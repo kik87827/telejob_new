@@ -2,7 +2,9 @@
 
 /.history
 
-
+/dist/*.html
+/dist/**/*.css
+/dist/**/*.js
 
 *.map
 
