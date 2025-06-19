@@ -11,6 +11,84 @@ html:not(.touchmode){
 .page_wrap{
     min-width:280px; position:relative;
 }
+.header_wrap{}
+.header_main_row{
+    .logo_cols{}
+    .search_cols{}
+    .util_cols{}
+}
+.toplogo_container{
+
+}
+.toplogo_item{
+    .img_cols{
+        > img{}
+    }
+    .spec_cols{
+        .spec_main_copy{}
+        .spec_sub_copy{}
+    }
+}
+.top_search_container{
+    > form{}
+}
+.top_search_field{
+    legend{}
+    .btn_search_reset{}
+    .btn_search_submit{}
+}
+input.top_search_input{}
+.top_search_keyword_wrap{}
+.top_search_keyword_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.top_search_keyword{}
+.top_util_wrap{}
+.top_util_list{
+    > li{}
+}
+.top_util_item{
+    &:hover{}
+}
+.header_nav_row{}
+.header_nav_container{}
+.header_nav_menu_wrap{}
+.header_nav_menu_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.header_nav_menu_item{}
+.nav_tooltip_layer{}
+.nav_tooltip_text{}
+.header_nav_menu_link{}
+.header_nav_util_wrap{}
+.header_nav_util_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.header_nav_util{
+    &:hover{}
+}
+.header_nav_toggle{}
+.nav_toggle_target{
+    .toggle_target_text{}
+}
+.nav_toggle_layer{}
+.nav_toggle_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.nav_toggle_menu{
+    &:hover{}
+}
+.nav_toggle_box{
+    &:hover{}
+}
 
 .footer_wrap{}
 .footer_menu_row{border-top:1px solid #E6E6E6; border-bottom:1px solid #E6E6E6;}
