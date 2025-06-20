@@ -101,6 +101,7 @@ input.top_search_input{appearance: none; width:100%; height:58px; line-height:1;
 .nav_toggle_target{
     min-height:40px; background:#0B51C5; border-radius:100px; display:flex; align-items:center; position:relative; box-sizing:border-box; padding:8px 32px 8px 16px;
     .toggle_target_text{@include font(16px, 700, 1, 1, #fff);}
+    &:after{display:block;content:'';width:6px;height:6px; border-right:1px solid #fff; border-bottom:1px solid #fff; transform:rotate(45deg); position:absolute;top:15px;right:17px;}
 }
 .nav_toggle_layer{position:absolute;top:calc(100%);left:0; display:none;}
 .nav_toggle_list{
