@@ -11,7 +11,7 @@ html:not(.touchmode){
 .page_wrap{
     min-width:280px; position:relative;
 }
-.header_wrap{border-bottom:2px solid #0B51C5;}
+.header_wrap{border-bottom:2px solid #0B51C5; padding:36px 0 0 0;}
 .header_main_row{
   display:flex; max-width:$pcwid;padding:0 30px; gap:94.5px;
   .logo_cols{}
@@ -22,14 +22,14 @@ html:not(.touchmode){
     display:inline-block;
 }
 .toplogo_item{
-    display:flex; gap:12px;
+    display:flex; gap:12px; align-items:center;
     .img_cols{
-      width:125px;
+      width:125px; flex:0 0 125px;
       > img{max-width:100%;vertical-align:top;}
     }
     .spec_cols{
       .spec_main_copy,
-      .spec_sub_copy{font-size:16px; display:inline-block; white-space:nowrap;}
+      .spec_sub_copy{font-size:16px; display:block; white-space:nowrap;}
       .spec_main_copy{color:#0C2F5B; font-weight:700;}
       .spec_sub_copy{color:#595959; font-weight:500;}
     }
@@ -38,15 +38,22 @@ html:not(.touchmode){
     > form{}
 }
 .top_search_field{
-    height:60px; box-sizing: border-box; border-radius:100px;border: 2px solid; border-image-source: linear-gradient(91.12deg, #3777FF 4.19%, #9442FE 96.41%);
-    display:flex; align-items:center;
+    height:60px; box-sizing: border-box; padding-right:8px;
+    border-radius: 100px;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(91.12deg, #3777FF 4.19%, #9442FE 96.41%) border-box;
+    border: 2px solid transparent;
+    display:flex; align-items:center;overflow:hidden; position:relative;
     legend{display:none;}
     .btn_search_reset,
-    .btn_search_submit{display:inline-block; @include bgicon}
-    .btn_search_reset{width:16px;height:16px;}
-    .btn_search_submit{width:24px;height:24px;}
+    .btn_search_submit{display:inline-block; @include bgicon;margin-right:16px;}
+    .btn_search_reset{width:16px;height:16px; background-image:url("../images/ico_total_reset.png")}
+    .btn_search_submit{width:24px;height:24px; background-image:url("../images/ico_total_search.png")}
 }
-input.top_search_input{appearance: none; width:100%; height:58px; line-height:1; border-radius:0; flex:1; }
+input.top_search_input{appearance: none; width:100%; height:58px; line-height:1; border-radius:0; flex:1; background:none; border:0; outline:0; padding:0 0 0 24px;
+    @include font(16px,700,1,1,#000);
+    &::placeholder {color: #aaa;}
+}
 .top_search_keyword_wrap{position:relative;}
 .top_search_keyword_list{
     display:flex; gap:8px; flex-wrap:wrap;
@@ -60,18 +67,18 @@ input.top_search_input{appearance: none; width:100%; height:58px; line-height:1;
 }
 .top_util_wrap{}
 .top_util_list{
-    display:flex; justify-content: flex-end; gap:24px;
+    display:flex; justify-content: flex-end; gap:24px; min-height:60px; align-items:center;
     > li{}
 }
 .top_util_item{
-    display:inline-block;
-    &:hover{}
+    display:inline-block; white-space:nowrap; @include font(13px,400,1,1,#000);
+    &:hover{font-weight:700;text-decoration:underline;}
 }
 .header_nav_row{}
 .header_nav_container{max-width:$pcwid;padding:0 30px; display:flex; justify-content: space-between; gap:30px;}
 .header_nav_menu_wrap{}
 .header_nav_menu_list{
-    display:flex; gap: 52px;
+    display:flex; gap: 52px; min-height:72px; align-items:center;
     > li{
         &:last-of-type{}
     }
