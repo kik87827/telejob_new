@@ -6,6 +6,7 @@ $primary : #13479b;;
 $secondary : #25b0f5;
 $sub_color : #D46C11;
 
+$pcwid : 1340px;
 
 $tablet : 1299px;
 $mobile_large : 1023px;
@@ -19,11 +20,19 @@ $mobile_xsmall : 319px;
 $warn : #e84854;
 
 
-@function rem($value) {
-    $remValue: math.div($value, 16) + rem;	
-    @return $remValue;
+@mixin font(
+  $size,
+  $weight: normal,
+  $lineHeight: normal,
+  $letterSpacing: normal,
+  $color: inherit
+) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
+  color: $color;
 }
-
 @mixin bgicon {
     background-repeat:no-repeat; background-size:100% auto; background-position:0 0;
 }
@@ -68,4 +77,9 @@ $warn : #e84854;
 
 @mixin clamp ($count) {
     word-break:break-all;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp:$count;overflow: hidden;
+}
+
+@function rem($value) {
+    $remValue: math.div($value, 16) + rem;	
+    @return $remValue;
 }
