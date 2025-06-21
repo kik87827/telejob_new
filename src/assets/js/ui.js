@@ -37,6 +37,7 @@ const uiBase = {
     },
     searchKeyword() {
         const marquee = document.getElementById("keywordMarquee");
+        if (!marquee) { return; }
         const content = marquee.querySelector(".top_search_keyword_list");
 
         // 텍스트 복제
@@ -53,6 +54,7 @@ const uiBase = {
     },
     searchForm() {
         const top_search_field = document.querySelector(".top_search_field");
+        if (!top_search_field) { return; }
         const top_search_input = top_search_field.querySelector(".top_search_input");
         const btn_search_reset = top_search_field.querySelector(".btn_search_reset");
         let input_value_length = 0;
@@ -70,8 +72,14 @@ const uiBase = {
         }
     },
     setVhProperty() {
-        const vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        setProperty();
+        window.addEventListener("resize", () => {
+            setProperty();
+        });
+        function setProperty() {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
     }
 }
 
