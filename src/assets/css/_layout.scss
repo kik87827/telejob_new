@@ -27,7 +27,7 @@ html:not(.touchmode){
   .logo_cols{}
   .search_cols{display:flex; flex-direction:column; gap:16px; min-width:0;}
   .util_cols{}
-  &:only-child{
+  &.only_type{
    /*  border-bottom: 1px solid #E6E6E6; */ padding-bottom:24px;
     &:after{
         display:block;content:'';width:100%;height:1px; background:#E6E6E6; position:absolute;bottom:0;left:0;
@@ -433,7 +433,7 @@ input.mb_nav_form_input{line-height:1;width:100%;border:0;appearance: none;box-s
         }
     }
     .header_main_row{gap:30px;
-        &:only-child{padding-bottom:16px;}
+        &.only_type{padding-bottom:16px;}
     }
     .header_nav_container{gap:20px;}
     .toplogo_item{
