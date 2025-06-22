@@ -178,9 +178,9 @@ input.top_search_input{appearance: none; width:100%; height:58px; line-height:1;
     dd{}
 }
 .key_fraction_label,
-.key_fraction_value{display:inline-block;@include font(16px, 400, 1, 0, #000);}
+.key_fraction_value{display:inline-block;@include font(16px, 400, 1, 0, #000);  white-space: nowrap;}
 .key_fraction_label{}
-.key_fraction_value{font-weight:700;font-family: 'Spoqa'; position:relative;top:1px; border-bottom:1px solid #000; white-space: nowrap;}
+.key_fraction_value{font-weight:700;font-family: 'Spoqa'; position:relative;top:1px; border-bottom:1px solid #000;}
 
 .middle_wrap{flex:1;}
 
@@ -205,11 +205,11 @@ input.top_search_input{appearance: none; width:100%; height:58px; line-height:1;
     .else_cols{}
 }
 .footer_logo{
-    max-width:107px; 
+    max-width:107px; display: inline-block;
     > img{vertical-align: top;}
 }
 .footer_copy_para_wrap{line-height:1.3;}
-.footer_copy_para{display:flex;gap:5px 24px;margin-bottom:5px;
+.footer_copy_para{display:flex;gap:5px 24px;margin-bottom:5px; flex-wrap:wrap; white-space: nowrap;
   &:last-of-type{margin-bottom:0;}
 }
 .footer_copy{font-size:12px; color:#595959;}
@@ -228,4 +228,52 @@ input.top_search_input{appearance: none; width:100%; height:58px; line-height:1;
   .spec_main,.spec_sub{text-decoration: underline; letter-spacing: -0.8px; white-space: nowrap;}
   .spec_main{font-size:14px; color:#000;}
   .spec_sub{font-size:12px; color:#595959;margin-top:5px;}
+}
+
+
+@media (max-width:$pcwid){
+    .header_wrap{padding-top:20px;
+        &.type2{
+            .header_nav_menu_list {gap:20px;}
+            .header_nav_util_list{gap:0px;padding-bottom:20px;}
+            .header_nav_menu_link{font-size:17px;}
+
+            .header_main_row{margin-bottom:20px;}
+
+            .header_nav_util_list{flex-direction: column; justify-content: flex-end; text-align: right; align-items: flex-end;}
+            .nav_toggle_target{}
+            .header_nav_toggle{left:15px;}
+
+            .key_fraction_value{top:0;}
+        }
+    }
+    .header_main_row{gap:30px;}
+    .header_nav_container{gap:20px;}
+    .toplogo_item{
+         .img_cols{width:100px;flex-basis: 100px;}
+         .spec_cols{
+            .spec_main_copy,
+            .spec_sub_copy{font-size:14px;}
+         }
+    }
+
+    .header_nav_menu_list{gap:20px;}
+    .top_util_list{gap:20px}
+    .header_nav_util_list{gap:25px;}
+    .footer_menu_list{gap:30px;}
+
+    .footer_main_container{gap:30px;padding:30px;}
+    .footer_main_container .logo_cols{flex-basis: 80px;}
+    .footer_logo{max-width:80px;}
+
+    .footer_partner_item{
+        .logo_row{
+            img{max-width:100px;}
+        }
+
+        .spec_main{font-size:13px;}
+        .spec_sub{font-size:11px;}
+    }
+
+    .header_nav_menu_link{font-size:17px;}
 }
