@@ -147,9 +147,11 @@ const uiBase = {
       const htmlAndBody = document.querySelectorAll('html, body');
       const page_wrap = document.querySelector(".page_wrap");
       const mobile_nav_panel = document.querySelector(".mobile_nav_panel");
+      const mobile_nav_panel_dim = document.querySelector(".mobile_nav_panel .bg_dim");
 
       function mobileTotal() {
         let motionTimer = 0;
+        let closeItems = [mobile_nav_panel_dim,btn_panel_close]
         if (!!btn_panel_menu) {
           btn_panel_menu.addEventListener("click", (e) => {
             e.preventDefault();
@@ -165,20 +167,22 @@ const uiBase = {
               }, 30);
           });
         }
-        if (!!btn_panel_close) {
-           btn_panel_close.addEventListener("click", (e) => {
-            e.preventDefault();
-            e.currentTarget.classList.remove("active");
-            btn_panel_menu.classList.remove("hidden");
-            page_wrap.classList.remove("open_mbmenu");
-            if (motionTimer) clearTimeout(motionTimer);
-            motionTimer = setTimeout(() => {
-              mobile_nav_panel.classList.remove("active");
-              htmlAndBody.forEach((item) => {
-                item.classList.remove("touchDis");
-              });
-            }, 500);
-          });
+        if (closeItems.length) {
+          closeItems.forEach((arrItem) => {
+            arrItem.addEventListener("click", (e) => {
+              e.preventDefault();
+              btn_panel_close.classList.remove("active");
+              btn_panel_menu.classList.remove("hidden");
+              page_wrap.classList.remove("open_mbmenu");
+              if (motionTimer) clearTimeout(motionTimer);
+              motionTimer = setTimeout(() => {
+                mobile_nav_panel.classList.remove("active");
+                htmlAndBody.forEach((item) => {
+                  item.classList.remove("touchDis");
+                });
+              }, 500);
+            });
+          })
         }
       }
       function mobileTotalTab() {
