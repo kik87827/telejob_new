@@ -122,15 +122,148 @@ const uiBase = {
             });
         }
     },
-    setVhProperty() {
-        setProperty();
-        window.addEventListener("resize", () => {
-            setProperty();
-        });
-        function setProperty() {
-            const vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
+    mobileHeader() {
+      function headerNavActive() {
+          const container = document.querySelector('.header_nav_container');
+          const activeItem = container?.querySelector('.header_nav_menu_item.active');
+
+          if (container && activeItem) {
+              const containerRect = container.getBoundingClientRect();
+              const itemRect = activeItem.getBoundingClientRect();
+
+              // active 항목이 컨테이너 왼쪽보다 왼쪽에 있다면
+              if (itemRect.left < containerRect.left) {
+                  container.scrollLeft -= (containerRect.left - itemRect.left) + 15;
+              }
+              // active 항목이 컨테이너 오른쪽보다 오른쪽에 있다면
+              else if (itemRect.right > containerRect.right) {
+                  container.scrollLeft += (itemRect.right - containerRect.right) + 15;
+              }
+          }
+      }
+
+      const btn_panel_menu = document.querySelector(".btn_panel_menu");
+      const btn_panel_close = document.querySelector(".btn_panel_close");
+      const htmlAndBody = document.querySelectorAll('html, body');
+      const page_wrap = document.querySelector(".page_wrap");
+      const mobile_nav_panel = document.querySelector(".mobile_nav_panel");
+
+      function mobileTotal() {
+        let motionTimer = 0;
+        if (!!btn_panel_menu) {
+          btn_panel_menu.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.currentTarget.classList.add("hidden");
+            htmlAndBody.forEach((item) => {
+              item.classList.add("touchDis");
+            });
+            page_wrap.classList.add("open_mbmenu");
+            mobile_nav_panel.classList.add("active");
+              if (motionTimer) clearTimeout(motionTimer);
+              motionTimer = setTimeout(() => {
+                  btn_panel_close.classList.add("active");
+              }, 30);
+          });
         }
+        if (!!btn_panel_close) {
+           btn_panel_close.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.currentTarget.classList.remove("active");
+            btn_panel_menu.classList.remove("hidden");
+            page_wrap.classList.remove("open_mbmenu");
+            if (motionTimer) clearTimeout(motionTimer);
+            motionTimer = setTimeout(() => {
+              mobile_nav_panel.classList.remove("active");
+              htmlAndBody.forEach((item) => {
+                item.classList.remove("touchDis");
+              });
+            }, 500);
+          });
+        }
+      }
+      function mobileTotalTab() {
+        const mb_nav_tab_li = document.querySelectorAll(".mb_nav_tab_list > li");
+        const mb_nav_tab = document.querySelectorAll(".mb_nav_tab");
+        const mb_nav_cont = document.querySelectorAll(".mb_nav_cont");
+        if (!!mb_nav_tab) {
+          mb_nav_tab.forEach((eventItem) => {
+            eventItem.addEventListener("click",(e) => {
+              e.preventDefault();
+              const thisTarget = e.currentTarget;
+              const thisCont = thisTarget.getAttribute("href");
+              const thisContDom = document.querySelector(thisCont);
+
+              mbNavReset();
+              if (!!thisContDom) {
+                thisContDom.classList.add("active");
+              }
+              thisTarget.closest("li").classList.add("active");
+            });
+          })
+        }
+
+        function mbNavReset() {
+          const resetItem = [...mb_nav_tab_li,...mb_nav_cont]
+          if (!!resetItem) {
+            resetItem.forEach((item) => {
+               item.classList.remove("active");
+            });
+          }
+        }
+      }
+      function mobileTotalToggle() {
+        const mb_navmenu_toggle = document.querySelectorAll('.mb_navmenu_item.has_arrow');
+        if (!!mb_navmenu_toggle) {
+          mb_navmenu_toggle.forEach((eventItem) => {
+            eventItem.addEventListener("click",(e) => {
+              e.preventDefault();
+              const thisTarget = e.currentTarget;
+              thisTarget.closest("li").classList.toggle("toggle_active");
+            })
+          })
+        }
+      }
+      function mobileTotalReset() {
+        let motionTimer2 = 0;
+        btn_panel_close.classList.remove("active");
+        btn_panel_menu.classList.remove("hidden");
+        page_wrap.classList.remove("open_mbmenu");
+        if (motionTimer2) clearTimeout(motionTimer);
+        motionTimer2 = setTimeout(() => {
+          mobile_nav_panel.classList.remove("active");
+          htmlAndBody.forEach((item) => {
+            item.classList.remove("touchDis");
+          });
+        }, 500);
+      }
+
+      // 최초 실행
+      headerNavActive();
+      mobileTotal();
+      mobileTotalTab();
+      mobileTotalToggle();
+
+      // 리사이즈 시 debounce 처리 후 실행
+      let resizeTimer;
+      window.addEventListener("resize", () => {
+          if (resizeTimer) clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(() => {
+            headerNavActive();
+            if (window.innerWidth >= 1024) {
+              mobileTotalReset();
+            }
+          }, 100); // 30ms → 100ms로 여유 있게 설정 (디바운싱)
+      });
+    },
+    setVhProperty() {
+      setProperty();
+      window.addEventListener("resize", () => {
+          setProperty();
+      });
+      function setProperty() {
+          const vh = window.innerHeight * 0.01;
+          document.documentElement.style.setProperty('--vh', `${vh}px`);
+      }
     }
 }
 
