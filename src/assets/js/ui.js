@@ -63,20 +63,45 @@ const uiBase = {
     },
     searchKeyword() {
         const marquee = document.getElementById("keywordMarquee");
-        if (!marquee) { return; }
+        if (!marquee) return;
+
         const content = marquee.querySelector(".top_search_keyword_list");
 
-        // 텍스트 복제
+        // 텍스트 복제 (한 번만 실행되게 처리)
         const clone = content.cloneNode(true);
         marquee.appendChild(clone);
 
-        // 총 너비 계산
-        const totalWidth = content.offsetWidth * 2 + 50;
-        const speed = 100; // 픽셀당 이동 속도 (낮을수록 빠름)
-        const duration = totalWidth / speed;
+        function isPC() {
+          // PC인지 확인 (필요에 따라 조건 조절 가능)
+          return window.innerWidth >= 1024;
+        }
 
-        // 애니메이션 시간 적용
-        marquee.style.animationDuration = `${duration}s`;
+        function action() {
+          if (!isPC()) return; // 모바일일 경우 실행 안 함
+
+          const contentWidth = content.offsetWidth;
+
+          // 모바일에서 display: none이면 offsetWidth가 0이 되어 오류 발생
+          if (contentWidth === 0) {
+            console.warn("콘텐츠 너비가 0입니다. action() 실행 보류");
+            return;
+          }
+
+          const totalWidth = contentWidth * 2 + 50;
+          const speed = 100;
+          const duration = totalWidth / speed;
+
+          marquee.style.animationDuration = `${duration}s`;
+        }
+
+        // 최초 실행
+        action();
+
+        // 리사이즈 시 PC로 전환되면 다시 계산
+        window.addEventListener("resize", () => {
+          action();
+        });
+
     },
     searchForm() {
         const top_search_field = document.querySelector(".top_search_field");
