@@ -3,8 +3,14 @@
     &.primary{
         .btn_box_text{}
     }
+    &.primary_full{
+        .btn_box_text{}
+    }
 }
 .btn_box_text{}
+.btn_box_wrap{
+    .btn_box{}
+}
 
 /* tab */
 .boxtab_wrap{}
@@ -29,7 +35,12 @@
 .block_form_label_row{}
 .block_form_label{}
 .block_form_enter_row{}
-input.form_input{}
+.block_warn_row{}
+.block_warn_para{}
+input.form_input{
+    &:read-only{}
+    &::placeholder{}
+}
 .props_item_wrap{}
 .props_item_list{
     > li{
@@ -43,6 +54,13 @@ input.props_dom{
     &:checked{}
 }
 .props_label{}
+.inline_flex_wrap{
+    .inline_long{
+        input.form_input{}
+    }
+    .inline_short{}
+}
+.btn_inline_control{}
 
 /* modal */
 .modal_wrap{

@@ -1,6 +1,6 @@
 /* contents */
 
-/* 로그인 */
+/* form layout */
 .gate_form_container{}
 .gate_top_row{}
 .gate_message_main{
@@ -72,4 +72,19 @@
     &.kakao{}
     &.apple{}
     &.google{}
+}
+
+.middle_container{}
+.middle_one_title_row{}
+.middle_one_title{}
+.middle_two_title_row{}
+.middle_two_title{}
+.middle_two_subcopy{}
+.middle_field_box{
+    > .boxtab_wrap{}
+    > .block_form_wrap{}
+    > .block_btn_wrap{}
+}
+.field_note_wrap{
+    .import_note_list{}
 }

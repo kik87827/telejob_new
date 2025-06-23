@@ -8,7 +8,7 @@
             <section class="middle_wrap">
                 <div class="middle_container">
                     <div class="middle_one_title_row">
-                        <h2 class="middle_one_title">비밀번호 찾기</h2>
+                        <h2 class="middle_one_title">아이디 찾기</h2>
                     </div>
                     <div class="middle_two_title_row">
                         <h3 class="middle_two_title">회원정보 입력</h3>
@@ -17,8 +17,8 @@
                     <div class="middle_field_box">
                         <div class="boxtab_wrap">
                             <ul class="boxtab_list">
-                                <li><a href="#" class="boxtab active"><span class="boxtab_text">개인회원</span></a></li>
-                                <li><a href="#" class="boxtab"><span class="boxtab_text">기업회원</span></a></li>
+                                <li><a href="#" class="boxtab"><span class="boxtab_text">개인회원</span></a></li>
+                                <li><a href="#" class="boxtab active"><span class="boxtab_text">기업회원</span></a></li>
                             </ul>
                         </div>
                         <div class="block_form_wrap">
@@ -26,20 +26,10 @@
                                 <li>
                                     <div class="block_form_item">
                                         <div class="block_form_label_row">
-                                            <p class="block_form_label">아이디</p>
-                                        </div>
-                                        <div class="block_form_enter_row">
-                                            <input type="text" class="form_input" placeholder="아이디를 입력하세요" />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="block_form_item">
-                                        <div class="block_form_label_row">
                                             <p class="block_form_label">이름</p>
                                         </div>
                                         <div class="block_form_enter_row">
-                                            <input type="text" class="form_input" placeholder="이름을 입력하세요" />
+                                            <input type="text" class="form_input" placeholder="이름을 입력하세요" value="홍길동" />
                                         </div>
                                     </div>
                                 </li>
@@ -49,19 +39,27 @@
                                             <p class="block_form_label">휴대폰 번호</p>
                                         </div>
                                         <div class="block_form_enter_row">
-                                            <div class="inline_flex_wrap">
-                                                <div class="inline_long"><input type="text" class="form_input" readonly placeholder="본인인증으로 휴대폰 번호를 불러올 수 있습니다" /></div>
-                                                <div class="inline_short">
-                                                    <a href="javascript:;" class="btn_inline_control">본인인증</a>
-                                                </div>
-                                            </div>
+                                            <input type="text" class="form_input" placeholder="‘-’ 제외하고 숫자만 입력하세요" value="010-1234-5678" />
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="block_form_item">
+                                        <div class="block_form_label_row">
+                                            <p class="block_form_label">사업자등록번호</p>
+                                        </div>
+                                        <div class="block_form_enter_row">
+                                            <input type="text" class="form_input warn" placeholder="‘-’ 제외하고 숫자만 입력하세요" value="123-45-6789" />
+                                        </div>
+                                        <div class="block_warn_row">
+                                            <p class="block_warn_para">사업자등록번호가 올바르지 않습니다.</p>
                                         </div>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                         <div class="block_btn_wrap btn_box_wrap">
-                            <a href="javascript:;" class="btn_box primary"><span class="btn_box_text">비밀번호 찾기</span></a>
+                            <a href="javascript:;" class="btn_box primary_full"><span class="btn_box_text">아이디 찾기</span></a>
                         </div>
                     </div>
                     <div class="field_note_wrap">

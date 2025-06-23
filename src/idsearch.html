@@ -6,7 +6,56 @@
             @@include('./include/header.html')
             <!-- middle -->
             <section class="middle_wrap">
-                내용이 들어갑니다.
+                <div class="middle_container">
+                    <div class="middle_one_title_row">
+                        <h2 class="middle_one_title">아이디 찾기</h2>
+                    </div>
+                    <div class="middle_two_title_row">
+                        <h3 class="middle_two_title">회원정보 입력</h3>
+                        <p class="middle_two_subcopy">회원가입시 입력하신 정보를 정확하게 입력해 주세요</p>
+                    </div>
+                    <div class="middle_field_box">
+                        <div class="boxtab_wrap">
+                            <ul class="boxtab_list">
+                                <li><a href="#" class="boxtab active"><span class="boxtab_text">개인회원</span></a></li>
+                                <li><a href="#" class="boxtab"><span class="boxtab_text">기업회원</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="block_form_wrap">
+                            <ul class="block_form_list">
+                                <li>
+                                    <div class="block_form_item">
+                                        <div class="block_form_label_row">
+                                            <p class="block_form_label">이름</p>
+                                        </div>
+                                        <div class="block_form_enter_row">
+                                            <input type="text" class="form_input" placeholder="이름을 입력하세요" />
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="block_form_item">
+                                        <div class="block_form_label_row">
+                                            <p class="block_form_label">휴대폰 번호</p>
+                                        </div>
+                                        <div class="block_form_enter_row">
+                                            <input type="text" class="form_input" placeholder="‘-’ 제외하고 숫자만 입력하세요" />
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="block_btn_wrap btn_box_wrap">
+                            <a href="javascript:;" class="btn_box primary"><span class="btn_box_text">비밀번호 찾기</span></a>
+                            <a href="javascript:;" class="btn_box primary_full"><span class="btn_box_text">아이디 찾기</span></a>
+                        </div>
+                    </div>
+                    <div class="field_note_wrap">
+                        <ul class="import_note_list">
+                            <li><p class="import_note_para">위 방법으로 확인하기 힘드신 경우, 고객센터로 문의해 주세요. (TEL : 031-706-2229)</p></li>
+                        </ul>
+                    </div>
+                </div>
             </section>
             <!-- // middle -->
              @@include('./include/footer.html')
