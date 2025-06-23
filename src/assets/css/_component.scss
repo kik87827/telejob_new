@@ -1,3 +1,48 @@
+/* button */
+.btn_box{
+    &.primary{
+        .btn_box_text{}
+    }
+}
+.btn_box_text{}
+
+/* tab */
+.boxtab_wrap{}
+.boxtab_list{
+    > li{}
+}
+.boxtab{
+    &.active{
+        .boxtab_text{}
+    }
+}
+.boxtab_text{}
+
+/* form */
+.block_form_wrap{}
+.block_form_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.block_form_item{}
+.block_form_label_row{}
+.block_form_label{}
+.block_form_enter_row{}
+input.form_input{}
+.props_item_wrap{}
+.props_item_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.props_item{
+
+}
+input.props_dom{
+    &:checked{}
+}
+.props_label{}
 
 /* modal */
 .modal_wrap{

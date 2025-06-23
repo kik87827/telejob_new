@@ -1,3 +1,75 @@
 /* contents */
 
-/* 공통 */
+/* 로그인 */
+.gate_form_container{}
+.gate_top_row{}
+.gate_message_main{
+    .gate_message_para{}
+}
+.gate_message_sub{
+    .gate_message_detail{}
+}
+.gate_message_para{}
+.gate_message_detail{}
+.gate_form_box{
+    .inner_top_row{}
+    .inner_middle_row{}
+    .inner_bottom_row{
+        .btn_box{}
+    }
+}
+.guide_box_maincopy{
+    strong{}
+}
+.guide_bullet_list{
+    > li{
+        &:before{}
+        &:last-of-type{}
+    }
+    .guide_bcopy{
+        
+    }
+}
+.gate_guide_cols{}
+.guide_inner_cont{}
+.gate_form_cols{
+    > .boxtab_wrap{}
+    > .block_form_wrap{}
+    > .block_submit_wrap{}
+}
+.btn_block_submit{}
+.block_smenu_list{
+    > li{
+        &:after{}
+        &:last-of-type{
+            &:after{}
+        }
+    }
+}
+.btn_smenu{}
+.gate_note_wrap{}
+.import_note_list{
+    > li{
+        &:last-of-type{
+        }
+    }
+}
+.import_note_para{
+    &:before{}
+}
+.block_sns_linkage_wrap{}
+.block_sns_linkage_list{
+    dt,dd{}
+    dt{}
+    dd{}
+}
+.block_sns_key{}
+.sns_dom_list{
+    > li{}
+}
+.btn_sns_dom{
+    &.naver{}
+    &.kakao{}
+    &.apple{}
+    &.google{}
+}
