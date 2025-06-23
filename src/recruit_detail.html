@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include('./include/head.html')
+    <body class="front_body">
+        <div class="page_wrap">
+            @@include('./include/header.html')
+            <!-- middle -->
+            <section class="middle_wrap">
+                내용이 들어갑니다.
+            </section>
+            <!-- // middle -->
+             <!-- popup -->
+            <div class="popup_wrap" id="counselingPopup">
+                <div class="bg_dim"></div>
+                <div class="popup_item sm_type2 skin2">
+                    <div class="popup_title_row">
+                        <h3 class="popup_title">구직상담 Call-Back 신청</h3>
+                    </div>
+                    <div class="popup_contents_row">
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용<br>
+                        내용
+                    </div>
+                    <a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
+                </div>
+            </div>
+            <!-- // popup -->
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    // 인스턴스 선언
+                    let counselingPopup = new DesignPopup({
+                        selector: "#counselingPopup",
+                        beforeCallback() {
+
+                        },
+                        callback() {
+
+                        },
+                        closeCallback() { }
+                    });
+                    // counselingPopup.popupShow(); // show
+                    // counselingPopup.popupHide(); // hide
+
+                    // 퍼블확인용
+                    let url = window.location.href.split("?")[1]
+                    let url_2 = url !== undefined ? url.split("#")[0] : null
+                    if (url_2 === "popup") {
+                      counselingPopup.popupShow(); // show
+                    }
+                });
+            </script>
+            @@include('./include/footer.html')
+        </div>
+    </body>
+</html>
