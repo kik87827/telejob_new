@@ -80,6 +80,8 @@
 .middle_two_title_row{}
 .middle_two_title{}
 .middle_two_subcopy{}
+.middle_message_row{}
+.middle_message_copy{}
 .middle_field_box{
     > .boxtab_wrap{}
     > .block_form_wrap{}
@@ -87,4 +89,20 @@
 }
 .field_note_wrap{
     .import_note_list{}
+}
+.middle_render_box{}
+.obj_render_list{
+    > li{}
+}
+.obj_render_item{
+    dt,dd{}
+    dt{}
+    dd{}
+}
+.obj_render_key{}
+.obj_render_value{
+    &.emp{}
+}
+.middle_bottom_btn_row{
+    .btn_box{}
 }

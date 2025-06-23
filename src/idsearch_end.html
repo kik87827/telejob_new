@@ -6,7 +6,34 @@
             @@include('./include/header.html')
             <!-- middle -->
             <section class="middle_wrap">
-                내용이 들어갑니다.
+                <div class="middle_container">
+                    <div class="middle_one_title_row">
+                        <h2 class="middle_one_title">아이디 찾기</h2>
+                    </div>
+                    <div class="middle_message_row">
+                        <p class="middle_message_copy">입력하신 정보와 일치하는 아이디입니다</p>
+                    </div>
+                    <div class="middle_render_box">
+                        <ul class="obj_render_list">
+                            <li>
+                                <dl class="obj_render_item">
+                                    <dt><span class="obj_render_key">아이디</span></dt>
+                                    <dd><span class="obj_render_value emp">Hong0214</span></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl class="obj_render_item">
+                                    <dt><span class="obj_render_key">가입일</span></dt>
+                                    <dd><span class="obj_render_value">2024.12.22</span></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="middle_bottom_btn_row btn_box_wrap">
+                        <a href="javascript:;" class="btn_box primary_full"><span class="btn_box_text">로그인 하기</span></a>
+                        <a href="javascript:;" class="btn_box primary"><span class="btn_box_text">비밀번호 찾기</span></a>
+                    </div>
+                </div>
             </section>
             <!-- // middle -->
              @@include('./include/footer.html')
