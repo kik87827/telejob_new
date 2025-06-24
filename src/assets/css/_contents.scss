@@ -428,6 +428,39 @@ input.file_input{}
 .gallery_spec{
     .props_item{}
 }
+.list_fraction_top_row{}
+.fraction_copy_cols{}
+.fraction_btn_cols{}
+.list_frac_copy{
+    strong{}
+}
+.btn_action_box{}
+.respon_entry_wrap{}
+.respon_entry_list{
+    > li{}
+}
+.respon_entry_item{}
+.entry_main_cols{}
+.entry_main_para{}
+.entry_detail_cols{}
+.entry_detail_list{
+    > li{
+        &:last-of-type{}
+    }
+    .btn_ico{}
+    .price_dom{}
+}
+.entry_number_text{}
+.price_dom{}
+.price_main{}
+.price_unit{}
+.foot_total_wrap{
+    .key_cols{}
+    .value_cols{
+        .price_dom{}
+    }
+}
+.foot_total_key{}
 
 /* text */
 .indent_para_list{
