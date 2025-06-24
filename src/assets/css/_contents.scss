@@ -258,3 +258,46 @@ select.form_select{
     &.active{}
     &.clamp_text{}
 }
+
+/* view */
+.view_container{}
+.view_title_row{}
+.view_title{}
+.view_else_wrap{}
+.view_else_list{
+    > li{}
+}
+.view_else_item{
+
+}
+.view_else_text{}
+.view_else_ico{
+    &.eye{}
+}
+.view_upload_row{
+    .key_cols{}
+    .value_cols{}
+}
+.key_upload_text{}
+.upload_file_item_list{
+    > li{}
+}
+.upload_file_item{
+    .file_ico{}
+    .file_name{}
+    .file_size{}
+}
+
+.view_contents_row{
+    img{}
+}
+.view_controls_row{}
+.btn_view_control{
+    .ico{}
+    &.prev{}
+    &.next{}
+}
+.view_control_text{}
+.view_controls_btn_wrap{
+    .btn_box{}
+}
