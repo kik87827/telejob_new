@@ -233,6 +233,21 @@ select.form_select{
 }
 .btn_entry_search{}
 
+.form_fieldset_wrap{
+  .form_cols{
+    .btn_form_reset{}
+  }
+  .btn_cols{}
+}
+input.fieldset_input{}
+input.file_input{}
+.btn_form_reset{}
+.btn_fieldset_submit{}
+.img_preview_render{
+  img{}
+}
+.preview_copy{}
+
 
 /* board layout */
 .board_container{}
@@ -401,11 +416,28 @@ select.form_select{
 .column_body{}
 .column_head_para{}
 .column_body_para{}
-
+.scroll_list_container{}
+.gallery_list_wrap{}
+.gallery_list{
+    > li{}
+}
+.gallery_item{}
+.gallery_thumnail{
+    img{}
+}
+.gallery_spec{
+    .props_item{}
+}
 
 /* text */
 .indent_para_list{
     > li{}
+    &.order_list{
+        > li{
+          .indent_bullet{}
+          .indent_liquid{}
+        }
+    }
 }
 .indent_bullet{}
 .indent_liquid{}
@@ -415,6 +447,8 @@ select.form_select{
     }
 }
 .dark_emp{}
+.red_emp{}
+.emp_link_text{}
 
 /* terms */
 .terms_section_wrap{}
@@ -427,3 +461,35 @@ select.form_select{
 .terms_sub_title{}
 .terms_sub_content{}
 .terms_sub_para{}
+
+
+/* guide */
+.total_dia_render{
+    .dia_row{
+        &:last-of-type{}
+    }
+}
+.dia_total_list{
+    dt,dd{}
+    dt{}
+    dd{}
+}
+.dia_total_key{}
+.dia_price_row{}
+.dia_price_number{}
+.dia_price_unit{}
+.dia_caption_row{}
+.dia_cpation_para{}
+.dia_detail_list{
+    > li{}
+}
+.dia_detail_item{
+    dt,dd{}
+    dt{}
+    dd{}
+}
+.dia_detail_key{}
+.dia_detail_price_wrap{}
+.dia_price_number{}
+.dia_price_unit{}
+.dia_detail_cpation_para{}
