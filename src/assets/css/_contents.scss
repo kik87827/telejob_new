@@ -301,3 +301,46 @@ select.form_select{
 .view_controls_btn_wrap{
     .btn_box{}
 }
+
+/* banner */
+.notice_banner_container{
+    .copy_cols{}
+    .service_cols{}
+}
+.notice_banner_copy_group{}
+.notice_banner_maincopy{}
+.notice_banner_subcopy{}
+.customer_service_dom{
+    .ico_service{
+        &.headset{}
+    }
+    .spec_service{}
+}
+.service_emp_text{}
+.service_wording_list{
+    >li{
+        &:after{}
+        &:last-of-type{
+            &:after{}
+        }
+    }
+}
+.service_wording{}
+
+/* list */
+.column_obj_wrap{}
+.column_obj_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.column_obj{
+    .ico{
+        &.ico_q{}
+        &.ico_a{}
+    }
+}
+.column_head{}
+.column_body{}
+.column_head_para{}
+.column_body_para{}
