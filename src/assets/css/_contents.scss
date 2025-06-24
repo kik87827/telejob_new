@@ -1,9 +1,28 @@
 /* contents */
 
 /* contents layout */
-.sub_title_row{}
+.sub_title_row{
+    &.display_type2{
+        .title_cols{
+            .sub_title{}
+        }
+        .else_cols{}
+    }
+}
 .sub_title{}
 .sub_title_copy{}
+.fraction_sort_list{
+    > li{}
+    
+    .form_select{}
+}
+.fra_obj_list{
+    dt,dd{}
+    dt{}
+    dd{}
+}
+.fra_key_text{}
+.fra_value_text{}
 
 /* form layout */
 .gate_form_container{}
@@ -344,3 +363,23 @@ select.form_select{
 .column_body{}
 .column_head_para{}
 .column_body_para{}
+
+
+/* text */
+.indent_para_list{
+    > li{}
+}
+.indent_bullet{}
+.indent_liquid{}
+
+/* terms */
+.terms_section_wrap{}
+.terms_section{}
+.terms_one_dep{}
+.terms_sub_item_wrap{}
+.terms_sub_item{
+    &:last-of-type{}
+}
+.terms_sub_title{}
+.terms_sub_content{}
+.terms_sub_para{}
