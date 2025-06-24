@@ -1,15 +1,92 @@
 <!DOCTYPE html>
 <html lang="ko">
-    @@include('./include/head.html')
-    <body class="front_body">
-        <div class="page_wrap">
-            @@include('./include/header.html')
-            <!-- middle -->
-            <section class="middle_wrap">
-                내용이 들어갑니다.
-            </section>
-            <!-- // middle -->
-             @@include('./include/footer.html')
+  @@include('./include/head.html')
+  <body class="front_body">
+    <div class="page_wrap">
+      @@include('./include/header.html')
+      <!-- middle -->
+      <section class="middle_wrap">
+        <div class="sub_title_row">
+          <h2 class="sub_title">공지/뉴스</h2>
+          <p class="sub_title_copy">텔레잡의 소식 및 안내사항을 확인하세요</p>
         </div>
-    </body>
+        <div class="board_container">
+          <div class="board_sort_row">
+            <div class="fraction_cols">
+              <span class="sort_fraction_text">총 <strong>0</strong> 건</span>
+            </div>
+            <div class="search_cols">
+              <ul class="inline_ring_list">
+                <li>
+                  <select class="form_select">
+                    <option>20개씩</option>
+                  </select>
+                </li>
+                <li>
+                  <div class="search_entry_field">
+                    <input type="text" class="input_search" />
+                    <button class="btn_entry_search"></button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="board_list_row">
+            <div class="list_table_wrap">
+              <table class="list_table">
+                <thead>
+                  <tr>
+                    <th class="mb_none"><span class="list_table_thtext">No.</span></th>
+                    <th><span class="list_table_thtext">제목</span></th>
+                    <th><span class="list_table_thtext">날짜</span></th>
+                    <th class="mb_none"><span class="list_table_thtext">조회</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="mb_none"><span class="list_table_tdtext">184</span></td>
+                    <td class="define_title">
+                      <div class="list_td_item_wrap">
+                        <a href="javascript:;" class="list_td_item">★★전화로 카드결제 서비스 개시 및 유료서비스 변경사항 안내★★</a>
+                      </div>
+                    </td>
+                    <td><span class="list_table_tdtext"></span></td>
+                    <td class="mb_none"><span class="list_table_tdtext">15,303</span></td>
+                  </tr>
+                  <tr>
+                    <td class="mb_none"><span class="list_table_tdtext">183</span></td>
+                    <td class="define_title">
+                      <div class="list_td_item_wrap">
+                        <a href="javascript:;" class="list_td_item">남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률</a>
+                      </div>
+                    </td>
+                    <td><span class="list_table_tdtext">2025.05.28</span></td>
+                    <td class="mb_none"><span class="list_table_tdtext">177</span></td>
+                  </tr>
+                  <tr>
+                    <td colspan="4" class="nodata_td"><p class="nodata_tdtext">데이터가 없습니다.</p></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="board_paging_row">
+            <a href="javascript:;" class="btn_paging_control first"></a>
+            <a href="javascript:;" class="btn_paging_control prev"></a>
+            <ul class="paging_num_list">
+              <li><a href="javascript:;" class="btn_paging_num active">1</a></li>
+              <li><a href="javascript:;" class="btn_paging_num">2</a></li>
+              <li><a href="javascript:;" class="btn_paging_num">3</a></li>
+              <li><span class="btn_paging_num clamp_text">...</span></li>
+              <li><a href="javascript:;" class="btn_paging_num">10</a></li>
+            </ul>
+            <a href="javascript:;" class="btn_paging_control next"></a>
+            <a href="javascript:;" class="btn_paging_control last"></a>
+          </div>
+        </div>
+      </section>
+      <!-- // middle -->
+      @@include('./include/footer.html')
+    </div>
+  </body>
 </html>

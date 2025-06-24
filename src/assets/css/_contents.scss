@@ -1,5 +1,10 @@
 /* contents */
 
+/* contents layout */
+.sub_title_row{}
+.sub_title{}
+.sub_title_copy{}
+
 /* form layout */
 .gate_form_container{}
 .gate_top_row{}
@@ -198,3 +203,58 @@
 
 }
 .visual_guide_copy{}
+.inline_ring_list{
+    > li{}
+}
+select.form_select{
+    input.input_search{}
+}
+.btn_entry_search{}
+
+
+/* board layout */
+.board_container{}
+.board_sort_row{
+    .fraction_cols{}
+    .search_cols{}
+}
+.sort_fraction_text{
+    strong{}
+}
+.board_list_row{}
+.list_table_wrap{}
+.list_table{
+    thead{
+        th{
+            &.mb_none{}
+        }
+    }
+    tbody{
+        td{
+            &.mb_none{}
+            &.define_title{}
+            &.nodata_td{}
+        }
+    }
+}
+.list_table_thtext{}
+.list_table_tdtext{}
+.list_td_item_wrap{}
+.list_td_item{}
+.nodata_tdtext{}
+
+/* paging */
+.board_paging_row{}
+.btn_paging_control{
+    &.first{}
+    &.prev{}
+    &.next{}
+    &.last{}
+}
+.paging_num_list{
+    > li{}
+}
+.btn_paging_num{
+    &.active{}
+    &.clamp_text{}
+}
