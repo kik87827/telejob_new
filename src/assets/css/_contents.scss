@@ -23,6 +23,9 @@
 }
 .fra_key_text{}
 .fra_value_text{}
+.top_note_wrap{
+    .bullet_list{}
+}
 
 /* form layout */
 .gate_form_container{}
@@ -262,6 +265,41 @@ select.form_select{
 .list_td_item{}
 .nodata_tdtext{}
 
+.respond_tb_wrap{}
+.respond_tb{
+    thead{
+        tr{
+            th{
+                &.has_total_dom{
+                    .props_item{}
+                    .props_dom{}
+                    .props_label{}
+                }
+            }
+        }
+    }
+    tbody{
+        tr{
+            td{
+                &.has_form{
+                    .props_dom{}
+                }
+                &.nodata_td{
+                    .nodata_tdtext{}
+                }
+            }
+        }
+    }
+}
+.respond_thtext{}
+.respond_td_obj{
+    dt,dd{}
+    dt{}
+    dd{}
+}
+.respond_tdkey{}
+.respond_tdtext{}
+
 /* paging */
 .board_paging_row{}
 .btn_paging_control{
@@ -371,6 +409,12 @@ select.form_select{
 }
 .indent_bullet{}
 .indent_liquid{}
+.bullet_list{
+    > li{
+        &:before{}
+    }
+}
+.dark_emp{}
 
 /* terms */
 .terms_section_wrap{}
