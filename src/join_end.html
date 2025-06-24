@@ -1,15 +1,63 @@
 <!DOCTYPE html>
 <html lang="ko">
-    @@include('./include/head.html')
-    <body class="front_body">
-        <div class="page_wrap">
-            @@include('./include/header.html')
-            <!-- middle -->
-            <section class="middle_wrap">
-                내용이 들어갑니다.
-            </section>
-            <!-- // middle -->
-             @@include('./include/footer.html')
+  @@include('./include/head.html')
+  <body class="front_body">
+    <div class="page_wrap">
+      @@include('./include/header.html')
+      <!-- middle -->
+      <section class="middle_wrap">
+        <div class="middle_container">
+          <div class="middle_one_title_row">
+            <h2 class="middle_one_title">회원가입</h2>
+          </div>
+          <div class="middle_grid_box display_type2">
+            <div class="bar_step_wrap">
+              <ul class="bar_step_list">
+                <li>
+                  <div class="bar_step_item active">
+                    <div class="number_row"><span class="bar_number">01</span></div>
+                    <div class="bar_row"><div class="bar_stick"></div></div>
+                    <div class="label_row"><p class="bar_label">약관동의</p></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="bar_step_item active">
+                    <div class="number_row"><span class="bar_number">02</span></div>
+                    <div class="bar_row"><div class="bar_stick"></div></div>
+                    <div class="label_row"><p class="bar_label">본인인증</p></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="bar_step_item active">
+                    <div class="number_row"><span class="bar_number">03</span></div>
+                    <div class="bar_row"><div class="bar_stick"></div></div>
+                    <div class="label_row"><p class="bar_label">정보입력</p></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="bar_step_item active">
+                    <div class="number_row"><span class="bar_number">04</span></div>
+                    <div class="bar_row"><div class="bar_stick"></div></div>
+                    <div class="label_row"><p class="bar_label">가입완료</p></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="visual_guide_container">
+              <div class="visual_guide_img end_step_img"></div>
+              <div class="visual_guide_spec">
+                <p class="visual_guide_copy">회원가입이 완료되었습니다.<br />로그인 후 이용해 주세요!</p>
+              </div>
+            </div>
+          </div>
+          <div class="middle_btn_row btn_box_wrap">
+            <a href="javascript:;" class="btn_box"><span class="btn_box_text">메인으로</span></a>
+            <a href="javascript:;" class="btn_box primary_full"><span class="btn_box_text">로그인하기</span></a>
+          </div>
         </div>
-    </body>
+      </section>
+      <!-- // middle -->
+      @@include('./include/footer.html')
+    </div>
+  </body>
 </html>

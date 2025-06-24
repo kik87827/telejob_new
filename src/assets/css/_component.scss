@@ -33,12 +33,15 @@
 }
 .block_form_item{}
 .block_form_label_row{}
-.block_form_label{}
+.block_form_label{
+  .ico_import{}
+}
 .block_form_enter_row{}
 .block_warn_row{}
 .block_warn_para{}
 input.form_input{
     &:read-only{}
+    &:disabled{}
     &::placeholder{}
 }
 .props_item_wrap{}
@@ -61,6 +64,65 @@ input.props_dom{
     .inline_short{}
 }
 .btn_inline_control{}
+.grid_form_wrap{}
+.grid_form_list{
+    > li{}
+}
+.block_form_item{}
+.block_form_label_row{}
+.block_form_label{
+    .ico_import{}
+}
+.block_form_enter_row{}
+.block_validate_row{}
+.validate_dom_list{
+    > li{}
+}
+.validate_dom{
+    &.active{
+        .validate_ico{}
+        .validate_label{}
+    }
+}
+.validate_ico{}
+.validate_label{}
+.field_section_wrap{}
+.field_section{
+    &:last-of-type{}
+}
+.field_title_row{
+    .main_cols{}
+    .sub_cols{}
+}
+.field_title{}
+.field_guide_copy{
+    .ico_import{}
+}
+.ico_import{}
+.field_content_row{}
+.multi_ring_wrap{}
+.multi_ring_long{
+  input.form_input{}
+}
+.multi_ring_short{}
+.multi_ring_unit{
+  .unit_text{}
+}
+select.block_form_select{
+
+}
+.field_setbox{}
+.field_setbox_list{
+  > li{
+
+  }
+}
+.setbox_th_cols{}
+.setbox_thtext{}
+.setbox_td_cols{
+  .props_item_list{}
+}
+
 
 /* modal */
 .modal_wrap{

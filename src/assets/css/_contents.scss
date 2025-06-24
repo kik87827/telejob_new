@@ -87,6 +87,9 @@
     > .block_form_wrap{}
     > .block_btn_wrap{}
 }
+.middle_btn_row{
+    .btn_box{}
+}
 .field_note_wrap{
     .import_note_list{}
 }
@@ -106,3 +109,92 @@
 .middle_bottom_btn_row{
     .btn_box{}
 }
+
+.middle_grid_box{
+    .grid_cols{
+        &.define_guide{}
+        &.define_form{}
+    }
+    .grid_cols{}
+    &.display_type2{
+
+    }
+    > .bar_step_wrap{}
+}
+.info_guide_container{}
+.info_maincopy_row{}
+.info_maincopy{
+    strong{}
+}
+.info_img_row{
+    .info_img{}
+}
+.info_subcopy_row{}
+.info_subcopy{
+    &:last-of-type{}
+}
+.bar_step_wrap{}
+.bar_step_list{
+    > li{}
+}
+.bar_step_item{
+    .number_row{}
+    .bar_number{}
+    .bar_row{}
+    .bar_stick{}
+    .label_row{}
+    .bar_label{}
+    &.active{
+        .number_row{}
+        .bar_number{}
+        .bar_row{}
+        .bar_stick{}
+        .label_row{}
+        .bar_label{}
+    }
+}
+.brick_section_container{
+}
+.brick_section{
+    &:last-of-type{}
+}
+.brick_title_row{}
+.brick_title{}
+.brick_content_row{}
+.bc_block_wrap{}
+.bc_block{
+    &:last-of-type{}
+}
+.bc_title{}
+.bc_terms_box{}
+.bc_terms_total_row{
+    .props_item{}
+}
+.bc_terms_detail_row{}
+.bc_terms_detail_list{
+    > li{}
+}
+.terms_agree_item{}
+.terms_agree_long{
+    .props_item{}
+}
+.terms_agree_short{}
+.btn_terms_view{
+    &:after{}
+}
+.brick_guide_copy{}
+.brick_screen_img_wrap{}
+.screen_img_list{
+    > li{
+        img{}
+    }
+    img.screen_img{}
+}
+.visual_guide_container{}
+.visual_guide_img{
+    &.end_step_img{}
+}
+.visual_guide_spec{
+
+}
+.visual_guide_copy{}
