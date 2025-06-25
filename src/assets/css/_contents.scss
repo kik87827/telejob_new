@@ -576,10 +576,10 @@ input.file_input{}
 .dia_detail_item{
     dt,dd{}
     dt{}
-    dd{}
+    dd{margin-top:12px;}
 }
-.dia_detail_key{}
-.dia_detail_price_wrap{}
-.dia_price_number{}
-.dia_price_unit{}
-.dia_detail_cpation_para{}
+.dia_detail_key{@include font(16px,400,1.33,0,#000);}
+.dia_detail_price_wrap{display:flex;}
+.dia_price_number{@include font(20px,500,1,0,#B5000F);}
+.dia_price_unit,
+.dia_detail_caption_para{@include font(14px,400,1.33,0,#595959);}
