@@ -31,13 +31,21 @@
 .boxtab_wrap{}
 .boxtab_list{
     display:flex; min-height:56px;
-    > li{flex:1;}
+    > li{flex:1;
+        &:last-of-type{
+            .boxtab{
+                &:after{display:none;}
+            }
+        }
+    }
 }
 .boxtab{
-    display:flex; min-height:100%; flex-direction: column; width:100%; box-sizing: border-box;padding:10px;
+    display:flex; min-height:100%; flex-direction: column; width:100%; box-sizing: border-box;padding:10px; position:relative;
+    &:after{display:block;content:'';width:1px;height:100%;position:absolute;top:0;right:0;background:#E6E6E6;}
     &.active{
         background-color:#0B51C5;
         .boxtab_text{color:#fff;}
+        &:after{display:none;}
     }
 }
 .boxtab_text{@include font(16px, 700, 1, 0, #595959); display:inline-block;}

@@ -412,6 +412,9 @@ input.file_input{}
 
 /* banner */
 .notice_banner_container{
+    display:flex; background:#EDF2FB; border-radius:16px; 
+    .copy_cols,
+    .service_cols{flex:1; min-width:0;}
     .copy_cols{}
     .service_cols{}
 }
@@ -455,13 +458,16 @@ input.file_input{}
 .scroll_list_container{position:relative;overflow:hidden;overflow-y:auto;}
 .gallery_list_wrap{}
 .gallery_list{
-    > li{}
+    display:flex; flex-wrap:wrap; gap:24px 12px; margin:0 -6px;
+    > li{flex:0 0 calc(33.333333% - 6px)}
 }
 .gallery_item{}
 .gallery_thumnail{
-    img{}
+    background:#F8F8F8; height:90px; display:flex; justify-content:center; text-align:center; box-sizing:border-box; padding:15px;
+    img{vertical-align:middle;height:100%; width:auto; max-width:100%;}
 }
 .gallery_spec{
+    margin-top:12px;
     .props_item{}
 }
 .list_fraction_top_row{}
