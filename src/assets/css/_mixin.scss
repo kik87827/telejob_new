@@ -36,6 +36,9 @@ $warn : #e84854;
 @mixin bgicon {
     background-repeat:no-repeat; background-size:100% auto; background-position:0 0;
 }
+@mixin bgicon_center($value) {
+    background-repeat:no-repeat; background-size:value; background-position:50% 50%;
+}
 @mixin bgimg {
     background-repeat:no-repeat; background-size:100% auto; background-position:0 0;
 }
