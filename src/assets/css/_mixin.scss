@@ -54,17 +54,10 @@ $warn : #e84854;
     font-family: 'GmarketSans','NotoSans-Regular',dotum;
 }
 
-@mixin rubik {
-    font-family: 'Rubik Regular','NotoSans-Regular',dotum;
+@mixin spoca {
+    font-family: 'Spoqa','NotoSans-Regular',dotum;
 }
 
-@mixin rubik_medium {
-    font-family: 'Rubik Medium','NotoSans-Regular',dotum;
-}
-
-@mixin rubik_bold {
-    font-family: 'Rubik Bold','NotoSans-Regular',dotum;
-}
 
 @mixin cont_center {
     max-width:1280px;padding:0 30px; margin:0 auto;

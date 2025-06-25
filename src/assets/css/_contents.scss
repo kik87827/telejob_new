@@ -2,15 +2,17 @@
 
 /* contents layout */
 .sub_title_row{
+    margin:45px 0 35px;
     &.display_type2{
+        display:flex; align-items:center; justify-content: space-between; gap:20px;
         .title_cols{
             .sub_title{}
         }
         .else_cols{}
     }
 }
-.sub_title{}
-.sub_title_copy{}
+.sub_title{@include font(20px, 500, 1.4, 0, #000);}
+.sub_title_copy{@include font(13px,400, 1.4, 0, #595959); margin-top:15px;}
 .fraction_sort_list{
     > li{}
     
@@ -275,11 +277,13 @@ input.file_input{}
 /* board layout */
 .board_container{}
 .board_sort_row{
+    display:flex; background:#F8F8F8; justify-content: space-between; gap:20px; align-items:center; margin-bottom:12px;
     .fraction_cols{}
     .search_cols{}
 }
 .sort_fraction_text{
-    strong{}
+    @include font(13px, 700, 1, 0, #000);
+    strong{@include font(14px, 700, 1, 0, #B5000F); @include spoca;}
 }
 .board_list_row{}
 .list_table_wrap{}
