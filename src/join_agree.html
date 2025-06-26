@@ -6,7 +6,7 @@
       @@include('./include/header.html')
       <!-- middle -->
       <section class="middle_wrap">
-        <div class="middle_container">
+        <div class="middle_inner">
           <div class="middle_one_title_row">
             <h2 class="middle_one_title">회원가입</h2>
           </div>
@@ -14,7 +14,7 @@
             <div class="grid_cols define_guide">
               <div class="info_guide_container">
                 <div class="info_maincopy_row">
-                  <p class="info_maincopy"><strong>대한민국 최초!</strong>TM/영업 전문 취업 플랫폼 - 텔레잡</p>
+                  <p class="info_maincopy"><strong>대한민국 최초!</strong><br />TM/영업 전문 취업 플랫폼 - 텔레잡</p>
                 </div>
                 <div class="info_img_row">
                   <div class="info_img"></div>
@@ -87,7 +87,7 @@
                                   </div>
                                 </div>
                                 <div class="terms_agree_short">
-                                  <button class="btn_terms_view" onclick="termsTail01Popup.popupShow()"></button>
+                                  <button class="btn_terms_view" id="btn_agree_01"></button>
                                 </div>
                               </div>
                             </li>
@@ -96,11 +96,11 @@
                                 <div class="terms_agree_long">
                                   <div class="props_item">
                                     <input type="checkbox" class="props_dom" id="agree_props_02" />
-                                    <label for="agree_props_01" class="props_label">제공에 관한 사항 동의(필수)</label>
+                                    <label for="agree_props_02" class="props_label">제공에 관한 사항 동의(필수)</label>
                                   </div>
                                 </div>
                                 <div class="terms_agree_short">
-                                  <button class="btn_terms_view" onclick="termsTail02Popup.popupShow()"></button>
+                                  <button class="btn_terms_view" id="btn_agree_02"></button>
                                 </div>
                               </div>
                             </li>
@@ -109,11 +109,11 @@
                                 <div class="terms_agree_long">
                                   <div class="props_item">
                                     <input type="checkbox" class="props_dom" id="agree_props_03" />
-                                    <label for="agree_props_01" class="props_label">수집·이용에 관한 사항 동의(필수)</label>
+                                    <label for="agree_props_03" class="props_label">수집·이용에 관한 사항 동의(필수)</label>
                                   </div>
                                 </div>
                                 <div class="terms_agree_short">
-                                  <button class="btn_terms_view" onclick="termsTail03Popup.popupShow()"></button>
+                                  <button class="btn_terms_view" id="btn_agree_03"></button>
                                 </div>
                               </div>
                             </li>
@@ -202,6 +202,44 @@
           });
           // termsTail03Popup.popupShow(); // show
           // termsTail03Popup.popupHide(); // hide
+
+          let tailBtns = ["#btn_agree_01", "#btn_agree_02", "#btn_agree_03"];
+
+          tailBtns.forEach((item) => {
+            document.querySelector(item).addEventListener("click", () => {
+              switch (item) {
+                case "#btn_agree_01":
+                  termsTail01Popup.popupShow();
+                  break;
+                case "#btn_agree_02":
+                  termsTail02Popup.popupShow();
+                  break;
+                case "#btn_agree_03":
+                  termsTail03Popup.popupShow();
+                  break;
+              }
+            });
+          });
+
+          const agreeTotal = document.querySelector("#agree_props_total");
+          const agreeItems = document.querySelectorAll(".bc_terms_detail_list .props_dom");
+
+          if (agreeTotal) {
+            // 전체 동의 클릭 시 개별 항목 전체 선택/해제
+            agreeTotal.addEventListener("click", () => {
+              agreeItems.forEach((item) => {
+                item.checked = agreeTotal.checked;
+              });
+            });
+
+            // 개별 항목 클릭 시 전체 동의 체크 여부 갱신
+            agreeItems.forEach((item) => {
+              item.addEventListener("click", () => {
+                const allChecked = [...agreeItems].every((i) => i.checked);
+                agreeTotal.checked = allChecked;
+              });
+            });
+          }
         });
       </script>
       @@include('./include/footer.html')
