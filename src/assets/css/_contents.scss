@@ -299,6 +299,19 @@ input.file_input{}
 }
 .preview_copy{}
 
+@media (max-width:$tablet){
+    .middle_one_title_row{
+        margin : 60px 0 30px 0;
+    }
+    .middle_one_title{font-size:40px;}
+
+    .middle_grid_box{
+        border-radius : 18px; padding : 50px 30px;
+    }
+    .visual_guide_copy{font-size:18px;}
+    .middle_btn_row{margin-top:30px;}
+}
+
 
 /* board layout */
 .board_container{}

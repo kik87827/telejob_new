@@ -29,6 +29,21 @@
     display:inline-block; width:24px;height:24px; @include bgicon;
     &.delete{background-image:url("../images/ico_delete_24.png");}
 }
+@media (max-width:$tablet){
+    .btn_box{
+        min-height:50px;
+    }
+    .btn_box_text{font-size:18px;}
+    .btn_box_wrap{
+         &.each_type{
+            .btn_box{
+                min-width:220px;
+            }
+        }
+        .btn_box{max-width:220px;}
+    }
+}
+
 
 /* tab */
 .boxtab_wrap{}
