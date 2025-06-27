@@ -1,670 +1,785 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="format-detection" content="telephone=no" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=1400" />
-<link rel="stylesheet" href="./assets/css/style.css" />
-<script src="./assets/js/jquery-3.4.1.min.js"></script>
-<title></title>
-<style type="text/css">
-*{margin:0;padding:0;font-size:14px;}
-ul{list-style: none;margin:0;padding:0;}
-table {border-collapse:collapse; border-spacing:0;}
-table th, strong {font-weight:normal;}
-body{margin:20px;}
-h1{margin:0 0 10px 0;color:#000;font-size:30px;font-family:'Pretendard';font-weight:700;}
-a {text-decoration:none;color:#000;}
-a:hover {text-decoration:underline;}
-.list_w table {	width: 100%;	margin: 20px auto;	border-top: solid 2px #555;	border-collapse: collapse;	border-spacing: 0;	font-size: 13px; text-align:center;}
-.list_w table tr:hover {background:#f3f3f3;}
-.list_w table th {	padding: 10px 0;	border: solid 1px #ddd;	background: #efefef;vertical-align:middle;font-weight:400;font-size:13px;}
-.list_w table td {	padding: 5px 3px;	border: solid 1px #ccc;vertical-align:middle;}
-.lastmdate {color: #1155CC;}
-.stand_by {color:#777;}
-.stop {color:#787878;}
-.ing {color:blue;}
-.bgo{text-align:left;}
-.end {background:green;color:#fff;}
-.else{color:red;}
-.modify{color:#ff5400;}
-.else2{color:#ff5400;}
-.list_w table td.link,
-.list_w table td.td_url,
-.list_w table td.etc{text-align: left; padding-left:10px;}
-.ing_w{border:1px solid #000;margin:0 0 20px;padding:5px 10px;}
-.t_tit{margin:20px 0 10px ;font-size:20px;}
-.ing_w .inglist{}
-.ing_w .inglist li{padding:10px;border-bottom:1px solid #999;}
-.ing_w .inglist li:last-child{border-bottom:0;}
-.ing_w .inglist .date{font-weight:bold;}
-.ing_w .inglist .text{}
-.ing_w .inglist .text .ingtext{font-weight:bold;}
-.guidelist{padding:8px 0;}
-.guidelist li{padding:2px 10px;}
-.alignleft{text-align:left;padding-left:10px !important;}
-.depth td{background:#0B51C5;color:#fff;text-align:left;font-size:20px;padding:10px 20px !important;}
-.depth2 td{background:#e2dbfb;color:#000;text-align:left;font-size:16px;padding:10px 20px !important;}
-.dev_notice{border-top:1px solid #000;border-bottom:1px solid #000;padding:10px;margin:30px 0;}
-</style>
-<script>
-	function procedure(w,h,url) {
-	 cw=screen.availWidth;     //화면 넓이
-	 ch=screen.availHeight;    //화면 높이
-	 sw=w;    //띄울 창의 넓이
-	 sh=h;    //띄울 창의 높이
-	 ml=(cw-sw)/2;        //가운데 띄우기위한 창의 x위치
-	 mt=(ch-sh)/2;         //가운데 띄우기위한 창의 y위치
-	 test=window.open(url,'tst','width='+sw+',height='+sh+',top='+mt+',left='+ml+',resizable=no,scrollbars=yes');
-	}
-</script>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=1400" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/js/jquery-3.4.1.min.js"></script>
+    <title></title>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      table th,
+      strong {
+        font-weight: normal;
+      }
+      body {
+        margin: 20px;
+      }
+      h1 {
+        margin: 0 0 10px 0;
+        color: #000;
+        font-size: 30px;
+        font-family: "Pretendard";
+        font-weight: 700;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .list_w table {
+        width: 100%;
+        margin: 20px auto;
+        border-top: solid 2px #555;
+        border-collapse: collapse;
+        border-spacing: 0;
+        font-size: 13px;
+        text-align: center;
+      }
+      .list_w table tr:hover {
+        background: #f3f3f3;
+      }
+      .list_w table th {
+        padding: 10px 0;
+        border: solid 1px #ddd;
+        background: #efefef;
+        vertical-align: middle;
+        font-weight: 400;
+        font-size: 13px;
+      }
+      .list_w table td {
+        padding: 5px 3px;
+        border: solid 1px #ccc;
+        vertical-align: middle;
+      }
+      .lastmdate {
+        color: #1155cc;
+      }
+      .stand_by {
+        color: #777;
+      }
+      .stop {
+        color: #787878;
+      }
+      .ing {
+        color: blue;
+      }
+      .bgo {
+        text-align: left;
+      }
+      .end {
+        background: green;
+        color: #fff;
+      }
+      .else {
+        color: red;
+      }
+      .modify {
+        color: #ff5400;
+      }
+      .else2 {
+        color: #ff5400;
+      }
+      .list_w table td.link,
+      .list_w table td.td_url,
+      .list_w table td.etc {
+        text-align: left;
+        padding-left: 10px;
+      }
+      .ing_w {
+        border: 1px solid #000;
+        margin: 0 0 20px;
+        padding: 5px 10px;
+      }
+      .t_tit {
+        margin: 20px 0 10px;
+        font-size: 20px;
+      }
+      .ing_w .inglist {
+      }
+      .ing_w .inglist li {
+        padding: 10px;
+        border-bottom: 1px solid #999;
+      }
+      .ing_w .inglist li:last-child {
+        border-bottom: 0;
+      }
+      .ing_w .inglist .date {
+        font-weight: bold;
+      }
+      .ing_w .inglist .text {
+      }
+      .ing_w .inglist .text .ingtext {
+        font-weight: bold;
+      }
+      .guidelist {
+        padding: 8px 0;
+      }
+      .guidelist li {
+        padding: 2px 10px;
+      }
+      .alignleft {
+        text-align: left;
+        padding-left: 10px !important;
+      }
+      .depth td {
+        background: #0b51c5;
+        color: #fff;
+        text-align: left;
+        font-size: 20px;
+        padding: 10px 20px !important;
+      }
+      .depth2 td {
+        background: #e2dbfb;
+        color: #000;
+        text-align: left;
+        font-size: 16px;
+        padding: 10px 20px !important;
+      }
+      .dev_notice {
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+        padding: 10px;
+        margin: 30px 0;
+      }
+    </style>
+    <script>
+      function procedure(w, h, url) {
+        cw = screen.availWidth; //화면 넓이
+        ch = screen.availHeight; //화면 높이
+        sw = w; //띄울 창의 넓이
+        sh = h; //띄울 창의 높이
+        ml = (cw - sw) / 2; //가운데 띄우기위한 창의 x위치
+        mt = (ch - sh) / 2; //가운데 띄우기위한 창의 y위치
+        test = window.open(url, "tst", "width=" + sw + ",height=" + sh + ",top=" + mt + ",left=" + ml + ",resizable=no,scrollbars=yes");
+      }
+    </script>
+  </head>
+  <body id="guide">
+    <!-- eniter wrap -->
+    <div id="guide_wrap">
+      <div class="header">
+        <h1>텔레잡</h1>
+        <p>End page : <span class="curr_n"></span>page / Total page : <span class="total_n"></span>page</p>
+        <p>진행율 : <span class="per"></span></p>
+        <p>깃주소 : <a href="https://github.com/kik87827/telejob_new" target="_blank">https://github.com/kik87827/telejob_new</a></p>
+        <p>소스내 src는 퍼블 컴파일 전 인크로드 환경이고 dist는 컴파일 후 전체 렌더된 환경이니 소스는 dist를 보시면 됩니다.</p>
+      </div>
+      <div class="list_w">
+        <table class="codinglist">
+          <colgroup>
+            <col width="3%" />
+            <col />
+            <col width="25%" />
+            <col width="12%" />
+            <col width="25%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th>no.</th>
+              <th>filename/link</th>
+              <th>HTML 파일명</th>
+              <th>현황</th>
+              <th>전달사항</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="depth">
+              <td colspan="5">샘플</td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="layout.html" target="_blank">레이아웃 샘플 1</a></td>
+              <td class="td_url"></td>
+              <td class="work end"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="layout2.html" target="_blank">레이아웃 샘플 2</a></td>
+              <td class="td_url"></td>
+              <td class="work end"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="layout3.html" target="_blank">레이아웃 샘플 3</a></td>
+              <td class="td_url"></td>
+              <td class="work end"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="layout4.html" target="_blank">레이아웃 샘플 4</a></td>
+              <td class="td_url"></td>
+              <td class="work end"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="popup.html" target="_blank">팝업 샘플</a></td>
+              <td class="td_url"></td>
+              <td class="work end"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="modal.html" target="_blank">모달 샘플</a></td>
+              <td class="td_url"></td>
+              <td class="work end"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr class="depth">
+              <td colspan="5">메인</td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="main.html" target="_blank">메인</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr class="depth">
+              <td colspan="5">회원</td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="login.html" target="_blank">로그인 - 개인회원</a></td>
+              <td class="td_url"></td>
+              <td class="work end"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="login2.html" target="_blank">로그인 - 기업회원</a></td>
+              <td class="td_url"></td>
+              <td class="work end"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="idsearch.html" target="_blank">아이디찾기 - 회원정보입력 - 개인회원</a></td>
+              <td class="td_url"></td>
+              <td class="work end"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="idsearch2.html" target="_blank">아이디찾기 - 회원정보입력 - 기업회원</a></td>
+              <td class="td_url"></td>
+              <td class="work end"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="pwsearch.html" target="_blank">비밀번호찾기 - 회원정보입력 - 개인회원</a></td>
+              <td class="td_url"></td>
+              <td class="work end"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="pwsearch2.html" target="_blank">비밀번호찾기 - 회원정보입력 - 기업회원</a></td>
+              <td class="td_url"></td>
+              <td class="work end"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="idsearch_end.html" target="_blank">아이디찾기 완료</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="join_agree.html" target="_blank">회원가입 - 약관동의</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="join_iden.html" target="_blank">회원가입 - 본인인증</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="join_form.html" target="_blank">회원가입 - 정보입력</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="join_end.html" target="_blank">회원가입 - 가입완료</a></td>
+              <td class="td_url"></td>
+              <td class="work end"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr class="depth">
+              <td colspan="5">채용정보</td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="recruit_search.html" target="_blank">상세검색</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="recruit_search2.html" target="_blank">상세검색2</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="recruit_detail.html" target="_blank">채용정보 상세</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="recruit_detail.html?popup" target="_blank">채용정보 상세 - 구직상담 Call-Back 신청</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="recruit_view.html" target="_blank">콜백채용정보 - 채용정보 상세</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="recruit_data_popular.html" target="_blank">인기채용정보/우수기업 - 인기채용정보</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="recruit_data_company.html" target="_blank">인기채용정보/우수기업 - 우수기업 전용채용관</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="recruit_talent_list.html" target="_blank">인재정보 - 리스트</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="recruit_talent_detail.html" target="_blank">인재정보 - 상세</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr class="depth">
+              <td colspan="5">공지/뉴스</td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="notice_list.html" target="_blank">리스트</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="notice_view.html" target="_blank">뷰</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr class="depth">
+              <td colspan="5">고객센터</td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="customer.html" target="_blank">고객센터</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr class="depth">
+              <td colspan="5">통합검색</td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="totalsearch.html" target="_blank">통합검색</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr class="depth">
+              <td colspan="5">기타</td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="etc_guide.html" target="_blank">이용약관</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="etc_personal.html" target="_blank">개인정보 처리방침</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="etc_right.html" target="_blank">권리침해 신고센터</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr class="depth">
+              <td colspan="5">서브_개인</td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="login_data.html" target="_blank">로그인정보</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="myresume_manage.html" target="_blank">내이력서관리</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="resume_write.html" target="_blank">이력서등록</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="entrance_current.html" target="_blank">입시지원현황</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="scrap_data.html" target="_blank">스크랩한채용정보</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="employ_docu.html" target="_blank">취업활동증명서</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="dont_open_com.html" target="_blank">열람제한기업등록</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="dont_open_com.html?popup" target="_blank">열람제한기업등록 - 팝업</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="member_data_modify.html" target="_blank">회원정보수정</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="member_dropout.html" target="_blank">회원탈퇴</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="member_dropout.html?modal" target="_blank">회원탈퇴 - confirm</a></td>
+              <td class="td_url"></td>
+              <td class="work end"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="member_dropout_end.html" target="_blank">회원탈퇴 - 완료</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr class="depth">
+              <td colspan="5">서브_기업</td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="ongoing_service.html" target="_blank">진행중인유료서비스</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="ongoing_service.html?popup" target="_blank">진행중인유료서비스 - 팝업(로고등록)</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="employ_notice_write.html" target="_blank">채용공고등록</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="employ_notice_write.html?popup01" target="_blank">채용공고등록 - 팝업_로고등록</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="employ_notice_write.html?popup02" target="_blank">채용공고등록 - 팝업_최저임금</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="employ_notice_write.html?popup03" target="_blank">채용공고등록 - 팝업_로고선택</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="employ_notice_detail.html" target="_blank">채용공고등록 - 상세내용</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="employ_notice_detail.html" target="_blank">채용공고등록 - 회사정보</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="employ_notice_detail.html" target="_blank">채용공고등록 - 자격요건, 근무환경</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="employ_notice_detail.html" target="_blank">채용공고등록 - 전형 및 접수방법</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="employ_notice_detail.html" target="_blank">채용공고등록 - 채용담당자</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="paid_service_tab01.html" target="_blank">유료서비스관리 - 채용정보연결 - 진행중인 유료서비스(TAB)</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="paid_service_tab02.html" target="_blank">유료서비스관리 - 채용정보연결 - 유료서비스 설정(TAB)</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="paid_service_tab03.html" target="_blank">유료서비스관리 - 채용정보연결 - 서비스 연장결제(TAB)</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="paid_service_history.html" target="_blank">유료서비스 이용내역</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="reserve_current.html" target="_blank">서비스 예약현황</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="paid_service_step.html" target="_blank">유료서비스 이용절차</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="paid_service_step.html?popup01" target="_blank">유료서비스 이용절차 - POPUP 상품신청</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="paid_service_step.html?popup02" target="_blank">유료서비스 이용절차 - POPUP 상품신청후</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="paid_service_step.html?popup03" target="_blank">유료서비스 이용절차 - POPUP 장바구니</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="pay_01.html" target="_blank">결제하기1</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+            <tr>
+              <td class="no"></td>
+              <td class="link"><a href="vip.html" target="_blank">VIP전용관</a></td>
+              <td class="td_url"></td>
+              <td class="work"></td>
+              <td class="bgo"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
-</head>
-<body id="guide">
+    <script type="text/javascript">
+      $(function () {
+        chkList();
+      });
 
-<!-- eniter wrap -->
-<div id="guide_wrap">
-	<div class="header">
-		<h1>텔레잡</h1> 
-		<p>End page : <span class="curr_n"></span>page / Total page : <span class="total_n"></span>page</p>
-		<p>진행율 : <span class="per"></span></p>
-		<p>깃주소 : <a href="https://github.com/kik87827/telejob_new" target="_blank">https://github.com/kik87827/telejob_new</a></p>
-		<p>소스내 src는 퍼블 컴파일 전 인크로드 환경이고 dist는 컴파일 후 전체 렌더된 환경이니 소스는 dist를 보시면 됩니다.</p>
-	</div>
-   <div class="list_w">
-		<table class="codinglist">
-			<colgroup>
-				<col width="3%" />
-				<col />
-				<col width="25%" />
-				<col width="12%" />
-				<col width="25%" />
-			</colgroup>
-			<thead>
-				<tr>
-					<th>no.</th>
-					<th>filename/link</th>
-					<th>HTML 파일명</th>
-					<th>현황</th>
-					<th>전달사항</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class="depth">
-					<td colspan="5">샘플</td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="layout.html" target="_blank">레이아웃 샘플 1</a></td>
-					<td class="td_url"></td>
-					<td class="work end"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="layout2.html" target="_blank">레이아웃 샘플 2</a></td>
-					<td class="td_url"></td>
-					<td class="work end"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="layout3.html" target="_blank">레이아웃 샘플 3</a></td>
-					<td class="td_url"></td>
-					<td class="work end"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="layout4.html" target="_blank">레이아웃 샘플 4</a></td>
-					<td class="td_url"></td>
-					<td class="work end"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="popup.html" target="_blank">팝업 샘플</a></td>
-					<td class="td_url"></td>
-					<td class="work end"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="modal.html" target="_blank">모달 샘플</a></td>
-					<td class="td_url"></td>
-					<td class="work end"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr class="depth">
-					<td colspan="5">메인</td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="main.html" target="_blank">메인</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr class="depth">
-					<td colspan="5">회원</td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="login.html" target="_blank">로그인 - 개인회원</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="login2.html" target="_blank">로그인 - 기업회원</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="idsearch.html" target="_blank">아이디찾기 - 회원정보입력 - 개인회원</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="idsearch2.html" target="_blank">아이디찾기 - 회원정보입력 - 기업회원</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="pwsearch.html" target="_blank">비밀번호찾기 - 회원정보입력 - 개인회원</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="pwsearch2.html" target="_blank">비밀번호찾기 - 회원정보입력 - 기업회원</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="idsearch_end.html" target="_blank">아이디찾기 완료</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="join_agree.html" target="_blank">회원가입 - 약관동의</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="join_iden.html" target="_blank">회원가입 - 본인인증</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="join_form.html" target="_blank">회원가입 - 정보입력</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="join_end.html" target="_blank">회원가입 - 가입완료</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr class="depth">
-					<td colspan="5">채용정보</td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="recruit_search.html" target="_blank">상세검색</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="recruit_search2.html" target="_blank">상세검색2</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="recruit_detail.html" target="_blank">채용정보 상세</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="recruit_detail.html?popup" target="_blank">채용정보 상세 - 구직상담 Call-Back 신청</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="recruit_view.html" target="_blank">콜백채용정보 - 채용정보 상세</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="recruit_data_popular.html" target="_blank">인기채용정보/우수기업 - 인기채용정보</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="recruit_data_company.html" target="_blank">인기채용정보/우수기업 - 우수기업 전용채용관</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="recruit_talent_list.html" target="_blank">인재정보 - 리스트</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="recruit_talent_detail.html" target="_blank">인재정보 - 상세</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr class="depth">
-					<td colspan="5">공지/뉴스</td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="notice_list.html" target="_blank">리스트</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="notice_view.html" target="_blank">뷰</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr class="depth">
-					<td colspan="5">고객센터</td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="customer.html" target="_blank">고객센터</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr class="depth">
-					<td colspan="5">통합검색</td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="totalsearch.html" target="_blank">통합검색</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr class="depth">
-					<td colspan="5">기타</td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="etc_guide.html" target="_blank">이용약관</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="etc_personal.html" target="_blank">개인정보 처리방침</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="etc_right.html" target="_blank">권리침해 신고센터</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr class="depth">
-					<td colspan="5">서브_개인</td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="login_data.html" target="_blank">로그인정보</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="myresume_manage.html" target="_blank">내이력서관리</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="resume_write.html" target="_blank">이력서등록</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="entrance_current.html" target="_blank">입시지원현황</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="scrap_data.html" target="_blank">스크랩한채용정보</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="employ_docu.html" target="_blank">취업활동증명서</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="dont_open_com.html" target="_blank">열람제한기업등록</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="dont_open_com.html?popup" target="_blank">열람제한기업등록 - 팝업</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="member_data_modify.html" target="_blank">회원정보수정</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="member_dropout.html" target="_blank">회원탈퇴</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="member_dropout.html?modal" target="_blank">회원탈퇴 - confirm</a></td>
-					<td class="td_url"></td>
-					<td class="work end"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="member_dropout_end.html" target="_blank">회원탈퇴 - 완료</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr class="depth">
-					<td colspan="5">서브_기업</td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="ongoing_service.html" target="_blank">진행중인유료서비스</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="ongoing_service.html?popup" target="_blank">진행중인유료서비스 - 팝업(로고등록)</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="employ_notice_write.html" target="_blank">채용공고등록</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="employ_notice_write.html?popup01" target="_blank">채용공고등록 - 팝업_로고등록</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="employ_notice_write.html?popup02" target="_blank">채용공고등록 - 팝업_최저임금</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="employ_notice_write.html?popup03" target="_blank">채용공고등록 - 팝업_로고선택</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="employ_notice_detail.html" target="_blank">채용공고등록 - 상세내용</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="employ_notice_detail.html" target="_blank">채용공고등록 - 회사정보</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="employ_notice_detail.html" target="_blank">채용공고등록 - 자격요건, 근무환경</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="employ_notice_detail.html" target="_blank">채용공고등록 - 전형 및 접수방법</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="employ_notice_detail.html" target="_blank">채용공고등록 - 채용담당자</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="paid_service_tab01.html" target="_blank">유료서비스관리 - 채용정보연결 - 진행중인 유료서비스(TAB)</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="paid_service_tab02.html" target="_blank">유료서비스관리 - 채용정보연결 - 유료서비스 설정(TAB)</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="paid_service_tab03.html" target="_blank">유료서비스관리 - 채용정보연결 - 서비스 연장결제(TAB)</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="paid_service_history.html" target="_blank">유료서비스 이용내역</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="reserve_current.html" target="_blank">서비스 예약현황</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="paid_service_step.html" target="_blank">유료서비스 이용절차</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="paid_service_step.html?popup01" target="_blank">유료서비스 이용절차 - POPUP 상품신청</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="paid_service_step.html?popup02" target="_blank">유료서비스 이용절차 - POPUP 상품신청후</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="paid_service_step.html?popup03" target="_blank">유료서비스 이용절차 - POPUP 장바구니</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="pay_01.html" target="_blank">결제하기1</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-				<tr>
-					<td class="no"></td>
-					<td class="link"><a href="vip.html" target="_blank">VIP전용관</a></td>
-					<td class="td_url"></td>
-					<td class="work"></td>
-					<td class="bgo"></td>
-				</tr>
-			</tbody>
-		</table>
-  </div>
-</div>
+      function chkList() {
+        var tatal_n = $(".codinglist tr").length - $(".depth,.depth2").length - 1;
+        var curr_n = 0;
+        var $ctd = $(".codinglist td.work"),
+          $ctr = $(".codinglist tr");
 
-<script type="text/javascript">
-$(function () {
-	chkList();
-});
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1; //January is 0!
+        var yyyy = today.getFullYear();
 
-function chkList(){
-	var tatal_n = $(".codinglist tr").length - $(".depth,.depth2").length-1;
-	var curr_n = 0;
-	var $ctd = $(".codinglist td.work"),
-		$ctr = $(".codinglist tr");
+        if (dd < 10) {
+          dd = "0" + dd;
+        }
 
-	var today = new Date();
-	var dd = today.getDate();
-	var mm = today.getMonth()+1; //January is 0!
-	var yyyy = today.getFullYear();
+        if (mm < 10) {
+          mm = "0" + mm;
+        }
 
-	if(dd<10) {
-		dd = '0'+dd
-	} 
+        today = yyyy + "-" + mm + "-" + dd;
 
-	if(mm<10) {
-		mm = '0'+mm
-	} 
+        $ctr.each(function (index) {
+          var $this = $(this),
+            $td = $this.find("td.work");
+          if ($td.hasClass("end")) {
+            curr_n++;
+            $td.text("완료");
+          } else {
+            if ($td.hasClass("ing")) {
+              $td.text(today + " 작업중").addClass("ing");
+            } else if ($td.hasClass("else")) {
+              $td.text("보류").addClass("else");
+            } else if ($td.hasClass("else2")) {
+              $td.text("예외").addClass("else2");
+            } else {
+              $td.text("대기중").addClass("stand_by");
+            }
+          }
+        });
+        $(".codinglist tr").each(function () {
+          var index = $(".codinglist tr").not(".depth").index(this);
+          $(this).children(".codinglist td.no").text(index);
+        });
+        $("td.link > a").each(function () {
+          var $this = $(this),
+            $t_href = $this.attr("href");
 
-	today = yyyy + '-' + mm + '-' + dd;
-	
-	$ctr.each(function(index) {
-		var $this = $(this),
-			$td = $this.find("td.work");
-		if($td.hasClass("end")){
-			curr_n++
-			$td.text("완료");
-		} else {
-			if($td.hasClass("ing")){
-				$td.text(today+" 작업중").addClass('ing');
-			}else if($td.hasClass("else")){
-				$td.text("보류").addClass('else');
-			}else if($td.hasClass("else2")){
-				$td.text("예외").addClass('else2');
-			}else{
-				$td.text("대기중").addClass('stand_by');
-			}
-		}
-	});
-	$(".codinglist tr").each(function() {
-		var index = $(".codinglist tr").not('.depth').index(this);
-		$(this).children(".codinglist td.no").text(index);
-	});
-	$("td.link > a").each(function(){
-		var $this = $(this),
-			$t_href = $this.attr("href");
-		
-		if($this.parent(".link").hasClass("type2")){
-			$this.parent("td").next(".td_url").append('<a href='+$t_href+'>'+$t_href+'</a>');
-		}else{
-			$this.parent("td").next(".td_url").append('<a href='+$t_href+' target="_blank">'+$t_href+'</a>');
-		}
-		
-	});
-	$('.total_n').text(tatal_n);
-	$('.curr_n').text(curr_n);
-	$('.per').text(Math.floor((curr_n/tatal_n)*100) + '%');
-}
-</script>
-</body>
+          if ($this.parent(".link").hasClass("type2")) {
+            $this
+              .parent("td")
+              .next(".td_url")
+              .append("<a href=" + $t_href + ">" + $t_href + "</a>");
+          } else {
+            $this
+              .parent("td")
+              .next(".td_url")
+              .append("<a href=" + $t_href + ' target="_blank">' + $t_href + "</a>");
+          }
+        });
+        $(".total_n").text(tatal_n);
+        $(".curr_n").text(curr_n);
+        $(".per").text(Math.floor((curr_n / tatal_n) * 100) + "%");
+      }
+    </script>
+  </body>
 </html>

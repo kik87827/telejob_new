@@ -17,7 +17,7 @@
 }
 .btn_box_text{@include font(20px, 700, 1, 0, #000); display:inline-block;}
 .btn_box_wrap{
-    display:flex; justify-content: center; gap:12px; flex-wrap:wrap; text-align:center;
+    display:flex; justify-content: center; gap:12px; text-align:center; flex-wrap:wrap;
     &.each_type{
         .btn_box{
             flex:auto; min-width:260px;
@@ -43,7 +43,31 @@
         .btn_box{max-width:220px;}
     }
 }
-
+@media (max-width:$mobile_large){
+    .btn_box_wrap{
+        margin-top:30px;
+        &.each_type{
+            .btn_box{
+                min-width:0;
+            }
+        }
+    }
+    .btn_box{min-height:45px;}
+    .btn_box_text{font-size:16px;}
+}
+@media (max-width:$mobile){
+    .btn_box_wrap{
+        margin-top:30px; flex-direction: column;
+        &.each_type{
+             flex-wrap:wrap; gap:10px 0;
+            .btn_box{
+                min-width:0;
+            }
+        }
+        .btn_box{max-width:100%;}
+    }
+    .btn_box{min-height:45px;}
+}
 
 /* tab */
 .boxtab_wrap{}
@@ -67,6 +91,13 @@
     }
 }
 .boxtab_text{@include font(16px, 700, 1, 0, #595959); display:inline-block;}
+@media (max-width:$tablet){
+    .boxtab_list{min-height:50px;}
+}
+@media (max-width:$mobile_large){
+    .boxtab_text{font-size:14px;}
+    .boxtab_list{min-height:45px;}
+}
 
 /* form */
 .block_form_wrap{}
@@ -198,7 +229,26 @@ select.form_select{
 .setbox_td_cols{
   .props_item_list{}
 }
-
+.mobile_placeholder{font-size:12px; color:#aaa; margin-top:10px;}
+@media (max-width:$tablet){
+    .btn_inline_control{padding:12px 20px;}
+}
+@media (max-width:$mobile_large){
+    /* .block_form_list{
+         > li{margin-bottom:20px;}
+    } */
+    input.form_input{font-size:13px;height:45px;}
+}
+@media (max-width:$mobile){
+    .inline_flex_wrap{gap:8px;}
+    .btn_inline_control{padding:8px 16px; min-height:45px; font-size:13px;}
+    input.form_input{
+        &.lone_place{
+            &::placeholder{color:transparent;}
+        }
+    }
+    .mobile_placeholder{display:block;}
+}
 
 /* modal */
 .modal_wrap{
