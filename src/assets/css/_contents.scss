@@ -366,6 +366,8 @@ input.file_input{}
     .field_section{margin-bottom:50px;padding-bottom:50px;}
     .field_title_row{margin-bottom:30px;}
     .field_setbox{border-radius:10px; padding:20px;}
+
+    .middle_bottom_btn_row{margin-top:30px;}
 }
 @media (max-width:$mobile_large){
     .middle_one_title_row{margin:35px 0 20px 0;}
@@ -429,6 +431,18 @@ input.file_input{}
     .sns_dom_list{gap:10px;}
 
     .import_note_list{text-align:left;}
+
+    .middle_message_copy{font-size:16px;}
+
+    .middle_render_box, .middle_grid_box{padding:30px 20px; border-radius:10px;}
+    .middle_render_box{text-align:center;}
+    .obj_render_list{display:inline-block;
+        > li{margin-bottom:10px;
+            &:last-of-type{margin-bottom:0;}
+        }
+    }
+
+    .obj_render_key, .obj_render_value{font-size:14px;}
 }
 
 /* board layout */
