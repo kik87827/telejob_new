@@ -45,7 +45,6 @@
 }
 @media (max-width:$mobile_large){
     .btn_box_wrap{
-        margin-top:30px;
         &.each_type{
             .btn_box{
                 min-width:0;
@@ -58,6 +57,9 @@
 @media (max-width:$mobile){
     .btn_box_wrap{
         margin-top:30px; flex-direction: column;
+        &.nobreak{
+            flex-direction: row;
+        }
         &.each_type{
              flex-wrap:wrap; gap:10px 0;
             .btn_box{
@@ -108,7 +110,9 @@
     }
 }
 .block_form_item{}
-.block_form_label_row{margin-bottom:12px;}
+.block_form_label_row{margin-bottom:12px;
+    &.vhidden{visibility:hidden;}
+}
 .block_form_label{
    @include font(16px, 400, 1.3, 0, #000);
   .ico_import{margin-left:5px;vertical-align:top; position:relative;top:3px;}
@@ -136,7 +140,7 @@ input.form_input{
     display:flex; gap:4px;
 }
 input.props_dom{
-    appearance: none; width:22px; height:22px; @include bgicon; background-image:url("../images/ico_checkbox_22.png"); border:1px solid #DBDBDB; border-radius:4px; box-sizing:content-box;
+    appearance: none; width:22px; height:22px; flex:0 0 22px; @include bgicon; background-image:url("../images/ico_checkbox_22.png"); border:1px solid #DBDBDB; border-radius:4px; box-sizing:content-box;
     &[type="radio"]{border-radius:100%; background-image:url("../images/ico_radio.png");
         &:checked{border-color:#4285F4;}
     }
@@ -189,15 +193,18 @@ input.props_dom{
 }
 .ico_import{display:inline-block; @include bgicon; background-image:url("../images/etri.svg"); width:5px;height:6px; vertical-align:middle;}
 .field_content_row{}
-.multi_ring_wrap{display:flex; align-items:center; gap:12px;}
+.multi_ring_wrap{display:flex; align-items:center; gap:12px;
+
+    .unit_text{@include font(16px,400,1,1,#595959);}
+}
 .multi_ring_long{
-  flex:1;
+  flex:1; display:flex; align-items:center;
+  .unit_text{padding-left:10px; display:none;}
   input.form_input{}
 }
 .multi_ring_short{flex:0 0 120px;white-space:nowrap;}
 .multi_ring_unit{
-  flex:0;white-space:nowrap; padding:0 12px;
-  .unit_text{@include font(16px,400,1,1,#595959);}
+  flex:0;white-space:nowrap; /* padding:0 12px; */
 }
 /* select.block_form_select{
  appearance: none; box-sizing:border-box; height:48px; font-size:16px; line-height:46px; width:100%; border:0; border-bottom:1px solid #BDC5D1; padding:0 42px 0 0; background:url("../images/ico_select_arrow.png") no-repeat calc(100% - 13px) 50%/16px auto;
@@ -229,9 +236,14 @@ select.form_select{
 .setbox_td_cols{
   .props_item_list{}
 }
-.mobile_placeholder{font-size:12px; color:#aaa; margin-top:10px;}
+.mobile_sm_placeholder,
+.mobile_placeholder{font-size:12px; color:#aaa; margin-top:10px; display:none;}
 @media (max-width:$tablet){
     .btn_inline_control{padding:12px 20px;}
+    
+    .grid_form_list{gap:25px 30px;
+        > li{flex-basis: calc(50% - 15px);}
+    }
 }
 @media (max-width:$mobile_large){
     /* .block_form_list{
@@ -240,14 +252,54 @@ select.form_select{
     input.form_input{font-size:13px;height:45px;}
 }
 @media (max-width:$mobile){
-    .inline_flex_wrap{gap:8px;}
+    .inline_flex_wrap{gap:8px;
+        &.break_type{
+            display:block;
+            .inline_short{
+                margin-top:15px; text-align:right;
+                .btn_inline_control{display:inline-flex;}
+            }
+        }
+    }
+    .multi_ring_wrap{display:block;
+        &.nobreak{display:flex;}
+    }
+    .multi_ring_unit{display:none;}
+    .multi_ring_short{white-space:normal;}
     .btn_inline_control{padding:8px 16px; min-height:45px; font-size:13px;}
     input.form_input{
-        &.lone_place{
+        &.long_place{
             &::placeholder{color:transparent;}
         }
     }
     .mobile_placeholder{display:block;}
+    .multi_ring_long{
+        .unit_text{display:inline-block;}
+    }
+    .block_form_label_row{
+        &.vhidden{display:none;}
+    }
+
+    .field_title_row{
+        &.break_type{display:block;
+            .sub_cols{text-align:left; margin-top:10px;}
+        }
+    }
+    .setbox_thtext{font-size:14px;}
+    .field_setbox_list{
+        > li{display:block;}
+    }
+    .setbox_td_cols{margin-top:10px;}
+
+    .grid_form_list{gap:25px 0;}
+}
+@media (max-width:$mobile_size3){
+    input.form_input{
+        &.long_place_sm{
+            &::placeholder{color:transparent;}
+        }
+    }
+    .mobile_sm_placeholder{display:block;}
 }
 
 /* modal */
