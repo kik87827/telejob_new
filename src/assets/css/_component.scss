@@ -215,7 +215,7 @@ select.form_select{
 } */
 
 select.form_select{
- appearance: none; box-sizing:border-box; height:48px; font-size:16px; line-height:46px; width:100%; border:1px solid #E6E6E6; border-radius:8px; padding:0 42px 0 13px; background:url("../images/ico_select_arrow.png") no-repeat calc(100% - 13px) 50%/16px auto;
+ appearance: none; cursor: pointer; box-sizing:border-box; height:48px; font-size:16px; line-height:46px; width:100%; border:1px solid #E6E6E6; border-radius:8px; padding:0 42px 0 13px; background:#fff url("../images/ico_select_arrow.png") no-repeat calc(100% - 13px) 50%/16px auto;
     &.block_type{
          border:0; border-bottom:1px solid #BDC5D1; border-radius:0; padding-left:0;
     }
