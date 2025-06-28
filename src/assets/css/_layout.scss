@@ -418,7 +418,7 @@ input.mb_nav_form_input{line-height:1;width:100%;border:0;appearance: none;box-s
   .spec_main{font-size:14px; color:#000;}
   .spec_sub{font-size:12px; color:#595959;margin-top:5px;}
 }
-
+.footer_mobile_logo_row{display:none;}
 
 @media (max-width:$pcwid){
     .header_wrap{padding-top:20px;
@@ -514,19 +514,31 @@ input.mb_nav_form_input{line-height:1;width:100%;border:0;appearance: none;box-s
     .header_nav_row{margin-top:0;}
 
     .middle_inner{padding:0 20px 60px}
-
-    .footer_menu_container{padding:12px 20px;}
-    .footer_menu_list{gap:10px 10px;flex-wrap:wrap;
-        > li.mb_hidden{display:none;}
+    .footer_wrap{padding-top:24px; border-top:1px solid rgba(0,0,0,.05);}
+    .footer_mobile_logo_row{display:block;padding:0 24px 10px;}
+    .footer_menu_row{border:0;}
+    .footer_menu_container{padding:0 24px;}
+    .footer_menu_list{gap:10px 26px;flex-wrap:wrap;
+        > li{
+            position:relative;
+            &:after{
+                display:block;content:'';width:1px;height:10px; background:rgba(0,0,0,.3); position:absolute;top:50%;right:-13px; transform: translateY(-50%);
+            }
+            &.mb_last{
+                &:after{display:none;}
+            }
+            &.mb_hidden{display:none;}
+        }
     }
     .footer_menu{font-size:12px;}
-    .footer_copy_para{white-space: normal;}
-    .footer_copy{font-size:11px;}
+    .footer_copy_para{white-space: normal; display:block;}
+    .footer_copy{font-size:11px; display:inline; padding-right:10px; margin-bottom:10px;}
     .footer_logo{max-width:50px;}
     .footer_main_container{
-        flex-wrap:wrap; padding:20px; gap:20px;
-        .logo_cols{flex-basis: 50px;}
+        flex-wrap:wrap; padding:12px 24px 36px; gap:20px;
+        .logo_cols{flex-basis: 50px; display:none;}
         .else_cols{flex:0 0 100%; display:none;}
+        .text_cols{margin-right:-10px;}
     }
     .footer_partner_list{margin-top:20px;}
     .footer_partner_item{
@@ -535,4 +547,14 @@ input.mb_nav_form_input{line-height:1;width:100%;border:0;appearance: none;box-s
     }
 
     .btn_topgo_wrap{display:block;}
+}
+
+@media (max-width:$mobile_small){
+    .footer_menu_list{gap:5px 16px;
+         > li{
+             &:after{
+                right:-9px;
+            }
+        }
+    }
 }
