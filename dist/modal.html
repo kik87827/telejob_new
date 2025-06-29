@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;  charset=utf-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="./assets/css/style.css" rel="stylesheet">
+	<script src="./assets/js/jquery-3.4.1.min.js"></script>
+	<script src="./assets/js/dynamicListener.min.js"></script>
+	<script src="./assets/js/swiper.min.js"></script>
+	<script src="./assets/js/ui.js"></script>
+	<title>텔레잡</title>
+</head>
+
+<body class="front_body">
+	<div class="page_wrap">
+		<div>
+			<a href="#" class="btn_guide_box" id="btnCall">모달 호출</a>
+		</div>
+
+
+		<script>
+			let modalOption = {
+				message: "정말 회원 탈퇴를 하시겠습니까?",
+				modaltype: 'confirm',
+				okcallback() {
+					console.log('okcallback');
+				},
+				cancelcallback() {
+					console.log('cancelcallback');
+				}
+			}
+			designModal(modalOption);
+
+			document.addEventListener("DOMContentLoaded", function() {
+
+
+				// event
+				document.querySelector("#btnCall").addEventListener("click", () => {
+					designModal(modalOption);
+				});
+			});
+		</script>
+	</div>
+</body>
+
+</html>
