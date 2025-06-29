@@ -33,6 +33,19 @@ $warn : #e84854;
   letter-spacing: $letterSpacing;
   color: $color;
 }
+
+
+@mixin font2(
+  $size,
+  $weight: normal,
+  $lineHeight: normal,
+  $color: inherit
+) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
+  color: $color;
+}
 @mixin bgicon {
     background-repeat:no-repeat; background-size:100% auto; background-position:0 0;
 }
