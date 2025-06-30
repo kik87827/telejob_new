@@ -6224,6 +6224,29 @@ input.file_input {
     width: 18px;
     height: 18px;
   }
+  .form_fieldset_wrap {
+    gap: 5px;
+    padding: 10px;
+  }
+  .form_fieldset_wrap .form_cols {
+    border-radius: 5px;
+  }
+  .btn_form_reset {
+    margin-right: 10px;
+  }
+  .btn_fieldset_submit {
+    min-height: 40px;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+  input.fieldset_input {
+    height: 38px;
+    font-size: 13px;
+  }
+  .img_preview_render {
+    min-height: 200px;
+  }
 }
 /* board layout */
 .board_sort_row {
@@ -7344,12 +7367,16 @@ input.file_input {
 .indent_para_list > li {
   display: flex;
   gap: 5px;
+  margin-bottom: 3px;
+}
+.indent_para_list > li:last-of-type {
+  margin-bottom: 0;
 }
 .indent_para_list.order_list {
   font-size: 13px;
   font-weight: 400;
   line-height: 1.33;
-  letter-spacing: 1;
+  letter-spacing: 0;
   color: #595959;
 }
 .indent_bullet {
@@ -7366,12 +7393,13 @@ input.file_input {
   font-size: 13px;
   font-weight: 400;
   line-height: 1.33;
-  letter-spacing: 1;
+  letter-spacing: 0;
   color: #595959;
 }
 .bullet_list > li {
   position: relative;
   padding-left: 10px;
+  margin-bottom: 3px;
 }
 .bullet_list > li:before {
   display: block;
@@ -7383,6 +7411,9 @@ input.file_input {
   top: 8px;
   left: 0;
   border-radius: 100%;
+}
+.bullet_list > li:last-of-type {
+  margin-bottom: 0;
 }
 
 .dark_emp {
