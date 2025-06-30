@@ -924,7 +924,7 @@ input.file_input{display:none;}
 .gallery_item{}
 .gallery_thumnail{
     background:#F8F8F8; height:90px; display:flex; justify-content:center; text-align:center; box-sizing:border-box; padding:15px;
-    img{vertical-align:middle;height:100%; width:auto; max-width:100%;}
+    img{vertical-align:middle;height:100%; width:auto; max-width:100%; object-fit: contain; object-position: 50% 50%;}
 }
 .gallery_spec{
     margin-top:12px;
@@ -994,6 +994,45 @@ input.file_input{display:none;}
     .column_head{gap:8px; margin-bottom:16px;}
     .column_head_para, .column_body_para{font-size:13px;}
     .column_body{gap:8px;padding:15px;}
+}
+@media (max-width:$mobile){
+    .list_fraction_top_row{margin-bottom:12px; gap:15px;}
+    .list_frac_copy{font-size:14px;}
+    .respon_entry_tb{
+        display:block;
+        tbody{ display:block;
+            tr{
+                display:block; border-bottom : 1px solid #E6E6E6; padding:10px 50px 10px 15px; position:relative;
+            }
+        }
+        td{
+            display:block; padding:5px 0; border:0; text-align:left;
+            &.date_cols{width:auto;}
+            &.price_cols{text-align:left; width:auto;
+                .price_dom{justify-content: flex-start;}
+                .price_main{font-weight:400; font-size:16px;}
+            }
+            &.ico_cols{width:auto;
+                position:absolute;top:50%;right:15px; transform: translateY(-50%);
+            }
+        }
+    }
+    .entry_main_para,
+    .entry_number_text{font-size:14px;}
+    .foot_total_wrap{
+        padding:18px 20px; margin-top:12px;
+    }
+    .foot_total_key{font-size:14px;}
+
+    .price_main{font-size:20px;}
+    .price_unit{}
+
+    .btn_action_box{font-size:13px;}
+
+    .scroll_list_container{height:auto;padding:12px 12px;}
+    .gallery_list{
+        > li{flex: 0 0 calc(50% - 12px);}
+    }
 }
 
 /* text */
@@ -1104,3 +1143,31 @@ input.file_input{display:none;}
     .dia_price_unit{@include font(14px,400,1.33,0,#595959);}
 }
 .dia_detail_caption_para{@include font(14px,400,1.33,0,#595959); margin-top:10px;}
+@media (max-width:$mobile){
+    .total_dia_render{
+        padding:24px 18px;
+        .dia_row{
+            padding-bottom:18px;margin-bottom:18px;
+        }
+    }
+    .dia_total_list{
+        gap:10px;
+    }
+    .dia_total_key{font-size:14px;}
+    .dia_price_number{font-size: 24px;}
+    .dia_detail_list{
+        display:flex; text-align:center;
+        > li{flex:1; min-width:0;}
+    }
+    .dia_detail_item{
+        dt,dd{}
+        dt{}
+        dd{margin-top:12px;}
+    }
+    .dia_detail_key{font-size:14px;}
+    .dia_detail_price_wrap{
+        gap:2px;
+        .dia_price_number{font-size:16px;}
+        .dia_price_unit{font-size:12px;}
+    }
+}
