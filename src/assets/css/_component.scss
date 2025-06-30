@@ -250,6 +250,9 @@ select.form_select{
          > li{margin-bottom:20px;}
     } */
     input.form_input{font-size:13px;height:45px;}
+    select.form_select{
+        height:40px; font-size:13px; line-height:39px; border-radius:5px; padding:0 30px 0 10px; background-position:calc(100% - 8px);
+    }
 }
 @media (max-width:$mobile){
     .inline_flex_wrap{gap:8px;
