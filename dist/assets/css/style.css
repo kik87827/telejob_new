@@ -6436,6 +6436,65 @@ input.file_input {
     font-size: 14px;
   }
 }
+@media (max-width: 767px) {
+  .respond_tb {
+    display: block;
+  }
+  .respond_tb thead {
+    display: block;
+  }
+  .respond_tb thead tr {
+    display: block;
+  }
+  .respond_tb thead tr th {
+    border: 0;
+    display: inline-block;
+  }
+  .respond_tb thead tr th.has_total_dom {
+    padding: 0 15px 10px;
+  }
+  .respond_tb thead tr th.has_total_dom .props_item {
+    gap: 10px;
+  }
+  .respond_tb thead tr th.has_total_dom .props_label {
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .respond_tb tbody {
+    display: block;
+  }
+  .respond_tb tbody tr {
+    display: block;
+    border-bottom: 1px solid #E6E6E6;
+    border-top: 1px solid #E6E6E6;
+    position: relative;
+    padding: 11px 0;
+  }
+  .respond_tb tbody tr td {
+    border: 0;
+    display: block;
+    padding: 5px 25px 5px 50px;
+  }
+  .respond_tb tbody tr td.has_form input.props_dom {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+  .respond_thtext {
+    display: none;
+  }
+  .respond_td_obj {
+    display: flex;
+    justify-content: space-between;
+  }
+  .respond_td_obj dt {
+    display: inline-block;
+  }
+  .respond_tdkey,
+.respond_tdtext {
+    font-size: 14px;
+  }
+}
 /* paging */
 .popup_contents_row .board_paging_row {
   margin-top: 24px;

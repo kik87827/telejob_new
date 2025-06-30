@@ -632,6 +632,44 @@ input.file_input{display:none;}
     .list_table_tdtext,
     .list_td_item,
     .nodata_tdtext{font-size:14px;}
+
+    
+}
+@media (max-width:$mobile){
+    .respond_tb{
+        display:block;
+         thead{
+            display:block;
+             tr{
+                display:block;
+                 th{border:0;display:inline-block;
+                    &.has_total_dom{
+                        padding: 0 15px 10px;
+                        .props_item{gap:10px;}
+                        .props_label{display:inline-block; white-space:nowrap;}
+                    }
+                }
+             }
+         }
+         tbody{
+            display:block;
+            tr{
+                display:block; border-bottom:1px solid #E6E6E6; border-top:1px solid #E6E6E6; position:relative;padding:11px 0;
+                td{border:0;display:block;padding:5px 25px 5px 50px;
+                    &.has_form{
+                        input.props_dom{position:absolute;top:15px;left:15px;}
+                    }
+                }
+            }
+         }
+    }
+    .respond_thtext{display:none;}
+    .respond_td_obj{
+        display:flex; justify-content:space-between;
+         dt{display:inline-block;}
+    }
+    .respond_tdkey,
+    .respond_tdtext{font-size:14px;}
 }
 
 /* paging */
