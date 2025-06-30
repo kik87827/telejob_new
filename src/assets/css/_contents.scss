@@ -32,6 +32,29 @@
     margin-bottom:36px;
     .bullet_list{}
 }
+@media (max-width:$tablet){
+}
+@media (max-width:$mobile_large){
+    .sub_title_row{
+        margin:30px 0 20px;
+        &.display_type2{
+            display:block;
+            .title_cols{
+                .sub_title{}
+            }
+            .else_cols{margin-top:15px;}
+        }
+    }
+    .sub_title{font-size:18px;}
+    .fraction_sort_list{
+        gap:10px; display:block;
+        > li{
+            margin-bottom:10px;
+            &:last-of-type{margin-bottom:0;}
+        }
+        .form_select{}
+    }
+}
 
 /* form layout */
 .gate_form_container{padding:43px 0 0;}
@@ -962,7 +985,7 @@ input.file_input{display:none;}
     color:#B5000F;
     *{color:#B5000F;}
 }
-.emp_link_text{@include font(13px,700,1.33,1,#000); display:inline-block; text-decoration: underline;}
+.emp_link_text{@include font(13px,700,1.33,0,#000); display:inline-block; text-decoration: underline;}
 
 /* terms */
 .terms_section_wrap{border-top:2px solid #BDC5D1;}
@@ -970,7 +993,7 @@ input.file_input{display:none;}
     
     &:last-of-type{margin-bottom:0;}
 }
-.terms_one_dep{ margin:54px 0 18px; @include font(24px,700,1.33,1,#000);
+.terms_one_dep{ margin:54px 0 18px; @include font(24px,700,1.33,0,#000);
     &:first-of-type{margin-top:18px;}
 }
 .terms_sub_item_wrap{padding:36px 24px;border-bottom:1px solid #E6E6E6;border-top:1px solid #E6E6E6;}
@@ -978,11 +1001,24 @@ input.file_input{display:none;}
     margin-bottom:24px;
     &:last-of-type{margin-bottom:0;}
 }
-.terms_sub_title{@include font(20px,500,1.33,1,#000);margin-bottom:24px;}
+.terms_sub_title{@include font(20px,500,1.33,0,#000);margin-bottom:24px;}
 .terms_sub_content{}
 .terms_sub_content,
-.terms_sub_para{@include font(16px,400,1.33,1,#000);}
-
+.terms_sub_para{@include font(16px,400,1.33,0,#000);}
+@media (max-width:$mobile_large){
+    .terms_one_dep{ margin:24px 0 10px; font-size:16px;
+        &:first-of-type{margin-top:18px;}
+    }
+    .terms_sub_item_wrap{padding:20px 15px;border-bottom:1px solid #E6E6E6;border-top:1px solid #E6E6E6;}
+    .terms_sub_item{
+        margin-bottom:24px;
+        &:last-of-type{margin-bottom:0;}
+    }
+    .terms_sub_title{font-size:14px; margin-bottom:12px;}
+    .terms_sub_content{}
+    .terms_sub_content,
+    .terms_sub_para{font-size:13px; }
+}
 
 /* guide */
 .total_dia_render{

@@ -50,6 +50,7 @@
                 min-width:0;
             }
         }
+        .btn_box:only-child{max-width:150px; min-width:150px !important; margin:0 auto;}
     }
     .btn_box{min-height:45px;}
     .btn_box_text{font-size:16px;}
