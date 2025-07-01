@@ -540,13 +540,17 @@ select.form_select{
         }
         .btn_submit_box_text{font-size:14px;}
     }
-    
+    .popup_contents_row + .popup_btn_row{
+        padding-top:10px;
+    }
 }
 
 @media (max-width:$mobile){
     .popup_item{
         max-width:100%;margin:15px; max-height:calc(100% - 30px);
-        .popup_btn_row.btn_bottom_wrap{margin:0; width:auto; max-width: inherit;}
+        .popup_btn_row.btn_bottom_wrap{margin:0; width:auto; max-width: inherit;
+            .btn_submit_box:only-child{min-width:100px;}
+        }
         &.full_type{
             margin:0; max-height:100%; height:100%;
         }
@@ -579,6 +583,9 @@ select.form_select{
             /* .btn_bottom_short,
             .btn_bottom_long{flex:auto;width:auto;display:inline-flex;} */
             .btn_bottom_long{gap:5px; justify-content:center;}
+        }
+        &.align_type3{
+            .btn_submit_box{min-width:75px;}
         }
     }
 }
