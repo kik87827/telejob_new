@@ -36,6 +36,7 @@
 							</span>
 						</a>
 					</h1>
+					<a href="javascript:;" class="btn_top_icomenu"><i class="icomenu ico_user"></i></a>
 				</div>
 				<div class="search_cols">
 					<div class="top_search_container">
@@ -104,30 +105,21 @@
 						</ul>
 					</div>
 					<div class="header_nav_util_wrap">
-						<ul class="header_nav_util_list type2">
-							<!-- <li><a href="#" class="header_nav_util">로그인</a></li>
-                    <li><a href="#" class="header_nav_util">회원가입</a></li> -->
+						<ul class="header_nav_util_list">
+							<li><a href="#" class="header_nav_util">로그인</a></li>
+							<li><a href="#" class="header_nav_util">회원가입</a></li>
 							<li>
-								<dl class="header_nav_fraction">
-									<dt><span class="key_fraction_label">입사지원현황 :</span></dt>
-									<dt><strong class="key_fraction_value">22</strong></dt>
-								</dl>
-							</li>
-							<li>
-								<div class="header_nav_toggle type2">
-									<a href="javascript:;" class="nav_toggle_target">
-										<i class="ico ico_men"></i>
-										<span class="toggle_target_text">TelejobUserID</span>
-									</a>
+								<div class="header_nav_toggle">
+									<a href="javascript:;" class="nav_toggle_target"><span class="toggle_target_text">기업서비스</span></a>
 									<div class="nav_toggle_layer">
 										<ul class="nav_toggle_list">
-											<li><a href="#" class="nav_toggle_menu">개인회원홈</a></li>
-											<li><a href="#" class="nav_toggle_menu">이력서등록</a></li>
-											<li><a href="#" class="nav_toggle_menu">이력서관리</a></li>
-											<li><a href="#" class="nav_toggle_menu">입사지원관리</a></li>
-											<li><a href="#" class="nav_toggle_menu">채용정보</a></li>
-											<li><a href="#" class="nav_toggle_menu">맞춤정보</a></li>
-											<li><a href="#" class="nav_toggle_menu">회원정보관리</a></li>
+											<li><a href="#" class="nav_toggle_menu">기업회원홈</a></li>
+											<li><a href="#" class="nav_toggle_menu">채용공고등록</a></li>
+											<li><a href="#" class="nav_toggle_menu">채용공고관리</a></li>
+											<li><a href="#" class="nav_toggle_menu">유료서비스관리</a></li>
+											<li><a href="#" class="nav_toggle_menu">인재관리</a></li>
+											<li><a href="#" class="nav_toggle_menu">VIP전용관</a></li>
+											<li><a href="#" class="nav_toggle_menu">회원탈퇴</a></li>
 											<li><a href="#" class="nav_toggle_box">로그아웃</a></li>
 										</ul>
 									</div>
@@ -310,202 +302,6 @@
 		<!-- middle -->
 		<section class="middle_wrap">내용이 들어갑니다.</section>
 		<!-- // middle -->
-		<!-- popup -->
-		<div class="popup_wrap" id="dontOpenPopup">
-			<div class="bg_dim"></div>
-			<div class="popup_item">
-				<div class="popup_title_row">
-					<h3 class="popup_title">열람제한 기업 등록</h3>
-				</div>
-				<div class="popup_contents_row">
-					<div class="top_note_wrap">
-						<ul class="bullet_list">
-							<li>기업을 열람제한으로 설정하면 회원님의 연락처 및 상세 이력서 열람이 공개되지 않습니다.</li>
-							<li><span class="dark_emp">최근 일주일 동안 내 이력서를 열람</span>한 기업이 있다면 <span class="dark_emp">열람으로 표시</span>됩니다.</li>
-						</ul>
-					</div>
-					<div class="board_container">
-						<div class="board_sort_row">
-							<div class="fraction_cols">
-								<span class="sort_fraction_text">총 <strong>0</strong> 건</span>
-							</div>
-							<div class="search_cols">
-								<ul class="inline_ring_list">
-									<li class="ring_short">
-										<select class="form_select">
-											<option>20개씩</option>
-										</select>
-									</li>
-									<li class="ring_long">
-										<div class="search_entry_field">
-											<input type="text" class="input_search" />
-											<button class="btn_entry_search"></button>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="board_list_row">
-							<div class="respond_tb_wrap">
-								<table class="respond_tb">
-									<colgroup>
-										<col style="width: 22px" />
-										<col />
-										<col style="width: 18%" />
-										<col style="width: 18%" />
-										<col style="width: 18%" />
-										<col style="width: 15%" />
-										<col style="width: 12%" />
-									</colgroup>
-									<thead>
-										<tr>
-											<th class="has_total_dom">
-												<div class="props_item">
-													<input type="checkbox" class="props_dom" id="list_total_chk" />
-													<label for="list_total_chk" class="props_label">전체 선택</label>
-												</div>
-											</th>
-											<th><span class="respond_thtext">회사명</span></th>
-											<th><span class="respond_thtext">채용담당자</span></th>
-											<th><span class="respond_thtext">담당자 이메일</span></th>
-											<th><span class="respond_thtext">연락처</span></th>
-											<th><span class="respond_thtext">진행중 공고</span></th>
-											<th><span class="respond_thtext">열람여부</span></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class="has_form"><input type="checkbox" class="props_dom" /></td>
-											<td class="align_type2">
-												<dl class="respond_td_obj">
-													<dt><span class="respond_tdkey">회사명</span></dt>
-													<dd><span class="respond_tdtext">메리츠화재</span></dd>
-												</dl>
-											</td>
-											<td>
-												<dl class="respond_td_obj">
-													<dt><span class="respond_tdkey">채용담당자</span></dt>
-													<dd><span class="respond_tdtext">담당자명</span></dd>
-												</dl>
-											</td>
-											<td>
-												<dl class="respond_td_obj">
-													<dt><span class="respond_tdkey">담당자 이메일</span></dt>
-													<dd><span class="respond_tdtext">job@mail.com</span></dd>
-												</dl>
-											</td>
-											<td>
-												<dl class="respond_td_obj">
-													<dt><span class="respond_tdkey">연락처</span></dt>
-													<dd><span class="respond_tdtext">010-1234-5678</span></dd>
-												</dl>
-											</td>
-											<td>
-												<dl class="respond_td_obj">
-													<dt><span class="respond_tdkey">진행중 공고</span></dt>
-													<dd><span class="respond_tdtext">100건</span></dd>
-												</dl>
-											</td>
-											<td>
-												<dl class="respond_td_obj">
-													<dt><span class="respond_tdkey">열람여부</span></dt>
-													<dd><span class="respond_tdtext">열람</span></dd>
-												</dl>
-											</td>
-										</tr>
-										<tr>
-											<td class="has_form"><input type="checkbox" class="props_dom" /></td>
-											<td class="align_type2">
-												<dl class="respond_td_obj">
-													<dt><span class="respond_tdkey">회사명</span></dt>
-													<dd><span class="respond_tdtext">메리츠화재</span></dd>
-												</dl>
-											</td>
-											<td>
-												<dl class="respond_td_obj">
-													<dt><span class="respond_tdkey">채용담당자</span></dt>
-													<dd><span class="respond_tdtext">담당자명</span></dd>
-												</dl>
-											</td>
-											<td>
-												<dl class="respond_td_obj">
-													<dt><span class="respond_tdkey">담당자 이메일</span></dt>
-													<dd><span class="respond_tdtext">job@mail.com</span></dd>
-												</dl>
-											</td>
-											<td>
-												<dl class="respond_td_obj">
-													<dt><span class="respond_tdkey">연락처</span></dt>
-													<dd><span class="respond_tdtext">010-1234-5678</span></dd>
-												</dl>
-											</td>
-											<td>
-												<dl class="respond_td_obj">
-													<dt><span class="respond_tdkey">진행중 공고</span></dt>
-													<dd><span class="respond_tdtext">100건</span></dd>
-												</dl>
-											</td>
-											<td>
-												<dl class="respond_td_obj">
-													<dt><span class="respond_tdkey">열람여부</span></dt>
-													<dd><span class="respond_tdtext">열람</span></dd>
-												</dl>
-											</td>
-										</tr>
-										<tr>
-											<td colspan="7" class="nodata_td">
-												<p class="nodata_tdtext">데이터가 없습니다.</p>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-						<div class="board_paging_row">
-							<a href="javascript:;" class="btn_paging_control first"></a>
-							<a href="javascript:;" class="btn_paging_control prev"></a>
-							<ul class="paging_num_list">
-								<li><a href="javascript:;" class="btn_paging_num active">1</a></li>
-								<li><a href="javascript:;" class="btn_paging_num">2</a></li>
-								<li><a href="javascript:;" class="btn_paging_num">3</a></li>
-								<li><span class="btn_paging_num clamp_text">...</span></li>
-								<li><a href="javascript:;" class="btn_paging_num">10</a></li>
-							</ul>
-							<a href="javascript:;" class="btn_paging_control next"></a>
-							<a href="javascript:;" class="btn_paging_control last"></a>
-						</div>
-					</div>
-				</div>
-				<div class="popup_btn_row btn_bottom_wrap">
-					<!-- close_trigger 있을시 닫기 -->
-					<a href="#" class="btn_submit_box close_trigger"><span class="btn_submit_box_text">취소</span></a>
-					<a href="#" class="btn_submit_box primary long_type close_trigger"><span class="btn_submit_box_text">열람제한 설정</span></a>
-				</div>
-				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
-			</div>
-		</div>
-		<!-- // popup -->
-
-		<script>
-			document.addEventListener("DOMContentLoaded", function() {
-				// 인스턴스 선언
-				let dontOpenPopup = new DesignPopup({
-					selector: "#dontOpenPopup",
-					beforeCallback() {},
-					callback() {},
-					closeCallback() {},
-				});
-				// dontOpenPopup.popupShow(); // show
-				// dontOpenPopup.popupHide(); // hide
-
-				// 퍼블확인용
-				let url = window.location.href.split("?")[1];
-				let url_2 = url !== undefined ? url.split("#")[0] : null;
-				if (url_2 === "popup") {
-					dontOpenPopup.popupShow();
-				}
-			});
-		</script>
 		<div class="btn_topgo_wrap"><a href="#" class="btn_topgo"></a></div>
 		<footer class="footer_wrap">
 			<div class="footer_mobile_logo_row">
