@@ -528,19 +528,24 @@ input.file_input{display:none;}
 }
 .board_list_row{}
 .board_top_row{
+    display:flex; justify-content: space-between; align-items: center; gap:20px; margin-bottom:16px;
     .each_cols{}
 }
 .board_control_list{
+    display:flex; align-items: center; gap:16px;
     > li{}
 }
 .btn_board_control{
+    display:inline-flex; align-items: center; border-radius: 100px; border:1px solid #E6E6E6; gap:4px; padding:6px 16px;
     .ico{
-        &.delete{}
+        width:24px;height:24px;flex:0 0 24px; @include bgicon;
+        &.delete{background-image:url("../images/ico_minus_24.png");}
     }
-    .control_text{}
+    .control_text{@include font(14px,700,1,0,#000); display:inline-block;}
 }
 .board_fraction_text{
-    .emp{}
+    @include font2(13px,400,1,#000);
+    .emp{font-size:14px; @include spoca; color:#B5000F;display:inline-block;padding:0 2px 0 4px;}
 }
 .board_fraction_text{}
 
@@ -577,11 +582,14 @@ input.file_input{display:none;}
 
 .respond_tb_wrap{
     &.skin2{
+        
         .respond_tb{
             thead{
                 tr{
                     th{
+                        background-color:#F8F8F8; border-top:2px solid #BDC5D1; border-bottom:1px solid #E6E6E6;
                         &.has_total_dom{
+                            
                             .props_item{}
                             .props_dom{}
                             .props_label{}
@@ -592,6 +600,7 @@ input.file_input{display:none;}
             tbody{
                 tr{
                     td{
+                        padding:24px 16px 24px;
                         &.has_form{
                             .props_dom{}
                         }
@@ -599,7 +608,9 @@ input.file_input{display:none;}
                 }
             }
         }
-        .respond_thtext{}
+        .respond_thtext{color:#595959;
+            &.emp{color:#000; font-weight:700; text-decoration: underline;}
+        }
         .respond_td_obj{
             dt,dd{}
             dt{}
@@ -629,7 +640,7 @@ input.file_input{display:none;}
     tbody{
         tr{
             td{
-                border-bottom:1px solid #E6E6E6; padding:24px 8px 25px;
+                border-bottom:1px solid #E6E6E6; padding:24px 8px 24px;
                 &.has_form{
                     padding:0 8px; vertical-align: middle; font-size:0;
                     .props_dom{}
@@ -656,6 +667,9 @@ input.file_input{display:none;}
 .respond_tdtext{ @include font2(16px,400,1,#000000);}
 .respond_tdkey{}
 .respond_tdtext{}
+.respond_tdlink{@include clamp(1); color:#005AAB; font-size:16px; text-decoration: underline;
+    &:hover{text-decoration: underline;}
+}
 
 @media (max-width:$mobile_large){
     .board_sort_row{
