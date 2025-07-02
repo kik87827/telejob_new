@@ -3809,6 +3809,9 @@ button.swiper-pagination-bullet {
 .btn_box_wrap.sub_bottom_pos {
   margin-top: 64px;
 }
+.btn_box_wrap.size_wrap .btn_box {
+  max-width: 180px;
+}
 
 .btn_ico {
   display: inline-block;
@@ -3871,6 +3874,9 @@ button.swiper-pagination-bullet {
   }
   .btn_box_wrap.each_type .btn_box {
     min-width: 0;
+  }
+  .btn_box_wrap.size_wrap .btn_box {
+    max-width: 100%;
   }
   .btn_box_wrap .btn_box {
     max-width: 100%;
@@ -4024,6 +4030,11 @@ input.form_input::-moz-placeholder {
 }
 input.form_input::placeholder {
   color: #aaa;
+}
+input.form_input.box_type {
+  border-radius: 8px;
+  border: 1px solid #E6E6E6;
+  padding: 0 13px;
 }
 
 .props_item_list {
@@ -4193,6 +4204,10 @@ input.props_dom:checked {
 }
 .field_guide_copy .ico_import {
   margin-right: 5px;
+}
+
+.field_btn_row.btn_box_wrap {
+  margin-top: 84px;
 }
 
 .ico_import {
