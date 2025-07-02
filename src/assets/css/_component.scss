@@ -1,6 +1,6 @@
 /* button */
 .btn_box{
-    display:flex; box-sizing:border-box; min-height:56px;  white-space:nowrap; appearance:none; justify-content:center; align-items:center; text-align:center; border:1px solid #000; color:#000; border-radius:120px; padding:12px 36px;
+    display:flex; box-sizing:border-box; min-height:56px;  appearance:none; justify-content:center; align-items:center; text-align:center; border:1px solid #000; color:#000; border-radius:120px; padding:12px 36px;
     &.primary{
         border-color:#0B51C5;
         .btn_box_text{color:#0258AD;}
@@ -14,16 +14,21 @@
         .btn_box_text{ color:#fff; }
     }
     &.max_reset{max-width:fit-content !important;}
+    &:disabled{opacity:.4;cursor:default;}
 }
 .btn_box_text{@include font(20px, 700, 1, 0, #000); display:inline-block;}
 .btn_box_wrap{
     display:flex; justify-content: center; gap:12px; text-align:center; flex-wrap:wrap;
     &.each_type{
         .btn_box{
-            flex:auto; min-width:260px;
+            flex:auto; min-width:260px; max-width:fit-content;
+            &.req_size2{min-width:218px;}
+            &.long_size2{padding-left:72px;padding-right:72px;}
         }
     }
-    .btn_box{flex:1;max-width:260px;}
+    .btn_box{flex:1;max-width:260px;
+    }
+    &.sub_bottom_pos{margin-top:64px;}
 }
 .btn_ico{
     display:inline-block; width:24px;height:24px; @include bgicon;
@@ -38,6 +43,7 @@
          &.each_type{
             .btn_box{
                 min-width:220px;
+                &.long_size2{padding-left:36px;padding-right:36px;}
             }
         }
         .btn_box{max-width:220px;}
@@ -47,7 +53,7 @@
     .btn_box_wrap{
         &.each_type{
             .btn_box{
-                min-width:0;
+                min-width:0; max-width:none;
             }
         }
         .btn_box:only-child{max-width:150px; min-width:150px !important; margin:0 auto;}
@@ -139,15 +145,25 @@ input.form_input{
 }
 .props_item{
     display:flex; gap:4px;
+    &.sm{
+
+    }
 }
 input.props_dom{
-    appearance: none; width:22px; height:22px; flex:0 0 22px; cursor: pointer; @include bgicon; background-image:url("../images/ico_checkbox_22.png"); border:1px solid #DBDBDB; border-radius:4px; box-sizing:content-box;
+    appearance: none; background-color:#fff; width:22px; height:22px; flex:0 0 22px; cursor: pointer; @include bgicon; background-image:url("../images/ico_checkbox_22.png"); border:1px solid #DBDBDB; border-radius:4px; box-sizing:content-box;
     &[type="radio"]{border-radius:100%; background-image:url("../images/ico_radio.png");
         &:checked{border-color:#4285F4;}
     }
     &:checked{background-position:0 100%;}
+    &.sm{
+        
+    }
 }
-.props_label{@include font2(14px, 400, 1.3, #000); display:inline-block; padding-top:2px; cursor:pointer;}
+.props_label{@include font2(14px, 400, 1.3, #000); display:inline-block; padding-top:2px; cursor:pointer;
+    &.sm{
+        
+    }
+}
 .inline_flex_wrap{
     display:flex; gap:12px;
     .inline_long{
