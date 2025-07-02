@@ -50,6 +50,7 @@
     display:flex; gap:4px; align-items: center;
     > li{}
 }
+.btn_text{}
 @media (max-width:$tablet){
     .btn_box{
         min-height:50px;
@@ -119,6 +120,16 @@
     }
 }
 .boxtab_text{@include font(16px, 700, 1, 0, #595959); display:inline-block;}
+.tailtab_wrap{}
+.tailtab_list{
+    > li{}
+}
+.tailtab{
+    &.active{
+        .tailtab_text{}
+    }
+}
+.tailtab_text{}
 @media (max-width:$tablet){
     .boxtab_list{min-height:50px;}
 }

@@ -1,15 +1,203 @@
 <!DOCTYPE html>
 <html lang="ko">
-    @@include('./include/head.html')
-    <body class="front_body">
-        <div class="page_wrap">
-            @@include('./include/header3.html')
-            <!-- middle -->
-            <section class="middle_wrap">
-                내용이 들어갑니다.
-            </section>
-            <!-- // middle -->
-             @@include('./include/footer.html')
+  @@include('./include/head.html')
+  <body class="front_body">
+    <div class="page_wrap">
+      @@include('./include/header3.html')
+      <!-- middle -->
+      <section class="middle_wrap">
+        <div class="middle_inner middle_template">
+          <div class="menu_cols">@@include('./middle_box.html')</div>
+          <div class="contents_cols">
+            <div class="data_render_box">
+              <div class="img_cols">
+                <div class="who_img_item">
+                  <div class="img_box"><img src="./assets/images/temp_woman.png" alt="" /></div>
+                  <div class="btn_row"><a href="#" class="btn_text">수정하기</a></div>
+                </div>
+              </div>
+              <div class="spec_cols">
+                <div class="spec_render_table_wrap">
+                  <table class="spec_render_table">
+                    <tbody>
+                      <tr>
+                        <th><span class="spec_key_text">이력서 작성율</span></th>
+                        <td class="short_data"><span class="spec_value_text spoca">87%</span></td>
+                        <th><span class="spec_key_text">희망 업종</span></th>
+                        <td class="long_data"><span class="spec_value_text">법인(보험, 상조/대출/기타금융, 통신서비스, 인바운드 아웃바운드, TM, 텔레마케터)사업자</span></td>
+                      </tr>
+                      <tr>
+                        <th><span class="spec_key_text">최근 수정일</span></th>
+                        <td class="short_data"><span class="spec_value_text spoca">2025.04.28</span></td>
+                        <th><span class="spec_key_text">희망 직종</span></th>
+                        <td class="long_data"><span class="spec_value_text">구분 없음, 인바운드</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="column_data_wrap">
+                  <ul class="column_data_list">
+                    <li>
+                      <div class="column_data_item">
+                        <div class="label_row"><span class="column_data_label">이력서 공개설정</span></div>
+                        <div class="value_row">
+                          <span class="column_data_value big">비공개</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="column_data_item">
+                        <div class="label_row"><span class="column_data_label">이력서 열람기업</span></div>
+                        <div class="value_row">
+                          <span class="column_data_obj">
+                            <span class="count">25</span>
+                            <span class="unit">건</span>
+                          </span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="column_data_item">
+                        <div class="label_row"><span class="column_data_label">입사지원 현황</span></div>
+                        <div class="value_row">
+                          <span class="column_data_obj">
+                            <span class="count">17</span>
+                            <span class="unit">건</span>
+                          </span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="column_data_item">
+                        <div class="label_row"><span class="column_data_label">스크랩한 채용정보</span></div>
+                        <div class="value_row">
+                          <span class="column_data_obj">
+                            <span class="count">17</span>
+                            <span class="unit">건</span>
+                          </span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="tailtab_wrap">
+              <ul class="tailtab_list">
+                <li>
+                  <a href="#" class="tailtab active"><span class="tailtab_text">입사지원현황 (26)</span></a>
+                </li>
+                <li>
+                  <a href="#" class="tailtab"><span class="tailtab_text">스크랩한 채용정보 (26)</span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="board_list_row">
+              <div class="respond_tb_wrap skin2">
+                <table class="respond_tb">
+                  <colgroup>
+                    <col style="width: 12%" />
+                    <col style="width: 12%" />
+                    <col />
+                    <col style="width: 12%" />
+                    <col style="width: 12%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th><span class="respond_thtext">지원일</span></th>
+                      <th><span class="respond_thtext">회사명</span></th>
+                      <th><span class="respond_thtext">채용제목</span></th>
+                      <th><span class="respond_thtext">마감일</span></th>
+                      <th><span class="respond_thtext">열람여부</span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <dl class="respond_td_obj">
+                          <dt><span class="respond_tdkey">지원일</span></dt>
+                          <dd><span class="respond_tdtext spoca">2025.05.28</span></dd>
+                        </dl>
+                      </td>
+                      <td>
+                        <dl class="respond_td_obj">
+                          <dt><span class="respond_tdkey">회사명</span></dt>
+                          <dd><span class="respond_tdtext">메리츠화재</span></dd>
+                        </dl>
+                      </td>
+                      <td class="align_type2 ptype2">
+                        <dl class="respond_td_obj">
+                          <dt><span class="respond_tdkey">채용제목</span></dt>
+                          <dd><a href="#" class="respond_tdlink">전화만 걸줄알면 연봉 1억 전화만 걸줄알면 연봉 1억 전화만 걸줄알면 연봉 1억 전화만 걸줄알면 연봉 1억 전화만 걸줄알면 연봉 1억 전화만 걸줄알면 연봉 1억</a></dd>
+                        </dl>
+                      </td>
+                      <td>
+                        <dl class="respond_td_obj">
+                          <dt><span class="respond_tdkey">마감일</span></dt>
+                          <dd><span class="respond_tdtext">채용시까지</span></dd>
+                        </dl>
+                      </td>
+                      <td>
+                        <dl class="respond_td_obj">
+                          <dt><span class="respond_tdkey">열람여부</span></dt>
+                          <dd><span class="respond_tdtext">미열람</span></dd>
+                        </dl>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <dl class="respond_td_obj">
+                          <dt><span class="respond_tdkey">지원일</span></dt>
+                          <dd><span class="respond_tdtext spoca">2025.05.28</span></dd>
+                        </dl>
+                      </td>
+                      <td>
+                        <dl class="respond_td_obj">
+                          <dt><span class="respond_tdkey">회사명</span></dt>
+                          <dd><span class="respond_tdtext">메리츠화재</span></dd>
+                        </dl>
+                      </td>
+                      <td class="align_type2 ptype2">
+                        <dl class="respond_td_obj">
+                          <dt><span class="respond_tdkey">채용제목</span></dt>
+                          <dd><a href="#" class="respond_tdlink">위촉당월 평균급여 4배지급 합니다.위촉당월 평균급여 4배지급 합니다.위촉당월 평균급여 4배지급 합니다.</a></dd>
+                        </dl>
+                      </td>
+                      <td>
+                        <dl class="respond_td_obj">
+                          <dt><span class="respond_tdkey">마감일</span></dt>
+                          <dd><span class="respond_tdtext">채용시까지</span></dd>
+                        </dl>
+                      </td>
+                      <td>
+                        <dl class="respond_td_obj">
+                          <dt><span class="respond_tdkey">열람여부</span></dt>
+                          <dd><span class="respond_tdtext">열람</span></dd>
+                        </dl>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="board_paging_row">
+              <a href="javascript:;" class="btn_paging_control first"></a>
+              <a href="javascript:;" class="btn_paging_control prev"></a>
+              <ul class="paging_num_list">
+                <li><a href="javascript:;" class="btn_paging_num active">1</a></li>
+                <li><a href="javascript:;" class="btn_paging_num">2</a></li>
+                <li><a href="javascript:;" class="btn_paging_num">3</a></li>
+                <li><span class="btn_paging_num clamp_text">...</span></li>
+                <li><a href="javascript:;" class="btn_paging_num">10</a></li>
+              </ul>
+              <a href="javascript:;" class="btn_paging_control next"></a>
+              <a href="javascript:;" class="btn_paging_control last"></a>
+            </div>
+          </div>
         </div>
-    </body>
+      </section>
+      <!-- // middle -->
+      @@include('./include/footer.html')
+    </div>
+  </body>
 </html>
