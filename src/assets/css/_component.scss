@@ -37,6 +37,19 @@
     display:inline-block; width:24px;height:24px; @include bgicon;
     &.delete{background-image:url("../images/ico_delete_24.png");}
 }
+.btn_quad{
+    display:inline-flex; min-height:32px; align-items: center; justify-content: center; box-sizing: border-box; padding:7px 16px;
+    border:1px solid #000; border-radius:100px; @include font2(13px,700,1,#000); background:#fff; white-space: nowrap;
+    &.large{}
+    &.primary{color:#005AAB; border-color:#005AAB;}
+    &:disabled{background-color:#F8F8F8;border-color:#E6E6E6;color:#595959; cursor: default;}
+    &.medium{min-height:36px;}
+    &.large{min-height:48px;padding-left:24px;padding-right:24px;}
+}
+.btn_quad_list{
+    display:flex; gap:4px; align-items: center;
+    > li{}
+}
 @media (max-width:$tablet){
     .btn_box{
         min-height:50px;

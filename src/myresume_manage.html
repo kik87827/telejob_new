@@ -1,15 +1,187 @@
 <!DOCTYPE html>
 <html lang="ko">
-    @@include('./include/head.html')
-    <body class="front_body">
-        <div class="page_wrap">
-            @@include('./include/header3.html')
-            <!-- middle -->
-            <section class="middle_wrap">
-                내용이 들어갑니다.
-            </section>
-            <!-- // middle -->
-             @@include('./include/footer.html')
+  @@include('./include/head.html')
+  <body class="front_body">
+    <div class="page_wrap">
+      @@include('./include/header3.html')
+      <!-- middle -->
+      <section class="middle_wrap">
+        <div class="middle_inner middle_template">
+          <div class="menu_cols">@@include('./middle_box.html')</div>
+          <div class="contents_cols">
+            <div class="contents_title_row type2"><h3 class="contents_title">내 이력서 관리</h3></div>
+            <div class="sub_contents_row">
+              <div class="sc_guide_block">
+                <ul class="bullet_list">
+                  <li>이력서는 최대 5개까지 작성/관리가 가능합니다.</li>
+                  <li>가장 최신 정보로 수시 업데이트하여 관리하셔야 최대한 어필이 가능합니다.</li>
+                  <li>이력서를 공개할 경우 구인기업으로 하여금 기본으로 설정한 <span class="color_emp black">“기본이력서”가 보여집니다.</span></li>
+                  <li><span class="color_emp black">이력서 작성율이</span> <span class="color_emp red">70%가 넘어야</span> <span class="color_emp black">온라인 입사지원이 가능합니다.</span></li>
+                  <li>삭제된 이력서는 복구가 불가능하오니, 착오 없으시기 바랍니다</li>
+                </ul>
+              </div>
+              <div class="sc_tape_formbox">
+                <div class="key_cols"><span class="sc_tape_key">이력서 노출상태(취업희망 여부) 변경</span></div>
+                <div class="form_cols">
+                  <ul class="form_field_list">
+                    <li>
+                      <ul class="props_item_list">
+                        <li>
+                          <div class="props_item">
+                            <input type="radio" class="props_dom" name="docu" id="docu_01" />
+                            <label for="docu_01" class="props_label">공개(취업희망)</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="props_item">
+                            <input type="radio" class="props_dom" name="docu" id="docu_02" />
+                            <label for="docu_02" class="props_label">미공개(희망안함)</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a href="javascript:;" class="btn_quad large">저장</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="sc_table_block">
+                <div class="board_top_row">
+                  <div class="each_cols">
+                    <ul class="board_control_list">
+                      <li>
+                        <button class="btn_board_control"><i class="ico check"></i><span class="control_text">기본이력서로 설정</span></button>
+                      </li>
+                      <li>
+                        <span class="board_fraction_text">총<strong class="emp">2</strong>건</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="each_cols">
+                    <a href="#" class="btn_quad medium primary">이력서 등록</a>
+                  </div>
+                </div>
+                <div class="board_list_row">
+                  <div class="respond_tb_wrap skin2">
+                    <table class="respond_tb">
+                      <colgroup>
+                        <col style="width: 80px" />
+                        <col style="width: 12%" />
+                        <col style="width: 15%" />
+                        <col />
+                        <col style="width: 12%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th class="has_total_dom"></th>
+                          <th><span class="respond_thtext">수정일</span></th>
+                          <th><span class="respond_thtext">이력서 제목</span></th>
+                          <th><span class="respond_thtext">채용재목</span></th>
+                          <th><span class="respond_thtext">작성율</span></th>
+                          <th><span class="respond_thtext">이력서관리</span></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="has_form"><input type="radio" class="props_dom" name="docu_list" id="docu_list_01" /></td>
+                          <td>
+                            <dl class="respond_td_obj">
+                              <dt><span class="respond_tdkey">수정일</span></dt>
+                              <dd><span class="respond_tdtext spoca">2025.05.28</span></dd>
+                            </dl>
+                          </td>
+                          <td class="align_type2 ptype2">
+                            <dl class="respond_td_obj">
+                              <dt><span class="respond_tdkey">이력서 제목</span></dt>
+                              <dd>
+                                <div class="tdlink_row">
+                                  <span class="data_flagbox">기본</span>
+                                  <a href="#" class="respond_tdlink">내 이력서11</a>
+                                </div>
+                              </dd>
+                            </dl>
+                          </td>
+                          <td>
+                            <dl class="respond_td_obj">
+                              <dt><span class="respond_tdkey">채용재목</span></dt>
+                              <dd><span class="respond_tdtext">보험,상조/대출/기타금융,통신서비스,인바운드</span></dd>
+                            </dl>
+                          </td>
+                          <td>
+                            <dl class="respond_td_obj">
+                              <dt><span class="respond_tdkey">작성율</span></dt>
+                              <dd><span class="respond_tdtext spoca">87%</span></dd>
+                            </dl>
+                          </td>
+                          <td class="ptype2">
+                            <ul class="btn_quad_list">
+                              <li><button class="btn_quad" disabled>수정</button></li>
+                              <li><button class="btn_quad" disabled>삭제</button></li>
+                              <li><button class="btn_quad" disabled>복사</button></li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="has_form"><input type="radio" class="props_dom" name="docu_list" id="docu_list_02" /></td>
+                          <td>
+                            <dl class="respond_td_obj">
+                              <dt><span class="respond_tdkey">수정일</span></dt>
+                              <dd><span class="respond_tdtext spoca">2025.05.28</span></dd>
+                            </dl>
+                          </td>
+                          <td class="align_type2 ptype2">
+                            <dl class="respond_td_obj">
+                              <dt><span class="respond_tdkey">이력서 제목</span></dt>
+                              <dd>
+                                <div class="tdlink_row">
+                                  <a href="#" class="respond_tdlink">내 이력서1234</a>
+                                </div>
+                              </dd>
+                            </dl>
+                          </td>
+                          <td>
+                            <dl class="respond_td_obj">
+                              <dt><span class="respond_tdkey">채용재목</span></dt>
+                              <dd><span class="respond_tdtext">보험,상조/대출/기타금융,통신서비스,인바운드</span></dd>
+                            </dl>
+                          </td>
+                          <td>
+                            <dl class="respond_td_obj">
+                              <dt><span class="respond_tdkey">작성율</span></dt>
+                              <dd><span class="respond_tdtext spoca">87%</span></dd>
+                            </dl>
+                          </td>
+                          <td class="ptype2">
+                            <ul class="btn_quad_list">
+                              <li><button class="btn_quad">수정</button></li>
+                              <li><button class="btn_quad">삭제</button></li>
+                              <li><button class="btn_quad">복사</button></li>
+                            </ul>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="board_paging_row">
+                  <a href="javascript:;" class="btn_paging_control first"></a>
+                  <a href="javascript:;" class="btn_paging_control prev"></a>
+                  <ul class="paging_num_list">
+                    <li><a href="javascript:;" class="btn_paging_num active">1</a></li>
+                    <li><a href="javascript:;" class="btn_paging_num">2</a></li>
+                    <li><a href="javascript:;" class="btn_paging_num">3</a></li>
+                    <li><span class="btn_paging_num clamp_text">...</span></li>
+                    <li><a href="javascript:;" class="btn_paging_num">10</a></li>
+                  </ul>
+                  <a href="javascript:;" class="btn_paging_control next"></a>
+                  <a href="javascript:;" class="btn_paging_control last"></a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </body>
+      </section>
+      <!-- // middle -->
+      @@include('./include/footer.html')
+    </div>
+  </body>
 </html>
