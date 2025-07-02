@@ -142,8 +142,8 @@
     &.google{background-image:url("../images/ico_sns_google_26x26.png"); border:1px solid #E6E6E6;}
 }
 
-.middle_one_title_row{text-align:center;margin:80px 0 48px 0;}
-.middle_one_title{@include font(52px,700,1.4,0,#000);}
+.middle_one_title_row{text-align:center;margin:40px 0 20px 0;}
+.middle_one_title{@include font(34px,700,1.4,0,#000);}
 .middle_two_title_row{margin:48px 0; text-align:center; margin-top:48px;}
 .middle_two_title{@include font(24px,700,1.4,0,#000);}
 .middle_two_subcopy{@include font(16px,400,1.4,0,#000); margin-top:12px; word-break:keep-all;}
@@ -540,6 +540,7 @@ input.file_input{display:none;}
     .ico{
         width:24px;height:24px;flex:0 0 24px; @include bgicon;
         &.delete{background-image:url("../images/ico_minus_24.png");}
+        &.cancel{background-image:url("../images/ico_cancel_24.png");}
     }
     .control_text{@include font(14px,700,1,0,#000); display:inline-block;}
 }
@@ -604,6 +605,7 @@ input.file_input{display:none;}
                         &.has_form{
                             .props_dom{}
                         }
+                        &.ptype2{padding-top:10px;padding-bottom:10px;}
                     }
                 }
             }
@@ -652,6 +654,7 @@ input.file_input{display:none;}
                     padding:100px 20px;
                     .nodata_tdtext{}
                 }
+                
             }
         }
     }
@@ -667,7 +670,7 @@ input.file_input{display:none;}
 .respond_tdtext{ @include font2(16px,400,1,#000000);}
 .respond_tdkey{}
 .respond_tdtext{}
-.respond_tdlink{@include clamp(1); color:#005AAB; font-size:16px; text-decoration: underline;
+.respond_tdlink{@include clamp(2); color:#005AAB; font-size:16px; text-decoration: underline;
     &:hover{text-decoration: underline;}
 }
 
