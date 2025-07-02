@@ -535,6 +535,18 @@ input.file_input{display:none;}
     display:flex; align-items: center; gap:16px;
     > li{}
 }
+.board_sortitem_list{
+    display:flex; align-items: center; gap:8px;
+    > li{}
+}
+.sort_item_obj{
+    display:flex; align-items: center; gap:8px;
+    dt,dd{}
+    dt{}
+    dd{}
+    .sort_key{@include font(14px, 400, 1, 0, #000); display:inline-block;}
+    .form_select{}
+}
 .btn_board_control{
     display:inline-flex; align-items: center; border-radius: 100px; border:1px solid #E6E6E6; gap:4px; padding:6px 16px;
     .ico{
@@ -673,7 +685,19 @@ input.file_input{display:none;}
 .respond_tdlink{@include clamp(2); color:#005AAB; font-size:16px; text-decoration: underline;
     &:hover{text-decoration: underline;}
 }
-
+.list_spec_obj_list{
+    > li{
+        margin-bottom:4px;
+        &:last-of-type{margin-bottom:0;}
+    }
+}
+.list_spec_obj{
+    display:flex; gap:12px; text-align: left;
+    .key_cols{flex:0; white-space: nowrap;}
+    .value_cols{flex:1;}
+    .spec_key_text{display:inline-block; @include font2(13px,400,1,#fff); white-space: nowrap; background:#BDC5D1; border-radius:4px; padding:2px 8px 3px;}
+    .spec_value_text{display:inline-block; @include font2(14px,400,1,#000);}
+}
 @media (max-width:$mobile_large){
     .board_sort_row{
         gap:10px; align-items:center; padding: 8px 10px;

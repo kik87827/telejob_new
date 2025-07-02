@@ -6333,6 +6333,24 @@ input.file_input {
   align-items: center;
   gap: 16px;
 }
+.board_sortitem_list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sort_item_obj {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sort_item_obj .sort_key {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #000;
+  display: inline-block;
+}
 .btn_board_control {
   display: inline-flex;
   align-items: center;
@@ -6542,6 +6560,44 @@ input.file_input {
 }
 .respond_tdlink:hover {
   text-decoration: underline;
+}
+
+.list_spec_obj_list > li {
+  margin-bottom: 4px;
+}
+.list_spec_obj_list > li:last-of-type {
+  margin-bottom: 0;
+}
+
+.list_spec_obj {
+  display: flex;
+  gap: 12px;
+  text-align: left;
+}
+.list_spec_obj .key_cols {
+  flex: 0;
+  white-space: nowrap;
+}
+.list_spec_obj .value_cols {
+  flex: 1;
+}
+.list_spec_obj .spec_key_text {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
+  color: #fff;
+  white-space: nowrap;
+  background: #BDC5D1;
+  border-radius: 4px;
+  padding: 2px 8px 3px;
+}
+.list_spec_obj .spec_value_text {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #000;
 }
 
 @media (max-width: 1023px) {
