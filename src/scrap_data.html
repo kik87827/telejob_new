@@ -1,15 +1,135 @@
 <!DOCTYPE html>
 <html lang="ko">
-    @@include('./include/head.html')
-    <body class="front_body">
-        <div class="page_wrap">
-            @@include('./include/header3.html')
-            <!-- middle -->
-            <section class="middle_wrap">
-                내용이 들어갑니다.
-            </section>
-            <!-- // middle -->
-             @@include('./include/footer.html')
+  @@include('./include/head.html')
+  <body class="front_body">
+    <div class="page_wrap">
+      @@include('./include/header3.html')
+      <!-- middle -->
+      <section class="middle_wrap">
+        <div class="middle_template">
+          <div class="menu_cols">@@include('./middle_box.html')</div>
+          <div class="contents_cols">
+            <div class="contents_title_row"><h3 class="contents_title">스크랩 채용정보</h3></div>
+            <div class="sub_contents_row">
+              <div class="board_top_row">
+                <div class="each_cols">
+                  <ul class="board_control_list">
+                    <li>
+                      <button class="btn_board_control"><i class="ico delete"></i><span class="control_text">스크랩 삭제</span></button>
+                    </li>
+                    <li>
+                      <span class="board_fraction_text">총<strong class="emp">14</strong>건</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="each_cols">
+                  <select class="form_select">
+                    <option>20개씩 보기</option>
+                  </select>
+                </div>
+              </div>
+              <div class="board_list_row">
+                <div class="respond_tb_wrap skin2">
+                  <table class="respond_tb">
+                    <colgroup>
+                      <col style="width: 22px" />
+                      <col style="width: 20%" />
+                      <col style="width: 20%" />
+                      <col />
+                      <col style="width: 20%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th class="has_total_dom">
+                          <div class="props_item">
+                            <input type="checkbox" class="props_dom" id="list_total_chk" />
+                            <label for="list_total_chk" class="props_label">전체 선택</label>
+                          </div>
+                        </th>
+                        <th><span class="respond_thtext emp">지원일</span></th>
+                        <th><span class="respond_thtext">회사명</span></th>
+                        <th><span class="respond_thtext">채용제목</span></th>
+                        <th><span class="respond_thtext">마감일</span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="has_form"><input type="checkbox" class="props_dom" /></td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">지원일</span></dt>
+                            <dd><span class="respond_tdtext spoca">2025.05.28</span></dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">회사명</span></dt>
+                            <dd><span class="respond_tdtext">메리츠화재</span></dd>
+                          </dl>
+                        </td>
+                        <td class="align_type2">
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">채용제목</span></dt>
+                            <dd><a href="#" class="respond_tdlink">전화만 걸줄알면 연봉 1억</a></dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">마감일</span></dt>
+                            <dd><span class="respond_tdtext">채용시까지</span></dd>
+                          </dl>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="has_form"><input type="checkbox" class="props_dom" /></td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">지원일</span></dt>
+                            <dd><span class="respond_tdtext spoca">2025.05.28</span></dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">회사명</span></dt>
+                            <dd><span class="respond_tdtext">메리츠화재</span></dd>
+                          </dl>
+                        </td>
+                        <td class="align_type2">
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">채용제목</span></dt>
+                            <dd><a href="#" class="respond_tdlink">위촉당월 평균급여 4배지급 합니다.</a></dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">마감일</span></dt>
+                            <dd><span class="respond_tdtext">상시채용</span></dd>
+                          </dl>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="board_paging_row">
+                <a href="javascript:;" class="btn_paging_control first"></a>
+                <a href="javascript:;" class="btn_paging_control prev"></a>
+                <ul class="paging_num_list">
+                  <li><a href="javascript:;" class="btn_paging_num active">1</a></li>
+                  <li><a href="javascript:;" class="btn_paging_num">2</a></li>
+                  <li><a href="javascript:;" class="btn_paging_num">3</a></li>
+                  <li><span class="btn_paging_num clamp_text">...</span></li>
+                  <li><a href="javascript:;" class="btn_paging_num">10</a></li>
+                </ul>
+                <a href="javascript:;" class="btn_paging_control next"></a>
+                <a href="javascript:;" class="btn_paging_control last"></a>
+              </div>
+            </div>
+          </div>
         </div>
-    </body>
+      </section>
+      <!-- // middle -->
+      @@include('./include/footer.html')
+    </div>
+  </body>
 </html>

@@ -527,6 +527,23 @@ input.file_input{display:none;}
     strong{@include font(14px, 700, 1, 0, #B5000F); @include spoca;}
 }
 .board_list_row{}
+.board_top_row{
+    .each_cols{}
+}
+.board_control_list{
+    > li{}
+}
+.btn_board_control{
+    .ico{
+        &.delete{}
+    }
+    .control_text{}
+}
+.board_fraction_text{
+    .emp{}
+}
+.board_fraction_text{}
+
 .list_table_wrap{}
 .list_table{
     width:100%;
@@ -558,7 +575,42 @@ input.file_input{display:none;}
 .list_td_item{flex:1; @include clamp(1); @include font(16px,400,1.3,0,#000);}
 .nodata_tdtext{@include font(16px,400,1,0,#000);}
 
-.respond_tb_wrap{}
+.respond_tb_wrap{
+    &.skin2{
+        .respond_tb{
+            thead{
+                tr{
+                    th{
+                        &.has_total_dom{
+                            .props_item{}
+                            .props_dom{}
+                            .props_label{}
+                        }
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    td{
+                        &.has_form{
+                            .props_dom{}
+                        }
+                    }
+                }
+            }
+        }
+        .respond_thtext{}
+        .respond_td_obj{
+            dt,dd{}
+            dt{}
+            dd{}
+        }
+        .respond_tdkey,
+        .respond_tdtext{}
+        .respond_tdkey{}
+        .respond_tdtext{}
+    }
+}
 .respond_tb{
     width:100%;
     thead{
