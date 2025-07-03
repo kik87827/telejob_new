@@ -3865,6 +3865,15 @@ button.swiper-pagination-bullet {
   gap: 4px;
   align-items: center;
 }
+.btn_text {
+  display: inline-block;
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+}
+
 @media (max-width: 1299px) {
   .btn_box {
     min-height: 50px;
@@ -3977,6 +3986,60 @@ button.swiper-pagination-bullet {
   letter-spacing: 0;
   color: #595959;
   display: inline-block;
+}
+
+.tailtab_wrap {
+  margin-bottom: 36px;
+}
+
+.tailtab_list {
+  display: flex;
+  position: relative;
+}
+.tailtab_list:before {
+  display: block;
+  content: "";
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #0053C2;
+}
+.tailtab_list > li.active {
+  position: relative;
+}
+.tailtab_list > li.active .tailtab {
+  border-color: #005AAB;
+  border-bottom-color: #fff;
+  background-color: #fff;
+}
+.tailtab_list > li.active .tailtab_text {
+  color: #005AAB;
+}
+
+.tailtab {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 14px 48px;
+  min-width: 280px;
+  min-height: 52px;
+  background: #F8F8F8;
+  border: 1px solid #F8F8F8;
+  border-bottom: 1px solid #0053C2;
+  border-radius: 16px 16px 0px 0px;
+}
+
+.tailtab_text {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #595959;
 }
 
 @media (max-width: 1299px) {
@@ -8261,5 +8324,144 @@ input.file_input {
 }
 
 /* data box */
+.data_render_box {
+  display: flex;
+  padding: 24px 36px;
+  gap: 60px;
+  margin-bottom: 48px;
+  border: 1px solid #E6E6E6;
+  border-radius: 16px;
+}
+.data_render_box .img_cols {
+  flex: 0 0 103px;
+}
+.data_render_box .spec_cols {
+  flex: 1;
+  min-width: 0;
+}
+.data_render_box .spec_cols .spec_block {
+  border-bottom: 1px dashed #E6E6E6;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+.data_render_box .spec_cols .spec_block:last-of-type {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.who_img_item {
+  text-align: center;
+}
+.who_img_item .img_box {
+  position: relative;
+  border: 1px solid #E6E6E6;
+  background: #F8F8F8 url("../images/img_no.png") no-repeat 50% 50%/36px auto;
+  padding-bottom: 127%;
+}
+.who_img_item .img_box > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 0;
+     object-position: 50% 0;
+}
+.who_img_item .btn_row {
+  margin-top: 12px;
+}
+.spec_render_table {
+  width: 100%;
+}
+.spec_render_table th, .spec_render_table td {
+  padding-bottom: 14px;
+  text-align: left;
+}
+.spec_render_table th {
+  width: 1px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
+.spec_render_table td.short_data {
+  width: 25%;
+}
+.spec_render_table tr:last-of-type th, .spec_render_table tr:last-of-type td {
+  padding-bottom: 0;
+}
+
+.spec_key_text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #595959;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.spec_value_text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #005AAB;
+  display: inline-block;
+}
+
+.column_data_list {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.column_data_item .label_row {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.column_data_label {
+  height: 28px;
+  background: rgba(89, 89, 89, 0.1);
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 28px;
+  color: #595959;
+  padding: 0 16px;
+}
+
+.column_data_value {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  color: #B5000F;
+  text-decoration: underline;
+  display: inline-block;
+}
+
+.column_data_obj {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.column_data_obj .count, .column_data_obj .unit {
+  display: inline-block;
+}
+.column_data_obj .count {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  color: #B5000F;
+  text-decoration: underline;
+  font-family: "Spoqa", "NotoSans-Regular", dotum;
+}
+.column_data_obj .unit {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
+  color: #595959;
+}
+
 /* main */
 /*# sourceMappingURL=style.css.map */

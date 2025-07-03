@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html lang="ko">
-    @@include('./include/head.html')
-    <body class="front_body">
-        <div class="page_wrap">
-            @@include('./include/header.html')
-            <!-- middle -->
-            <section class="middle_wrap">
-                내용이 들어갑니다.
-            </section>
-            <!-- // middle -->
-             @@include('./include/footer.html')
-        </div>
-    </body>
+  @@include('./include/head.html')
+  <body class="front_body">
+    <div class="page_wrap">
+      @@include('./include/header.html')
+      <!-- middle -->
+      <section class="middle_wrap">내용이 들어갑니다.</section>
+      <!-- // middle -->
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // 인스턴스 선언
+          let dontOpenPopup = new DesignPopup({
+            selector: "#notice_popup",
+            beforeCallback() {},
+            callback() {},
+            closeCallback() {},
+          });
+          // dontOpenPopup.popupShow(); // show
+          // dontOpenPopup.popupHide(); // hide
+
+          // 퍼블확인용
+          let url = window.location.href.split("?")[1];
+          let url_2 = url !== undefined ? url.split("#")[0] : null;
+          if (url_2 === "popup") {
+            dontOpenPopup.popupShow();
+          }
+        });
+      </script>
+      @@include('./include/footer.html')
+    </div>
+  </body>
 </html>
