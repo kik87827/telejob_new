@@ -302,23 +302,58 @@
 		<!-- middle -->
 		<section class="middle_wrap">내용이 들어갑니다.</section>
 		<!-- // middle -->
+		<!-- popup -->
+		<div class="popup_wrap" id="noticeMainPopup">
+			<div class="bg_dim"></div>
+			<div class="popup_box_tb_wrap">
+				<div class="popup_box_tb">
+					<div class="popup_box_td">
+						<div class="notice_banner_container">
+							<div class="img_row">
+								<div class="swiper notice_banner_swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<a href="#" class="notice_banner_item"><img src="../images/main_notice_banner.jpg" alt="" /></a>
+										</div>
+										<div class="swiper-slide">
+											<a href="#" class="notice_banner_item"><img src="../images/main_notice_banner02.jpg" alt="" /></a>
+										</div>
+										<div class="swiper-slide">
+											<a href="#" class="notice_banner_item"><img src="../images/main_notice_banner03.jpg" alt="" /></a>
+										</div>
+										<div class="swiper-slide">
+											<a href="#" class="notice_banner_item"><img src="../images/main_notice_banner04.jpg" alt="" /></a>
+										</div>
+										<div class="swiper-slide">
+											<a href="#" class="notice_banner_item"><img src="../images/main_notice_banner05.jpg" alt="" /></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="control_row"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // popup -->
 		<script>
 			document.addEventListener("DOMContentLoaded", function() {
 				// 인스턴스 선언
-				let dontOpenPopup = new DesignPopup({
-					selector: "#notice_popup",
+				let noticeMainPopup = new DesignPopup({
+					selector: "#noticeMainPopup",
 					beforeCallback() {},
 					callback() {},
 					closeCallback() {},
 				});
-				// dontOpenPopup.popupShow(); // show
-				// dontOpenPopup.popupHide(); // hide
+				// noticeMainPopup.popupShow(); // show
+				// noticeMainPopup.popupHide(); // hide
 
 				// 퍼블확인용
 				let url = window.location.href.split("?")[1];
 				let url_2 = url !== undefined ? url.split("#")[0] : null;
 				if (url_2 === "popup") {
-					dontOpenPopup.popupShow();
+					noticeMainPopup.popupShow();
 				}
 			});
 		</script>

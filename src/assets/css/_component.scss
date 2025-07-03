@@ -480,8 +480,11 @@ select.form_select{
     .bg_dim{display:block;width:100%;height:100%;position:fixed;top:0;left:0;z-index:0;background:#333;opacity:0;transition:.5s;
         &.no_transition{transition:0s;opacity:.7;transform:none;}
     }
+    &.scroll_type{overflow-y:auto;}
 }
-
+.popup_box_tb_wrap{position:absolute;top:0;left:0;width:100%;height:100%;}
+.popup_box_tb{table-layout:fixed; display:table; width:100%;height:100%;}
+.popup_box_td{display:table-cell;padding:20px;vertical-align:middle;}
 
 .popup_modal_box{padding:65px 100px 40px;text-align: center;
     .btn_bottom_wrap{margin-top:30px;}

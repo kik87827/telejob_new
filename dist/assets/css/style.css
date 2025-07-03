@@ -4803,6 +4803,30 @@ select.form_select:required:invalid {
   opacity: 0.7;
   transform: none;
 }
+.popup_wrap.scroll_type {
+  overflow-y: auto;
+}
+
+.popup_box_tb_wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.popup_box_tb {
+  table-layout: fixed;
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.popup_box_td {
+  display: table-cell;
+  padding: 20px;
+  vertical-align: middle;
+}
 
 .popup_modal_box {
   padding: 65px 100px 40px;
