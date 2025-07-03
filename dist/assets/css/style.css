@@ -8487,5 +8487,11 @@ input.file_input {
   color: #595959;
 }
 
+/* notice popup */
+.notice_banner_container {
+  max-width: 464px;
+  margin: 0 auto;
+}
+
 /* main */
 /*# sourceMappingURL=style.css.map */

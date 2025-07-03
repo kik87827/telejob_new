@@ -1460,3 +1460,7 @@ input.file_input{display:none;}
     .count{@include font2(16px,700,1,#B5000F); text-decoration: underline; @include spoca}
     .unit{@include font2(13px,400,1,#595959);}
 }
+
+
+/* notice popup */
+.notice_banner_container{max-width:464px; margin:0 auto;}
