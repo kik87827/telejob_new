@@ -1,157 +1,154 @@
-
 window.addEventListener("DOMContentLoaded", () => {
-    uiBase.init();
+  uiBase.init();
 });
 
 const uiBase = {
   init() {
-      // 현재 객체 내의 모든 메서드 순회
-      for (const key in this) {
-          if (typeof this[key] === "function" && key !== "init") {
-              this[key]();
-          }
+    // 현재 객체 내의 모든 메서드 순회
+    for (const key in this) {
+      if (typeof this[key] === "function" && key !== "init") {
+        this[key]();
       }
+    }
   },
   commonInit() {
-      let touchstart = "ontouchstart" in window;
-      let userAgent = navigator.userAgent.toLowerCase();
-      if (touchstart) {
-          browserAdd("touchmode");
-      }
-      if (userAgent.indexOf("samsung") > -1) {
-          browserAdd("samsung");
-      }
+    let touchstart = "ontouchstart" in window;
+    let userAgent = navigator.userAgent.toLowerCase();
+    if (touchstart) {
+      browserAdd("touchmode");
+    }
+    if (userAgent.indexOf("samsung") > -1) {
+      browserAdd("samsung");
+    }
 
-      if (
-          navigator.platform.indexOf("Win") > -1 ||
-          navigator.platform.indexOf("win") > -1
-      ) {
-          browserAdd("window");
-      }
+    if (navigator.platform.indexOf("Win") > -1 || navigator.platform.indexOf("win") > -1) {
+      browserAdd("window");
+    }
 
-      if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
-          // iPad or iPhone
-          browserAdd("ios");
-      }
+    if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
+      // iPad or iPhone
+      browserAdd("ios");
+    }
 
-      function browserAdd(opt) {
-          document.querySelector("html").classList.add(opt);
-      }
+    function browserAdd(opt) {
+      document.querySelector("html").classList.add(opt);
+    }
   },
   navToggle() {
-      const header_nav_toggle = document.querySelectorAll(".header_nav_toggle");
-      if (!!header_nav_toggle) {
-          header_nav_toggle.forEach((item) => {
-              const thisItem = item;
-              const thisTarget = thisItem.querySelector(".nav_toggle_target");
-              thisTarget.addEventListener("click", (e) => {
-                  e.preventDefault();
-                  thisItem.classList.toggle("active");
-                  e.stopPropagation();
-              });
-          });
-          document.addEventListener("click", (e) => {
-              header_nav_toggle.forEach((item) => {
-                  const thisItem = item;
-                  const toggleTarget = thisItem.querySelector(".nav_toggle_target");
-                  if (!toggleTarget.contains(e.target)) {
-                      item.classList.remove("active");
-                  }
-              });
-          });
-      }
+    const header_nav_toggle = document.querySelectorAll(".header_nav_toggle");
+    if (!!header_nav_toggle) {
+      header_nav_toggle.forEach((item) => {
+        const thisItem = item;
+        const thisTarget = thisItem.querySelector(".nav_toggle_target");
+        thisTarget.addEventListener("click", (e) => {
+          e.preventDefault();
+          thisItem.classList.toggle("active");
+          e.stopPropagation();
+        });
+      });
+      document.addEventListener("click", (e) => {
+        header_nav_toggle.forEach((item) => {
+          const thisItem = item;
+          const toggleTarget = thisItem.querySelector(".nav_toggle_target");
+          if (!toggleTarget.contains(e.target)) {
+            item.classList.remove("active");
+          }
+        });
+      });
+    }
   },
   searchKeyword() {
-      const marquee = document.getElementById("keywordMarquee");
-      if (!marquee) return;
+    const marquee = document.getElementById("keywordMarquee");
+    if (!marquee) return;
 
-      const content = marquee.querySelector(".top_search_keyword_list");
+    const content = marquee.querySelector(".top_search_keyword_list");
 
-      // 텍스트 복제 (한 번만 실행되게 처리)
-      const clone = content.cloneNode(true);
-      marquee.appendChild(clone);
+    // 텍스트 복제 (한 번만 실행되게 처리)
+    const clone = content.cloneNode(true);
+    marquee.appendChild(clone);
 
-      function isPC() {
-        // PC인지 확인 (필요에 따라 조건 조절 가능)
-        return window.innerWidth >= 1024;
+    function isPC() {
+      // PC인지 확인 (필요에 따라 조건 조절 가능)
+      return window.innerWidth >= 1024;
+    }
+
+    function action() {
+      if (!isPC()) return; // 모바일일 경우 실행 안 함
+
+      const contentWidth = content.offsetWidth;
+
+      // 모바일에서 display: none이면 offsetWidth가 0이 되어 오류 발생
+      if (contentWidth === 0) {
+        console.warn("콘텐츠 너비가 0입니다. action() 실행 보류");
+        return;
       }
 
-      function action() {
-        if (!isPC()) return; // 모바일일 경우 실행 안 함
+      const totalWidth = contentWidth * 2 + 50;
+      const speed = 100;
+      const duration = totalWidth / speed;
 
-        const contentWidth = content.offsetWidth;
+      marquee.style.animationDuration = `${duration}s`;
+    }
 
-        // 모바일에서 display: none이면 offsetWidth가 0이 되어 오류 발생
-        if (contentWidth === 0) {
-          console.warn("콘텐츠 너비가 0입니다. action() 실행 보류");
-          return;
-        }
+    // 최초 실행
+    action();
 
-        const totalWidth = contentWidth * 2 + 50;
-        const speed = 100;
-        const duration = totalWidth / speed;
-
-        marquee.style.animationDuration = `${duration}s`;
-      }
-
-      // 최초 실행
+    // 리사이즈 시 PC로 전환되면 다시 계산
+    window.addEventListener("resize", () => {
       action();
-
-      // 리사이즈 시 PC로 전환되면 다시 계산
-      window.addEventListener("resize", () => {
-        action();
-      });
-
+    });
   },
   searchForm() {
-      const top_search_field = document.querySelector(".top_search_field");
-      if (!top_search_field) { return; }
-      const top_search_input = top_search_field.querySelector(".top_search_input");
-      const btn_search_reset = top_search_field.querySelector(".btn_search_reset");
-      let input_value_length = 0;
-      if (!!top_search_input) {
-          top_search_input.addEventListener("input", (e) => {
-              input_value_length = e.target.value.length;
-              top_search_field.classList.toggle("active",input_value_length)
-          });
-      }
-      if (!!btn_search_reset) {
-          btn_search_reset.addEventListener("click", (e) => {
-              top_search_input.focus();
-              top_search_field.classList.remove("active");
-          });
-      }
+    const top_search_field = document.querySelector(".top_search_field");
+    if (!top_search_field) {
+      return;
+    }
+    const top_search_input = top_search_field.querySelector(".top_search_input");
+    const btn_search_reset = top_search_field.querySelector(".btn_search_reset");
+    let input_value_length = 0;
+    if (!!top_search_input) {
+      top_search_input.addEventListener("input", (e) => {
+        input_value_length = e.target.value.length;
+        top_search_field.classList.toggle("active", input_value_length);
+      });
+    }
+    if (!!btn_search_reset) {
+      btn_search_reset.addEventListener("click", (e) => {
+        top_search_input.focus();
+        top_search_field.classList.remove("active");
+      });
+    }
   },
   mobileHeader() {
     function headerNavActive() {
-        const container = document.querySelector('.header_nav_container');
-        const activeItem = container?.querySelector('.header_nav_menu_item.active');
+      const container = document.querySelector(".header_nav_container");
+      const activeItem = container?.querySelector(".header_nav_menu_item.active");
 
-        if (container && activeItem) {
-            const containerRect = container.getBoundingClientRect();
-            const itemRect = activeItem.getBoundingClientRect();
+      if (container && activeItem) {
+        const containerRect = container.getBoundingClientRect();
+        const itemRect = activeItem.getBoundingClientRect();
 
-            // active 항목이 컨테이너 왼쪽보다 왼쪽에 있다면
-            if (itemRect.left < containerRect.left) {
-                container.scrollLeft -= (containerRect.left - itemRect.left) + 15;
-            }
-            // active 항목이 컨테이너 오른쪽보다 오른쪽에 있다면
-            else if (itemRect.right > containerRect.right) {
-                container.scrollLeft += (itemRect.right - containerRect.right) + 15;
-            }
+        // active 항목이 컨테이너 왼쪽보다 왼쪽에 있다면
+        if (itemRect.left < containerRect.left) {
+          container.scrollLeft -= containerRect.left - itemRect.left + 15;
         }
+        // active 항목이 컨테이너 오른쪽보다 오른쪽에 있다면
+        else if (itemRect.right > containerRect.right) {
+          container.scrollLeft += itemRect.right - containerRect.right + 15;
+        }
+      }
     }
 
     const btn_panel_menu = document.querySelector(".btn_panel_menu");
     const btn_panel_close = document.querySelector(".btn_panel_close");
-    const htmlAndBody = document.querySelectorAll('html, body');
+    const htmlAndBody = document.querySelectorAll("html, body");
     const page_wrap = document.querySelector(".page_wrap");
     const mobile_nav_panel = document.querySelector(".mobile_nav_panel");
     const mobile_nav_panel_dim = document.querySelector(".mobile_nav_panel .bg_dim");
 
     function mobileTotal() {
       let motionTimer = 0;
-      let closeItems = [mobile_nav_panel_dim,btn_panel_close]
+      let closeItems = [mobile_nav_panel_dim, btn_panel_close];
       if (!!btn_panel_menu) {
         btn_panel_menu.addEventListener("click", (e) => {
           e.preventDefault();
@@ -161,10 +158,10 @@ const uiBase = {
           });
           page_wrap.classList.add("open_mbmenu");
           mobile_nav_panel.classList.add("active");
-            if (motionTimer) clearTimeout(motionTimer);
-            motionTimer = setTimeout(() => {
-                btn_panel_close.classList.add("active");
-            }, 30);
+          if (motionTimer) clearTimeout(motionTimer);
+          motionTimer = setTimeout(() => {
+            btn_panel_close.classList.add("active");
+          }, 30);
         });
       }
       if (closeItems.length) {
@@ -182,7 +179,7 @@ const uiBase = {
               });
             }, 500);
           });
-        })
+        });
       }
     }
     function mobileTotalTab() {
@@ -191,7 +188,7 @@ const uiBase = {
       const mb_nav_cont = document.querySelectorAll(".mb_nav_cont");
       if (!!mb_nav_tab) {
         mb_nav_tab.forEach((eventItem) => {
-          eventItem.addEventListener("click",(e) => {
+          eventItem.addEventListener("click", (e) => {
             e.preventDefault();
             const thisTarget = e.currentTarget;
             const thisCont = thisTarget.getAttribute("href");
@@ -203,28 +200,28 @@ const uiBase = {
             }
             thisTarget.closest("li").classList.add("active");
           });
-        })
+        });
       }
 
       function mbNavReset() {
-        const resetItem = [...mb_nav_tab_li,...mb_nav_cont]
+        const resetItem = [...mb_nav_tab_li, ...mb_nav_cont];
         if (!!resetItem) {
           resetItem.forEach((item) => {
-              item.classList.remove("active");
+            item.classList.remove("active");
           });
         }
       }
     }
     function mobileTotalToggle() {
-      const mb_navmenu_toggle = document.querySelectorAll('.mb_navmenu_item.has_arrow');
+      const mb_navmenu_toggle = document.querySelectorAll(".mb_navmenu_item.has_arrow");
       if (!!mb_navmenu_toggle) {
         mb_navmenu_toggle.forEach((eventItem) => {
-          eventItem.addEventListener("click",(e) => {
+          eventItem.addEventListener("click", (e) => {
             e.preventDefault();
             const thisTarget = e.currentTarget;
             thisTarget.closest("li").classList.toggle("toggle_active");
-          })
-        })
+          });
+        });
       }
     }
     function mobileTotalReset() {
@@ -250,31 +247,31 @@ const uiBase = {
     // 리사이즈 시 debounce 처리 후 실행
     let resizeTimer;
     window.addEventListener("resize", () => {
-        if (resizeTimer) clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => {
-          headerNavActive();
-          if (window.innerWidth >= 1024) {
-            mobileTotalReset();
-          }
-        }, 100); // 30ms → 100ms로 여유 있게 설정 (디바운싱)
+      if (resizeTimer) clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        headerNavActive();
+        if (window.innerWidth >= 1024) {
+          mobileTotalReset();
+        }
+      }, 100); // 30ms → 100ms로 여유 있게 설정 (디바운싱)
     });
   },
   setVhProperty() {
+    setProperty();
+    window.addEventListener("resize", () => {
       setProperty();
-      window.addEventListener("resize", () => {
-          setProperty();
-      });
-      function setProperty() {
-          const vh = window.innerHeight * 0.01;
-          document.documentElement.style.setProperty('--vh', `${vh}px`);
-      }
+    });
+    function setProperty() {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    }
   },
   pageTopgo() {
     const btn_topgo = document.querySelector(".btn_topgo");
     if (!!btn_topgo) {
       btn_topgo.addEventListener("click", (e) => {
         e.preventDefault();
-        window.scrollTo({top : 0, left: 0, behavior : 'smooth'})
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
       });
     }
   },
@@ -284,9 +281,8 @@ const uiBase = {
     if (!!footer_menu_li_last) {
       footer_menu_li_last.classList.add("mb_last");
     }
-  }
-}
-
+  },
+};
 
 /* popup */
 class DesignPopup {
@@ -315,7 +311,6 @@ class DesignPopup {
     }
     this.layer_wrap_parent = document.querySelector(".layer_wrap_parent");
 
-
     // event
     this.btn_close = this.selector.querySelectorAll(".btn_popup_close");
     this.bg_design_popup = this.selector.querySelector(".bg_dim");
@@ -326,10 +321,14 @@ class DesignPopup {
     }
     if (closeItemArray.length) {
       closeItemArray.forEach((element) => {
-        element.addEventListener("click", (e) => {
-          e.preventDefault();
-          this.popupHide(this.selector);
-        }, false);
+        element.addEventListener(
+          "click",
+          (e) => {
+            e.preventDefault();
+            this.popupHide(this.selector);
+          },
+          false
+        );
       });
     }
   }
@@ -344,15 +343,22 @@ class DesignPopup {
       this.layer_wrap_parent.classList.remove("has_active_multi");
     }
   }
-  popupShow() {
+  popupShow(option) {
+    let target = this.option.selector;
+    let instance_option = option;
     this.design_popup_wrap_active = document.querySelectorAll(".popup_wrap.active");
-    if (this.selector == null) { return; }
+    if (this.selector == null) {
+      return;
+    }
     if (this.touchstart) {
       this.domHtml.classList.add("touchDis");
     }
     this.selector.classList.add("active");
     setTimeout(() => {
       this.selector.classList.add("motion_end");
+      if ("openCallback" in instance_option) {
+        instance_option.openCallback();
+      }
     }, 30);
     if ("beforeCallback" in this.option) {
       this.option.beforeCallback();
@@ -386,31 +392,29 @@ class DesignPopup {
       setTimeout(() => {
         this.selector.classList.remove("active");
         let closeTimer = 0;
-        if(closeTimer){
+        if (closeTimer) {
           clearTimeout(closeTimer);
           closeTimer = 0;
-        }else{
+        } else {
           if ("closeCallback" in this.option) {
             this.option.closeCallback();
           }
-          closeTimer = setTimeout(()=>{
+          closeTimer = setTimeout(() => {
             if ("closeCallback" in instance_option) {
               instance_option.closeCallback();
             }
-          },30);  
+          }, 30);
         }
       }, 400);
       this.design_popup_wrap_active = document.querySelectorAll(".popup_wrap.active");
       this.dimCheck();
-      
-      
+
       if (this.design_popup_wrap_active.length == 1) {
         this.domHtml.classList.remove("touchDis");
       }
     }
   }
 }
-
 
 function designModal(option) {
   const modalGroupCreate = document.createElement("div");
@@ -420,8 +424,8 @@ function designModal(option) {
   let modal_item = null;
   let pagewrap = document.querySelector(".page_wrap");
   let showNum = 0;
-  let okTextNode = option.okText ?? '확인';
-  let cancelTextNode = option.cancelText ?? '취소';
+  let okTextNode = option.okText ?? "확인";
+  let cancelTextNode = option.cancelText ?? "취소";
   let closeBtnDisplay = option.closeDisplay ?? true;
   let submitBtnDisplay = option.submitDisplay ?? true;
   modalGroupCreate.classList.add("modal_wrap_parent");
@@ -445,7 +449,6 @@ function designModal(option) {
       <a href="javascript:;" class="btn_modal_submit primary okcall"><span class="btn_modal_submit_text">${okTextNode}</span></a>
     `;
   }
-  
 
   let modal_template = `
     <div class="modal_wrap">
@@ -467,7 +470,9 @@ function designModal(option) {
   modal_wrap_parent.innerHTML = modal_template;
   modal_item = modal_wrap_parent.querySelector(".modal_wrap");
   modal_item.classList.add("active");
-  if (showNum) { clearTimeout(showNum); }
+  if (showNum) {
+    clearTimeout(showNum);
+  }
   showNum = setTimeout(() => {
     modal_item.classList.add("motion_end");
     modal_item.addEventListener("transitionend", (e) => {
@@ -482,17 +487,17 @@ function designModal(option) {
   let btn_modal_submit_wrap = modal_item.querySelector(".btn_modal_submit_wrap");
   let btn_modal_submit = modal_item.querySelectorAll(".btn_modal_submit");
   let btn_modal_close = modal_item.querySelectorAll(".btn_modal_close");
-  if(!submitBtnDisplay){
+  if (!submitBtnDisplay) {
     modal_item.querySelector(".modal_box_item").classList.add("submit_not");
   }
   if (!!btn_modal_submit) {
     btn_modal_submit.forEach((item) => {
       let eventIs = false;
 
-      if(!submitBtnDisplay){
+      if (!submitBtnDisplay) {
         item.remove();
         btn_modal_submit_wrap.remove();
-      }else{
+      } else {
         if (eventIs) {
           item.removeEventListener("click");
         }
@@ -511,19 +516,17 @@ function designModal(option) {
           eventIs = true;
         });
       }
-
-     
     });
   }
-  if(!closeBtnDisplay){
+  if (!closeBtnDisplay) {
     modal_item.querySelector(".modal_box_item").classList.add("close_not");
   }
-  if(!!btn_modal_close){
-    btn_modal_close.forEach((item)=>{
+  if (!!btn_modal_close) {
+    btn_modal_close.forEach((item) => {
       let eventIs = false;
-      if(!closeBtnDisplay){
+      if (!closeBtnDisplay) {
         item.remove();
-      }else{
+      } else {
         if (eventIs) {
           item.removeEventListener("click");
         }
@@ -532,7 +535,7 @@ function designModal(option) {
           eventIs = true;
         });
       }
-    })
+    });
   }
 
   function closeAction() {
@@ -541,7 +544,9 @@ function designModal(option) {
     if (design_popup_wrap_active.length === 0) {
       domHtml.classList.remove("touchDis");
     }
-    if (actionNum) { clearTimeout(actionNum); }
+    if (actionNum) {
+      clearTimeout(actionNum);
+    }
     actionNum = setTimeout(() => {
       modal_item.classList.remove("active");
       modal_item.remove();

@@ -8,12 +8,23 @@
       <section class="middle_wrap">내용이 들어갑니다.</section>
       <!-- // middle -->
       <!-- popup -->
-      <div class="popup_wrap" id="noticeMainPopup">
+      <div class="popup_wrap scroll_type" id="noticeMainPopup">
         <div class="bg_dim"></div>
         <div class="popup_box_tb_wrap">
           <div class="popup_box_tb">
             <div class="popup_box_td">
-              <div class="notice_banner_container">
+              <div class="notice_banner_layer">
+                <div class="control_row">
+                  <div class="control_cols">
+                    <div class="props_item">
+                      <input type="checkbox" class="props_dom" id="notice_today" />
+                      <label for="notice_today" class="props_label">오늘 하루 보지 않기</label>
+                    </div>
+                  </div>
+                  <div class="control_cols">
+                    <a href="javascript:;" class="btn_card close_trigger"><i class="ico close"></i><span class="text_node">닫기</span></a>
+                  </div>
+                </div>
                 <div class="img_row">
                   <div class="swiper notice_banner_swiper">
                     <div class="swiper-wrapper">
@@ -36,17 +47,6 @@
                     <div class="swiper-pagination"></div>
                   </div>
                 </div>
-                <div class="control_row">
-                  <div class="control_cols">
-                    <div class="props_item">
-                      <input type="checkbox" class="props_dom" id="notice_today" />
-                      <label for="notice_today" class="props_label">오늘 하루 보지 않기</label>
-                    </div>
-                  </div>
-                  <div class="control_cols">
-                    <a href="javascript:;" class="btn_card"><i class="ico close"></i><span class="text_node">닫기</span></a>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -62,9 +62,13 @@
             callback() {},
             closeCallback() {},
           });
+          // noticeMainPopup.popupShow(); // show
+          // noticeMainPopup.popupHide(); // hide
+
           // 공지 팝업 swiper 선언
           let noticeSwiper = new Swiper(".notice_banner_swiper", {
             loop: true,
+            speed: 500,
             autoplay: {
               delay: 3000,
               disableOnInteraction: false,
@@ -74,14 +78,31 @@
               clickable: true, // 사용자가 페이지 버튼 클릭 가능
             },
           });
-          // noticeMainPopup.popupShow(); // show
-          // noticeMainPopup.popupHide(); // hide
+
+          // 오늘하루보지 않기
+          const notice_today = document.getElementById("notice_today");
+          const todayKey = "todayPopup";
+          // 오늘 날짜 (YYYY-MM-DD)
+          const today = new Date().toISOString().split("T")[0];
+          const storedDate = localStorage.getItem(todayKey);
+          notice_today.addEventListener("click", (e) => {
+            if (e.currentTarget.checked && notice_today.checked) {
+              localStorage.setItem(todayKey, today);
+            }
+          });
 
           // 퍼블확인용
           let url = window.location.href.split("?")[1];
           let url_2 = url !== undefined ? url.split("#")[0] : null;
           if (url_2 === "notice_popup") {
-            noticeMainPopup.popupShow();
+            // 오늘 하루 보지 않기
+            if (storedDate !== today) {
+              noticeMainPopup.popupShow({
+                openCallback() {
+                  noticeSwiper.update();
+                },
+              });
+            }
           }
         });
       </script>
