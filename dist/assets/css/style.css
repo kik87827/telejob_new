@@ -5378,7 +5378,7 @@ select.form_select:required:invalid {
   border: 1px solid #E6E6E6;
   border-radius: 24px;
   display: flex;
-  padding: 80px 0;
+  padding: 60px 0;
 }
 .guide_box_maincopy {
   font-size: 30px;
@@ -5684,7 +5684,7 @@ select.form_select:required:invalid {
 .middle_grid_box {
   border: 1px solid #E6E6E6;
   border-radius: 24px;
-  padding: 80px 60px;
+  padding: 60px 60px;
   display: flex;
 }
 .middle_grid_box .grid_cols {
