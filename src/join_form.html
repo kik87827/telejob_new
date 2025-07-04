@@ -205,14 +205,104 @@
                           </div>
                         </div>
                       </li>
+                      <!-- 0704 추가 -->
+                      <li>
+                        <div class="block_form_item">
+                          <div class="block_form_label_row">
+                            <p class="block_form_label">업종<span class="ico_import"></span></p>
+                          </div>
+                          <div class="block_form_enter_row">
+                            <select required class="form_select block_type">
+                              <option value="" disabled selected hidden>선택</option>
+                              <option value="1">전문직</option>
+                              <option value="2">서비스직</option>
+                            </select>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="block_form_item">
+                          <div class="block_form_label_row">
+                            <p class="block_form_label">상품(서비스명)<span class="ico_import"></span></p>
+                          </div>
+                          <div class="block_form_enter_row"><input type="text" class="form_input" /></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="block_form_item">
+                          <div class="block_form_label_row">
+                            <p class="block_form_label">사업자등록번호</p>
+                          </div>
+                          <div class="block_form_enter_row">
+                            <div class="multi_ring_wrap no_block">
+                              <div class="multi_ring_long"><input type="text" class="form_input" /></div>
+                              <div class="multi_ring_unit"><span class="unit_text">-</span></div>
+                              <div class="multi_ring_long"><input type="text" class="form_input" /></div>
+                              <div class="multi_ring_unit"><span class="unit_text">-</span></div>
+                              <div class="multi_ring_long"><input type="text" class="form_input" /></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="block_form_item">
+                          <div class="block_form_label_row">
+                            <p class="block_form_label">사업자등록 상호명</p>
+                          </div>
+                          <div class="block_form_enter_row"><input type="text" class="form_input" /></div>
+                        </div>
+                      </li>
+                      <li class="colspan">
+                        <div class="block_form_item">
+                          <div class="block_form_label_row">
+                            <p class="block_form_label">사업자등록증<br class="mb_sm_br" />(또는 재직증명서)<span class="ico_import"></span></p>
+                          </div>
+                          <div class="block_form_enter_row">
+                            <div class="block_form_enter_row">
+                              <div class="inline_flex_wrap">
+                                <div class="inline_long">
+                                  <input type="text" class="form_input" id="file_input" placeholder="선택된 파일 없음" />
+                                </div>
+                                <div class="inline_short">
+                                  <div class="hidden_input_wrap">
+                                    <a href="javascript:;" class="btn_inline_control">파일 선택</a>
+                                    <input type="file" class="hidden_file_form" data-input="#file_input" />
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form_inner_copy_group">
+                                <p class="form_inner_copy">사업자등록증 제출이 불가피한 경우, 최근 3개월 이내 발급받으신 소속회사의 <strong class="color_emp black">"재직증명서"</strong>를 첨부해주시기 바랍니다.</p>
+                                <p class="form_inner_copy color_emp blue">기업정보에 기재된 회사명과 증빙서류상의 회사명이 반드시 일치해야 합니다.<br />일치하지 않는 경우, 별도의 고지 없이 텔레잡 관리자의 권한으로 증빙서류 폐기처리 될 수 있습니다.</p>
+                                <p class="form_inner_copy indent_copy color_emp blue">
+                                  <span class="indent_bullet">※</span><span class="indent_liquid">기업정보상 회사명 수정이 필요한 경우<br />또는 제출하신 증빙서류의 수정이 필요하신 경우 텔레잡 고객센터(TEL:031-706-2229)로 연락주시기 바랍니다.</span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="colspan">
+                        <div class="block_form_item">
+                          <div class="block_form_label_row">
+                            <p class="block_form_label">회사소개<span class="ico_import"></span></p>
+                          </div>
+                          <div class="block_form_enter_row">
+                            <div class="form_textarea_wrap">
+                              <textarea cols="10" row="10" class="form_textarea"></textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- // 0704 추가 -->
                       <li>
                         <div class="block_form_item">
                           <div class="block_form_label_row">
                             <p class="block_form_label">이메일<span class="ico_import"></span></p>
                           </div>
                           <div class="block_form_enter_row">
-                            <div class="multi_ring_wrap">
-                              <div class="multi_ring_long"><input type="text" class="form_input" /><span class="unit_text mb_unit">@</span></div>
+                            <!-- 0704 변경 -->
+                            <div class="multi_ring_wrap no_block">
+                              <div class="multi_ring_long"><input type="text" class="form_input" /></div>
                               <div class="multi_ring_unit"><span class="unit_text">@</span></div>
                               <div class="multi_ring_long">
                                 <select required class="form_select block_type">
@@ -222,6 +312,7 @@
                                 </select>
                               </div>
                             </div>
+                            <!-- // 0704 변경 -->
                           </div>
                         </div>
                       </li>
@@ -426,6 +517,28 @@
         </div>
       </section>
       <!-- // middle -->
+      <script>
+        window.addEventListener("DOMContentLoaded", () => {
+          fileInputUpload();
+        });
+
+        function fileInputUpload() {
+          const hidden_file_form = document.querySelectorAll(".hidden_file_form");
+          if (hidden_file_form.length) {
+            hidden_file_form.forEach((item) => {
+              const itemDom = item;
+              itemDom.addEventListener("change", (event) => {
+                const eventTarget = event.currentTarget;
+                const itemDomTargetText = eventTarget.dataset.input;
+                const itemDomTargetDom = document.querySelector(itemDomTargetText);
+                if (!!itemDomTargetDom) {
+                  itemDomTargetDom.value = eventTarget.value;
+                }
+              });
+            });
+          }
+        }
+      </script>
       @@include('./include/footer.html')
     </div>
   </body>
