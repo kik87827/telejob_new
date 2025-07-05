@@ -1,15 +1,273 @@
 <!DOCTYPE html>
 <html lang="ko">
-    @@include('./include/head.html')
-    <body class="front_body">
-        <div class="page_wrap">
-            @@include('./include/header4.html')
-            <!-- middle -->
-            <section class="middle_wrap">
-                내용이 들어갑니다.
-            </section>
-            <!-- // middle -->
-             @@include('./include/footer.html')
+  @@include('./include/head.html')
+  <body class="front_body">
+    <div class="page_wrap">
+      @@include('./include/header3.html')
+      <!-- middle -->
+      <section class="middle_wrap">
+        <div class="middle_inner middle_template">
+          <div class="menu_cols">@@include('./middle_box_service.html')</div>
+          <div class="contents_cols">
+            <div class="contents_title_row type2"><h3 class="contents_title">유료서비스 이용내역</h3></div>
+            <div class="sub_contents_row">
+              <div class="board_control_sort_row">
+                <div class="tab_cols">
+                  <dl class="bc_tabmeu_obj">
+                    <dt><span class="bc_tabmenu_key">조회기간</span></dt>
+                    <dd>
+                      <ul class="bartab_list">
+                        <li><a href="#" class="bartab_item active">최근 1주일</a></li>
+                        <li><a href="#" class="bartab_item">최근 1개월</a></li>
+                        <li><a href="#" class="bartab_item">최근 3개월</a></li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="form_cols">
+                  <div class="field_search_wrap">
+                    <div class="field_main_cols">
+                      <ul class="inline_horing_list">
+                        <li class="long"><input type="text" class="box_input calendar" /></li>
+                        <li class="unit"><span class="inline_ring_unit">~</span></li>
+                        <li class="long"><input type="text" class="box_input calendar" /></li>
+                      </ul>
+                    </div>
+                    <a href="javascript:;" class="btn_fieldset_submit type2">검색</a>
+                  </div>
+                </div>
+              </div>
+              <div class="board_sort_row type2">
+                <div class="fraction_cols">
+                  <span class="sort_fraction_text">총 <strong>0</strong> 건</span>
+                </div>
+                <div class="btn_cols">
+                  <a href="javascript:;" class="btn_action_box">신용카드 조회</a>
+                  <a href="javascript:;" class="btn_action_box type2">엑셀 다운로드</a>
+                </div>
+              </div>
+              <div class="board_list_row">
+                <div class="respond_tb_wrap skin2 ptype2">
+                  <table class="respond_tb">
+                    <colgroup>
+                      <col style="width: 16%" />
+                      <col style="width: 15%" />
+                      <col />
+                      <col style="width: 10%" />
+                      <col style="width: 12%" />
+                      <col style="width: 12%" />
+                      <col style="width: 14%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th><span class="respond_thtext emp">결제일</span></th>
+                        <th><span class="respond_thtext">서비스명</span></th>
+                        <th><span class="respond_thtext">결제기간</span></th>
+                        <th><span class="respond_thtext">결제방법</span></th>
+                        <th><span class="respond_thtext">총금액</span></th>
+                        <th><span class="respond_thtext">상태</span></th>
+                        <th><span class="respond_thtext">조회</span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td rowspan="2">
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">결제일</span></dt>
+                            <dd>
+                              <p class="respond_tdtext spoca">2025.05.28</p>
+                              <p class="respond_tdtext sub spoca">11:08:10</p>
+                            </dd>
+                          </dl>
+                        </td>
+                        <td class="align_type2">
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">서비스명</span></dt>
+                            <dd><span class="respond_tdtext spoca">풀옵션</span></dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">결제기간</span></dt>
+                            <dd><span class="respond_tdtext spoca">2025.05.28 ~ 2025.06.02</span></dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">결제방법</span></dt>
+                            <dd><span class="respond_tdtext">무통장입금</span></dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">총금액</span></dt>
+                            <dd>
+                              <div class="price_number_dom">
+                                <span class="value">170,400</span>
+                                <span class="unit">원</span>
+                              </div>
+                            </dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">상태</span></dt>
+                            <dd><span class="respond_tdtext ctype2">입금확인중</span></dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">조회</span></dt>
+                            <dd><a href="javascript:;" class="btn_action_box type3">신용카드 조회</a></dd>
+                          </dl>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="align_type2">
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">서비스명</span></dt>
+                            <dd><span class="respond_tdtext spoca">풀옵션</span></dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">결제기간</span></dt>
+                            <dd><span class="respond_tdtext spoca">2025.05.28 ~ 2025.06.02</span></dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">결제방법</span></dt>
+                            <dd><span class="respond_tdtext">무통장입금</span></dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">총금액</span></dt>
+                            <dd>
+                              <div class="price_number_dom">
+                                <span class="value">170,400</span>
+                                <span class="unit">원</span>
+                              </div>
+                            </dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">상태</span></dt>
+                            <dd><span class="respond_tdtext ctype3">결제완료</span></dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">조회</span></dt>
+                            <dd><a href="javascript:;" class="btn_action_box type3">신용카드 조회</a></dd>
+                          </dl>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">결제일</span></dt>
+                            <dd>
+                              <p class="respond_tdtext spoca">2025.05.28</p>
+                              <p class="respond_tdtext sub spoca">11:08:10</p>
+                            </dd>
+                          </dl>
+                        </td>
+                        <td class="align_type2">
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">서비스명</span></dt>
+                            <dd><span class="respond_tdtext spoca">프리미엄 베이직</span></dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">결제기간</span></dt>
+                            <dd><span class="respond_tdtext spoca">2025.05.28 ~ 2025.06.02</span></dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">결제방법</span></dt>
+                            <dd><span class="respond_tdtext">계좌이체</span></dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">총금액</span></dt>
+                            <dd>
+                              <div class="price_number_dom">
+                                <span class="value">170,400</span>
+                                <span class="unit">원</span>
+                              </div>
+                            </dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">상태</span></dt>
+                            <dd><span class="respond_tdtext ctype2">입금확인중</span></dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">조회</span></dt>
+                            <dd><a href="javascript:;" class="btn_action_box type3">신용카드 조회</a></dd>
+                          </dl>
+                        </td>
+                      </tr>
+                      <!-- <tr>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">지원일</span></dt>
+                            <dd><span class="respond_tdtext spoca">2025.05.28</span></dd>
+                          </dl>
+                        </td>
+                        <td class="align_type2">
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">회사명</span></dt>
+                            <dd><span class="respond_tdtext">메리츠화재</span></dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">주소</span></dt>
+                            <dd><span class="respond_tdtext">서울 중구 칠패로 28 (봉래동1가) 메리츠화재 봉래신사옥</span></dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">연락처</span></dt>
+                            <dd><span class="respond_tdtext spoca">010-1234-5678</span></dd>
+                          </dl>
+                        </td>
+                      </tr> -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- paging -->
+              <div class="board_paging_row">
+                <a href="javascript:;" class="btn_paging_control first"></a>
+                <a href="javascript:;" class="btn_paging_control prev"></a>
+                <ul class="paging_num_list">
+                  <li><a href="javascript:;" class="btn_paging_num active">1</a></li>
+                  <li><a href="javascript:;" class="btn_paging_num">2</a></li>
+                  <li><a href="javascript:;" class="btn_paging_num">3</a></li>
+                  <li><span class="btn_paging_num clamp_text">...</span></li>
+                  <li><a href="javascript:;" class="btn_paging_num">10</a></li>
+                </ul>
+                <a href="javascript:;" class="btn_paging_control next"></a>
+                <a href="javascript:;" class="btn_paging_control last"></a>
+              </div>
+              <!-- // paging -->
+            </div>
+          </div>
         </div>
-    </body>
+      </section>
+      <!-- // middle -->
+      @@include('./include/footer.html')
+    </div>
+  </body>
 </html>
