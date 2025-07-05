@@ -7397,6 +7397,8 @@ input.file_input {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  position: relative;
+  min-height: 56px;
   padding-top: 36px;
   border-top: 1px solid #E6E6E6;
 }
@@ -7404,9 +7406,14 @@ input.file_input {
 .btn_view_control_cols {
   flex: 1;
   min-width: 0;
+  min-height: 100%;
+}
+.btn_view_control_cols.prev_dir {
+  padding-right: 120px;
 }
 .btn_view_control_cols.next_dir {
   text-align: right;
+  padding-left: 120px;
 }
 
 .btn_view_control {
@@ -7448,6 +7455,20 @@ input.file_input {
   overflow: hidden;
 }
 
+.view_controls_btn_wrap {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+  min-height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 36px;
+  box-sizing: border-box;
+}
 .view_controls_btn_wrap .btn_box {
   min-width: 180px;
 }
@@ -7521,6 +7542,7 @@ input.file_input {
   .view_controls_row {
     gap: 10px;
     padding-top: 18px;
+    min-height: 45px;
   }
   .btn_view_control {
     gap: 8px;
@@ -7538,9 +7560,20 @@ input.file_input {
     -webkit-line-clamp: 2;
     overflow: hidden;
     line-height: 1.3;
+    position: relative;
+    top: 1px;
+  }
+  .view_controls_btn_wrap {
+    padding-top: 18px;
   }
   .view_controls_btn_wrap .btn_box {
     min-width: 90px;
+  }
+  .btn_view_control_cols.prev_dir {
+    padding-right: 60px;
+  }
+  .btn_view_control_cols.next_dir {
+    padding-left: 60px;
   }
 }
 /* banner */

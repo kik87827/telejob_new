@@ -577,3 +577,19 @@ function designModal(option) {
     }, 500);
   }
 }
+
+function showInputRequiredModal(message, okcallback = null) {
+  const modalOption = {
+    message,
+
+    modaltype: "",
+
+    okcallback() {
+      if (typeof okcallback === "function") {
+        okcallback(); // 외부 콜백 호출
+      }
+    },
+  };
+
+  designModal(modalOption);
+}
