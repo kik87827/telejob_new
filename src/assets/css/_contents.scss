@@ -144,13 +144,13 @@
 
 .middle_one_title_row{text-align:center;margin:40px 0 20px 0;}
 .middle_one_title{@include font(34px,700,1.4,0,#000);}
-.middle_two_title_row{margin:48px 0; text-align:center; margin-top:48px;}
+.middle_two_title_row{margin:28px 0; text-align:center;}
 .middle_two_title{@include font(24px,700,1.4,0,#000);}
 .middle_two_subcopy{@include font(16px,400,1.4,0,#000); margin-top:12px; word-break:keep-all;}
 .middle_message_row{margin:48px 0; text-align:center;}
 .middle_message_copy{@include font(24px,700,1.4,0,#000);}
 .middle_field_box{
-    max-width:800px; margin:0 auto; box-sizing: border-box; border:1px solid #E6E6E6; border-radius: 24px; padding:80px 60px;
+    max-width:800px; margin:0 auto; box-sizing: border-box; border:1px solid #E6E6E6; border-radius: 24px; padding:60px 60px;
     > .boxtab_wrap{margin-bottom:60px;}
     > .block_form_wrap{}
     > .block_btn_wrap{margin-top:60px;padding:0 84px;}

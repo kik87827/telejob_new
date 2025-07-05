@@ -5743,9 +5743,8 @@ select.form_select:required:invalid {
 }
 
 .middle_two_title_row {
-  margin: 48px 0;
+  margin: 28px 0;
   text-align: center;
-  margin-top: 48px;
 }
 
 .middle_two_title {
@@ -5785,7 +5784,7 @@ select.form_select:required:invalid {
   box-sizing: border-box;
   border: 1px solid #E6E6E6;
   border-radius: 24px;
-  padding: 80px 60px;
+  padding: 60px 60px;
 }
 .middle_field_box > .boxtab_wrap {
   margin-bottom: 60px;
