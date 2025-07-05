@@ -317,11 +317,15 @@
     }
     .btn_cols{flex:0; white-space: nowrap;}
 }
-input.fieldset_input{appearance: none; width:100%;border:0; background:transparent; padding:12px 34px 12px 13px; @include font(16px,400,1.6,0,#000); height:48px;box-sizing: border-box; }
+input.fieldset_input{appearance: none; width:100%;border:0; background:transparent; padding:12px 34px 12px 13px; @include font(16px,400,1.6,0,#000); height:48px;box-sizing: border-box;
+    &.calendar{}
+}
 input.file_input{display:none;}
 .btn_form_reset{width:16px;height:16px;display:none; @include bgicon;background-image:url("../images/ico_reset_light.png"); margin-right:16px;}
 
-.btn_fieldset_submit{@include font(14px,700,1,0,#000); min-height:48px;background:#fff; border:1px solid #000000; display:flex; align-items: center; justify-content: center; border-radius: 12px; padding:14px 24px; box-sizing: border-box;}
+.btn_fieldset_submit{@include font(14px,700,1,0,#000); min-height:48px;background:#fff; border:1px solid #000000; display:inline-flex; align-items: center; justify-content: center; border-radius: 12px; padding:14px 24px; box-sizing: border-box;
+    &.type2{min-height:44px; padding:12px 24px;}
+}
 .img_preview_render{
     min-height:260px; margin-top:12px; box-sizing: border-box; text-align: center; display:flex; align-items: center; justify-content: center; border-radius:8px; border:1px solid #E6E6E6;
   img{vertical-align: middle;}
@@ -518,6 +522,7 @@ input.file_input{display:none;}
     .search_cols{
         .form_select{min-width:120px;}
     }
+    &.type2{background:none;padding:0;}
 }
 .sort_fraction_text{
     @include font(13px, 700, 1, 0, #000);
@@ -535,6 +540,32 @@ input.file_input{display:none;}
 .board_sortitem_list{
     display:flex; align-items: center; gap:8px;
     > li{}
+}
+.board_control_sort_row{
+    background:#F8F8F8; display:flex; align-items: center; justify-content: space-between; gap:20px; padding:8px 16px; margin-bottom:48px;
+    .tab_cols{}
+    .form_cols{}
+}
+.bc_tabmeu_obj{
+    display:flex; align-items: center; gap:12px;
+    dt,dd{}
+    dt{}
+    dd{}
+}
+.bc_tabmenu_key{@include font2(16px,400,1,#000); display:inline-block;}
+.bartab_list{
+    display:flex; align-items: center; gap:4px;
+    > li{}
+}
+.bartab_item{
+    @include font2(13px,700,1,#595959); display:inline-flex; min-height:32px; align-items: center; border:1px solid #E6E6E6; border-radius:100px; padding:5px 16px 6px; box-sizing: border-box;
+    &.active{color:#005AAB; border-color:#005AAB;}
+}
+.field_search_wrap{
+    display:flex; align-items: center; gap:8px;
+    .field_main_cols{
+        
+    }
 }
 .sort_item_obj{
     display:flex; align-items: center; gap:8px;
@@ -611,7 +642,7 @@ input.file_input{display:none;}
             tbody{
                 tr{
                     td{
-                        padding:24px 16px 24px;
+                        padding:16px 16px 16px;
                         &.has_form{
                             .props_dom{}
                         }
@@ -1057,7 +1088,9 @@ input.file_input{display:none;}
     @include font2(16px,500,1.5,#000);
     strong{font-weight:500;}
 }
-.btn_action_box{display:inline-flex; align-items: center; @include font2(14px,700,1,#000); min-height:36px; border:1px solid #E6E6E6; border-radius: 100px; box-sizing: border-box; padding:8px 16px;}
+.btn_action_box{display:inline-flex; align-items: center; @include font2(14px,700,1,#000); min-height:36px; border:1px solid #E6E6E6; border-radius: 100px; box-sizing: border-box; padding:8px 16px;
+    &.type2{color:#005AAB; border-color:#005AAB;}
+}
 .respon_entry_wrap{border-top:2px solid #BDC5D1;}
 .respon_entry_tb{
     width:100%;

@@ -173,13 +173,22 @@
 .block_warn_para{@include font(12px, 400, 1.3, 0, #AF0101);}
 input.form_input{
     appearance: none; height:48px;  @include font(16px, 400, 1, 0, #000); border:0; border-bottom:1px solid #BDC5D1; border-radius:0; width:100%; box-sizing: border-box;
+    &.calendar{}
     &.warn{border-color:#AF0101;}
     &:focus{border-bottom-color:#000;}
     &:read-only,
     &:disabled{background:#F8F8F8; color:#aaa; padding:0 13px;}
     &::placeholder{color:#aaa;}
-
+    
     &.box_type{border-radius:8px; border:1px solid #E6E6E6;padding:0 13px;}
+}
+input.box_input{
+    appearance: none; height:44px;  @include font(14px, 400, 1, 0, #000); border:1px solid #E6E6E6; border-radius:8px; width:100%; box-sizing: border-box; padding:0 42px 0 13px;
+    &.calendar{background:#fff url("../images/ico_calendar.png") no-repeat calc(100% - 13px) 50%/16px auto;}
+    &.warn{border-color:#AF0101;}
+    &:read-only,
+    &:disabled{background:#F8F8F8; color:#aaa;}
+    &::placeholder{color:#aaa;}
 }
 textarea.form_textarea{
     appearance: none; height:200px; padding:0 0; vertical-align:top; resize: none;  @include font(16px, 400, 1.3, 0, #000);border:0; border-bottom:1px solid #BDC5D1; border-radius:0; width:100%; box-sizing: border-box;
@@ -297,6 +306,16 @@ input.props_dom{
 select.form_select{
  appearance: none; box-sizing:border-box; height:48px; font-size:16px; line-height:46px; width:100%; border:1px solid #E6E6E6; border-radius:8px; padding:0 42px 0 13px; background:url("../images/ico_select_arrow.png") no-repeat calc(100% - 13px) 50%/16px auto;
 } */
+
+
+.inline_horing_list{
+    display:flex; align-items: center;
+    >li{
+        &.long{flex:1;}
+        &.unit{}
+    }
+}
+.inline_ring_unit{@include font2(14px,400,1,#000);display:inline-block; padding:0 8px;}
 
 select.form_select{
  appearance: none; cursor: pointer; box-sizing:border-box; height:48px; font-size:16px; line-height:46px; width:100%; border:1px solid #E6E6E6; border-radius:8px; padding:0 42px 0 13px; background:#fff url("../images/ico_select_arrow.png") no-repeat calc(100% - 13px) 50%/16px auto;

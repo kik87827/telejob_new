@@ -282,6 +282,30 @@ const uiBase = {
       footer_menu_li_last.classList.add("mb_last");
     }
   },
+  datePiceker() {
+    $(function () {
+      $(".box_input.calendar").datepicker({
+        dateFormat: "yy-mm-dd", // 날짜 형식
+        showButtonPanel: true, // 오늘/완료 버튼 표시
+        showMonthAfterYear: true,
+        yearSuffix: "년",
+        closeText: "닫기",
+        prevText: "이전달",
+        nextText: "다음달",
+        currentText: "오늘",
+        monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+        monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+        dayNames: ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"],
+        dayNamesShort: ["일", "월", "화", "수", "목", "금", "토"],
+        dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+        showOtherMonths: true, // 👉 이전/다음 달 날짜도 달력에 표시
+        selectOtherMonths: true, // 👉 이전/다음 달 날짜도 선택 가능
+        onSelect: function (dateText, inst) {
+          console.log("선택한 날짜:", dateText);
+        },
+      });
+    });
+  },
 };
 
 /* popup */

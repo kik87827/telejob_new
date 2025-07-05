@@ -17,6 +17,7 @@
 	<script src="./assets/js/jquery-3.4.1.min.js"></script>
 	<script src="./assets/js/dynamicListener.min.js"></script>
 	<script src="./assets/js/swiper.min.js"></script>
+	<script src="./assets/js/jquery-ui.js"></script>
 	<script src="./assets/js/ui.js"></script>
 	<title>텔레잡</title>
 </head>
@@ -360,45 +361,150 @@
 					</div>
 				</div>
 				<div class="contents_cols">
-					<div class="contents_title_row">
+					<div class="contents_title_row type2">
 						<h3 class="contents_title">취업활동 증명서</h3>
 					</div>
 					<div class="sub_contents_row">
-						<div class="board_control_sort_row">
-							<div class="tab_cols">
-								<dl class="bc_tabmeu_obj">
-									<dt><span class="bc_tabmenu_key"></span></dt>
-									<dd>
-										<ul class="bartab_list">
-											<li><a href="#" class="bartab_item active">최근 1주일</a></li>
-											<li><a href="#" class="bartab_item">최근 1개월</a></li>
-											<li><a href="#" class="bartab_item">최근 3개월</a></li>
-										</ul>
-									</dd>
-								</dl>
+						<div class="board_container">
+							<div class="board_control_sort_row">
+								<div class="tab_cols">
+									<dl class="bc_tabmeu_obj">
+										<dt><span class="bc_tabmenu_key">조회기간</span></dt>
+										<dd>
+											<ul class="bartab_list">
+												<li><a href="#" class="bartab_item active">최근 1주일</a></li>
+												<li><a href="#" class="bartab_item">최근 1개월</a></li>
+												<li><a href="#" class="bartab_item">최근 3개월</a></li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+								<div class="form_cols">
+									<div class="field_search_wrap">
+										<div class="field_main_cols">
+											<ul class="inline_horing_list">
+												<li class="long"><input type="text" class="box_input calendar" /></li>
+												<li class="unit"><span class="inline_ring_unit">~</span></li>
+												<li class="long"><input type="text" class="box_input calendar" /></li>
+											</ul>
+										</div>
+										<a href="javascript:;" class="btn_fieldset_submit type2">검색</a>
+									</div>
+								</div>
 							</div>
-							<div class="form_cols"></div>
+							<div class="board_sort_row type2">
+								<div class="fraction_cols">
+									<span class="sort_fraction_text">총 <strong>0</strong> 건</span>
+								</div>
+								<div class="btn_cols">
+									<a href="javascript:;" class="btn_action_box type2">증명서 보기</a>
+								</div>
+							</div>
+							<div class="board_list_row">
+								<div class="respond_tb_wrap skin2">
+									<table class="respond_tb">
+										<colgroup>
+											<col style="width: 80px" />
+											<col style="width: 12%" />
+											<col style="width: 15%" />
+											<col />
+											<col style="width: 20%" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th class="has_total_dom">
+													<div class="props_item">
+														<input type="checkbox" class="props_dom" id="list_total_chk" />
+														<label for="list_total_chk" class="props_label">전체 선택</label>
+													</div>
+												</th>
+												<th><span class="respond_thtext emp">지원일</span></th>
+												<th><span class="respond_thtext">회사명</span></th>
+												<th><span class="respond_thtext">주소</span></th>
+												<th><span class="respond_thtext">연락처</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="has_form"><input type="checkbox" class="props_dom" /></td>
+												<td>
+													<dl class="respond_td_obj">
+														<dt><span class="respond_tdkey">지원일</span></dt>
+														<dd><span class="respond_tdtext spoca">2025.05.28</span></dd>
+													</dl>
+												</td>
+												<td class="align_type2">
+													<dl class="respond_td_obj">
+														<dt><span class="respond_tdkey">회사명</span></dt>
+														<dd><span class="respond_tdtext">메리츠화재</span></dd>
+													</dl>
+												</td>
+												<td>
+													<dl class="respond_td_obj">
+														<dt><span class="respond_tdkey">주소</span></dt>
+														<dd><span class="respond_tdtext">서울 중구 칠패로 28 (봉래동1가) 메리츠화재 봉래신사옥</span></dd>
+													</dl>
+												</td>
+												<td>
+													<dl class="respond_td_obj">
+														<dt><span class="respond_tdkey">연락처</span></dt>
+														<dd><span class="respond_tdtext spoca">010-1234-5678</span></dd>
+													</dl>
+												</td>
+											</tr>
+											<tr>
+												<td class="has_form"><input type="checkbox" class="props_dom" /></td>
+												<td>
+													<dl class="respond_td_obj">
+														<dt><span class="respond_tdkey">지원일</span></dt>
+														<dd><span class="respond_tdtext spoca">2025.05.28</span></dd>
+													</dl>
+												</td>
+												<td class="align_type2">
+													<dl class="respond_td_obj">
+														<dt><span class="respond_tdkey">회사명</span></dt>
+														<dd><span class="respond_tdtext">메리츠화재</span></dd>
+													</dl>
+												</td>
+												<td>
+													<dl class="respond_td_obj">
+														<dt><span class="respond_tdkey">주소</span></dt>
+														<dd><span class="respond_tdtext">서울 중구 칠패로 28 (봉래동1가) 메리츠화재 봉래신사옥</span></dd>
+													</dl>
+												</td>
+												<td>
+													<dl class="respond_td_obj">
+														<dt><span class="respond_tdkey">연락처</span></dt>
+														<dd><span class="respond_tdtext spoca">010-1234-5678</span></dd>
+													</dl>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<!-- paging -->
+							<div class="board_paging_row">
+								<a href="javascript:;" class="btn_paging_control first"></a>
+								<a href="javascript:;" class="btn_paging_control prev"></a>
+								<ul class="paging_num_list">
+									<li><a href="javascript:;" class="btn_paging_num active">1</a></li>
+									<li><a href="javascript:;" class="btn_paging_num">2</a></li>
+									<li><a href="javascript:;" class="btn_paging_num">3</a></li>
+									<li><span class="btn_paging_num clamp_text">...</span></li>
+									<li><a href="javascript:;" class="btn_paging_num">10</a></li>
+								</ul>
+								<a href="javascript:;" class="btn_paging_control next"></a>
+								<a href="javascript:;" class="btn_paging_control last"></a>
+							</div>
+							<!-- // paging -->
 						</div>
-						<!-- paging -->
-						<div class="board_paging_row">
-							<a href="javascript:;" class="btn_paging_control first"></a>
-							<a href="javascript:;" class="btn_paging_control prev"></a>
-							<ul class="paging_num_list">
-								<li><a href="javascript:;" class="btn_paging_num active">1</a></li>
-								<li><a href="javascript:;" class="btn_paging_num">2</a></li>
-								<li><a href="javascript:;" class="btn_paging_num">3</a></li>
-								<li><span class="btn_paging_num clamp_text">...</span></li>
-								<li><a href="javascript:;" class="btn_paging_num">10</a></li>
-							</ul>
-							<a href="javascript:;" class="btn_paging_control next"></a>
-							<a href="javascript:;" class="btn_paging_control last"></a>
-						</div>
-						<!-- // paging -->
 					</div>
 				</div>
 			</div>
 		</section>
 		<!-- // middle -->
+		<script></script>
 		<div class="btn_topgo_wrap"><a href="#" class="btn_topgo"></a></div>
 		<footer class="footer_wrap">
 			<div class="footer_mobile_logo_row">
