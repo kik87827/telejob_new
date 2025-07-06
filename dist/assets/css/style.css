@@ -4572,6 +4572,9 @@ select.form_select:required:invalid {
   .grid_form_list > li {
     flex-basis: calc(50% - 15px);
   }
+  .field_btn_row.btn_box_wrap {
+    margin-top: 60px;
+  }
 }
 @media (max-width: 1023px) {
   /* .block_form_list{
@@ -4596,6 +4599,14 @@ select.form_select:required:invalid {
     font-size: 13px;
     padding: 15px 0;
     height: 100px;
+  }
+  .btn_inline_control {
+    padding: 6px 16px;
+    min-height: 40px;
+    font-size: 13px;
+  }
+  .field_btn_row.btn_box_wrap {
+    margin-top: 40px;
   }
 }
 @media (max-width: 767px) {
@@ -4639,11 +4650,6 @@ select.form_select:required:invalid {
   }
   .multi_ring_short {
     white-space: normal;
-  }
-  .btn_inline_control {
-    padding: 6px 16px;
-    min-height: 40px;
-    font-size: 13px;
   }
   input.form_input.long_place::-moz-placeholder {
     color: transparent;
@@ -6583,6 +6589,9 @@ input.file_input {
   }
   .img_preview_render {
     min-height: 200px;
+  }
+  .field_title_row {
+    margin-bottom: 20px;
   }
 }
 /* board layout */

@@ -351,6 +351,9 @@ select.form_select{
     .grid_form_list{gap:25px 30px;
         > li{flex-basis: calc(50% - 15px);}
     }
+    .field_btn_row{
+        &.btn_box_wrap{margin-top:60px;}
+    }
 }
 @media (max-width:$mobile_large){
     /* .block_form_list{
@@ -365,6 +368,10 @@ select.form_select{
         > li{flex:0 0 100%;}
     }
     textarea.form_textarea{font-size:13px;padding:15px 0; height:100px;}
+    .btn_inline_control{padding:6px 16px; min-height:40px; font-size:13px;}
+    .field_btn_row{
+        &.btn_box_wrap{margin-top:40px;}
+    }
 }
 @media (max-width:$mobile){
     .inline_flex_wrap{gap:8px;
@@ -396,7 +403,7 @@ select.form_select{
     }
     .multi_ring_unit{display:none;}
     .multi_ring_short{white-space:normal;}
-    .btn_inline_control{padding:6px 16px; min-height:40px; font-size:13px;}
+    
     input.form_input{
         &.long_place{
             &::placeholder{color:transparent;}
