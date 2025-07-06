@@ -1555,14 +1555,14 @@ strong.color_emp{font-weight:700;}
 
 
 /* notice popup */
-.notice_banner_layer{max-width:464px; margin:0 auto; background:#fff;box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.12); border-radius: 24px; position:relative;overflow:hidden;
+.notice_banner_layer{max-width:464px; margin:0 auto; background:#fff;box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.12); border-radius: 24px 24px 100px 100px;
     font-size:0;line-height:0;
     .control_row{
         display:flex; justify-content: space-between; padding:8px 24px; align-items:center;
         .props_label{font-size:14px;}
     }
     .control_cols{}
-    .img_row{}
+    .img_row{border-radius: 24px; position:relative;overflow:hidden;}
 }
 
 
