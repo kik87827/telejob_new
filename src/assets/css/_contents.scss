@@ -560,7 +560,7 @@ input.file_input{display:none;}
     > li{}
 }
 .bartab_item{
-    @include font2(13px,700,1,#595959); display:inline-flex; min-height:32px; align-items: center; border:1px solid #E6E6E6; border-radius:100px; padding:5px 16px 6px; box-sizing: border-box;
+    @include font2(13px,700,1,#595959); display:inline-flex; text-align:center; justify-content: center; white-space:nowrap; min-height:32px; align-items: center; border:1px solid #E6E6E6; border-radius:100px; padding:5px 16px 6px; box-sizing: border-box;
     &.active{color:#005AAB; border-color:#005AAB;}
 }
 .field_search_wrap{
@@ -752,7 +752,7 @@ input.file_input{display:none;}
     }
 }
 .list_spec_obj{
-    display:flex; gap:12px; text-align: left;
+    display:flex; gap:5px 12px; text-align: left;
     .key_cols{flex:0; white-space: nowrap;}
     .value_cols{flex:1;}
     .spec_key_text{display:inline-block; @include font2(13px,400,1,#fff); white-space: nowrap; background:#BDC5D1; border-radius:4px; padding:2px 8px 3px;}
@@ -782,6 +782,9 @@ input.file_input{display:none;}
     .props_label{}
 }
 .sc_table_block{margin-top:48px;}
+@media (max-width:$pcwid_large){
+    .list_spec_obj{flex-direction: column;}
+}
 @media (max-width:$mobile_large){
     .board_sort_row{
         gap:10px; align-items:center; padding: 8px 10px;
@@ -794,6 +797,40 @@ input.file_input{display:none;}
     .sort_fraction_text{
         font-size:12px;
         strong{font-size:12px;}
+    }
+    .board_control_list{gap:10px;}
+
+    .board_top_row{
+        &.break_mb{
+            flex-direction: column; align-items: flex-start; gap:10px;
+            .each_cols{flex:1;width:100%;}
+        }
+    }
+
+    .board_sortitem_list{
+        width:100%;
+        > li{
+            &.long{flex:1;
+                
+                .sort_item_obj{
+                    dd{flex:1;}
+                }
+            }
+        }
+    }
+    .sort_item_obj{
+        dt{display:none;}
+    }
+
+    .btn_board_control{
+        padding:5px 12px 6px;
+        .ico{
+            width:18px;height:18px;flex:0 0 18px;
+        }
+        .control_text{font-size:12px;}
+    }
+    .board_fraction_text{font-size:12px;
+        .emp{font-size:13px;}
     }
 
 
@@ -819,17 +856,43 @@ input.file_input{display:none;}
 
     .respond_tb_wrap{
         &.skin2{
-            border-top:2px solid #E6E6E6;
+            &.has_total_chk{
+                 .respond_tb{
+                    thead{
+                         position:relative; padding-bottom:40px;
+                        tr{
+                            th{
+                                &.has_total_dom{
+                                    .props_item{position:absolute;bottom:15px;left:0;}  
+                                }
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                             position:relative; padding:7px 0 7px 40px;
+                             td{
+                                &.has_form{
+                                    height:0; padding:0;
+                                    .props_dom{position:absolute;top:15px;left:0;}  
+                                }
+                             }
+                        }
+                    }
+                }
+            }
             .respond_tb{
                 thead{
                     height:0;
                     tr{
                        th{
                         background:none; border:0;padding:0;
+                        
                        }
                     }
                 }
                 tbody{
+                    border-top:2px solid #E6E6E6;
                     tr{
                         border-top:0;
                         td{padding:10px 0;}
@@ -876,6 +939,10 @@ input.file_input{display:none;}
     .respond_tdtext{font-size:14px;}
     .respond_tdkey{white-space: nowrap;}
     .respond_tdlink{position:relative;top:-1px;}
+
+    .list_spec_obj{
+        .key_cols,.value_cols{text-align: right;}
+    }
 }
 /* paging */
 .popup_contents_row{

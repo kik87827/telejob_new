@@ -217,32 +217,6 @@
                           </dl>
                         </td>
                       </tr>
-                      <!-- <tr>
-                        <td>
-                          <dl class="respond_td_obj">
-                            <dt><span class="respond_tdkey">지원일</span></dt>
-                            <dd><span class="respond_tdtext spoca">2025.05.28</span></dd>
-                          </dl>
-                        </td>
-                        <td class="align_type2">
-                          <dl class="respond_td_obj">
-                            <dt><span class="respond_tdkey">회사명</span></dt>
-                            <dd><span class="respond_tdtext">메리츠화재</span></dd>
-                          </dl>
-                        </td>
-                        <td>
-                          <dl class="respond_td_obj">
-                            <dt><span class="respond_tdkey">주소</span></dt>
-                            <dd><span class="respond_tdtext">서울 중구 칠패로 28 (봉래동1가) 메리츠화재 봉래신사옥</span></dd>
-                          </dl>
-                        </td>
-                        <td>
-                          <dl class="respond_td_obj">
-                            <dt><span class="respond_tdkey">연락처</span></dt>
-                            <dd><span class="respond_tdtext spoca">010-1234-5678</span></dd>
-                          </dl>
-                        </td>
-                      </tr> -->
                     </tbody>
                   </table>
                 </div>
@@ -267,6 +241,27 @@
         </div>
       </section>
       <!-- // middle -->
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const table = document.querySelector(".respond_tb");
+          if (!table) return;
+
+          const rows = Array.from(table.querySelectorAll("tbody tr"));
+
+          rows.forEach((row, rowIndex) => {
+            const cells = row.querySelectorAll("td[rowspan]");
+            cells.forEach((cell) => {
+              const rowspan = parseInt(cell.getAttribute("rowspan"), 10);
+              if (rowspan > 1) {
+                const endRow = rows[rowIndex + rowspan - 1];
+                if (endRow) {
+                  endRow.classList.add("rowspan_end");
+                }
+              }
+            });
+          });
+        });
+      </script>
       @@include('./include/footer.html')
     </div>
   </body>

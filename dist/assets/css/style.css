@@ -6710,6 +6710,9 @@ input.file_input {
   line-height: 1;
   color: #595959;
   display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  white-space: nowrap;
   min-height: 32px;
   align-items: center;
   border: 1px solid #E6E6E6;
@@ -7026,7 +7029,7 @@ input.file_input {
 
 .list_spec_obj {
   display: flex;
-  gap: 12px;
+  gap: 5px 12px;
   text-align: left;
 }
 .list_spec_obj .key_cols {
@@ -7081,6 +7084,11 @@ input.file_input {
   margin-top: 48px;
 }
 
+@media (max-width: 1440px) {
+  .list_spec_obj {
+    flex-direction: column;
+  }
+}
 @media (max-width: 1023px) {
   .board_sort_row {
     gap: 10px;
@@ -7103,6 +7111,47 @@ input.file_input {
   }
   .sort_fraction_text strong {
     font-size: 12px;
+  }
+  .board_control_list {
+    gap: 10px;
+  }
+  .board_top_row.break_mb {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .board_top_row.break_mb .each_cols {
+    flex: 1;
+    width: 100%;
+  }
+  .board_sortitem_list {
+    width: 100%;
+  }
+  .board_sortitem_list > li.long {
+    flex: 1;
+  }
+  .board_sortitem_list > li.long .sort_item_obj dd {
+    flex: 1;
+  }
+  .sort_item_obj dt {
+    display: none;
+  }
+  .btn_board_control {
+    padding: 5px 12px 6px;
+  }
+  .btn_board_control .ico {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+  }
+  .btn_board_control .control_text {
+    font-size: 12px;
+  }
+  .board_fraction_text {
+    font-size: 12px;
+  }
+  .board_fraction_text .emp {
+    font-size: 13px;
   }
   .list_table thead th.mb_none {
     display: none;
@@ -7129,8 +7178,27 @@ input.file_input {
 .nodata_tdtext {
     font-size: 14px;
   }
-  .respond_tb_wrap.skin2 {
-    border-top: 2px solid #E6E6E6;
+  .respond_tb_wrap.skin2.has_total_chk .respond_tb thead {
+    position: relative;
+    padding-bottom: 40px;
+  }
+  .respond_tb_wrap.skin2.has_total_chk .respond_tb thead tr th.has_total_dom .props_item {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+  }
+  .respond_tb_wrap.skin2.has_total_chk .respond_tb tbody tr {
+    position: relative;
+    padding: 7px 0 7px 40px;
+  }
+  .respond_tb_wrap.skin2.has_total_chk .respond_tb tbody tr td.has_form {
+    height: 0;
+    padding: 0;
+  }
+  .respond_tb_wrap.skin2.has_total_chk .respond_tb tbody tr td.has_form .props_dom {
+    position: absolute;
+    top: 15px;
+    left: 0;
   }
   .respond_tb_wrap.skin2 .respond_tb thead {
     height: 0;
@@ -7139,6 +7207,9 @@ input.file_input {
     background: none;
     border: 0;
     padding: 0;
+  }
+  .respond_tb_wrap.skin2 .respond_tb tbody {
+    border-top: 2px solid #E6E6E6;
   }
   .respond_tb_wrap.skin2 .respond_tb tbody tr {
     border-top: 0;
@@ -7210,6 +7281,9 @@ input.file_input {
   .respond_tdlink {
     position: relative;
     top: -1px;
+  }
+  .list_spec_obj .key_cols, .list_spec_obj .value_cols {
+    text-align: right;
   }
 }
 /* paging */
