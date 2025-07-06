@@ -378,7 +378,7 @@
 							</div>
 						</div>
 						<div class="board_list_row">
-							<div class="respond_tb_wrap skin2 ptype2">
+							<div class="respond_tb_wrap skin2 ptype2" id="table_border">
 								<table class="respond_tb">
 									<colgroup>
 										<col style="width: 16%" />
@@ -447,13 +447,19 @@
 												</dl>
 											</td>
 											<td>
-												<dl class="respond_td_obj">
-													<dt><span class="respond_tdkey">조회</span></dt>
-													<dd><a href="javascript:;" class="btn_action_box type3">신용카드 조회</a></dd>
-												</dl>
+												<a href="javascript:;" class="btn_action_box type3">신용카드 조회</a>
 											</td>
 										</tr>
 										<tr>
+											<td class="pc_hidden_cols">
+												<dl class="respond_td_obj">
+													<dt><span class="respond_tdkey">결제일</span></dt>
+													<dd>
+														<p class="respond_tdtext spoca">2025.05.28</p>
+														<p class="respond_tdtext sub spoca">11:08:10</p>
+													</dd>
+												</dl>
+											</td>
 											<td class="align_type2">
 												<dl class="respond_td_obj">
 													<dt><span class="respond_tdkey">서비스명</span></dt>
@@ -490,10 +496,7 @@
 												</dl>
 											</td>
 											<td>
-												<dl class="respond_td_obj">
-													<dt><span class="respond_tdkey">조회</span></dt>
-													<dd><a href="javascript:;" class="btn_action_box type3">신용카드 조회</a></dd>
-												</dl>
+												<a href="javascript:;" class="btn_action_box type3">신용카드 조회</a>
 											</td>
 										</tr>
 										<tr>
@@ -542,10 +545,7 @@
 												</dl>
 											</td>
 											<td>
-												<dl class="respond_td_obj">
-													<dt><span class="respond_tdkey">조회</span></dt>
-													<dd><a href="javascript:;" class="btn_action_box type3">신용카드 조회</a></dd>
-												</dl>
+												<a href="javascript:;" class="btn_action_box type3">신용카드 조회</a>
 											</td>
 										</tr>
 									</tbody>
@@ -574,23 +574,7 @@
 		<!-- // middle -->
 		<script>
 			document.addEventListener("DOMContentLoaded", () => {
-				const table = document.querySelector(".respond_tb");
-				if (!table) return;
-
-				const rows = Array.from(table.querySelectorAll("tbody tr"));
-
-				rows.forEach((row, rowIndex) => {
-					const cells = row.querySelectorAll("td[rowspan]");
-					cells.forEach((cell) => {
-						const rowspan = parseInt(cell.getAttribute("rowspan"), 10);
-						if (rowspan > 1) {
-							const endRow = rows[rowIndex + rowspan - 1];
-							if (endRow) {
-								endRow.classList.add("rowspan_end");
-							}
-						}
-					});
-				});
+				tableTrSelector("#table_border");
 			});
 		</script>
 		<div class="btn_topgo_wrap"><a href="#" class="btn_topgo"></a></div>

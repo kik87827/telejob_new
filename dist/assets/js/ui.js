@@ -377,7 +377,7 @@ class DesignPopup {
   }
   popupShow(option) {
     let target = this.option.selector;
-    let instance_option = option;
+    let instance_option = option || {};
     this.design_popup_wrap_active = document.querySelectorAll(".popup_wrap.active");
     if (this.selector == null) {
       return;
@@ -398,19 +398,12 @@ class DesignPopup {
     if ("callback" in this.option) {
       this.option.callback();
     }
-    /* if (!!this.design_popup_wrap_active) {
-      this.design_popup_wrap_active.forEach((element, index) => {
-          if (this.design_popup_wrap_active !== this.selector) {
-              element.classList.remove("active");
-          }
-      });
-    } */
     this.layer_wrap_parent.append(this.selector);
     this.dimCheck();
   }
   popupHide(option) {
     let target = this.option.selector;
-    let instance_option = option;
+    let instance_option = option || {};
     if (!!target) {
       this.selector.classList.remove("motion");
       if ("beforeClose" in this.option) {
@@ -600,4 +593,24 @@ function showInputRequiredModal(message, okcallback = null) {
   };
 
   designModal(modalOption);
+}
+
+function tableTrSelector(selector) {
+  const table = document.querySelector(selector);
+  if (!table) return;
+
+  const rows = Array.from(table.querySelectorAll("tbody tr"));
+
+  rows.forEach((row, rowIndex) => {
+    const cells = row.querySelectorAll("td[rowspan]");
+    cells.forEach((cell) => {
+      const rowspan = parseInt(cell.getAttribute("rowspan"), 10);
+      if (rowspan > 1) {
+        const endRow = rows[rowIndex + rowspan - 1];
+        if (endRow) {
+          endRow.classList.add("rowspan_end");
+        }
+      }
+    });
+  });
 }
