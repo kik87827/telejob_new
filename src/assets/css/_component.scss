@@ -84,6 +84,10 @@
     }
     .btn_box{min-height:45px;}
     .btn_box_text{font-size:16px;}
+
+    .btn_box_wrap{
+        &.sub_bottom_pos{margin-top:30px;}
+    }
 }
 @media (max-width:$mobile){
     .btn_box_wrap{
