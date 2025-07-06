@@ -7146,8 +7146,9 @@ input.file_input {
   .respond_tb_wrap.skin2 .respond_tb tbody tr td {
     padding: 10px 0;
   }
-}
-@media (max-width: 767px) {
+  .respond_thtext {
+    display: none;
+  }
   .respond_tb {
     display: block;
   }
@@ -7190,9 +7191,6 @@ input.file_input {
     position: absolute;
     top: 15px;
     left: 15px;
-  }
-  .respond_thtext {
-    display: none;
   }
   .respond_td_obj {
     display: flex;

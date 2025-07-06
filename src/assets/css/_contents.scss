@@ -838,8 +838,7 @@ input.file_input{display:none;}
             }
         }
     }
-}
-@media (max-width:$mobile){
+    .respond_thtext{display:none;}
     .respond_tb{
         display:block;
          thead{
@@ -867,7 +866,7 @@ input.file_input{display:none;}
             }
          }
     }
-    .respond_thtext{display:none;}
+    
     .respond_td_obj{
         display:flex; justify-content:space-between;
          dt{display:inline-block;}
@@ -878,7 +877,6 @@ input.file_input{display:none;}
     .respond_tdkey{white-space: nowrap;}
     .respond_tdlink{position:relative;top:-1px;}
 }
-
 /* paging */
 .popup_contents_row{
     .board_paging_row{
