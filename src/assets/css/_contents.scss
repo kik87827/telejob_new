@@ -1367,6 +1367,75 @@ input.file_input{display:none;}
     }
 }
 .foot_total_key{display:inline-block; @include font2(16px,400,1,#000);}
+
+.chain_tb_wrap{}
+.chain_tb{
+    tbody{
+        tr{
+            td{
+                &.has_props_item{
+                    input.props_dom{}
+                }
+            }
+        }
+    }
+}
+.chain_tb{}
+.chain_emp_title{}
+.tail_item_tb{
+    > li{
+
+    }
+    .tail_key_cols{}
+    .tail_value_cols{}
+    .tail_key_text{}
+    .tail_value_text{}
+}
+.link_row_list{
+    > li{
+        &.long{}
+        &.unit{}
+    }
+}
+input.ui_input{}
+.link_unit_text{}
+.tail_vobj_dl{
+    dt,dd{}
+    dt{}
+    dd{}
+}
+.tail_vkey_text{}
+.number_ring_item{}
+.number_ring_main{}
+.number_ring_unit{}
+.obj_count_render_list{
+    > li{}
+}
+.obj_count_binder{
+    .key_cols{}
+    .value_cols{}
+}
+.obj_binder_key{}
+.number_link_item{}
+.number_link_main{
+    &.color_red{}
+}
+.number_link_unit{}
+.obj_binder_top_coment{}
+.total_tape_render{
+    .key_cols{}
+    .value_cols{}
+}
+.total_define_dl{
+    dt,dd{}
+    dt{}
+    dd{}
+}
+.total_define_key{}
+.number_connect_item{}
+.number_connect_main{}
+.number_connect_unit{}
+
 @media (max-width:$mobile_large){
     .boxtab_wrap + .column_obj_wrap{margin-top:24px;}
     .column_obj{border-radius:8px; padding:15px;
