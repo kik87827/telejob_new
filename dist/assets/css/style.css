@@ -7070,6 +7070,14 @@ input.file_input {
   color: #000;
 }
 
+.sc_guide_title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  color: #000;
+  margin-bottom: 12px;
+}
+
 .sc_tape_formbox {
   background: #F8F8F8;
   padding: 24px 36px;

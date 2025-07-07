@@ -769,6 +769,7 @@ input.file_input{display:none;}
         }
     }
 }
+.sc_guide_title{@include font2(16px,500,1,#000); margin-bottom:12px;}
 .sc_tape_formbox{
     background:#F8F8F8; padding:24px 36px; margin-top:16px; display:flex; gap:20px; align-items: center; justify-content: space-between;
     .key_cols{}
