@@ -9529,5 +9529,15 @@ strong.color_emp {
     margin-top: 20px;
   }
 }
+/* 반응형 간격 */
+.res_mb36 {
+  margin-bottom: 36px !important;
+}
+
+@media (max-width: 1023px) {
+  .res_mb36 {
+    margin-bottom: 20px !important;
+  }
+}
 /* main */
 /*# sourceMappingURL=style.css.map */

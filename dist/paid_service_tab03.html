@@ -24,8 +24,7 @@
 
 <body class="front_body">
 	<div class="page_wrap">
-		<!-- type2 추가 -->
-		<header class="header_wrap type2">
+		<header class="header_wrap">
 			<div class="header_main_row">
 				<div class="logo_cols">
 					<a href="javascript:;" class="btn_panel_menu"><i class="btn_panel_menu_ico"></i></a>
@@ -39,12 +38,37 @@
 						</a>
 					</h1>
 				</div>
+				<div class="search_cols">
+					<div class="top_search_container">
+						<form>
+							<fieldset class="top_search_field">
+								<legend>검색</legend>
+								<input type="text" class="top_search_input" placeholder="텔레마케터 취업의 새로운 시작, 텔레잡!" />
+								<button type="reset" class="btn_search_reset"></button>
+								<button type="submit" class="btn_search_submit"></button>
+							</fieldset>
+						</form>
+					</div>
+					<div class="top_search_keyword_wrap">
+						<div class="top_search_marguee" id="keywordMarquee">
+							<ul class="top_search_keyword_list">
+								<li><a href="#" class="top_search_keyword">상조</a></li>
+								<li><a href="#" class="top_search_keyword">동의콜</a></li>
+								<li><a href="#" class="top_search_keyword">재택</a></li>
+								<li><a href="#" class="top_search_keyword">인바운드</a></li>
+								<li><a href="#" class="top_search_keyword">건강식품</a></li>
+								<li><a href="#" class="top_search_keyword">aia</a></li>
+								<li><a href="#" class="top_search_keyword">현대해상</a></li>
+								<li><a href="#" class="top_search_keyword">실장</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
 				<div class="util_cols">
 					<div class="top_util_wrap">
 						<ul class="top_util_list">
-							<li><a href="#" class="top_util_item">텔레잡 홈</a></li>
-							<li><a href="#" class="top_util_item type2">유료서비스 안내</a></li>
-							<li><a href="#" class="top_util_item type2">디자인신청</a></li>
+							<li><a href="#" class="top_util_item">즐겨찾기</a></li>
+							<li><a href="#" class="top_util_item">유료서비스안내</a></li>
 							<li><a href="#" class="top_util_item">공지/뉴스</a></li>
 							<li><a href="#" class="top_util_item">고객센터</a></li>
 						</ul>
@@ -57,48 +81,36 @@
 						<ul class="header_nav_menu_list">
 							<li>
 								<div class="header_nav_menu_item active">
-									<a href="#" class="header_nav_menu_link">기업회원 홈</a>
+									<div class="nav_tooltip_layer">
+										<span class="nav_tooltip_text">SINCE 2001, 신뢰의 시작!</span>
+									</div>
+									<a href="#" class="header_nav_menu_link">전체 채용정보</a>
 								</div>
 							</li>
 							<li>
 								<div class="header_nav_menu_item">
-									<a href="#" class="header_nav_menu_link">채용공고등록</a>
+									<a href="#" class="header_nav_menu_link">콜백 채용정보</a>
 								</div>
 							</li>
 							<li>
 								<div class="header_nav_menu_item">
-									<a href="#" class="header_nav_menu_link">채용공고관리</a>
+									<a href="#" class="header_nav_menu_link">인기채용정보/우수기업전용채용관</a>
 								</div>
 							</li>
 							<li>
 								<div class="header_nav_menu_item">
-									<a href="#" class="header_nav_menu_link">유료서비스관리</a>
-								</div>
-							</li>
-							<li>
-								<div class="header_nav_menu_item">
-									<a href="#" class="header_nav_menu_link">인재관리</a>
-								</div>
-							</li>
-							<li>
-								<div class="header_nav_menu_item">
-									<a href="#" class="header_nav_menu_link">VIP전용관</a>
-								</div>
-							</li>
-							<li>
-								<div class="header_nav_menu_item">
-									<a href="#" class="header_nav_menu_link">기업정보관리</a>
+									<a href="#" class="header_nav_menu_link">인재정보</a>
 								</div>
 							</li>
 						</ul>
 					</div>
 					<div class="header_nav_util_wrap">
-						<ul class="header_nav_util_list">
+						<ul class="header_nav_util_list type2">
 							<!-- <li><a href="#" class="header_nav_util">로그인</a></li>
                     <li><a href="#" class="header_nav_util">회원가입</a></li> -->
 							<li>
 								<dl class="header_nav_fraction">
-									<dt><span class="key_fraction_label">총지원자 :</span></dt>
+									<dt><span class="key_fraction_label">입사지원현황 :</span></dt>
 									<dt><strong class="key_fraction_value">22</strong></dt>
 								</dl>
 							</li>
@@ -298,7 +310,91 @@
 		</header>
 		<!-- middle -->
 		<section class="middle_wrap">
-			내용이 들어갑니다.
+			<div class="middle_inner middle_template">
+				<div class="menu_cols">
+					<div class="middle_menu_box">
+						<div class="box_top_row">
+							<h2 class="middle_menu_title">유료서비스 관리</h2>
+						</div>
+						<div class="box_middle_row">
+							<ul class="box_menu_list">
+								<li><a href="#" class="depth_one_title active">채용정보 연결</a></li>
+								<li><a href="#" class="depth_one_title">유료서비스 이용내역</a></li>
+								<li><a href="#" class="depth_one_title">서비스 예약현황</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="middle_banner_wrap">
+						<ul class="middle_banner_list">
+							<li>
+								<a href="#" class="middle_banner_item" style="background-color: #ff494d">
+									<span class="img_cols"><img src="./assets/images/banner_img_design.png" alt="" /></span>
+									<div class="text_cols">
+										<p class="banner_text_node">채용공고<br />디자인 신청</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="contents_cols">
+					<div class="contents_title_row type2">
+						<h3 class="contents_title">채용정보 연결</h3>
+					</div>
+					<div class="sub_contents_row">
+						<div class="sc_guide_block res_mb36">
+							<p class="sc_guide_title">유료서비스 설정</p>
+							<ul class="bullet_list">
+								<li>구입하신 서비스 상품과 게시할 채용정보를 연결 관리하는 메뉴입니다.</li>
+								<li>
+									채용정보를 서비스에 연결하기 전에 반드시
+									<span class="color_emp red">해당 채용정보가 현재 게재되어 있는지 확인하세요.</span>
+								</li>
+								<li>올바른 연결이 되어 있지 않은 경우 정상적으로 노출이 되지 않으니 유념하시기 바랍니다.</li>
+								<li>서비스 사용 유효기간 내에서는 연결할 채용정보를 수시로 변경 가능합니다.</li>
+							</ul>
+						</div>
+						<div class="tailtab_wrap">
+							<ul class="tailtab_list">
+								<li>
+									<a href="#" class="tailtab">
+										<span class="tailtab_text">
+											진행중인 유료서비스
+											<br class="mb_br" />
+											(10)
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="tailtab">
+										<span class="tailtab_text">유료서비스 설정</span>
+									</a>
+								</li>
+								<li class="active">
+									<a href="#" class="tailtab">
+										<span class="tailtab_text">서비스 연장 결제</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- paging -->
+						<div class="board_paging_row">
+							<a href="javascript:;" class="btn_paging_control first"></a>
+							<a href="javascript:;" class="btn_paging_control prev"></a>
+							<ul class="paging_num_list">
+								<li><a href="javascript:;" class="btn_paging_num active">1</a></li>
+								<li><a href="javascript:;" class="btn_paging_num">2</a></li>
+								<li><a href="javascript:;" class="btn_paging_num">3</a></li>
+								<li><span class="btn_paging_num clamp_text">...</span></li>
+								<li><a href="javascript:;" class="btn_paging_num">10</a></li>
+							</ul>
+							<a href="javascript:;" class="btn_paging_control next"></a>
+							<a href="javascript:;" class="btn_paging_control last"></a>
+						</div>
+						<!-- // paging -->
+					</div>
+				</div>
+			</div>
 		</section>
 		<!-- // middle -->
 		<div class="btn_topgo_wrap"><a href="#" class="btn_topgo"></a></div>

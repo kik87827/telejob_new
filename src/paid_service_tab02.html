@@ -1,15 +1,72 @@
 <!DOCTYPE html>
 <html lang="ko">
-    @@include('./include/head.html')
-    <body class="front_body">
-        <div class="page_wrap">
-            @@include('./include/header4.html')
-            <!-- middle -->
-            <section class="middle_wrap">
-                내용이 들어갑니다.
-            </section>
-            <!-- // middle -->
-             @@include('./include/footer.html')
+  @@include('./include/head.html')
+  <body class="front_body">
+    <div class="page_wrap">
+      @@include('./include/header3.html')
+      <!-- middle -->
+      <section class="middle_wrap">
+        <div class="middle_inner middle_template">
+          <div class="menu_cols">@@include('./middle_box_service_01.html')</div>
+          <div class="contents_cols">
+            <div class="contents_title_row type2"><h3 class="contents_title">채용정보 연결</h3></div>
+            <div class="sub_contents_row">
+              <div class="sc_guide_block res_mb36">
+                <p class="sc_guide_title">유료서비스 설정</p>
+                <ul class="bullet_list">
+                  <li>구입하신 서비스 상품과 게시할 채용정보를 연결 관리하는 메뉴입니다.</li>
+                  <li>
+                    채용정보를 서비스에 연결하기 전에 반드시
+                    <span class="color_emp red">해당 채용정보가 현재 게재되어 있는지 확인하세요.</span>
+                  </li>
+                  <li>올바른 연결이 되어 있지 않은 경우 정상적으로 노출이 되지 않으니 유념하시기 바랍니다.</li>
+                  <li>서비스 사용 유효기간 내에서는 연결할 채용정보를 수시로 변경 가능합니다.</li>
+                </ul>
+              </div>
+              <div class="tailtab_wrap">
+                <ul class="tailtab_list">
+                  <li>
+                    <a href="#" class="tailtab">
+                      <span class="tailtab_text">
+                        진행중인 유료서비스
+                        <br class="mb_br" />
+                        (10)
+                      </span>
+                    </a>
+                  </li>
+                  <li class="active">
+                    <a href="#" class="tailtab">
+                      <span class="tailtab_text">유료서비스 설정</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="tailtab">
+                      <span class="tailtab_text">서비스 연장 결제</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- paging -->
+              <div class="board_paging_row">
+                <a href="javascript:;" class="btn_paging_control first"></a>
+                <a href="javascript:;" class="btn_paging_control prev"></a>
+                <ul class="paging_num_list">
+                  <li><a href="javascript:;" class="btn_paging_num active">1</a></li>
+                  <li><a href="javascript:;" class="btn_paging_num">2</a></li>
+                  <li><a href="javascript:;" class="btn_paging_num">3</a></li>
+                  <li><span class="btn_paging_num clamp_text">...</span></li>
+                  <li><a href="javascript:;" class="btn_paging_num">10</a></li>
+                </ul>
+                <a href="javascript:;" class="btn_paging_control next"></a>
+                <a href="javascript:;" class="btn_paging_control last"></a>
+              </div>
+              <!-- // paging -->
+            </div>
+          </div>
         </div>
-    </body>
+      </section>
+      <!-- // middle -->
+      @@include('./include/footer.html')
+    </div>
+  </body>
 </html>
