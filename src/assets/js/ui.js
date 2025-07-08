@@ -606,3 +606,148 @@ function tableTrSelector(selector) {
     });
   });
 }
+
+
+
+
+/* combo box */
+ function comboFunc() {
+  const combo_item = document.querySelectorAll(".combo_item");
+  const combo_option_group = document.querySelectorAll(".combo_option_group");
+  addDynamicEventListener(document.body, 'click', '.combo_target', function(e) {
+    let thisTarget = e.target;
+    let thisParent = thisTarget.closest(".combo_item");
+    let thisOptionGroup = thisParent.querySelector(".combo_option_group");
+    let appendOption = null;
+    let combo_option_scroll = null;
+    if (thisOptionGroup !== null) {
+      comboInit(thisParent);
+    }
+    comboPosAction();
+    // not
+    combo_item.forEach((element) => {
+      if (element !== thisParent) {
+        element.classList.remove("active");
+      }
+    });
+    appendOption = document.querySelector(`[data-option='${thisParent.getAttribute("id")}']`);
+    combo_option_scroll = appendOption.querySelector(".combo_option_scroll");
+    appendOptionListOption = combo_option_scroll.getAttribute("data-rowCount") !== null ? combo_option_scroll.getAttribute("data-rowCount") : 5;
+    combo_option_group.forEach((element) => {
+      if (element !== appendOption) {
+        element.classList.remove("active");
+      }
+    });
+    thisParent.classList.toggle("active");
+    appendOption.classList.toggle("active");
+    if (appendOption.classList.contains("active")) {
+      if (combo_option_scroll.classList.contains("addHeight")) {
+        return;
+      }
+      if (appendOption.querySelectorAll("li")[appendOptionListOption] !== undefined) {
+        combo_option_scroll.style.maxHeight = `${appendOption.querySelectorAll("li")[appendOptionListOption].offsetTop/* +7 */}px`;
+      }
+      console.log(appendOptionListOption);
+      combo_option_scroll.classList.add("addHeight");
+    }
+  });
+  addDynamicEventListener(document.body, 'click', '.combo_option', function(e) {
+    let thisTarget = e.target;
+    let thisParent = thisTarget.closest(".combo_option_group");
+    let thisTargetText = thisTarget.textContent;
+    let comboCallItem = document.querySelector(`[id='${thisParent.getAttribute('data-option')}']`);
+    let comboCallTarget = comboCallItem.querySelector(".combo_target");
+
+    if (thisTarget.classList.contains("disabled")) {
+      return;
+    }
+    comboCallTarget.textContent = thisTargetText;
+    thisParent.classList.remove("active");
+    comboCallItem.classList.remove("active");
+  });
+  document.addEventListener("click", (e) => {
+    if (e.target.closest(".combo_item") !== null) {
+      return;
+    }
+    comtoReset();
+  });
+
+  let currentWid = window.innerWidth;
+  window.addEventListener("resize",()=>{
+    if(currentWid !== window.innerWidth){
+      comboPosAction();
+    }
+    currentWid = window.innerWidth;
+  })
+
+  function comtoReset() {
+    const combo_item = document.querySelectorAll(".combo_item");
+    const combo_option_group = document.querySelectorAll(".combo_option_group");
+
+    combo_item.forEach((element) => {
+      element.classList.remove("active");
+    });
+    combo_option_group.forEach((element) => {
+      element.classList.remove("active");
+    });
+  }
+
+  function comboInit() {
+    const combo_item = document.querySelectorAll(".combo_item");
+    const appBody = document.querySelector(".page_wrap");
+
+    combo_item.forEach((element, index) => {
+      let thisElement = element;
+      let option_group = thisElement.querySelector(".combo_option_group");
+      if (element.getAttribute("id") === null) {
+        thisElement.setAttribute("id", 'combo_item_' + index);
+        option_group.setAttribute("data-option", 'combo_item_' + index);
+      } else {
+        option_group.setAttribute("data-option", thisElement.getAttribute("id"));
+      }
+      if (element.closest(".fullpop_contlow") !== null) {
+        element.closest(".fullpop_contlow").appendChild(option_group);
+      } else {
+        appBody.appendChild(option_group);
+      }
+    });
+  }
+
+  function comboPosAction() {
+    const appendOption = document.querySelectorAll(".combo_option_group");
+    appendOption.forEach((element, index) => {
+      let comboCall = document.querySelector(`[id='${element.getAttribute("data-option")}']`);
+      if(!comboCall){return;}
+      let combo_top = window.scrollY + comboCall.getBoundingClientRect().top;
+      let fullpop_contlow_top = 0;
+      let combo_left = comboCall.getBoundingClientRect().left;
+      let fullpop_contlow_left = 0;
+
+      if (comboCall.closest(".fullpop_contlow") !== null) {
+        fullpop_contlow_top = comboCall.closest(".fullpop_contlow").getBoundingClientRect().top;
+        fullpop_contlow_left = comboCall.closest(".fullpop_contlow").getBoundingClientRect().left;
+        element.setAttribute("style", `
+                    top : ${(combo_top - fullpop_contlow_top) + comboCall.getBoundingClientRect().height - 1}px; 
+                    left : ${combo_left - fullpop_contlow_left}px;
+                    width : ${ comboCall.getBoundingClientRect().width }px;
+                `)
+      } else {
+        element.setAttribute("style", `
+                    top : ${combo_top + comboCall.getBoundingClientRect().height - 1}px; 
+                    left : ${combo_left}px;
+                    width : ${ comboCall.getBoundingClientRect().width }px;
+                `)
+      }
+    });
+  }
+}
+
+function comboChangeCallback(option) {
+  addDynamicEventListener(document.body, 'click', `[data-option='${option.target}'] .combo_option`, function(e) {
+    let thisEventObj = e.target;
+    let thisEventObjValue = thisEventObj.getAttribute("data-value");
+    if ("callback" in option) {
+      option.callback(thisEventObjValue);
+    }
+  });
+}
