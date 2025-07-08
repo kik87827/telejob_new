@@ -535,7 +535,13 @@ input.file_input{display:none;}
     display:flex; justify-content: space-between; align-items: center; gap:20px; margin-bottom:16px;
     .each_cols{}
 }
-.board_front_row{display:flex; justify-content: flex-end; text-align: right; padding:0 0 24px 0;}
+.board_front_row{display:flex; justify-content: flex-end; text-align: right; padding:0 0 24px 0;
+    &.align_type2{
+        text-align: left; justify-content: space-between; gap:20px; align-items: center;
+        .sort_cols{}
+        .btn_cols{}
+    }
+}
 .board_control_list{
     display:flex; align-items: center; gap:16px;
     > li{}
@@ -593,6 +599,16 @@ input.file_input{display:none;}
     .emp{font-size:14px; @include spoca; color:#B5000F;display:inline-block;padding:0 2px 0 4px;}
 }
 .board_fraction_text{}
+
+.linked_sort_obj{
+    display:flex; align-items: center; gap:10px;
+    dt,dd{}
+    dt{}
+    dd{
+        .combo_item{}
+    }
+}
+.linked_key{@include font2(14px,400,1,#000000); display:inline-block;}
 
 .list_table_wrap{}
 .list_table{
@@ -741,6 +757,9 @@ input.file_input{display:none;}
 .respond_tdlink{@include clamp(2); color:#005AAB; font-size:16px; text-decoration: underline;
     &:hover{text-decoration: underline;}
 }
+.normal_tdlink{color:#005AAB; font-size:16px; text-decoration: underline;
+    &:hover{text-decoration: underline;}
+}
 .price_number_dom{
     display:inline-flex; gap:3px; align-items: center;
     .value{@include spoca; @include font2(16px,400,1,#000);}
@@ -789,6 +808,16 @@ input.file_input{display:none;}
     .props_label{}
 }
 .sc_table_block{margin-top:48px;}
+
+.td_title_package{}
+.td_title_main{@include font2(16px,400,1.3,#000);}
+.title_keynumber{@include spoca;}
+.title_keymain_text{}
+.td_title_sub{@include font2(14px,400,1.3,#595959);margin-top:2px;}
+.td_package_wrap{
+    .respond_tdtext + .normal_tdlink_para{margin-top:4px;}
+}
+
 @media (max-width:$pcwid_large){
     .list_spec_obj{flex-direction: column;}
 }
@@ -1003,8 +1032,10 @@ input.file_input{display:none;}
     }
     .respond_tdkey,
     .respond_tdlink,
+    .normal_tdlink,
     .respond_tdtext{font-size:14px;}
     .respond_tdkey{white-space: nowrap;}
+    
     .respond_tdlink{position:relative;top:-1px;}
 
     .tdlink_row{display:flex;}

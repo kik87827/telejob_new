@@ -58,7 +58,19 @@
     }
     .text_node{@include font2(13px,700,1,#000); display:inline-block; position:relative;top:-1px;}
 }
-.btn_tile{display:inline-flex; min-height:32px; background-color:#00A7FC; border-radius:4px; @include font2(13px,700,1,#fff); align-items: center; padding:5px 16px 6px; box-sizing: border-box;}
+.btn_tile{display:inline-flex; min-height:32px; background-color:#00A7FC; border-radius:4px; @include font2(13px,700,1,#fff); align-items: center; padding:5px 16px 6px; box-sizing: border-box;
+    &.skin2{
+        border:1px solid #00A7FC; background:#fff; color:#00A7FC; padding:5px 16px 5px 8px;
+    }
+    &.has_ico{
+        gap:3px;
+        .ico{
+            width:24px;height:24px;flex:0 0 24px; @include bgicon;
+           &.back{background-image:url("../images/ico_button_back.png");} 
+        }
+        .text_node{}
+    }
+}
 .btn_ovalbox{display:inline-flex; gap:4px; min-height:32px; background-color:#fff;border:1px solid #000; border-radius:100px; align-items: center; padding:5px 16px; box-sizing: border-box;
     .ico{
         width:16px; height:16px; flex:0 0 16px; @include bgicon;
