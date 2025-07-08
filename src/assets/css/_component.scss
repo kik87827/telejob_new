@@ -149,6 +149,7 @@
 .boxtab_text{@include font(16px, 700, 1, 0, #595959); display:inline-block;}
 .tailtab_wrap{margin-bottom:36px;
     &.mb_type2{margin-bottom:24px;}
+    &.mb_type3{margin-bottom:16px;}
 }
 .tailtab_list{
     display:flex;position:relative; min-height: 52px;
