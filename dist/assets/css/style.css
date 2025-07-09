@@ -5726,6 +5726,21 @@ select.form_select:required:invalid {
 .top_note_wrap {
   margin-bottom: 36px;
 }
+.core_panel_container {
+  padding: 44px 0 80px;
+}
+
+.core_title_row {
+  margin-bottom: 42px;
+}
+
+.core_title {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #000000;
+}
+
 @media (max-width: 1023px) {
   .sub_title_row {
     margin: 30px 0 20px;
@@ -10251,5 +10266,112 @@ strong.color_emp {
     margin-bottom: 20px !important;
   }
 }
+/* design page */
+.stack_title_row {
+  margin-bottom: 12px;
+}
+
+.stack_title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: inherit;
+}
+
+.word_info_tb_wrap {
+  margin-top: 12px;
+}
+
+.word_info_tb_inner {
+  display: inline-block;
+  border: 1px solid #E6E6E6;
+  border-radius: 8px;
+  padding: 7px 11px;
+}
+
+.word_info_tb td {
+  padding: 4px 5px;
+  text-align: left;
+}
+.word_info_tb td:last-of-type {
+  padding-right: 0;
+}
+
+.word_key_text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #000;
+}
+
+.word_emp_number {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #B5000F;
+  font-family: "Spoqa", "NotoSans-Regular", dotum;
+}
+
+.word_sub_text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #595959;
+}
+
+.screen_box_container {
+  margin-top: 12px;
+  border: 1px solid #E6E6E6;
+  text-align: center;
+  background-position: 0 0;
+  background-size: 100% auto;
+  min-height: 434px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+.screen_box_main_copy {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #005AAB;
+}
+
+.screen_box_sub_copy {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000;
+  margin-top: 23px;
+}
+
+.screen_box_sub2_copy {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000;
+  margin-top: 27px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.screen_box_sub2_copy .color_marking {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #005AAB;
+  font-family: "Spoqa", "NotoSans-Regular", dotum;
+}
+
+.screen_slice_word_group {
+  display: inline-flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
 /* main */
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,33 @@
+/* design page */
+.stack_item{
+    &:last-of-type{}
+}
+.stack_title_row{margin-bottom:12px;}
+.stack_title{@include font2(16px,500,1.4);}
+.stack_contents_row{
+    .bullet_list{}
+}
+.word_info_tb_wrap{margin-top:12px;}
+.word_info_tb_inner{display:inline-block;border:1px solid #E6E6E6; border-radius:8px;padding:7px 11px;}
+.word_info_tb{
+    
+    td{
+        padding:4px 5px; text-align: left;
+        &:last-of-type{padding-right:0;}
+    }
+}
+.word_key_text{@include font2(14px,500,1.4,#000);}
+.word_emp_number{@include font2(14px,500,1.4,#B5000F); @include spoca;}
+.word_sub_text{@include font2(14px,500,1.4,#595959);}
+.screen_box_container{
+    margin-top:12px; border:1px solid #E6E6E6; text-align: center; background-position:0 0; background-size:100% auto; min-height:434px; 
+    display:flex; justify-content: center; align-items: center; box-sizing: border-box; padding:30px;
+}
+.screen_box_copy_wrap{}
+.screen_box_main_copy{@include font2(24px,700,1.4,#005AAB);}
+.screen_box_sub_copy{@include font2(16px,400,1.6,#000); margin-top:23px;}
+.screen_box_sub2_copy{
+    @include font2(16px,400,1.6,#000); margin-top:27px; display:flex; gap:15px; flex-wrap:wrap; justify-content: center;
+    .color_marking{@include font2(16px,500,1.6,#005AAB); @include spoca}
+}
+.screen_slice_word_group{display:inline-flex; gap:8px; flex-wrap:wrap;}

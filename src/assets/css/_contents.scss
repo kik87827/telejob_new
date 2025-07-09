@@ -32,6 +32,10 @@
     margin-bottom:36px;
     .bullet_list{}
 }
+.core_panel_container{padding:44px 0 80px}
+.core_title_row{margin-bottom:42px;}
+.core_title{@include font2(30px,500,1.4,#000000);}
+.core_contents_row{}
 @media (max-width:$tablet){
 }
 @media (max-width:$mobile_large){
