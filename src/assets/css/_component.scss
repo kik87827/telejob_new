@@ -179,7 +179,7 @@
     flex:1;box-sizing: border-box;display: flex;flex-direction: row;justify-content: center;align-items: center; text-align:center;
     padding: 14px 48px; min-width: 280px; min-height: 100%; background: #F8F8F8;border:1px solid #F8F8F8;border-bottom: 1px solid #0053C2;border-radius: 16px 16px 0px 0px;
 }
-.tailtab_text{display:inline-block; @include font2(16px,700,1.3,#595959);}
+.tailtab_text{display:inline-block; @include font2(16px,700,1.3,#595959); word-break:keep-all;}
 @media (max-width:$tablet){
     .boxtab_list{min-height:50px;}
     .tailtab_wrap{margin-bottom:20px;}
@@ -191,8 +191,8 @@
     .tailtab_list{
         > li{flex:1;}
     }
-    .tailtab{padding:5px 10px; min-height:35px; min-width:0;}
-    .tailtab_text{font-size:13px;}
+    .tailtab{padding:5px 10px; min-height:35px; min-width:0;border-radius:10px 10px 0 0;}
+    .tailtab_text{font-size:12px;}
 }
 
 /* form */

@@ -949,7 +949,7 @@ input.file_input{display:none;}
                 tbody{
                     border-top:2px solid #E6E6E6;
                     tr{
-                        border-top:0; padding:5px 0;
+                        border-top:0; padding:10px 0;
                         td{padding:10px 0;}
                     }
                 }
@@ -1020,6 +1020,7 @@ input.file_input{display:none;}
                     &.has_form{
                         input.props_dom{position:absolute;top:15px;left:15px;}
                     }
+                    &.has_btn{text-align:right;}
                 }
             }
          }
