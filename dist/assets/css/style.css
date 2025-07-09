@@ -10235,6 +10235,10 @@ strong.color_emp {
   }
 }
 /* 반응형 간격 */
+.mb16 {
+  margin-bottom: 16px !important;
+}
+
 .res_mb36 {
   margin-bottom: 36px !important;
 }

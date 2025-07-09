@@ -5,7 +5,147 @@
     <div class="page_wrap">
       @@include('./include/header3.html')
       <!-- middle -->
-      <section class="middle_wrap">내용이 들어갑니다.</section>
+      <section class="middle_wrap">
+        <div class="middle_inner middle_template">
+          <div class="menu_cols">@@include('./middle_box.html')</div>
+          <div class="contents_cols">
+            <div class="contents_title_row type2"><h3 class="contents_title">열람제한 기업설정</h3></div>
+            <div class="sub_contents_row">
+              <div class="sc_guide_block mb16">
+                <ul class="bullet_list">
+                  <li>
+                    이력서를 공개하고 싶지 않은 특정 기업을 열람제한으로 설정하면 회원님의 연락처 및 상세 이력서 열람이
+                    공개되지 않습니다.
+                  </li>
+                  <li>이력서 열람제한 기업으로 등록한 기업의 채용정보에는 온라인 입사지원이 불가능합니다.</li>
+                  <li>해당 기업에게 입사지원을 원할 경우 열람제한 해제 후에 입사지원 하시기 바랍니다.</li>
+                  <li>
+                    <span class="color_emp black">최근 일주일 동안 내 이력서를 열람</span>
+                    한 기업이 있다면
+                    <span class="color_emp black">열람으로 표시</span>
+                    됩니다.
+                  </li>
+                </ul>
+              </div>
+              <div class="board_sort_row type2">
+                <div class="fraction_cols">
+                  <span class="sort_fraction_text">
+                    총
+                    <strong>0</strong>
+                    건
+                  </span>
+                </div>
+                <div class="btn_cols">
+                  <a href="javascript:;" class="btn_action_box type2">증명서 보기</a>
+                </div>
+              </div>
+              <div class="board_list_row">
+                <div class="respond_tb_wrap skin2 has_props_tb">
+                  <table class="respond_tb">
+                    <colgroup>
+                      <col style="width: 80px" />
+                      <col style="width: 12%" />
+                      <col style="width: 18%" />
+                      <col />
+                      <col style="width: 16%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th class="has_total_dom"></th>
+                        <th><span class="respond_thtext emp">지원일</span></th>
+                        <th><span class="respond_thtext">회사명</span></th>
+                        <th><span class="respond_thtext">주소</span></th>
+                        <th><span class="respond_thtext">연락처</span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="has_form">
+                          <input type="checkbox" class="props_dom" />
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">지원일</span></dt>
+                            <dd><span class="respond_tdtext spoca">2025.05.28</span></dd>
+                          </dl>
+                        </td>
+                        <td class="align_type2 ptype2">
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">회사명</span></dt>
+                            <dd>
+                              <span class="respond_tdtext">메리츠화재</span>
+                            </dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">주소</span></dt>
+                            <dd>
+                              <span class="respond_tdtext">서울 중구 칠패로 28 (봉래동1가) 메리츠화재 봉래신사옥</span>
+                            </dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">연락처</span></dt>
+                            <dd><span class="respond_tdtext spoca">010-1234-5678</span></dd>
+                          </dl>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="has_form">
+                          <input type="checkbox" class="props_dom" />
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">지원일</span></dt>
+                            <dd><span class="respond_tdtext spoca">2025.05.28</span></dd>
+                          </dl>
+                        </td>
+                        <td class="align_type2 ptype2">
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">회사명</span></dt>
+                            <dd>
+                              <span class="respond_tdtext">메리츠화재</span>
+                            </dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">주소</span></dt>
+                            <dd>
+                              <span class="respond_tdtext">서울 중구 칠패로 28 (봉래동1가) 메리츠화재 봉래신사옥</span>
+                            </dd>
+                          </dl>
+                        </td>
+                        <td>
+                          <dl class="respond_td_obj">
+                            <dt><span class="respond_tdkey">연락처</span></dt>
+                            <dd><span class="respond_tdtext spoca">010-1234-5678</span></dd>
+                          </dl>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="board_paging_row">
+                <a href="javascript:;" class="btn_paging_control first"></a>
+                <a href="javascript:;" class="btn_paging_control prev"></a>
+                <ul class="paging_num_list">
+                  <li><a href="javascript:;" class="btn_paging_num active">1</a></li>
+                  <li><a href="javascript:;" class="btn_paging_num">2</a></li>
+                  <li><a href="javascript:;" class="btn_paging_num">3</a></li>
+                  <li><span class="btn_paging_num clamp_text">...</span></li>
+                  <li><a href="javascript:;" class="btn_paging_num">10</a></li>
+                </ul>
+                <a href="javascript:;" class="btn_paging_control next"></a>
+                <a href="javascript:;" class="btn_paging_control last"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- // middle -->
       <!-- popup -->
       <div class="popup_wrap" id="dontOpenPopup">
@@ -18,13 +158,22 @@
             <div class="top_note_wrap">
               <ul class="bullet_list">
                 <li>기업을 열람제한으로 설정하면 회원님의 연락처 및 상세 이력서 열람이 공개되지 않습니다.</li>
-                <li><span class="dark_emp">최근 일주일 동안 내 이력서를 열람</span>한 기업이 있다면 <span class="dark_emp">열람으로 표시</span>됩니다.</li>
+                <li>
+                  <span class="dark_emp">최근 일주일 동안 내 이력서를 열람</span>
+                  한 기업이 있다면
+                  <span class="dark_emp">열람으로 표시</span>
+                  됩니다.
+                </li>
               </ul>
             </div>
             <div class="board_container">
               <div class="board_sort_row">
                 <div class="fraction_cols">
-                  <span class="sort_fraction_text">총 <strong>0</strong> 건</span>
+                  <span class="sort_fraction_text">
+                    총
+                    <strong>0</strong>
+                    건
+                  </span>
                 </div>
                 <div class="search_cols">
                   <ul class="inline_ring_list">
@@ -174,7 +323,9 @@
           <div class="popup_btn_row btn_bottom_wrap">
             <!-- close_trigger 있을시 닫기 -->
             <a href="#" class="btn_submit_box close_trigger"><span class="btn_submit_box_text">취소</span></a>
-            <a href="#" class="btn_submit_box primary long_type close_trigger"><span class="btn_submit_box_text">열람제한 설정</span></a>
+            <a href="#" class="btn_submit_box primary long_type close_trigger">
+              <span class="btn_submit_box_text">열람제한 설정</span>
+            </a>
           </div>
           <a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
         </div>
