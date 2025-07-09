@@ -967,8 +967,9 @@ input.file_input{display:none;}
                 
                 tbody{
                     tr{
-                        padding:4px 0;
+                        padding:13px 0;
                         td{padding:4px 25px 5px 50px;
+                            &.has_form{padding:0}
                             .btn_quad_list{
                                 justify-content: flex-end;
                                 > li{
