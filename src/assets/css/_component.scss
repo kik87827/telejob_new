@@ -68,7 +68,7 @@
             width:24px;height:24px;flex:0 0 24px; @include bgicon;
            &.back{background-image:url("../images/ico_button_back.png");} 
         }
-        .text_node{}
+        .text_node{white-space:nowrap;}
     }
 }
 .btn_ovalbox{display:inline-flex; gap:4px; min-height:32px; background-color:#fff;border:1px solid #000; border-radius:100px; align-items: center; padding:5px 16px; box-sizing: border-box;
@@ -792,7 +792,7 @@ select.form_select{
     &.fluid{display:block;}
 }
 .combo_target{
-    font-size:16px;box-sizing:border-box;color:#000;padding:12px 42px 12px 12px;border:1px solid #E6E6E6;border-radius:8px;display:block;position:relative;
+    font-size:16px;box-sizing:border-box;color:#000;padding:12px 42px 12px 12px;border:1px solid #E6E6E6;border-radius:8px;display:flex;position:relative; align-items:center;
     box-sizing: border-box;min-height:48px;
     background:#fff;
     &.theme2{
@@ -823,4 +823,11 @@ select.form_select{
     font-size:16px;color: #000000;display:block;padding:8px 10px;
     &:hover{background:#00AEF3;color:#fff;}
     &.disabled{background:#f2f5f5;color:#adb3b3;cursor:default;}
+}
+@media (max-width:$mobile_large){
+    .combo_option,
+    .combo_target{font-size:13px;}
+    .combo_target{min-height:40px;border-radius:4px; padding-top:5px; padding-bottom:5px;
+        &:after{width:5px;height:5px; margin-top:-4px;}
+    }
 }
