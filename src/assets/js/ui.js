@@ -751,3 +751,31 @@ function comboChangeCallback(option) {
     }
   });
 }
+
+
+function responColWidth(){
+  const respon_col_tb = document.querySelectorAll(".respon_col_tb");
+  action();
+
+  window.addEventListener("resize",()=>{
+    action();
+  });
+
+  function action(){
+    if(respon_col_tb.length){
+      respon_col_tb.forEach((item)=>{
+        const tb_item = item;
+        const colTag = tb_item.querySelectorAll("colgroup col");
+        colTag.forEach((thisItem)=>{
+          if(!thisItem.dataset.pc || !thisItem.dataset.tablet){return;}
+          if(window.innerWidth > 1280){
+            thisItem.style.width = thisItem.dataset.pc;
+          }else{
+            thisItem.style.width = thisItem.dataset.tablet;
+          }
+          console.log(thisItem.dataset.pc,thisItem.dataset.tablet);
+        });
+      });
+    }
+  }
+}

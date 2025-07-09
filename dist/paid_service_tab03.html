@@ -378,12 +378,12 @@
 							</ul>
 						</div>
 						<div class="chain_tb_wrap">
-							<table class="chain_tb">
+							<table class="chain_tb has_props_tb respon_col_tb">
 								<colgroup>
 									<col style="width: 80px" />
 									<col style="width: 20%" />
 									<col />
-									<col style="width: 20%" />
+									<col style="width: 20%" data-tablet="30%" data-pc="20%" />
 								</colgroup>
 								<tbody>
 									<tr>
@@ -558,6 +558,11 @@
 			</div>
 		</section>
 		<!-- // middle -->
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				responColWidth();
+			});
+		</script>
 		<div class="btn_topgo_wrap"><a href="#" class="btn_topgo"></a></div>
 		<footer class="footer_wrap">
 			<div class="footer_mobile_logo_row">

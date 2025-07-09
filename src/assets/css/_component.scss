@@ -183,6 +183,7 @@
 @media (max-width:$tablet){
     .boxtab_list{min-height:50px;}
     .tailtab_wrap{margin-bottom:20px;}
+    .tailtab{min-width:100px;}
 }
 @media (max-width:$mobile_large){
     .boxtab_text{font-size:14px;}
