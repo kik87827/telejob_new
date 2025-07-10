@@ -6564,6 +6564,102 @@ input.file_input {
   color: #AAAAAA;
 }
 
+.form_notice_box {
+  background: #333;
+  margin-bottom: 48px;
+  padding: 48px 36px;
+}
+
+.fn_title_row {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.fn_title_row .ico_cols .ico {
+  width: 46px;
+  height: 46px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 0;
+}
+.fn_title_row .ico_cols .ico.import {
+  background-image: url("../images/ico_import_circle.png");
+}
+.fn_sub_title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #FFCE5F;
+}
+
+.fn_main_title {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #fff;
+  margin-top: 4px;
+}
+
+.fn_contents_row {
+  margin-left: 64px;
+}
+.form_section_title_row {
+  padding-bottom: 16px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form_section_title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #000000;
+}
+
+.import_caption_g {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.import_caption_text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  color: #555;
+}
+
+.form_section_contents {
+  border-top: 2px solid #E6E6E6;
+}
+
+.form_message_block_wrap {
+  margin-bottom: 16px;
+}
+
+.form_message_block {
+  margin-top: 16px;
+}
+.form_message_title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.form_message_warn {
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #B5000F;
+}
+
 @media (max-width: 1299px) {
   .middle_one_title_row {
     margin: 60px 0 30px 0;
@@ -9281,6 +9377,12 @@ strong.color_emp {
   line-height: 1.33;
   letter-spacing: 0;
   color: #595959;
+}
+.bullet_list.skin_w {
+  color: #fff;
+}
+.bullet_list.skin_w > li:before {
+  background-color: #fff;
 }
 .bullet_list > li {
   position: relative;
