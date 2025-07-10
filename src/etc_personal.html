@@ -1,15 +1,222 @@
 <!DOCTYPE html>
 <html lang="ko">
-    @@include('./include/head.html')
-    <body class="front_body">
-        <div class="page_wrap">
-            @@include('./include/header.html')
-            <!-- middle -->
-            <section class="middle_wrap">
-                내용이 들어갑니다.
-            </section>
-            <!-- // middle -->
-             @@include('./include/footer.html')
+  @@include('./include/head.html')
+  <body class="front_body">
+    <div class="page_wrap">
+      @@include('./include/header.html')
+      <!-- middle -->
+      <section class="middle_wrap">
+        <div class="middle_inner">
+          <div class="core_panel_container">
+            <div class="core_title_row">
+              <h2 class="core_title">개인정보 처리방침</h2>
+              <div class="core_title_else_wrap">
+                <select required class="form_select">
+                  <option value="" disabled selected hidden>이전 이용약관 보기</option>
+                  <option value="naver.com">이전 이용약관 보기 1</option>
+                  <option value="daum.net">이전 이용약관 보기 2</option>
+                </select>
+              </div>
+            </div>
+            <div class="core_contents_row">
+              <div class="terms_anchor_box">
+                <div class="terms_cols">
+                  <ul class="terms_anchor_list">
+                    <li>
+                      <a href="#terms_target_01" class="terms_anchor_item">
+                        <span class="bullet_node">1.</span>
+                        <div class="text_node">총칙</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#terms_target_02" class="terms_anchor_item">
+                        <span class="bullet_node">2.</span>
+                        <div class="text_node">게시물</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#terms_target_03" class="terms_anchor_item">
+                        <span class="bullet_node">3.</span>
+                        <div class="text_node">수집하는 개인정보의 항목</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#terms_target_04" class="terms_anchor_item">
+                        <span class="bullet_node">4.</span>
+                        <div class="text_node">개인정보의 위탁처리</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#terms_target_05" class="terms_anchor_item">
+                        <span class="bullet_node">5.</span>
+                        <div class="text_node">개인정보의 이용기간 및 보유기간</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#terms_target_06" class="terms_anchor_item">
+                        <span class="bullet_node">6.</span>
+                        <div class="text_node">이용자의 권리와 의무</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#terms_target_07" class="terms_anchor_item">
+                        <span class="bullet_node">7.</span>
+                        <div class="text_node">개인정보의 수집목적 및 이용목적</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#terms_target_08" class="terms_anchor_item">
+                        <span class="bullet_node">8.</span>
+                        <div class="text_node">의견수렴 및 불만처리</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#terms_target_09" class="terms_anchor_item">
+                        <span class="bullet_node">9.</span>
+                        <div class="text_node">개인정보 수집에 대한 동의</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#terms_target_10" class="terms_anchor_item">
+                        <span class="bullet_node">10.</span>
+                        <div class="text_node">개인정보관리책임자 및 담당자</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#terms_target_11" class="terms_anchor_item">
+                        <span class="bullet_node">11.</span>
+                        <div class="text_node">목적의 사용 및 제3자에 대한 제공 및 공유</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="terms_cols">
+                  <ul class="terms_anchor_list">
+                    <li>
+                      <a href="#terms_target_12" class="terms_anchor_item">
+                        <span class="bullet_node">12.</span>
+                        <div class="text_node">아동의 개인정보보호</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#terms_target_13" class="terms_anchor_item">
+                        <span class="bullet_node">13.</span>
+                        <div class="text_node">개인정보의 열람, 정정</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#terms_target_14" class="terms_anchor_item">
+                        <span class="bullet_node">14.</span>
+                        <div class="text_node">광고성 정보 전송</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#terms_target_15" class="terms_anchor_item">
+                        <span class="bullet_node">15.</span>
+                        <div class="text_node">개인정보 수집, 이용, 제공에 대한 동의철회(회원탈퇴)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#terms_target_16" class="terms_anchor_item">
+                        <span class="bullet_node">16.</span>
+                        <div class="text_node">개인정보 도용시 대처방법</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#terms_target_17" class="terms_anchor_item">
+                        <span class="bullet_node">17.</span>
+                        <div class="text_node">쿠키에 의한 개인정보 수집</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#terms_target_18" class="terms_anchor_item">
+                        <span class="bullet_node">18.</span>
+                        <div class="text_node">휴면 아이디 처리방법</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#terms_target_19" class="terms_anchor_item">
+                        <span class="bullet_node">19.</span>
+                        <div class="text_node">개인정보보호를 위한 기술 및 관리적 대책</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#terms_target_20" class="terms_anchor_item">
+                        <span class="bullet_node">20.</span>
+                        <div class="text_node">고지의 의무</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#terms_target_21" class="terms_anchor_item">
+                        <span class="bullet_node">21.</span>
+                        <div class="text_node">링크사이트</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="terms_stack_wrap">
+                <div class="terms_stack_item" id="terms_target_01">
+                  <div class="stack_title_row"><p class="stack_title">제 1장 총칙</p></div>
+                  <div class="stack_contents">
+                    <ul class="indent_para_list">
+                      <li>
+                        <span class="indent_bullet">1.</span>
+                        <div class="indent_liquid">개인정보란 생존하는 개인에 관한 정보로서 당해 정보에 포함되어 있는 성명, 주소 등의 사항에 의하여 당해 개인을 식별할 수 있는 정보(당해 정보만으로는 특정 개인을 식별할 수 없더라도 다른 정보와 용이하게 결합하여 식별할 수 있는 것을 포함합니다)를 말합니다.</div>
+                      </li>
+                      <li>
+                        <span class="indent_bullet">2.</span>
+                        <div class="indent_liquid">텔레잡은 귀하의 개인정보보호를 매우 중요시하며, 『정보통신망이용촉진및정보보호에 관한법률』상의 개인정보보호규정 및 정보통신부가 제정한 『개인정보보호지침』을 준수하고 있습니다. (주)텔레잡은 개인정보취급방침을 통하여 귀하께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.</div>
+                      </li>
+                      <li>
+                        <span class="indent_bullet">3.</span>
+                        <div class="indent_liquid">텔레잡은 개인정보취급방침을 홈페이지 첫 화면에 메뉴를 두어서 귀하께서 언제나 용이하게 보실 수 있도록 조치하고 있습니다.</div>
+                      </li>
+                      <li>
+                        <span class="indent_bullet">4.</span>
+                        <div class="indent_liquid">텔레잡은 개인정보취급방침의 지속적인 개선을 위하여 개인정보취급방침을 개정하는데 필요한 절차를 정하고 있습니다. 그리고 개인정보취급방침을 개정하는 경우 버전번호 등을 부여하여 개정된 사항을 귀하께서 쉽게 알아볼 수 있도록 하고 있습니다.</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="terms_stack_item" id="terms_target_02">
+                  <div class="stack_title_row"><p class="stack_title">제 2장 게시물</p></div>
+                  <div class="stack_contents">
+                    <ul class="indent_para_list">
+                      <li>
+                        <span class="indent_bullet">1.</span>
+                        <div class="indent_liquid">개인정보란 생존하는 개인에 관한 정보로서 당해 정보에 포함되어 있는 성명, 주소 등의 사항에 의하여 당해 개인을 식별할 수 있는 정보(당해 정보만으로는 특정 개인을 식별할 수 없더라도 다른 정보와 용이하게 결합하여 식별할 수 있는 것을 포함합니다)를 말합니다.</div>
+                      </li>
+                      <li>
+                        <span class="indent_bullet">2.</span>
+                        <div class="indent_liquid">텔레잡은 귀하의 개인정보보호를 매우 중요시하며, 『정보통신망이용촉진및정보보호에 관한법률』상의 개인정보보호규정 및 정보통신부가 제정한 『개인정보보호지침』을 준수하고 있습니다. (주)텔레잡은 개인정보취급방침을 통하여 귀하께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.</div>
+                      </li>
+                      <li>
+                        <span class="indent_bullet">3.</span>
+                        <div class="indent_liquid">텔레잡은 개인정보취급방침을 홈페이지 첫 화면에 메뉴를 두어서 귀하께서 언제나 용이하게 보실 수 있도록 조치하고 있습니다.</div>
+                      </li>
+                      <li>
+                        <span class="indent_bullet">4.</span>
+                        <div class="indent_liquid">텔레잡은 개인정보취급방침의 지속적인 개선을 위하여 개인정보취급방침을 개정하는데 필요한 절차를 정하고 있습니다. 그리고 개인정보취급방침을 개정하는 경우 버전번호 등을 부여하여 개정된 사항을 귀하께서 쉽게 알아볼 수 있도록 하고 있습니다.</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="terms_spec_box">
+                <ul class="terms_spec_list">
+                  <li><div class="terms_spec_item">개인정보취급방침 버전번호 : V 2_2</div></li>
+                  <li><div class="terms_spec_item">개인정보취급방침 최초 제정일자 : 2000. 11. 13</div></li>
+                  <li><div class="terms_spec_item">개인정보취급방침 시행일자 : 2002-06-11</div></li>
+                  <li><div class="terms_spec_item">개인정보취급방침 최종변경일자 : 2007-09-04</div></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-    </body>
+      </section>
+      <!-- // middle -->
+      @@include('./include/footer.html')
+    </div>
+  </body>
 </html>

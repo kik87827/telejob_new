@@ -1,0 +1,35 @@
+.terms_anchor_box{
+    display: flex; background:#EDF2FB;padding:0 30px;
+    .terms_cols{flex:1;min-width:0;padding:30px;}
+}
+.terms_anchor_list{
+    
+    > li{
+        margin-bottom:12px;
+        &:last-of-type{margin-bottom:0;}
+    }
+}
+.terms_anchor_item{
+    display:flex; gap:5px; @include font2(16px,500,1.5,#005AAB);
+    .bullet_node{flex:0;white-space:nowrap;}
+    .text_node{}
+}
+
+.terms_stack_wrap{
+    
+}
+.terms_stack_item{
+    margin-top:54px;
+   .stack_title_row{border-bottom:1px solid #E6E6E6;padding-bottom:18px;margin-bottom:36px;} 
+   .stack_title{@include font2(24px,700,1.5,#000);}
+   .indent_para_list{@include font2(16px,400,1.5,#000);} 
+}
+.stack_contents{}
+.terms_spec_box{
+    margin-top:60px; background:#F8F8F8; padding:24px 36px; 
+}
+.terms_spec_list{
+     gap:20px; display:flex; justify-content: space-between;
+    > li{}
+}
+.terms_spec_item{@include font2(14px,400,1.5,#000);}
