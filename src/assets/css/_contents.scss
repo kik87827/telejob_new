@@ -32,7 +32,9 @@
     margin-bottom:36px;
     .bullet_list{}
 }
-.core_panel_container{padding:44px 0 80px}
+.core_panel_container{padding:44px 0 0;
+    &.pdtype2{padding-top:36px;}
+}
 .core_title_row{margin-bottom:42px;display:flex; justify-content:space-between; align-items:center;}
 .core_title{@include font2(30px,500,1.4,#000000);}
 .core_title_else_wrap{}
@@ -821,6 +823,40 @@ input.file_input{display:none;}
 .td_title_sub{@include font2(14px,400,1.3,#595959);margin-top:2px;}
 .td_package_wrap{
     .respond_tdtext + .normal_tdlink_para{margin-top:4px;}
+}
+.chipcard_wrap{}
+.chipcard_list{
+    display:flex; flex-wrap:wrap; gap:16px; margin-right:-16px;
+    > li{
+        flex:0 0 calc(33.33333333% - 16px);
+        &.nodata_li{
+            .nodata_li_para{}
+        }
+    }
+}
+.chipcard_item{
+    display:block;border:1px solid #E6E6E6; border-radius:16px; box-sizing:border-box; min-height:100%; padding:16px 24px;
+    .img_row{
+        display:flex; align-items:center; height:72px;
+        > img{max-width:100%;max-height:42px; object-fit: contain;}
+    }
+    .spec_row{
+
+    }
+    .spec_main_para{}
+    .spec_sub_para{}
+    .caption_row{display:flex; justify-content: space-between; align-items: center; gap:20px;}
+    .spec_caption_para{
+
+    }
+    .spec_caption_else{
+        .btn_icon{
+        }
+    }
+}
+li.nodata_li{
+    flex:0 0 100% !important; text-align:center; box-sizing:border-box;padding:200px 20px;
+    .nodata_li_para{@include font2(16px,400,1.5,#595959);}
 }
 
 @media (max-width:$pcwid_large){

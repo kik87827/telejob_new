@@ -3968,6 +3968,22 @@ button.swiper-pagination-bullet {
   top: -1px;
 }
 
+.btn_icon {
+  display: inline-block;
+  font-size: 0;
+}
+.btn_icon .icon {
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 0;
+  width: 16px;
+  height: 16px;
+  flex-basis: 16px;
+}
+.btn_icon .icon.phone {
+  background-image: url("../images/ico_phone_x2.png");
+}
+
 @media (max-width: 1299px) {
   .btn_box {
     min-height: 50px;
@@ -4097,6 +4113,9 @@ button.swiper-pagination-bullet {
 .tailtab_wrap.mb_type3 {
   margin-bottom: 16px;
 }
+.tailtab_wrap.mb_type4 {
+  margin-bottom: 48px;
+}
 
 .tailtab_list {
   display: flex;
@@ -4127,6 +4146,20 @@ button.swiper-pagination-bullet {
 }
 .tailtab_list > li.active .tailtab_text {
   color: #005AAB;
+}
+.tailtab_list.fulltype > li {
+  flex: 1;
+}
+.tailtab_list.fulltype > li .tailtab {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+.tailtab_list.large {
+  min-height: 78px;
+}
+.tailtab_list.large .tailtab_text {
+  font-size: 20px;
 }
 
 .tailtab {
@@ -5727,7 +5760,10 @@ select.form_select:required:invalid {
   margin-bottom: 36px;
 }
 .core_panel_container {
-  padding: 44px 0 80px;
+  padding: 44px 0 0;
+}
+.core_panel_container.pdtype2 {
+  padding-top: 36px;
 }
 
 .core_title_row {
@@ -7390,6 +7426,53 @@ input.file_input {
 
 .td_package_wrap .respond_tdtext + .normal_tdlink_para {
   margin-top: 4px;
+}
+
+.chipcard_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-right: -16px;
+}
+.chipcard_list > li {
+  flex: 0 0 calc(33.33333333% - 16px);
+}
+.chipcard_item {
+  display: block;
+  border: 1px solid #E6E6E6;
+  border-radius: 16px;
+  box-sizing: border-box;
+  min-height: 100%;
+  padding: 16px 24px;
+}
+.chipcard_item .img_row {
+  display: flex;
+  align-items: center;
+  height: 72px;
+}
+.chipcard_item .img_row > img {
+  max-width: 100%;
+  max-height: 42px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.chipcard_item .caption_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+li.nodata_li {
+  flex: 0 0 100% !important;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 200px 20px;
+}
+li.nodata_li .nodata_li_para {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #595959;
 }
 
 @media (max-width: 1440px) {

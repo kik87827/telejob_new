@@ -85,6 +85,15 @@
     }
     .text_node{@include font2(13px,700,1,#000); display:inline-block; position:relative;top:-1px;}
 }
+.btn_icon{
+    display:inline-block;font-size:0;
+    .icon{
+        @include bgicon; width:16px;height:16px; flex-basis:16px;
+        &.phone{
+            background-image:url("../images/ico_phone_x2.png");
+        }
+    }
+}
 @media (max-width:$tablet){
     .btn_box{
         min-height:50px;
@@ -162,6 +171,7 @@
 .tailtab_wrap{margin-bottom:36px;
     &.mb_type2{margin-bottom:24px;}
     &.mb_type3{margin-bottom:16px;}
+    &.mb_type4{margin-bottom:48px;}
 }
 .tailtab_list{
     display:flex;position:relative; min-height: 52px;
@@ -173,6 +183,15 @@
             .tailtab{border-color:#005AAB;border-bottom-color:#fff; background-color:#fff;}
             .tailtab_text{color:#005AAB;}
         }
+    }
+    &.fulltype{
+        > li{flex:1;
+            .tailtab{min-width:fit-content;}
+        }
+    }
+    &.large{
+        min-height: 78px;
+        .tailtab_text{font-size:20px;}
     }
 }
 .tailtab{
