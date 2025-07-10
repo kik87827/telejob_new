@@ -836,18 +836,19 @@ input.file_input{display:none;}
 }
 .chipcard_item{
     display:block;border:1px solid #E6E6E6; border-radius:16px; box-sizing:border-box; min-height:100%; padding:16px 24px;
+    &:hover{border-color:#000;}
     .img_row{
         display:flex; align-items:center; height:72px;
         > img{max-width:100%;max-height:42px; object-fit: contain;}
     }
     .spec_row{
-
+        margin-top:16px;
     }
-    .spec_main_para{}
-    .spec_sub_para{}
-    .caption_row{display:flex; justify-content: space-between; align-items: center; gap:20px;}
+    .spec_main_para{@include font2(14px,700,1.4,#000);@include clamp(1);}
+    .spec_sub_para{@include font2(12px,400,1.4,#000);@include clamp(1);margin-top:5px;}
+    .caption_row{display:flex; justify-content: space-between; gap:20px; align-items: center; margin-top:8px; font-size:0;}
     .spec_caption_para{
-
+         @include font2(12px,400,1.4,#595959); @include clamp(1);
     }
     .spec_caption_else{
         .btn_icon{
