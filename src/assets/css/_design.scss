@@ -24,10 +24,25 @@
     display:flex; justify-content: center; align-items: center; box-sizing: border-box; padding:30px;
 }
 .screen_box_copy_wrap{}
-.screen_box_main_copy{@include font2(24px,700,1.4,#005AAB);}
-.screen_box_sub_copy{@include font2(16px,400,1.6,#000); margin-top:23px;}
+.screen_box_main_copy{@include font2(24px,700,1.4,#005AAB);word-break: keep-all}
+.screen_box_sub_copy{@include font2(16px,400,1.6,#000); margin-top:23px; word-break: keep-all}
 .screen_box_sub2_copy{
-    @include font2(16px,400,1.6,#000); margin-top:27px; display:flex; gap:15px; flex-wrap:wrap; justify-content: center;
+    @include font2(16px,400,1.6,#000); margin-top:27px; display:flex; gap:15px; flex-wrap:wrap; justify-content: center; word-break: keep-all;
     .color_marking{@include font2(16px,500,1.6,#005AAB); @include spoca}
 }
 .screen_slice_word_group{display:inline-flex; gap:8px; flex-wrap:wrap;}
+
+@media (max-width:$mobile_large){
+    .stack_title{font-size:14px;}
+    .word_key_text,
+    .word_emp_number,
+    .word_sub_text{font-size:12px;}
+
+    .screen_box_main_copy{font-size:18px;}
+    .screen_box_sub_copy{font-size:14px; margin-top:16px;}
+    .screen_box_sub2_copy{
+        font-size:14px; margin-top:16px;gap:5px 10px;
+        .color_marking{font-size:14px;}
+    }
+    .screen_box_container{min-height:300px;}
+}

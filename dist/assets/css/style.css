@@ -5805,6 +5805,18 @@ select.form_select:required:invalid {
   .fraction_sort_list > li:last-of-type {
     margin-bottom: 0;
   }
+  .core_panel_container {
+    padding: 20px 0 0;
+  }
+  .core_panel_container.pdtype2 {
+    padding-top: 15px;
+  }
+  .core_title_row {
+    margin-bottom: 20px;
+  }
+  .core_title {
+    font-size: 18px;
+  }
 }
 /* form layout */
 .gate_form_container {
@@ -10771,6 +10783,7 @@ strong.color_emp {
   font-weight: 700;
   line-height: 1.4;
   color: #005AAB;
+  word-break: keep-all;
 }
 
 .screen_box_sub_copy {
@@ -10779,6 +10792,7 @@ strong.color_emp {
   line-height: 1.6;
   color: #000;
   margin-top: 23px;
+  word-break: keep-all;
 }
 
 .screen_box_sub2_copy {
@@ -10791,6 +10805,7 @@ strong.color_emp {
   gap: 15px;
   flex-wrap: wrap;
   justify-content: center;
+  word-break: keep-all;
 }
 .screen_box_sub2_copy .color_marking {
   font-size: 16px;
@@ -10806,6 +10821,34 @@ strong.color_emp {
   flex-wrap: wrap;
 }
 
+@media (max-width: 1023px) {
+  .stack_title {
+    font-size: 14px;
+  }
+  .word_key_text,
+.word_emp_number,
+.word_sub_text {
+    font-size: 12px;
+  }
+  .screen_box_main_copy {
+    font-size: 18px;
+  }
+  .screen_box_sub_copy {
+    font-size: 14px;
+    margin-top: 16px;
+  }
+  .screen_box_sub2_copy {
+    font-size: 14px;
+    margin-top: 16px;
+    gap: 5px 10px;
+  }
+  .screen_box_sub2_copy .color_marking {
+    font-size: 14px;
+  }
+  .screen_box_container {
+    min-height: 300px;
+  }
+}
 .terms_anchor_box {
   display: flex;
   background: #EDF2FB;
