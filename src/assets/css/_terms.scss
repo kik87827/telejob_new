@@ -33,3 +33,37 @@
     > li{}
 }
 .terms_spec_item{@include font2(14px,400,1.5,#000);}
+
+@media (max-width:$mobile_large){
+    .terms_anchor_box{
+        padding:0 20px; gap:20px;
+        .terms_cols{padding:20px 0;}
+    }
+    .terms_anchor_list{
+        > li{
+            margin-bottom:5px;
+        }
+    }
+    .terms_anchor_item{
+        font-size:13px;
+    }
+
+    .terms_stack_wrap{
+        
+    }
+    .terms_stack_item{
+        margin-top:25px;
+        .stack_title_row{padding-bottom:15px;margin-bottom:15px;} 
+        .stack_title{font-size:14px;}
+        .indent_para_list{font-size:14px;}
+    }
+    .stack_contents{}
+    .terms_spec_box{
+        margin-top:30px;padding:12px 18px; 
+    }
+    .terms_spec_list{
+        gap:10px 20px; flex-wrap:wrap;
+        > li{flex:0 0 calc(50% - 10px);}
+    }
+    .terms_spec_item{font-size:12px;}
+}
