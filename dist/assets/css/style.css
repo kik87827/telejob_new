@@ -9579,7 +9579,7 @@ strong.color_emp {
   letter-spacing: 0;
   color: #000;
   display: inline-block;
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 @media (max-width: 1023px) {
