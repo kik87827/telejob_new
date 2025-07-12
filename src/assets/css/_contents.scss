@@ -62,7 +62,7 @@
         .form_select{}
     }
     .core_panel_container{padding:20px 0 0;
-        &.pdtype2{padding-top:15px;}
+        &.pdtype2{padding-top:20px;}
     }
     .core_title_row{margin-bottom:20px;}
     .core_title{font-size:18px;}
@@ -1195,6 +1195,27 @@ li.nodata_li{
 
     .linked_sort_obj{display:block;
         dt{display:block;margin-bottom:5px;}
+    }
+
+    .chipcard_list{
+        gap:10px; margin-right:-10px;
+        > li{
+            flex:0 0 calc(50% - 10px);
+        }
+    }
+    .chipcard_item{
+        border-radius:10px;padding:0 15px 15px;
+        &:hover{border-color:#000;}
+        .img_row{
+           justify-content: center;
+        }
+        .spec_row{
+            margin-top:10px;
+        }
+    }
+    li.nodata_li{
+        padding:100px 20px;
+        .nodata_li_para{font-size:14px;}
     }
 }
 @media (max-width:$mobile){

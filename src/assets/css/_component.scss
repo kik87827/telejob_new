@@ -191,6 +191,7 @@
     }
     &.large{
         min-height: 78px;
+        &:before{display:none;}
         .tailtab_text{font-size:20px;}
     }
 }
@@ -208,11 +209,22 @@
     .boxtab_text{font-size:14px;}
     .boxtab_list{min-height:45px;}
 
+    .tailtab_wrap{margin-bottom:24px;
+        &.mb_type4{margin-bottom:24px;}
+    }
+
     .tailtab_list{
         > li{flex:1;}
     }
     .tailtab{padding:5px 10px; min-height:35px; min-width:0;border-radius:10px 10px 0 0;}
     .tailtab_text{font-size:12px;}
+
+    .tailtab_list{
+        &.large{
+            min-height: 40px;
+            .tailtab_text{font-size:14px;}
+        }
+    }
 }
 
 /* form */

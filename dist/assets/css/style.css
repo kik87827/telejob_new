@@ -4160,6 +4160,9 @@ button.swiper-pagination-bullet {
 .tailtab_list.large {
   min-height: 78px;
 }
+.tailtab_list.large:before {
+  display: none;
+}
 .tailtab_list.large .tailtab_text {
   font-size: 20px;
 }
@@ -4208,6 +4211,12 @@ button.swiper-pagination-bullet {
   .boxtab_list {
     min-height: 45px;
   }
+  .tailtab_wrap {
+    margin-bottom: 24px;
+  }
+  .tailtab_wrap.mb_type4 {
+    margin-bottom: 24px;
+  }
   .tailtab_list > li {
     flex: 1;
   }
@@ -4219,6 +4228,12 @@ button.swiper-pagination-bullet {
   }
   .tailtab_text {
     font-size: 12px;
+  }
+  .tailtab_list.large {
+    min-height: 40px;
+  }
+  .tailtab_list.large .tailtab_text {
+    font-size: 14px;
   }
 }
 /* form */
@@ -5809,7 +5824,7 @@ select.form_select:required:invalid {
     padding: 20px 0 0;
   }
   .core_panel_container.pdtype2 {
-    padding-top: 15px;
+    padding-top: 20px;
   }
   .core_title_row {
     margin-bottom: 20px;
@@ -8029,6 +8044,32 @@ li.nodata_li .nodata_li_para {
   .linked_sort_obj dt {
     display: block;
     margin-bottom: 5px;
+  }
+  .chipcard_list {
+    gap: 10px;
+    margin-right: -10px;
+  }
+  .chipcard_list > li {
+    flex: 0 0 calc(50% - 10px);
+  }
+  .chipcard_item {
+    border-radius: 10px;
+    padding: 0 15px 15px;
+  }
+  .chipcard_item:hover {
+    border-color: #000;
+  }
+  .chipcard_item .img_row {
+    justify-content: center;
+  }
+  .chipcard_item .spec_row {
+    margin-top: 10px;
+  }
+  li.nodata_li {
+    padding: 100px 20px;
+  }
+  li.nodata_li .nodata_li_para {
+    font-size: 14px;
   }
 }
 @media (max-width: 767px) {
