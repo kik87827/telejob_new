@@ -804,14 +804,15 @@ function responWidFunc() {
   }
 }
 
-function responThFunc() {
-  const respond_fieldset_tb = $(".respond_fieldset_tb");
+function responThFunc(target) {
+  const respond_fieldset_tb = $(target) || target;
   action();
   $(window).on("resize", function () {
     action();
   });
 
   function action() {
+    console.log(target);
     respond_fieldset_tb.each(function () {
       const $thisTb = $(this);
       const $thisThText = $thisTb.find(".fset_thtext");

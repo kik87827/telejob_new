@@ -41,7 +41,7 @@
                   </div>
                   <div class="form_section_contents type2">
                     <!-- form table -->
-                    <div class="respond_fieldset_wrap">
+                    <div class="respond_fieldset_wrap" id="right_fieldset">
                       <div class="respond_fieldset_tb">
                         <div class="fset_tr">
                           <div class="fset_cols_group">
@@ -167,7 +167,7 @@
           responWidFunc();
         });
         $(window).on("load", function () {
-          responThFunc(); // mobile일때 th 최대 넓이 값 지정
+          responThFunc("#right_fieldset"); // mobile일때 th 최대 넓이 값 지정
         });
       </script>
       @@include('./include/footer.html')
