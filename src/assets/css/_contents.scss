@@ -373,7 +373,9 @@ input.file_input{display:none;}
     .ico_import{}
 }
 .import_caption_text{@include font2(12px,400,1,#555)}
-.form_section_contents{border-top:2px solid #E6E6E6;}
+.form_section_contents{border-top:2px solid #E6E6E6;
+    &.type2{border-top:0;}
+}
 .form_message_block_wrap{margin-bottom:16px;}
 .form_message_block{
    margin-top:16px;

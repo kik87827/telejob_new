@@ -6744,6 +6744,9 @@ input.file_input {
 .form_section_contents {
   border-top: 2px solid #E6E6E6;
 }
+.form_section_contents.type2 {
+  border-top: 0;
+}
 
 .form_message_block_wrap {
   margin-bottom: 16px;
