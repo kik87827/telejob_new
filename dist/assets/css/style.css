@@ -4023,10 +4023,14 @@ button.swiper-pagination-bullet {
   display: inline-block;
   position: relative;
 }
+.btn_quadcard_group:hover .btn_tooltip_layer {
+  display: block;
+}
 
 .btn_tooltip_layer {
   position: absolute;
   bottom: calc(100% + 15px);
+  display: none;
   border-radius: 4px;
   border: 1px solid #E6E6E6;
   left: 50%;
@@ -5568,6 +5572,9 @@ select.form_select:required:invalid {
   .popup_contents_row + .popup_btn_row {
     padding-top: 10px;
   }
+  .popup_item.skin2 .popup_title {
+    font-size: 20px !important;
+  }
 }
 @media (max-width: 767px) {
   .popup_item {
@@ -5606,7 +5613,7 @@ select.form_select:required:invalid {
     padding: 15px 60px 15px 20px;
   }
   .popup_title {
-    font-size: 16px;
+    font-size: 16px !important;
   }
   .popup_contents_row {
     font-size: 14px;
@@ -6779,7 +6786,7 @@ input.file_input {
 .tele_biz_box {
   background: #F8F8F8;
   border-radius: 8px;
-  padding: 12px;
+  padding: 16px 12px;
   margin-top: 10px;
 }
 
@@ -6822,6 +6829,7 @@ input.file_input {
 .sms_shape_container .top_row {
   flex: 0 0 56px;
   height: 56px;
+  line-height: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6887,9 +6895,9 @@ input.file_input {
 .ste_detail {
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.5;
   color: #000;
-  margin-top: 10px;
+  margin-top: 8px;
   word-break: keep-all;
 }
 
@@ -7319,6 +7327,57 @@ input.input_sms_send::placeholder {
   }
   .form_message_title {
     font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .form_both_container {
+    flex-direction: column;
+  }
+  .form_both_container .form_cols,
+.form_both_container .sms_cols {
+    flex: 0;
+  }
+  .sms_shape_container {
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    border-radius: 8px;
+  }
+  .sms_shape_container .top_row {
+    flex: 0 0 45px;
+    height: 45px;
+  }
+  .btn_sms_back:before {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+  }
+  .sms_top_placeholder {
+    font-size: 12px;
+  }
+  .sms_tele_wbox {
+    border-radius: 8px;
+    margin-right: 30px;
+  }
+  .ste_title {
+    font-size: 14px;
+  }
+  .ste_detail {
+    font-size: 14px;
+  }
+  .ste_sub {
+    font-size: 14px;
+  }
+  .sms_form_row {
+    margin-top: 20px;
+    border-radius: 8px;
+    margin: 0 16px 8px;
+  }
+  input.input_sms_send {
+    height: 45px;
+  }
+  .bottom_pos_agree_row {
+    margin-top: 20px;
   }
 }
 /* board layout */
