@@ -3986,6 +3986,71 @@ button.swiper-pagination-bullet {
   background-image: url("../images/ico_phone_x2.png");
 }
 
+.btn_quadcard_wrap {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 36px;
+  position: relative;
+}
+
+.btn_quadcard {
+  display: inline-flex;
+  background: #F8F8F8;
+  border: 1px solid #BDC5D1;
+  border-radius: 100px;
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 10px 24px;
+  align-items: center;
+}
+.btn_quadcard .text_node {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  color: #595959;
+}
+.btn_quadcard.active {
+  border-color: #0B51C5;
+  background-color: #EDF2FB;
+}
+.btn_quadcard.active .text_node {
+  color: #0258AD;
+}
+
+.btn_quadcard_group {
+  display: inline-block;
+  position: relative;
+}
+
+.btn_tooltip_layer {
+  position: absolute;
+  bottom: calc(100% + 15px);
+  border-radius: 4px;
+  border: 1px solid #E6E6E6;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 4px 8px;
+  white-space: nowrap;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #595959;
+}
+.btn_tooltip_layer:after {
+  display: block;
+  content: "";
+  width: 10px;
+  height: 5px;
+  background: url("../images/ico_tooltip_pointer.png") no-repeat 0 0/100% auto;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @media (max-width: 1299px) {
   .btn_box {
     min-height: 50px;
@@ -4410,6 +4475,9 @@ textarea.form_textarea::placeholder {
   display: flex;
   gap: 4px;
 }
+.props_item.gap2 {
+  gap: 10px;
+}
 input.props_dom {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -4477,6 +4545,10 @@ input.props_dom:checked {
   padding: 12px 24px;
   background: #F8F8F8;
 }
+.btn_inline_control.skin2 {
+  background: #fff;
+}
+
 .hidden_input_wrap {
   display: inline-block;
   position: relative;
@@ -5213,6 +5285,9 @@ select.form_select:required:invalid {
 }
 .popup_item.sm_type4 {
   max-width: 636px;
+}
+.popup_item.sm_type5 {
+  max-width: 720px;
 }
 .popup_item.single_type {
   max-width: 540px;
@@ -6686,6 +6761,205 @@ input.file_input {
   color: #B5000F;
 }
 
+.form_both_container {
+  display: flex;
+  gap: 24px;
+}
+.form_both_container .form_cols,
+.form_both_container .sms_cols {
+  flex: 1;
+}
+.form_both_container .block_form_list > li {
+  margin-bottom: 24px;
+}
+.form_both_container .block_form_list > li:last-of-type {
+  margin-bottom: 0;
+}
+
+.tele_biz_box {
+  background: #F8F8F8;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 10px;
+}
+
+.tele_message_row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 14px;
+  align-items: center;
+}
+.tele_message_copy {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #000000;
+}
+
+.tele_timer {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #4DC659;
+  font-family: "Spoqa", "NotoSans-Regular", dotum;
+}
+
+.btn_inline_liquid {
+  margin-top: 8px;
+}
+
+.sms_shape_container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid #E6E6E6;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+.sms_shape_container .top_row {
+  flex: 0 0 56px;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 16px 12px;
+}
+.sms_shape_container .middle_row {
+  background: #F3F3F3;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn_sms_back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn_sms_back:before {
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 0;
+  background-image: url("../images/btn_sms_back.png");
+}
+.btn_sms_back .text_node {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #000;
+}
+
+.sms_top_placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #595959;
+}
+
+.sms_tele_row {
+  padding: 24px 16px;
+  flex: 1;
+}
+
+.sms_tele_wbox {
+  border-radius: 10px;
+  padding: 10px;
+  background: #fff;
+  margin-right: 54px;
+}
+
+.ste_title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #000;
+}
+
+.ste_detail {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000;
+  margin-top: 10px;
+  word-break: keep-all;
+}
+
+.ste_sub {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #000;
+  font-family: "Spoqa", "NotoSans-Regular", dotum;
+  margin-top: 10px;
+}
+
+.sms_form_row {
+  margin-top: 46px;
+  background: #fff;
+  border-radius: 8px;
+  margin: 0 16px 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sms_send_form_container {
+  display: flex;
+  align-items: center;
+}
+
+input.input_sms_send {
+  flex: 1;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  padding: 0 16px;
+  height: 50px;
+  font-size: 13px;
+  border-radius: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+input.input_sms_send::-moz-placeholder {
+  color: #aaa;
+}
+input.input_sms_send::placeholder {
+  color: #aaa;
+}
+
+.sms_send_control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 16px;
+}
+
+.btn_sms_control {
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 0;
+}
+.btn_sms_control.shape_voice {
+  background-image: url("../images/ico_sms_voice.png");
+}
+.btn_sms_control.shape_add {
+  background-image: url("../images/ico_sms_add.png");
+}
+
+.bottom_pos_agree_row {
+  margin-top: 24px;
+}
 @media (max-width: 1299px) {
   .middle_one_title_row {
     margin: 60px 0 30px 0;

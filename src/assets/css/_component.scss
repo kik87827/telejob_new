@@ -94,18 +94,21 @@
         }
     }
 }
-.btn_quadcard_wrap{}
+.btn_quadcard_wrap{text-align: center; justify-content: center; align-items: center; gap:8px; margin-top:36px; position:relative;}
 .btn_quadcard{
-    .text_node{}
+    display:inline-flex; background:#F8F8F8; border:1px solid #BDC5D1; border-radius:100px; min-height:44px; box-sizing: border-box; padding:10px 24px; align-items: center;
+    .text_node{@include font2(14px,700,1,#595959);}
     &.active{
-        .text_node{}
+        border-color:#0B51C5; background-color:#EDF2FB;
+        .text_node{color:#0258AD;}
     }
 }
 .btn_quadcard_group{
-
+    display:inline-block; position:relative; 
 }
 .btn_tooltip_layer{
-    &:after{}
+    position:absolute;bottom:calc(100% + 15px); border-radius:4px; border:1px solid #E6E6E6; left:50%;transform:translate(-50%); padding:4px 8px;  white-space:nowrap; background:#fff; @include font2(12px,400,1.3,#595959);
+    &:after{display:block; content:''; width:10px;height:5px; background:url("../images/ico_tooltip_pointer.png") no-repeat 0 0/100% auto; position:absolute;top:100%;left:50%;transform: translateX(-50%);}
 }
 @media (max-width:$tablet){
     .btn_box{
@@ -296,6 +299,7 @@ textarea.form_textarea{
 }
 .props_item{
     display:flex; gap:4px;
+    &.gap2{gap:10px;}
     &.sm{
 
     }
@@ -324,7 +328,7 @@ input.props_dom{
     .inline_short{flex:0;white-space:nowrap;}
 }
 .btn_inline_control{display:flex; white-space:nowrap; align-items:center; justify-content:center; text-align:center; min-height:48px; @include font(14px, 500, 1.3, 0, #000); box-sizing:border-box; border-radius:100px; border:1px solid #E6E6E6; padding:12px 24px; background:#F8F8F8;
-    &.skin2{}
+    &.skin2{background:#fff;}
 }
 .hidden_input_wrap{display:inline-block; position:relative; overflow:hidden;}
 .hidden_file_form{color: transparent;cursor: pointer;position:absolute;top:0;right:0;width:calc(100% + 200px); height:100%; transform:scale(2);
@@ -668,6 +672,7 @@ select.form_select{
     &.sm_type2{max-width:680px;}
     &.sm_type3{max-width:600px;}
     &.sm_type4{max-width:636px;}
+    &.sm_type5{max-width:720px;}
 
     &.single_type{
         max-width:540px;

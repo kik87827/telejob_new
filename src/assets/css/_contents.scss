@@ -384,52 +384,65 @@ input.file_input{display:none;}
 .form_editor_render{}
 
 .form_both_container{
+    display:flex;gap:24px;
+    .form_cols,
+    .sms_cols{flex:1;}
     .form_cols{}
     .sms_cols{}
     .block_form_wrap{}
     .block_form_list{
-        > li{}
+        > li{
+            margin-bottom:24px;
+            &:last-of-type{margin-bottom:0;}
+        }
     }
 }
-.tele_biz_box{}
+.tele_biz_box{background:#F8F8F8; border-radius:8px; padding:12px;margin-top:10px;}
 .tele_message_row{
+    display:flex; justify-content: space-between; gap:20px; margin-bottom:14px; align-items: center;
     .copy_cols{}
     .number_cols{}
 }
-.tele_message_copy{}
-.tele_timer{}
+.tele_message_copy{@include font2(13px,400,1.3,#000000);}
+.tele_timer{@include font2(13px,700,1.3,#4DC659); @include spoca;}
 .tele_contents_row{
     .inline_flex_wrap{}
 }
-.btn_inline_liquid{}
-.form_both_container{}
+.btn_inline_liquid{margin-top:8px;}
 
 .sms_shape_container{
+    min-height:100%; display:flex; flex-direction: column; box-sizing: border-box; border:1px solid #E6E6E6; border-radius:12px;  position:relative; overflow:hidden;
     .top_row{
+        flex:0 0 56px; height:56px; display:flex; justify-content: space-between; align-items: center; box-sizing: border-box; padding:16px 12px;
         .back_cols{}
         .else_cols{}
     }
-    .middle_row{}
+    .middle_row{background:#F3F3F3; flex:1; display:flex; flex-direction: column;}
 }
 .btn_sms_back{
-    &:before{}
-    .text_node{}
+    display:inline-flex; align-items: center; gap:8px;
+    &:before{display:block;content:'';width:24px;height:24px; flex:0 0 24px; @include bgicon; background-image:url("../images/btn_sms_back.png");}
+    .text_node{@include font2(14px,400,1,#000);}
 }
-.sms_top_placeholder{}
-.sms_tele_row{}
-.sms_tele_wbox{}
-.ste_title{}
-.ste_detail{}
-.ste_sub{}
-.sms_form_row{}
-.sms_send_form_container{}
-input.input_sms_send{}
-.sms_send_control{}
+.sms_top_placeholder{@include font2(14px,400,1,#595959);}
+.sms_tele_row{padding:24px 16px; flex:1;}
+.sms_tele_wbox{border-radius:10px; padding:10px; background:#fff; margin-right:54px;}
+.ste_title{@include font2(16px,500,1.3,#000);}
+.ste_detail{@include font2(16px,400,1.6,#000);margin-top:10px; word-break: keep-all}
+.ste_sub{@include font2(16px,500,1.3,#000); @include spoca;margin-top:10px;}
+.sms_form_row{margin-top:46px; background:#fff; border-radius:8px;margin:0 16px 8px; position:relative;overflow:hidden;}
+.sms_send_form_container{display:flex; align-items: center;}
+input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:50px; font-size:13px; border-radius:0; box-sizing: border-box; width:100%;
+    &::placeholder{color:#aaa;}
+}
+.sms_send_control{display:flex; align-items: center; gap:10px; padding-right:16px;}
 .btn_sms_control{
-    &.shape_voice{}
-    &.shape_add{}
+    width:24px; height:24px; @include bgicon;
+    &.shape_voice{background-image:url("../images/ico_sms_voice.png");}
+    &.shape_add{background-image:url("../images/ico_sms_add.png");}
 }
 .bottom_pos_agree_row{
+    margin-top:24px;
     .props_item{}
 }
 
