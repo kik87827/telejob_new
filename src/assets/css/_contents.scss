@@ -383,6 +383,56 @@ input.file_input{display:none;}
 .form_message_warn{margin-top:12px; @include font2(13px,400,1.3,#B5000F);}
 .form_editor_render{}
 
+.form_both_container{
+    .form_cols{}
+    .sms_cols{}
+    .block_form_wrap{}
+    .block_form_list{
+        > li{}
+    }
+}
+.tele_biz_box{}
+.tele_message_row{
+    .copy_cols{}
+    .number_cols{}
+}
+.tele_message_copy{}
+.tele_timer{}
+.tele_contents_row{
+    .inline_flex_wrap{}
+}
+.btn_inline_liquid{}
+.form_both_container{}
+
+.sms_shape_container{
+    .top_row{
+        .back_cols{}
+        .else_cols{}
+    }
+    .middle_row{}
+}
+.btn_sms_back{
+    &:before{}
+    .text_node{}
+}
+.sms_top_placeholder{}
+.sms_tele_row{}
+.sms_tele_wbox{}
+.ste_title{}
+.ste_detail{}
+.ste_sub{}
+.sms_form_row{}
+.sms_send_form_container{}
+input.input_sms_send{}
+.sms_send_control{}
+.btn_sms_control{
+    &.shape_voice{}
+    &.shape_add{}
+}
+.bottom_pos_agree_row{
+    .props_item{}
+}
+
 @media (max-width:$tablet){
     .middle_one_title_row{
         margin : 60px 0 30px 0;

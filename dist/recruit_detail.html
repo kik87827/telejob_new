@@ -301,9 +301,7 @@
 			<!-- // mobilemenu -->
 		</header>
 		<!-- middle -->
-		<section class="middle_wrap">
-			내용이 들어갑니다.
-		</section>
+		<section class="middle_wrap">내용이 들어갑니다.</section>
 		<!-- // middle -->
 		<!-- popup -->
 		<div class="popup_wrap" id="counselingPopup">
@@ -313,47 +311,109 @@
 					<h3 class="popup_title">구직상담 Call-Back 신청</h3>
 				</div>
 				<div class="popup_contents_row">
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용<br>
-					내용
+					<div class="form_both_container">
+						<div class="form_cols">
+							<div class="block_form_wrap">
+								<ul class="block_form_list">
+									<li>
+										<div class="block_form_item">
+											<div class="block_form_label_row">
+												<p class="block_form_label">이름</p>
+											</div>
+											<div class="block_form_enter_row">
+												<input type="text" class="form_input box_type" placeholder="이름을 입력하세요" />
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="block_form_item">
+											<div class="block_form_label_row">
+												<p class="block_form_label">휴대폰번호</p>
+											</div>
+											<div class="block_form_enter_row">
+												<div class="inline_flex_wrap">
+													<div class="inline_long">
+														<input type="text" class="form_input box_type" placeholder="‘-’없이 숫자만 입력하세요" />
+													</div>
+													<div class="inline_short">
+														<a href="javascript:;" class="btn_inline_control">인증번호</a>
+													</div>
+												</div>
+												<div class="tele_biz_box">
+													<div class="tele_message_row">
+														<div class="copy_cols">
+															<p class="tele_message_copy">인증번호를 전송했습니다</p>
+														</div>
+														<div class="number_cols"><span class="tele_timer">00:59</span></div>
+													</div>
+													<div class="tele_contents_row">
+														<div class="inline_flex_wrap">
+															<div class="inline_long">
+																<input type="text" class="form_input box_type" placeholder="‘-’없이 숫자만 입력하세요" />
+															</div>
+															<div class="inline_short">
+																<a href="javascript:;" class="btn_inline_control skin2">인증번호</a>
+															</div>
+														</div>
+														<div class="btn_inline_liquid">
+															<a href="javascript:;" class="btn_inline_control skin2">인증번호 재전송</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sms_cols">
+							<div class="sms_shape_container">
+								<div class="top_row">
+									<div class="back_cols">
+										<a href="#" class="btn_sms_back"><span class="text_node">채용담당자</span></a>
+									</div>
+									<div class="else_cols">
+										<p class="sms_top_placeholder">(메시지 예시)</p>
+									</div>
+								</div>
+								<div class="middle_row">
+									<div class="sms_tele_row">
+										<div class="sms_tele_wbox">
+											<div class="ste_title">[Web발신]</div>
+											<div class="ste_detail">
+												[텔레잡 콜백서비스]
+												<br />
+												홍길동님께서 구직 상담을 신청하셨습니다.
+											</div>
+											<div class="ste_sub">TEL : 010-1234-5678</div>
+										</div>
+									</div>
+									<div class="sms_form_row">
+										<div class="sms_send_form_container">
+											<input type="text" class="input_sms_send" placeholder="메시지를 입력하세요" />
+											<div class="sms_send_control">
+												<button class="btn_sms_control shape_voice"></button>
+												<button class="btn_sms_control shape_add"></button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bottom_pos_agree_row">
+						<div class="props_item">
+							<input type="checkbox" class="props_dom" id="sms_agree" />
+							<label for="sms_agree" class="props_label">위 정보를 채용담당자에게 제공함을 동의합니다.</label>
+						</div>
+					</div>
+					<div class="btn_quadcard_wrap">
+						<a href="#" class="btn_quadcard"><span class="text_node">취소</span></a>
+						<div class="btn_quadcard_group">
+							<a href="#" class="btn_quadcard active"><span class="text_node">SMS발송</span></a>
+							<span class="btn_tooltip_layer">발송비용은 텔레잡에서 부담합니다!</span>
+						</div>
+					</div>
 				</div>
 				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
 			</div>
@@ -364,20 +424,16 @@
 				// 인스턴스 선언
 				let counselingPopup = new DesignPopup({
 					selector: "#counselingPopup",
-					beforeCallback() {
-
-					},
-					callback() {
-
-					},
-					closeCallback() {}
+					beforeCallback() {},
+					callback() {},
+					closeCallback() {},
 				});
 				// counselingPopup.popupShow(); // show
 				// counselingPopup.popupHide(); // hide
 
 				// 퍼블확인용
-				let url = window.location.href.split("?")[1]
-				let url_2 = url !== undefined ? url.split("#")[0] : null
+				let url = window.location.href.split("?")[1];
+				let url_2 = url !== undefined ? url.split("#")[0] : null;
 				if (url_2 === "popup") {
 					counselingPopup.popupShow(); // show
 				}

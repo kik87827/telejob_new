@@ -94,6 +94,19 @@
         }
     }
 }
+.btn_quadcard_wrap{}
+.btn_quadcard{
+    .text_node{}
+    &.active{
+        .text_node{}
+    }
+}
+.btn_quadcard_group{
+
+}
+.btn_tooltip_layer{
+    &:after{}
+}
 @media (max-width:$tablet){
     .btn_box{
         min-height:50px;
@@ -310,7 +323,9 @@ input.props_dom{
     }
     .inline_short{flex:0;white-space:nowrap;}
 }
-.btn_inline_control{display:flex; white-space:nowrap; align-items:center; justify-content:center; text-align:center; min-height:48px; @include font(14px, 500, 1.3, 0, #000); box-sizing:border-box; border-radius:100px; border:1px solid #E6E6E6; padding:12px 24px; background:#F8F8F8;}
+.btn_inline_control{display:flex; white-space:nowrap; align-items:center; justify-content:center; text-align:center; min-height:48px; @include font(14px, 500, 1.3, 0, #000); box-sizing:border-box; border-radius:100px; border:1px solid #E6E6E6; padding:12px 24px; background:#F8F8F8;
+    &.skin2{}
+}
 .hidden_input_wrap{display:inline-block; position:relative; overflow:hidden;}
 .hidden_file_form{color: transparent;cursor: pointer;position:absolute;top:0;right:0;width:calc(100% + 200px); height:100%; transform:scale(2);
     appearance: none;-webkit-appearance: none;-moz-appearance: none;
