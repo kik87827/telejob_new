@@ -296,6 +296,7 @@ textarea.form_textarea{
 .props_item_list{
     display:flex; gap:10px 36px; gap:24px;
     &.gap_type2{gap:36px;}
+    &.gap_type3{gap:10px 12px;}
     > li{
         &:last-of-type{}
     }
@@ -303,6 +304,7 @@ textarea.form_textarea{
 .props_item{
     display:flex; gap:4px;
     &.gap2{gap:10px;}
+    &.gap3{gap:8px;}
     &.sm{
 
     }
@@ -465,6 +467,7 @@ select.form_select{
     .field_btn_row{
         &.btn_box_wrap{margin-top:40px;}
     }
+    .props_label{font-size:13px;padding-top:3px;}
 }
 @media (max-width:$mobile){
     .inline_flex_wrap{gap:8px;

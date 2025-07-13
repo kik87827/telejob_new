@@ -45,7 +45,12 @@
                       <div class="respond_fieldset_tb">
                         <div class="fset_tr">
                           <div class="fset_cols_group">
-                            <div class="fset_th_cols"><span class="fset_thtext imp">학력사항</span></div>
+                            <div class="fset_th_cols">
+                              <span class="fset_thtext">
+                                학력사항
+                                <span class="ico_import"></span>
+                              </span>
+                            </div>
                             <div class="fset_td_cols">
                               <select required class="form_select" style="width: 272px" data-pcwid="272px">
                                 <option value="" disabled selected hidden>선택</option>
@@ -80,7 +85,7 @@
                                   </ul>
                                   <ul class="props_item_list">
                                     <li>
-                                      <div class="props_item">
+                                      <div class="props_item gap3">
                                         <input type="checkbox" class="props_dom" id="age_not" />
                                         <label for="age_not" class="props_label">무관</label>
                                       </div>
@@ -99,19 +104,24 @@
                         </div>
                         <div class="fset_tr">
                           <div class="fset_cols_group">
-                            <div class="fset_th_cols"><span class="fset_thtext imp">경력사항</span></div>
+                            <div class="fset_th_cols">
+                              <span class="fset_thtext">
+                                경력사항
+                                <span class="ico_import"></span>
+                              </span>
+                            </div>
                             <div class="fset_td_cols">
                               <ul class="fset_td_dp_list">
                                 <li>
-                                  <ul class="props_item_list">
+                                  <ul class="props_item_list gap_type3" style="width: 152px" data-pcwid="152px">
                                     <li>
-                                      <div class="props_item">
+                                      <div class="props_item gap3">
                                         <input type="checkbox" class="props_dom" id="young" />
                                         <label for="young" class="props_label">신입</label>
                                       </div>
                                     </li>
                                     <li>
-                                      <div class="props_item">
+                                      <div class="props_item gap3">
                                         <input type="checkbox" class="props_dom" id="old" />
                                         <label for="old" class="props_label">경력</label>
                                       </div>
@@ -152,6 +162,14 @@
         </div>
       </section>
       <!-- // middle -->
+      <script>
+        $(function () {
+          responWidFunc();
+        });
+        $(window).on("load", function () {
+          responThFunc(); // mobile일때 th 최대 넓이 값 지정
+        });
+      </script>
       @@include('./include/footer.html')
     </div>
   </body>
