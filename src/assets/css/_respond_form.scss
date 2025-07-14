@@ -12,6 +12,7 @@
     > *{width:100%;}
     padding:6px 24px; flex:1; min-width:0;
     .form_select{}
+    .props_cols_wrap + .multi_fileform_wrap{margin-top:16px;}
 }
 .fset_thtext{
     display:inline-block; @include font2(16px,400,1.5,#595959);
@@ -50,6 +51,16 @@
             > li{}
         }
     }
+}
+
+.props_cols_wrap{
+
+}
+.props_cols_list{
+    &.cols_4{
+        > li{}
+    }
+    > li{}
 }
 
 @media (max-width:$mobile_large){

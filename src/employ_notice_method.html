@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./include/head.html')
+  <body class="front_body">
+    <div class="page_wrap">
+      @@include('./include/header4.html')
+      <!-- middle -->
+      <section class="middle_wrap">
+        <div class="middle_inner">
+          <div class="core_panel_container">
+            <div class="core_title_row"><h2 class="core_title">채용공고 등록</h2></div>
+            <div class="core_contents_row">
+              <div class="form_notice_box">
+                <div class="fn_title_row">
+                  <div class="ico_cols">
+                    <i class="ico import"></i>
+                  </div>
+                  <div class="spec_cols">
+                    <div class="fn_sub_title">등록 전 반드시 확인해 주세요!</div>
+                    <div class="fn_main_title">채용공고 등록 시 주의사항</div>
+                  </div>
+                </div>
+                <div class="fn_contents_row">
+                  <ul class="bullet_list skin_w">
+                    <li>근무지 주소는 1개만 등록 가능합니다. 채용공고의 내용은 동일하나, 근무지가 여러 곳일 경우에는 내용을 복사하시어 각각 등록하실 것을 권장드립니다.</li>
+                    <li>마감일이 지난 채용공고는 ‘게재 중인 채용공고’에서 ‘보관 중인 채용공고’로 이동되며, 개인회원(구직자)에게 노출되지 않습니다.</li>
+                    <li>동일한 내용의 공고를 중복 게재하여 공고 게시판을 도배하거나 허위 정보 및 부적절한 컨텐츠 제공 시, 텔레잡 관리자 권한으로 게재 중지 및 삭제 조치될 수 있습니다.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="form_global_container">
+                <div class="form_section_block">
+                  <div class="form_section_title_row">
+                    <h3 class="form_section_title">전형 및 접수방법</h3>
+                    <div class="form_section_else_wrap">
+                      <span class="import_caption_g">
+                        <i class="ico_import"></i>
+                        <span class="import_caption_text">필수입력</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="form_section_contents type2">
+                    <!-- form table -->
+                    <div class="respond_fieldset_wrap" id="method_fieldset">
+                      <div class="respond_fieldset_tb">
+                        <div class="fset_tr">
+                          <div class="fset_cols_group">
+                            <div class="fset_th_cols">
+                              <span class="fset_thtext">학력사항</span>
+                            </div>
+                            <div class="fset_td_cols">
+                              <div class="props_cols_wrap">
+                                <ul class="props_cols_list cols_4">
+                                  <li>
+                                    <div class="props_item">
+                                      <input type="checkbox" class="props_dom" id="study_chk01" />
+                                      <label for="study_chk01" class="props_label">모두입력(제출서류)</label>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="props_item">
+                                      <input type="checkbox" class="props_dom" id="study_chk02" />
+                                      <label for="study_chk02" class="props_label">제출한 서류는 일체 반환하지 않음</label>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="props_item">
+                                      <input type="checkbox" class="props_dom" id="study_chk03" />
+                                      <label for="study_chk03" class="props_label">이력서에 연락처, 희망연봉 기재</label>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="props_item">
+                                      <input type="checkbox" class="props_dom" id="study_chk04" />
+                                      <label for="study_chk04" class="props_label">회사 홈페이지에서 다운로드 후 작성</label>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="fset_tr">
+                          <div class="fset_cols_group">
+                            <div class="fset_th_cols">
+                              <span class="fset_thtext">전형방법</span>
+                            </div>
+                            <div class="fset_td_cols">
+                              <div class="props_cols_wrap">
+                                <ul class="props_cols_list cols_4">
+                                  <li>
+                                    <div class="props_item">
+                                      <input type="checkbox" class="props_dom" id="method_chk01" />
+                                      <label for="method_chk01" class="props_label">모두입력(전형방법)</label>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="props_item">
+                                      <input type="checkbox" class="props_dom" id="method_chk02" />
+                                      <label for="method_chk02" class="props_label">서류전형</label>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="props_item">
+                                      <input type="checkbox" class="props_dom" id="method_chk03" />
+                                      <label for="method_chk03" class="props_label">임원면접 및 연봉협상</label>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="props_item">
+                                      <input type="checkbox" class="props_dom" id="method_chk04" />
+                                      <label for="method_chk04" class="props_label">면접 후 서류전형 합격자에게 통보</label>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="fset_tr">
+                          <div class="fset_cols_group">
+                            <div class="fset_th_cols">
+                              <span class="fset_thtext">선택한 항목</span>
+                            </div>
+                            <div class="fset_td_cols ptype2">
+                              <p class="indent_node_text">
+                                <span class="indent_bullet_node">*</span>
+                                <span class="indent_node_liquid">제출서류 및 전형방법을 선택하시면, 아래에서 선택된 항목을 확인 할 수 있습니다.</span>
+                              </p>
+                              <div class="preview_docu_container">
+                                <ul class="preview_docu_list">
+                                  <li>
+                                    <div class="preview_category_row"><p class="preview_category">제출서류</p></div>
+                                    <div class="preview_value_render">이력서, 자기소개서</div>
+                                  </li>
+                                  <li>
+                                    <div class="preview_category_row"><p class="preview_category">전형방법</p></div>
+                                    <div class="preview_value_render">전형방법1, 전형방법2</div>
+                                  </li>
+                                  <li>
+                                    <div class="preview_category_row"><p class="preview_category">기타</p></div>
+                                    <div class="preview_value_render">기타, 기타2</div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="fset_tr">
+                          <div class="fset_cols_group">
+                            <div class="fset_th_cols">
+                              <span class="fset_thtext">
+                                접수방법
+                                <span class="ico_import"></span>
+                              </span>
+                            </div>
+                            <div class="fset_td_cols ptype2">
+                              <div class="props_cols_wrap">
+                                <ul class="props_cols_list cols_4">
+                                  <li>
+                                    <div class="props_item">
+                                      <input type="checkbox" class="props_dom" id="method2_chk01" />
+                                      <label for="method2_chk01" class="props_label">온라인 입사지원(텔레잡)</label>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="props_item">
+                                      <input type="checkbox" class="props_dom" id="method2_chk02" />
+                                      <label for="method2_chk02" class="props_label">전화 입사지원(모바일용)</label>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="props_item">
+                                      <input type="checkbox" class="props_dom" id="method2_chk03" />
+                                      <label for="method2_chk03" class="props_label">E-MAIL 접수</label>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="props_item">
+                                      <input type="checkbox" class="props_dom" id="method2_chk04" />
+                                      <label for="method2_chk04" class="props_label">자사 홈페이지 접수</label>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="props_item">
+                                      <input type="checkbox" class="props_dom" id="method2_chk05" />
+                                      <label for="method2_chk05" class="props_label">우편 접수</label>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="props_item">
+                                      <input type="checkbox" class="props_dom" id="method2_chk06" />
+                                      <label for="method2_chk06" class="props_label">FAX 접수</label>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="props_item">
+                                      <input type="checkbox" class="props_dom" id="method2_chk07" />
+                                      <label for="method2_chk07" class="props_label">방문접수</label>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="props_item">
+                                      <input type="checkbox" class="props_dom" id="method2_chk08" />
+                                      <label for="method2_chk08" class="props_label">자사양식 (HWP, DOC, EXCEL )</label>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                              <!-- file -->
+                              <div class="multi_fileform_wrap" id="multi_fileform_wrap">
+                                <ul class="multi_fileform_list">
+                                  <li>
+                                    <div class="form_fieldset_wrap">
+                                      <div class="label_cols">
+                                        <span class="fieldset_label">워드(DOC)</span>
+                                      </div>
+                                      <div class="form_cols">
+                                        <input type="text" class="fieldset_input" value="파일선택..." readonly disabled />
+                                        <input type="file" class="file_input" />
+                                        <button class="btn_form_reset"></button>
+                                      </div>
+                                      <div class="btn_cols">
+                                        <a href="javascript:;" class="btn_fieldset_submit btn_upload_trigger">확인</a>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="form_fieldset_wrap">
+                                      <div class="label_cols">
+                                        <span class="fieldset_label">한글(HWP)</span>
+                                      </div>
+                                      <div class="form_cols">
+                                        <input type="text" class="fieldset_input" value="파일선택..." readonly disabled />
+                                        <input type="file" class="file_input" />
+                                        <button class="btn_form_reset"></button>
+                                      </div>
+                                      <div class="btn_cols">
+                                        <a href="javascript:;" class="btn_fieldset_submit btn_upload_trigger">확인</a>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="form_fieldset_wrap">
+                                      <div class="label_cols">
+                                        <span class="fieldset_label">엑셀(EXCEL)</span>
+                                      </div>
+                                      <div class="form_cols">
+                                        <input type="text" class="fieldset_input" value="파일선택..." readonly disabled />
+                                        <input type="file" class="file_input" />
+                                        <button class="btn_form_reset"></button>
+                                      </div>
+                                      <div class="btn_cols">
+                                        <a href="javascript:;" class="btn_fieldset_submit btn_upload_trigger">확인</a>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="form_fieldset_wrap">
+                                      <div class="label_cols">
+                                        <span class="fieldset_label">이미지파일(PDF)</span>
+                                      </div>
+                                      <div class="form_cols">
+                                        <input type="text" class="fieldset_input" value="파일선택..." readonly disabled />
+                                        <input type="file" class="file_input" />
+                                        <button class="btn_form_reset"></button>
+                                      </div>
+                                      <div class="btn_cols">
+                                        <a href="javascript:;" class="btn_fieldset_submit btn_upload_trigger">확인</a>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="form_fieldset_wrap">
+                                      <div class="label_cols">
+                                        <span class="fieldset_label">파워포인트(PPT)</span>
+                                      </div>
+                                      <div class="form_cols">
+                                        <input type="text" class="fieldset_input" value="파일선택..." readonly disabled />
+                                        <input type="file" class="file_input" />
+                                        <button class="btn_form_reset"></button>
+                                      </div>
+                                      <div class="btn_cols">
+                                        <a href="javascript:;" class="btn_fieldset_submit btn_upload_trigger">확인</a>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                              <!-- // file -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- // form table -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- // middle -->
+      <script>
+        $(function () {
+          responWidFunc();
+        });
+        $(window).on("load", function () {
+          responThFunc("#method_fieldset"); // mobile일때 th 최대 넓이 값 지정
+          responFileLabelFunc("#multi_fileform_wrap"); // pc일때 th 최대 넓이 값 지정
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+          // 파일 등록
+          const btn_upload_trigger = document.querySelectorAll(".btn_upload_trigger");
+          btn_upload_trigger.forEach((eventItem) => {
+            const form_fieldset_wrap = eventItem.closest(".form_fieldset_wrap");
+            const fieldset_input = form_fieldset_wrap.querySelector(".fieldset_input");
+            const file_input = form_fieldset_wrap.querySelector(".file_input");
+            const btn_form_reset = form_fieldset_wrap.querySelector(".btn_form_reset");
+            eventItem.addEventListener("click", (e) => {
+              e.preventDefault();
+              const eventTarget = e.currentTarget;
+              file_input.click();
+            });
+            btn_form_reset.addEventListener("click", (e) => {
+              e.preventDefault();
+              fieldset_input.value = "파일선택...";
+              e.currentTarget.style.display = "none";
+            });
+            file_input.addEventListener("change", (e) => {
+              console.log("upload test");
+              fieldset_input.value = e.currentTarget.value;
+              btn_form_reset.style.display = "block";
+            });
+          });
+        });
+      </script>
+      @@include('./include/footer.html')
+    </div>
+  </body>
+</html>

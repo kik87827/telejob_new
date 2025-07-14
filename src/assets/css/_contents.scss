@@ -323,6 +323,7 @@
 
 .form_fieldset_wrap{
     display:flex; background:#F8F8F8; padding:8px 16px; gap:12px;
+    .label_cols{display:flex; align-items:center;}
     .form_cols{
         flex:1; display:flex; background:#fff; align-items: center; border:1px solid #E6E6E6; border-radius: 12px; box-sizing: border-box; 
         .btn_form_reset{}
@@ -338,6 +339,23 @@ input.file_input{display:none;}
 .btn_fieldset_submit{@include font(14px,700,1,0,#000); white-space:nowrap; min-height:48px;background:#fff; border:1px solid #000000; display:inline-flex; align-items: center; justify-content: center; border-radius: 12px; padding:14px 24px; box-sizing: border-box;
     &.type2{min-height:44px; padding:12px 24px;}
 }
+
+.multi_fileform_wrap{}
+.multi_fileform_list{
+    > li{}
+}
+
+.preview_docu_container{}
+.preview_docu_list{
+    > li{
+        &:before{}
+    }
+}
+.preview_category_row{}
+.preview_category{
+}
+.preview_value_render{}
+
 .img_preview_render{
     min-height:260px; margin-top:12px; box-sizing: border-box; text-align: center; display:flex; align-items: center; justify-content: center; border-radius:8px; border:1px solid #E6E6E6;
   img{vertical-align: middle;}

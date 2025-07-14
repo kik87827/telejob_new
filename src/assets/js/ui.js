@@ -828,3 +828,27 @@ function responThFunc(target) {
     });
   }
 }
+
+function responFileLabelFunc(target) {
+  const respond_fieldset_tb = $(target) || target;
+  action();
+  $(window).on("resize", function () {
+    action();
+  });
+
+  function action() {
+    respond_fieldset_tb.each(function () {
+      const $thisTb = $(this);
+      const $thisThText = $thisTb.find(".fieldset_label");
+      const $thisThCols = $thisTb.find(".label_cols");
+      let $thisMaxArray = [];
+      $thisThCols.css("width", "");
+      if ($(window).width() > 1023) {
+        $thisThText.each(function () {
+          $thisMaxArray.push($(this).outerWidth());
+        });
+        $thisThCols.css("width", Math.max.apply(null, $thisMaxArray));
+      }
+    });
+  }
+}

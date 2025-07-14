@@ -6592,6 +6592,10 @@ select.form_select:required:invalid {
   padding: 8px 16px;
   gap: 12px;
 }
+.form_fieldset_wrap .label_cols {
+  display: flex;
+  align-items: center;
+}
 .form_fieldset_wrap .form_cols {
   flex: 1;
   display: flex;
@@ -11289,6 +11293,10 @@ strong.color_emp {
 .fset_td_cols > * {
   width: 100%;
 }
+.fset_td_cols .props_cols_wrap + .multi_fileform_wrap {
+  margin-top: 16px;
+}
+
 .fset_thtext {
   display: inline-block;
   font-size: 16px;
