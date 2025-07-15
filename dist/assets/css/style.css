@@ -4851,6 +4851,12 @@ select.form_select:required:invalid {
   .field_btn_row.btn_box_wrap {
     margin-top: 60px;
   }
+  .props_cols_list {
+    gap: 5px 0;
+  }
+  .props_cols_list > li {
+    flex: 0 0 33.33333% !important;
+  }
 }
 @media (max-width: 1023px) {
   /* .block_form_list{
@@ -4885,6 +4891,9 @@ select.form_select:required:invalid {
   .props_label {
     font-size: 13px;
     padding-top: 3px;
+  }
+  .props_cols_list > li {
+    flex: 0 0 50% !important;
   }
 }
 @media (max-width: 767px) {
@@ -4962,6 +4971,9 @@ select.form_select:required:invalid {
   }
   .grid_form_list {
     gap: 25px 0;
+  }
+  .props_cols_list > li {
+    flex: 0 0 100% !important;
   }
 }
 @media (max-width: 374px) {
@@ -6669,7 +6681,7 @@ input.file_input {
   background-size: 100% auto;
   background-position: 50% 50%;
   background-image: url("../images/ico_reset_light.png");
-  margin-right: 16px;
+  margin-right: 13px;
 }
 
 .btn_fieldset_submit {
@@ -6729,6 +6741,10 @@ input.file_input {
 }
 .preview_docu_list > li:last-of-type {
   margin-bottom: 0;
+}
+
+.preview_category_row {
+  margin-bottom: 7px;
 }
 
 .preview_category {
@@ -7433,6 +7449,29 @@ input.input_sms_send::placeholder {
   .form_section_block {
     margin-bottom: 40px;
   }
+  .preview_docu_container {
+    border-radius: 5px;
+    padding: 10px 15px;
+  }
+  .preview_docu_list > li {
+    padding-left: 7px;
+  }
+  .preview_docu_list > li:before {
+    width: 2px;
+    height: 2px;
+  }
+  .preview_category {
+    font-size: 13px;
+  }
+  .preview_value_render {
+    font-size: 15px;
+  }
+  .form_fieldset_wrap {
+    flex-wrap: wrap;
+  }
+  .form_fieldset_wrap .label_cols {
+    flex: 0 0 100%;
+  }
 }
 @media (max-width: 767px) {
   .form_both_container {
@@ -7483,6 +7522,9 @@ input.input_sms_send::placeholder {
   }
   .bottom_pos_agree_row {
     margin-top: 20px;
+  }
+  .form_fieldset_wrap .fieldset_label {
+    font-size: 13px;
   }
 }
 /* board layout */
