@@ -4055,6 +4055,10 @@ button.swiper-pagination-bullet {
   transform: translateX(-50%);
 }
 
+.link-style {
+  cursor: pointer;
+}
+
 @media (max-width: 1299px) {
   .btn_box {
     min-height: 50px;
@@ -7796,14 +7800,6 @@ input.input_sms_send::placeholder {
   text-decoration: underline;
 }
 
-.link-style {
-  cursor: pointer;
-}
-
-.depth_two_menu.active {
-  color: #005AAB;
-}
-
 .normal_tdlink {
   color: #005AAB;
   font-size: 16px;
@@ -10414,6 +10410,10 @@ strong.color_emp {
   cursor: default;
   color: #aaa;
 }
+.depth_two_menu.active {
+  color: #005AAB;
+}
+
 .contents_title_row {
   margin-bottom: 48px;
   padding-top: 8px;

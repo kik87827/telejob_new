@@ -946,14 +946,8 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
 .respond_tdlink{@include clamp(2); color:#005AAB; font-size:14px;
     &:hover{text-decoration: underline;}
 }
-//추가
-.link-style {
-  cursor: pointer;
-}
-//추가
-.depth_two_menu.active {
-  color: #005AAB;
-}
+
+
 .normal_tdlink{color:#005AAB; font-size:16px; text-decoration: underline;
     &:hover{text-decoration: underline;}
 }
@@ -2190,7 +2184,14 @@ strong.color_emp{font-weight:700;}
     @include font2(14px,700,1,#000);
     &.current{cursor:default; color:#aaa;}
     &:hover{}
+    //추가
+    &.active {
+        color: #005AAB;
+    }
 }
+
+
+
 .contents_title_row{margin-bottom:48px;padding-top:8px;
     &.type2{margin-bottom:16px;}
 }
