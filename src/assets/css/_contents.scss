@@ -322,23 +322,23 @@
 .btn_entry_search{display:block; width:24px; height:24px; @include bgicon; background-image:url("../images/ico_search_24.png");}
 
 .form_fieldset_wrap{
-    display:flex; background:#F8F8F8; padding:8px 16px; gap:12px;
+    display:flex; background:#F8F8F8; padding:8px 16px; gap:12px; align-items:center;
     .label_cols{display:flex; align-items:center;}
     .form_cols{
-        flex:1; display:flex; background:#fff; align-items: center; border:1px solid #E6E6E6; border-radius: 12px; box-sizing: border-box; 
+        flex:1; display:flex; background:#fff; align-items: center; border:1px solid #E6E6E6; border-radius: 5px; box-sizing: border-box; 
         .btn_form_reset{}
     }
     .btn_cols{flex:0; white-space: nowrap;}
 }
-.fieldset_label{@include font2(16px,400,1.3,#000); white-space:nowrap;}
-input.fieldset_input{appearance: none; width:100%;border:0; background:transparent; padding:12px 34px 12px 13px; @include font(16px,400,1.6,0,#000); height:48px;box-sizing: border-box;
+.fieldset_label{@include font2(14px,400,1.3,#000); white-space:nowrap;}
+input.fieldset_input{appearance: none; width:100%;border:0; background:transparent; padding:8px 13px 8px 13px; @include font(14px,400,1.6,0,#000); height:38px;box-sizing: border-box;
     &.calendar{}
 }
 input.file_input{display:none;}
-.btn_form_reset{width:16px;height:16px;display:none; @include bgicon;background-image:url("../images/ico_reset_light.png"); margin-right:16px;}
+.btn_form_reset{width:16px;height:16px;display:none; @include bgicon_center(100% auto);background-image:url("../images/ico_reset_light.png"); margin-right:16px;}
 
-.btn_fieldset_submit{@include font(14px,700,1,0,#000); white-space:nowrap; min-height:48px;background:#fff; border:1px solid #000000; display:inline-flex; align-items: center; justify-content: center; border-radius: 12px; padding:14px 24px; box-sizing: border-box;
-    &.type2{min-height:44px; padding:12px 24px;}
+.btn_fieldset_submit{@include font(14px,700,1,0,#000); white-space:nowrap; min-height:38px;background:#fff; border:1px solid #000000; display:inline-flex; align-items: center; justify-content: center; border-radius: 5px; padding:10px 24px; box-sizing: border-box;
+    &.type2{ padding:10px 24px;}
 }
 
 .multi_fileform_wrap{}
@@ -655,8 +655,8 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
         .form_cols{border-radius:5px;}
     }
     .btn_form_reset{margin-right:10px;}
-    .btn_fieldset_submit{min-height:40px; border-radius:5px;padding:12px 20px;font-size:13px;}
-    input.fieldset_input{height:38px;font-size:13px;}
+    .btn_fieldset_submit{padding:12px 20px;font-size:13px;}
+    input.fieldset_input{font-size:13px;}
     .img_preview_render{min-height:200px;}
 
     .field_title_row{margin-bottom:20px;}
@@ -1167,7 +1167,7 @@ li.nodata_li{
 
     .field_search_wrap{max-width:100%;}
     .field_main_cols{flex:1;}
-    input.box_input{height:40px;}
+    input.box_input{}
     .btn_fieldset_submit{
         &.type2{min-height:40px; padding:8px 18px;}
     }

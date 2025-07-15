@@ -281,7 +281,7 @@ input.form_input{
     &.box_type{border-radius:5px; border:1px solid #E6E6E6;padding:0 13px;}
 }
 input.box_input{
-    appearance: none; height:44px;  @include font(14px, 400, 1, 0, #000); border:1px solid #E6E6E6; border-radius:8px; width:100%; box-sizing: border-box; padding:0 42px 0 13px;
+    appearance: none; height:38px;  @include font(14px, 400, 1, 0, #000); border:1px solid #E6E6E6; border-radius:5px; width:100%; box-sizing: border-box; padding:0 42px 0 13px;
     &.calendar{background:#fff url("../images/ico_calendar.png") no-repeat calc(100% - 13px) 50%/16px auto;}
     &.warn{border-color:#AF0101;}
     &:read-only,
