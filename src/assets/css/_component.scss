@@ -270,7 +270,7 @@
 .block_warn_row{margin-top:4px;}
 .block_warn_para{@include font(12px, 400, 1.3, 0, #AF0101);}
 input.form_input{
-    appearance: none; height:48px;  @include font(16px, 400, 1, 0, #000); border:0; border-bottom:1px solid #BDC5D1; border-radius:0; width:100%; box-sizing: border-box;
+    appearance: none; height:38px;  @include font(14px, 400, 1, 0, #000); border:0; border-bottom:1px solid #BDC5D1; border-radius:0; width:100%; box-sizing: border-box;
     &.calendar{}
     &.warn{border-color:#AF0101;}
     &:focus{border-bottom-color:#000;}
@@ -278,7 +278,7 @@ input.form_input{
     &:disabled{background:#F8F8F8; color:#aaa; padding:0 13px;}
     &::placeholder{color:#aaa;}
     
-    &.box_type{border-radius:8px; border:1px solid #E6E6E6;padding:0 13px;}
+    &.box_type{border-radius:5px; border:1px solid #E6E6E6;padding:0 13px;}
 }
 input.box_input{
     appearance: none; height:44px;  @include font(14px, 400, 1, 0, #000); border:1px solid #E6E6E6; border-radius:8px; width:100%; box-sizing: border-box; padding:0 42px 0 13px;
@@ -347,7 +347,7 @@ input.props_dom{
     }
     .inline_short{flex:0;white-space:nowrap;}
 }
-.btn_inline_control{display:flex; white-space:nowrap; align-items:center; justify-content:center; text-align:center; min-height:48px; @include font(14px, 500, 1.3, 0, #000); box-sizing:border-box; border-radius:100px; border:1px solid #E6E6E6; padding:12px 24px; background:#F8F8F8;
+.btn_inline_control{display:flex; white-space:nowrap; align-items:center; justify-content:center; text-align:center; min-height:38px; @include font(14px, 500, 1.3, 0, #000); box-sizing:border-box; border-radius:100px; border:1px solid #E6E6E6; padding:6px 24px; background:#F8F8F8;
     &.skin2{background:#fff;}
 }
 .hidden_input_wrap{display:inline-block; position:relative; overflow:hidden;}
@@ -432,7 +432,7 @@ select.form_select{
 .inline_ring_unit{@include font2(14px,400,1,#000);display:inline-block; padding:0 8px;}
 
 select.form_select{
- appearance: none; cursor: pointer; box-sizing:border-box; height:48px; font-size:16px; line-height:46px; width:100%; border:1px solid #E6E6E6; border-radius:8px; padding:0 42px 0 13px; background:#fff url("../images/ico_select_arrow.png") no-repeat calc(100% - 13px) 50%/16px auto;
+ appearance: none; transform: scale(1); transform-origin: top left; cursor: pointer; box-sizing:border-box; height:38px; font-size:14px; line-height:34px; width:100%; border:1px solid #E6E6E6; border-radius:5px; padding:0 42px 0 13px; background:#fff url("../images/ico_select_arrow.png") no-repeat calc(100% - 13px) 50%/16px auto;
     &.block_type{
          border:0; border-bottom:1px solid #BDC5D1; border-radius:0; padding-left:0;
     }
@@ -456,7 +456,7 @@ select.form_select{
 .mobile_sm_placeholder,
 .mobile_placeholder{font-size:12px; color:#aaa; margin-top:10px; display:none;}
 @media (max-width:$tablet){
-    .btn_inline_control{padding:12px 20px;}
+    /* .btn_inline_control{padding:12px 20px;} */
     
     .grid_form_list{gap:25px 30px;
         > li{flex-basis: calc(50% - 15px);}
@@ -471,7 +471,7 @@ select.form_select{
     } */
     input.form_input{font-size:13px;height:40px;}
     select.form_select{
-        height:40px; font-size:13px; line-height:39px; border-radius:5px; padding:0 30px 0 10px; background-position:calc(100% - 8px);
+       font-size:13px; border-radius:5px; padding:0 30px 0 10px; background-position:calc(100% - 8px);
     }
     
     .grid_form_list{

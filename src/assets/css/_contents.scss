@@ -316,8 +316,8 @@
 }
 
 .search_entry_field{
-    border:1px solid #E6E6E6; min-width:300px; box-sizing: border-box; border-radius:8px;background:#fff; position:relative; overflow:hidden; padding:0 13px; display:flex; align-items: center;
-    input.input_search{appearance: none; width:100%; height:46px; background:#fff; border:0; font-size:16px; line-height:1;color:#000;}
+    border:1px solid #E6E6E6; min-width:300px; box-sizing: border-box; border-radius:5px;background:#fff; position:relative; overflow:hidden; padding:0 13px; display:flex; align-items: center;
+    input.input_search{appearance: none; width:100%; height:36px; background:#fff; border:0; font-size:14px; line-height:1;color:#000;}
 }
 .btn_entry_search{display:block; width:24px; height:24px; @include bgicon; background-image:url("../images/ico_search_24.png");}
 
@@ -391,7 +391,8 @@ input.file_input{display:none;}
 }
 .form_global_container{}
 .form_section_block{
-    &:last-of-type{}
+    margin-bottom:80px;
+    &:last-of-type{margin-bottom:0;}
 }
 .form_section_title_row{padding-bottom:16px; display:flex; gap:20px; justify-content: space-between; align-items: center}
 .form_section_title{@include font2(16px,500,1.3,#000000);}
@@ -543,6 +544,7 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
     .field_setbox{border-radius:10px; padding:20px;}
 
     .middle_bottom_btn_row{margin-top:30px;}
+    
 }
 @media (max-width:$mobile_large){
     .middle_one_title_row{margin:35px 0 20px 0;}
@@ -645,7 +647,7 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
 
     .search_entry_field{
         min-width:0; border-radius:5px; padding:0 10px;
-        input.input_search{height:38px; font-size:13px;}
+        input.input_search{font-size:13px;}
     }
     .btn_entry_search{width:18px; height:18px;}
 
@@ -686,6 +688,10 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
     }
     .form_message_title{font-size:14px;}
     .form_editor_render{}
+
+    .form_section_block{
+        margin-bottom:40px;
+    }
 }
 @media (max-width:$mobile){
     

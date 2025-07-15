@@ -4354,8 +4354,8 @@ input.form_input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  height: 48px;
-  font-size: 16px;
+  height: 38px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1;
   letter-spacing: 0;
@@ -4389,7 +4389,7 @@ input.form_input::placeholder {
   color: #aaa;
 }
 input.form_input.box_type {
-  border-radius: 8px;
+  border-radius: 5px;
   border: 1px solid #E6E6E6;
   padding: 0 13px;
 }
@@ -4567,7 +4567,7 @@ input.props_dom:checked {
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 48px;
+  min-height: 38px;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.3;
@@ -4576,7 +4576,7 @@ input.props_dom:checked {
   box-sizing: border-box;
   border-radius: 100px;
   border: 1px solid #E6E6E6;
-  padding: 12px 24px;
+  padding: 6px 24px;
   background: #F8F8F8;
 }
 .btn_inline_control.skin2 {
@@ -4784,14 +4784,16 @@ select.form_select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  transform: scale(1);
+  transform-origin: top left;
   cursor: pointer;
   box-sizing: border-box;
-  height: 48px;
-  font-size: 16px;
-  line-height: 46px;
+  height: 38px;
+  font-size: 14px;
+  line-height: 34px;
   width: 100%;
   border: 1px solid #E6E6E6;
-  border-radius: 8px;
+  border-radius: 5px;
   padding: 0 42px 0 13px;
   background: #fff url("../images/ico_select_arrow.png") no-repeat calc(100% - 13px) 50%/16px auto;
 }
@@ -4839,9 +4841,7 @@ select.form_select:required:invalid {
 }
 
 @media (max-width: 1299px) {
-  .btn_inline_control {
-    padding: 12px 20px;
-  }
+  /* .btn_inline_control{padding:12px 20px;} */
   .grid_form_list {
     gap: 25px 30px;
   }
@@ -4861,9 +4861,7 @@ select.form_select:required:invalid {
     height: 40px;
   }
   select.form_select {
-    height: 40px;
     font-size: 13px;
-    line-height: 39px;
     border-radius: 5px;
     padding: 0 30px 0 10px;
     background-position: calc(100% - 8px);
@@ -6579,7 +6577,7 @@ select.form_select:required:invalid {
   border: 1px solid #E6E6E6;
   min-width: 300px;
   box-sizing: border-box;
-  border-radius: 8px;
+  border-radius: 5px;
   background: #fff;
   position: relative;
   overflow: hidden;
@@ -6592,10 +6590,10 @@ select.form_select:required:invalid {
      -moz-appearance: none;
           appearance: none;
   width: 100%;
-  height: 46px;
+  height: 36px;
   background: #fff;
   border: 0;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1;
   color: #000;
 }
@@ -6812,6 +6810,13 @@ input.file_input {
 .fn_contents_row {
   margin-left: 64px;
 }
+.form_section_block {
+  margin-bottom: 80px;
+}
+.form_section_block:last-of-type {
+  margin-bottom: 0;
+}
+
 .form_section_title_row {
   padding-bottom: 16px;
   display: flex;
@@ -7358,7 +7363,6 @@ input.input_sms_send::placeholder {
     padding: 0 10px;
   }
   .search_entry_field input.input_search {
-    height: 38px;
     font-size: 13px;
   }
   .btn_entry_search {
@@ -7428,6 +7432,9 @@ input.input_sms_send::placeholder {
   }
   .form_message_title {
     font-size: 14px;
+  }
+  .form_section_block {
+    margin-bottom: 40px;
   }
 }
 @media (max-width: 767px) {

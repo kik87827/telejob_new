@@ -820,7 +820,6 @@ function responThFunc(target) {
   });
 
   function action() {
-    console.log(target);
     respond_fieldset_tb.each(function() {
       const $thisTb = $(this);
       const $thisThText = $thisTb.find(".fset_thtext");
