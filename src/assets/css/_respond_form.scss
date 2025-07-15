@@ -52,17 +52,6 @@
         }
     }
 }
-
-.props_cols_wrap{
-
-}
-.props_cols_list{
-    &.cols_4{
-        > li{}
-    }
-    > li{}
-}
-
 @media (max-width:$mobile_large){
     .fset_td_inner_flex{flex-direction: column; align-items: flex-start; gap:10px;
         .td_cols{flex:0;width:100%; gap:15px;

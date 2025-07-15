@@ -305,6 +305,17 @@ textarea.form_textarea{
         &:last-of-type{}
     }
 }
+.props_cols_wrap{
+    position:relative; overflow:hidden;
+}
+.props_cols_list{
+    display:flex; flex-wrap:wrap; gap:12px 0; margin:0 -8px;
+    .props_item{gap:8px;}
+    &.cols_4{
+        > li{}
+    }
+    > li{box-sizing:border-box; flex:0 0 25%;padding:0 8px;}
+}
 .props_item{
     display:flex; gap:4px;
     &.gap2{gap:10px;}
