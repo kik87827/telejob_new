@@ -934,7 +934,7 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
     dd{}
 }
 .respond_tdkey,
-.respond_tdtext{ @include font2(16px,400,1,#000000);}
+.respond_tdtext{ @include font2(14px,400,1,#000000);}
 .respond_tdkey{}
 .respond_tdtext{
     &.sub{@include font2(14px,400,1,#595959);margin-top:10px;}
@@ -943,8 +943,16 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
     &.ctype4{}
     &.clamp01{@include clamp(1);}
 }
-.respond_tdlink{@include clamp(2); color:#005AAB; font-size:16px; text-decoration: underline;
+.respond_tdlink{@include clamp(2); color:#005AAB; font-size:14px;
     &:hover{text-decoration: underline;}
+}
+//추가
+.link-style {
+  cursor: pointer;
+}
+//추가
+.depth_two_menu.active {
+  color: #005AAB;
 }
 .normal_tdlink{color:#005AAB; font-size:16px; text-decoration: underline;
     &:hover{text-decoration: underline;}

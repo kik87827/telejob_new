@@ -7756,7 +7756,7 @@ input.input_sms_send::placeholder {
 }
 .respond_tdkey,
 .respond_tdtext {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1;
   color: #000000;
@@ -7790,11 +7790,18 @@ input.input_sms_send::placeholder {
   -webkit-line-clamp: 2;
   overflow: hidden;
   color: #005AAB;
-  font-size: 16px;
-  text-decoration: underline;
+  font-size: 14px;
 }
 .respond_tdlink:hover {
   text-decoration: underline;
+}
+
+.link-style {
+  cursor: pointer;
+}
+
+.depth_two_menu.active {
+  color: #005AAB;
 }
 
 .normal_tdlink {
