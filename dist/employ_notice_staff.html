@@ -382,7 +382,9 @@
 												<div class="fset_cols_group">
 													<div class="fset_th_cols">
 														<span class="fset_thtext emp">
-															Call-Back 서비스
+															Call-Back
+															<br class="mb_br" />
+															서비스
 															<span class="ico_import"></span>
 														</span>
 													</div>
@@ -548,6 +550,14 @@
 				document.querySelector("#btn_callback_guide").addEventListener("click", () => {
 					tooltipPopup.popupShow(); // show
 				});
+			});
+
+			/* jquery */
+			$(function() {
+				responWidFunc();
+			});
+			$(window).on("load", function() {
+				responThFunc("#staff_fieldset"); // mobile일때 th 최대 넓이 값 지정
 			});
 		</script>
 		<div class="btn_topgo_wrap"><a href="#" class="btn_topgo"></a></div>

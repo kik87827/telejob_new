@@ -11530,8 +11530,9 @@ strong.color_emp {
 .tditems_list {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 10px 24px;
   flex-wrap: wrap;
+  min-height: 38px;
 }
 .tooltip_btn_wrap {
   display: inline-block;
@@ -11608,7 +11609,7 @@ strong.color_emp {
     width: 100%;
   }
   .linked_horitem_list > li.short {
-    padding: 0 5px;
+    padding: 0 2px;
   }
 }
 @media (max-width: 767px) {
@@ -11626,6 +11627,9 @@ strong.color_emp {
   }
   .fset_td_inner_flex .td_cols > .linked_horitem_list {
     flex: 1;
+  }
+  .tip_text_copy {
+    font-size: 13px;
   }
 }
 /* design page */

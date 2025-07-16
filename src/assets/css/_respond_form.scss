@@ -56,7 +56,7 @@
     }
 }
 .tditems_list{
-    display:flex; align-items:center; gap:24px; flex-wrap:wrap;
+    display:flex; align-items:center; gap:10px 24px; flex-wrap:wrap; min-height:38px;
     > li{
 
     }
@@ -96,7 +96,7 @@
 
     .linked_horitem_list{
          > li{
-            &.short{padding:0 5px;}
+            &.short{padding:0 2px;}
          }
     }
 }
@@ -108,5 +108,9 @@
             }
             > .linked_horitem_list{flex:1;}
         }
+    }
+
+    .tip_text_copy{
+        font-size:13px;
     }
 }
