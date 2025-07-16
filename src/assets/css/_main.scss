@@ -1,1 +1,94 @@
 /* main */
+
+/* 고객센터 */
+.brief_section{}
+.brief_pixed_table{}
+.brief_pixed_cols{}
+.brief_slice_wrap{}
+.brief_slice_title_row{}
+.brief_slice_title_dom{
+    .ico{
+        &.tel{}
+        &.account{}
+        &.pay{}
+    }
+    .slice_title_wrap{}
+    .slice_title{}
+    .slice_title_sub{}
+}
+.brief_slice_contents{
+    .number_row{}
+    .note_row{}
+    .summary_row{}
+}
+.brief_note_text{
+    .note_keyword{}
+    &:last-of-type{}
+}
+.brief_main_number{}
+.brief_summary_tb{
+    .summary_tr{}
+    .summary_td{
+        &.define_th{}
+        &.define_td{}
+    }
+    .summary_emptext{}
+    .summary_thtext{}
+    .summary_tdtext{}
+}
+.banking_slice_list{
+    > li{}
+}
+.banking_obj{
+    dt,dd{}
+    dt{
+        img{}
+    }
+    dd{}
+}
+.banking_spec_text{}
+.brief_amount_dom{}
+.brief_amount_number{}
+.brief_amount_unit{}
+.recap_tb_wrap{}
+.recap_tb{
+    th,td{}
+    th{}
+    td{}
+}
+.recap_thtext{}
+.recap_tdtext{}
+.guide_points_wrap{}
+.guide_bullet_list{
+    > li{
+        &:before{}
+    }
+}
+.btn_text_node{}
+.brief_banner_wrap{}
+.brief_banner_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.brief_banner_item{
+    &.type2{
+        .img_cols{
+            > img{}
+        }
+        .brief_text_node{
+
+        }
+        .brief_emp_text{}
+        .brief_sub_text{}
+    }
+    .img_cols{
+        > img{}
+    }
+    .text_cols{}
+}
+.brief_text_node{
+
+}
+.brief_emp_text{}
+.brief_sub_text{}
