@@ -1,13 +1,25 @@
-.respond_fieldset_wrap{border-top:2px solid #BDC5D1;}
+.respond_fieldset_wrap{border-top:2px solid #BDC5D1;
+    &.type2{border-top:0;}
+}
+.respond_fieldset_zone{}
+.form_map_both_container{
+    display:flex;
+    .form_cols{
+        flex:1; min-width:0;
+        .respond_fieldset_tb{}
+    }
+    .map_cols{flex:0 0 404px; display:flex; flex-direction: column; box-sizing: border-box; padding:20px; background:#F8F8F8; border-bottom:1px solid #E6E6E6}
+}
 .respond_fieldset_tb{
 }
+.map_render{flex:1; border:1px solid #E6E6E6; position:relative;}
 .fset_tr{
     display:flex; border-bottom:1px solid #E6E6E6;
 }
 .fset_cols_group{flex:1; display:flex;}
 .fset_th_cols,
-.fset_td_cols{display:flex; flex-direction: column; align-items: flex-start; justify-content: center; box-sizing: border-box;}
-.fset_th_cols{padding:18px 16px; background:#F8F8F8;width:170px;}
+.fset_td_cols{display:flex; flex-direction: column; align-items: flex-start; box-sizing: border-box;}
+.fset_th_cols{padding:6px 16px; background:#F8F8F8;width:170px; justify-content: center;}
 .fset_td_cols{
     > *{width:100%;}
     padding:6px 24px; flex:1; min-width:0;
@@ -55,8 +67,18 @@
         }
     }
 }
+.inline_connect_wrap{
+    display:flex; gap:8px; align-items: center;
+    > .inline_connect_list{flex:1;}
+}
 .tditems_list{
-    display:flex; align-items:center; gap:10px 24px; flex-wrap:wrap; min-height:38px;
+    display:flex; align-items:center; gap:5px 24px; flex-wrap:wrap; min-height:38px;
+    &.type2{
+        gap:8px;
+    }
+    &.type3{
+        gap:16px;
+    }
     > li{
 
     }
@@ -76,6 +98,68 @@
     @include font(14px,400,1.6); word-break:keep-all;
 }
 
+.inline_connect_list{
+    display:flex; gap:8px; align-items: center;
+    > li{
+        &.short{flex:0 0 30%}
+        &.long{flex:1;}
+    }
+}
+.td_column_wrap{}
+.td_column{
+    margin-bottom:5px;
+    &:last-of-type{margin-bottom:0;}
+}
+.with_unit_obj{
+    display:flex; align-items: center; gap:4px;
+    .unit_node{white-space: nowrap; @include font2(14px,400,1,#000)}
+}
+.btn_event_text_list{
+    display:flex; gap:8px; align-items: center;
+    > li{}
+}
+.btn_event_text{display:inline-block; @include font2(14px,700,1,#000); text-decoration: underline !important; white-space: nowrap;}
+.many_items_wrap{
+    line-height:0; font-size:0;
+    .many_items_list{ margin-bottom:10px;
+        &:last-of-type{margin-bottom:0;}
+    }
+    &:last-of-type{margin-bottom:0;}
+}
+.many_items_list{
+    display:flex; gap:16px; align-items: center;
+}
+@media (max-width:$pcwid_large){
+    .tditems_list{
+        &.type2, &.type3{
+            > .inline_connect_list{flex:1;}
+        }
+    }
+    .many_items_wrap{
+        .many_items_list{ margin-bottom:20px;
+        }
+    }
+    .many_items_list{display:block;
+        .inline_connect_list{
+            >li{flex:1;}
+        }
+        .btn_event_text_list{justify-content: flex-end;margin-top:10px;}
+    }
+    .inline_connect_wrap{
+        flex-direction: column;
+        > .inline_connect_list{flex:0;width:100%;
+            > li{}
+        }
+    }
+}
+@media (max-width:$tablet){
+    .inline_connect_list{
+        > li{
+            &.short{flex:0 0 40%}
+        }
+    }
+    
+}
 
 @media (max-width:$mobile_large){
     .fset_td_inner_flex{flex-direction: column; align-items: flex-start; gap:10px;
@@ -96,9 +180,34 @@
 
     .linked_horitem_list{
          > li{
-            &.short{padding:0 2px;}
+            &.short{padding:0 3px;}
          }
     }
+
+    .form_map_both_container{
+        display:block;
+        .form_cols{
+            .respond_fieldset_tb{}
+        }
+        .map_cols{padding:0;}
+    }
+    .map_render{min-height:300px;}
+    .respond_fieldset_tb{
+    }
+
+    .tditems_list{
+        &.type2{
+            flex-direction: column; align-items: flex-start; justify-content: flex-start;
+            > .inline_connect_list{flex:0; width:100%;align-items: flex-start; justify-content: flex-start;
+                > li{width:100%;flex:auto;}
+            }
+        }
+    }
+    .inline_connect_list{
+        > li{flex:1;}
+    }
+
+    .btn_event_text{font-size:13px;}
 }
 @media (max-width:$mobile){
     .fset_td_inner_flex{
@@ -112,5 +221,14 @@
 
     .tip_text_copy{
         font-size:13px;
+    }
+
+    .inline_connect_list{
+        flex-direction: column; gap:5px;
+        > li{
+            flex:0;width:100%;
+            &.short,
+            &.long{flex:0;width:100%}
+        }
     }
 }

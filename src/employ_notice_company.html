@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./include/head.html')
+  <body class="front_body">
+    <div class="page_wrap">
+      @@include('./include/header4.html')
+      <!-- middle -->
+      <section class="middle_wrap">
+        <div class="middle_inner">
+          <div class="core_panel_container">
+            <div class="core_title_row"><h2 class="core_title">채용공고 등록</h2></div>
+            <div class="core_contents_row">
+              <div class="form_notice_box">
+                <div class="fn_title_row">
+                  <div class="ico_cols">
+                    <i class="ico import"></i>
+                  </div>
+                  <div class="spec_cols">
+                    <div class="fn_sub_title">등록 전 반드시 확인해 주세요!</div>
+                    <div class="fn_main_title">채용공고 등록 시 주의사항</div>
+                  </div>
+                </div>
+                <div class="fn_contents_row">
+                  <ul class="bullet_list skin_w">
+                    <li>근무지 주소는 1개만 등록 가능합니다. 채용공고의 내용은 동일하나, 근무지가 여러 곳일 경우에는 내용을 복사하시어 각각 등록하실 것을 권장드립니다.</li>
+                    <li>마감일이 지난 채용공고는 ‘게재 중인 채용공고’에서 ‘보관 중인 채용공고’로 이동되며, 개인회원(구직자)에게 노출되지 않습니다.</li>
+                    <li>동일한 내용의 공고를 중복 게재하여 공고 게시판을 도배하거나 허위 정보 및 부적절한 컨텐츠 제공 시, 텔레잡 관리자 권한으로 게재 중지 및 삭제 조치될 수 있습니다.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="form_global_container">
+                <div class="form_section_block">
+                  <div class="form_section_title_row">
+                    <h3 class="form_section_title">회사정보</h3>
+                    <div class="form_section_else_wrap">
+                      <span class="import_caption_g">
+                        <i class="ico_import"></i>
+                        <span class="import_caption_text">필수입력</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="form_section_contents">
+                    <div class="respond_fieldset_zone" id="company_fieldset">
+                      <div class="form_map_both_container">
+                        <div class="form_cols">
+                          <!-- form table -->
+                          <div class="respond_fieldset_tb">
+                            <div class="fset_tr">
+                              <div class="fset_cols_group">
+                                <div class="fset_th_cols">
+                                  <span class="fset_thtext">
+                                    회사명
+                                    <span class="ico_import"></span>
+                                  </span>
+                                </div>
+                                <div class="fset_td_cols">
+                                  <ul class="inline_connect_list" style="width: 612px" data-pcwid="612px" data-pconly="true">
+                                    <li class="short"><input type="text" class="box_input" disabled value="메리츠화재" /></li>
+                                    <li class="long">
+                                      <select class="form_select">
+                                        <option value="0">업종선택</option>
+                                        <option value="1">옵션 1</option>
+                                        <option value="2">옵션 2</option>
+                                      </select>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="fset_tr">
+                              <div class="fset_cols_group">
+                                <div class="fset_th_cols">
+                                  <span class="fset_thtext">
+                                    근무지주소
+                                    <span class="ico_import"></span>
+                                  </span>
+                                </div>
+                                <div class="fset_td_cols">
+                                  <div class="td_column_wrap">
+                                    <div class="td_column tditems_list">
+                                      <div class="inline_flex_wrap">
+                                        <div class="inline_long">
+                                          <input type="text" class="box_input" placeholder="우편번호" style="width: 112px" data-pcwid="112px" />
+                                        </div>
+                                        <div class="inline_short">
+                                          <a href="javascript:;" class="btn_inline_control">주소검색</a>
+                                        </div>
+                                      </div>
+                                      <div class="props_item gap3">
+                                        <input type="checkbox" class="props_dom" id="import_data" />
+                                        <label for="import_data" class="props_label">기업정보 주소 불러오기</label>
+                                      </div>
+                                    </div>
+                                    <div class="td_column">
+                                      <input type="text" class="box_input" placeholder="주소" style="width: 612px" data-pcwid="612px" data-pconly="true" />
+                                    </div>
+                                    <div class="td_column">
+                                      <input type="text" class="box_input" placeholder="상세주소" style="width: 612px" data-pcwid="612px" data-pconly="true" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="fset_tr">
+                              <div class="fset_cols_group">
+                                <div class="fset_th_cols">
+                                  <span class="fset_thtext">
+                                    인근지하철
+                                    <span class="ico_import"></span>
+                                  </span>
+                                </div>
+                                <div class="fset_td_cols">
+                                  <div class="many_items_wrap">
+                                    <div class="many_items_list">
+                                      <div class="inline_connect_wrap">
+                                        <ul class="inline_connect_list">
+                                          <li>
+                                            <select class="form_select" style="width: 160px" data-pcwid="160px" data-pconly="true">
+                                              <option value="0">지하철 노선</option>
+                                              <option value="1">옵션 1</option>
+                                              <option value="2">옵션 2</option>
+                                            </select>
+                                          </li>
+                                          <li>
+                                            <select class="form_select" style="width: 182px" data-pcwid="182px" data-pconly="true">
+                                              <option value="0">지하철 역명</option>
+                                              <option value="1">옵션 1</option>
+                                              <option value="2">옵션 2</option>
+                                            </select>
+                                          </li>
+                                        </ul>
+                                        <ul class="inline_connect_list">
+                                          <li>
+                                            <div class="with_unit_obj">
+                                              <input type="text" class="box_input" style="width: 80px" data-pcwid="80px" data-pconly="true" />
+                                              <span class="unit_node">번 출구</span>
+                                            </div>
+                                          </li>
+                                          <li>
+                                            <div class="with_unit_obj">
+                                              <select class="form_select" style="width: 120px" data-pcwid="120px" data-pconly="true">
+                                                <option value="0">도보걸이</option>
+                                                <option value="1">옵션 1</option>
+                                                <option value="2">옵션 2</option>
+                                              </select>
+                                              <span class="unit_node">이내</span>
+                                            </div>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                      <ul class="btn_event_text_list">
+                                        <li><a href="javascript:;" class="btn_event_text">삭제</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="many_items_list">
+                                      <div class="inline_connect_wrap">
+                                        <ul class="inline_connect_list">
+                                          <li>
+                                            <select class="form_select" style="width: 160px" data-pcwid="160px" data-pconly="true">
+                                              <option value="0">지하철 노선</option>
+                                              <option value="1">옵션 1</option>
+                                              <option value="2">옵션 2</option>
+                                            </select>
+                                          </li>
+                                          <li>
+                                            <select class="form_select" style="width: 182px" data-pcwid="182px" data-pconly="true">
+                                              <option value="0">지하철 역명</option>
+                                              <option value="1">옵션 1</option>
+                                              <option value="2">옵션 2</option>
+                                            </select>
+                                          </li>
+                                        </ul>
+                                        <ul class="inline_connect_list">
+                                          <li>
+                                            <div class="with_unit_obj">
+                                              <input type="text" class="box_input" style="width: 80px" data-pcwid="80px" data-pconly="true" />
+                                              <span class="unit_node">번 출구</span>
+                                            </div>
+                                          </li>
+                                          <li>
+                                            <div class="with_unit_obj">
+                                              <select class="form_select" style="width: 120px" data-pcwid="120px" data-pconly="true">
+                                                <option value="0">도보걸이</option>
+                                                <option value="1">옵션 1</option>
+                                                <option value="2">옵션 2</option>
+                                              </select>
+                                              <span class="unit_node">이내</span>
+                                            </div>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                      <ul class="btn_event_text_list">
+                                        <li><a href="javascript:;" class="btn_event_text">삭제</a></li>
+                                        <li><a href="javascript:;" class="btn_event_text">추가</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="fset_tr">
+                              <div class="fset_cols_group">
+                                <div class="fset_th_cols">
+                                  <span class="fset_thtext">
+                                    지역분류
+                                    <span class="ico_import"></span>
+                                  </span>
+                                </div>
+                                <div class="fset_td_cols">
+                                  <div class="tditems_list type2">
+                                    <ul class="inline_connect_list" style="width: 612px" data-pcwid="612px" data-pconly="true">
+                                      <li>
+                                        <select class="form_select" style="width: 160px" data-pcwid="160px" data-pconly="true">
+                                          <option>지역(도,시) 선택</option>
+                                        </select>
+                                      </li>
+                                      <li class="long">
+                                        <select class="form_select">
+                                          <option>상세지역 선택</option>
+                                        </select>
+                                      </li>
+                                    </ul>
+                                    <p class="indent_node_text">
+                                      <span class="indent_bullet_node">*</span>
+                                      <span class="indent_node_liquid">상세 검색용</span>
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- // form table -->
+                        </div>
+                        <div class="map_cols">
+                          <div class="map_render">
+                            <!-- map api -->
+                            <div style="background: #ddd; position: absolute; top: 0; left: 0; width: 100%; display: flex; justify-content: center; align-items: center; height: 100%">NAVER MAP</div>
+                            <!-- // map api -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="respond_fieldset_wrap type2">
+                        <div class="respond_fieldset_tb">
+                          <div class="fset_tr">
+                            <div class="fset_cols_group">
+                              <div class="fset_th_cols">
+                                <span class="fset_thtext">홈페이지</span>
+                              </div>
+                              <div class="fset_td_cols"><input type="text" class="box_input" placeholder="ex) www.telejob.co.kr" style="width: 612px" data-pcwid="612px" data-pconly="true" /></div>
+                            </div>
+                          </div>
+                          <div class="fset_tr">
+                            <div class="fset_cols_group">
+                              <div class="fset_th_cols">
+                                <span class="fset_thtext">
+                                  회사소개
+                                  <i class="ico_import"></i>
+                                </span>
+                              </div>
+                              <div class="fset_td_cols">
+                                <div class="box_textarea_wrap">
+                                  <textarea cols="10" row="10" class="box_textarea"></textarea>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- // middle -->
+      <script>
+        $(function () {
+          responWidFunc();
+          responThFunc(["#company_fieldset"]); // mobile일때 th 최대 넓이 값 지정
+        });
+      </script>
+      @@include('./include/footer.html')
+    </div>
+  </body>
+</html>

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;  charset=utf-8" />
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" type="image/png" href="./assets/images/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+	<link rel="shortcut icon" href="./assets/images/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png" />
+	<link rel="manifest" href="./assets/images/site.webmanifest" />
+	<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link href="./assets/css/style.css" rel="stylesheet" />
+	<script src="./assets/js/jquery-3.4.1.min.js"></script>
+	<script src="./assets/js/dynamicListener.min.js"></script>
+	<script src="./assets/js/swiper.min.js"></script>
+	<script src="./assets/js/jquery-ui.js"></script>
+	<script src="./assets/js/ui.js"></script>
+	<title>텔레잡</title>
+</head>
+
+<body class="front_body">
+	<div class="page_wrap">
+		<!-- type2 추가 -->
+		<header class="header_wrap type2">
+			<div class="header_main_row">
+				<div class="logo_cols">
+					<a href="javascript:;" class="btn_panel_menu"><i class="btn_panel_menu_ico"></i></a>
+					<h1 class="toplogo_container">
+						<a href="#" class="toplogo_item">
+							<span class="img_cols"><img src="./assets/images/toplogo.png" alt=""></span>
+							<span class="spec_cols">
+								<span class="spec_main_copy">대한민국 최초!</span>
+								<span class="spec_sub_copy">TM/영업 전문 취업 플랫폼</span>
+							</span>
+						</a>
+					</h1>
+				</div>
+				<div class="util_cols">
+					<div class="top_util_wrap">
+						<ul class="top_util_list">
+							<li><a href="#" class="top_util_item">텔레잡 홈</a></li>
+							<li><a href="#" class="top_util_item type2">유료서비스 안내</a></li>
+							<li><a href="#" class="top_util_item type2">디자인신청</a></li>
+							<li><a href="#" class="top_util_item">공지/뉴스</a></li>
+							<li><a href="#" class="top_util_item">고객센터</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="header_nav_row">
+				<nav class="header_nav_container">
+					<div class="header_nav_menu_wrap">
+						<ul class="header_nav_menu_list">
+							<li>
+								<div class="header_nav_menu_item active">
+									<a href="#" class="header_nav_menu_link">기업회원 홈</a>
+								</div>
+							</li>
+							<li>
+								<div class="header_nav_menu_item">
+									<a href="#" class="header_nav_menu_link">채용공고등록</a>
+								</div>
+							</li>
+							<li>
+								<div class="header_nav_menu_item">
+									<a href="#" class="header_nav_menu_link">채용공고관리</a>
+								</div>
+							</li>
+							<li>
+								<div class="header_nav_menu_item">
+									<a href="#" class="header_nav_menu_link">유료서비스관리</a>
+								</div>
+							</li>
+							<li>
+								<div class="header_nav_menu_item">
+									<a href="#" class="header_nav_menu_link">인재관리</a>
+								</div>
+							</li>
+							<li>
+								<div class="header_nav_menu_item">
+									<a href="#" class="header_nav_menu_link">VIP전용관</a>
+								</div>
+							</li>
+							<li>
+								<div class="header_nav_menu_item">
+									<a href="#" class="header_nav_menu_link">기업정보관리</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="header_nav_util_wrap">
+						<ul class="header_nav_util_list">
+							<!-- <li><a href="#" class="header_nav_util">로그인</a></li>
+                    <li><a href="#" class="header_nav_util">회원가입</a></li> -->
+							<li>
+								<dl class="header_nav_fraction">
+									<dt><span class="key_fraction_label">총지원자 :</span></dt>
+									<dt><strong class="key_fraction_value">22</strong></dt>
+								</dl>
+							</li>
+							<li>
+								<div class="header_nav_toggle type2">
+									<a href="javascript:;" class="nav_toggle_target">
+										<i class="ico ico_men"></i>
+										<span class="toggle_target_text">TelejobUserID</span>
+									</a>
+									<div class="nav_toggle_layer">
+										<ul class="nav_toggle_list">
+											<li><a href="#" class="nav_toggle_menu">개인회원홈</a></li>
+											<li><a href="#" class="nav_toggle_menu">이력서등록</a></li>
+											<li><a href="#" class="nav_toggle_menu">이력서관리</a></li>
+											<li><a href="#" class="nav_toggle_menu">입사지원관리</a></li>
+											<li><a href="#" class="nav_toggle_menu">채용정보</a></li>
+											<li><a href="#" class="nav_toggle_menu">맞춤정보</a></li>
+											<li><a href="#" class="nav_toggle_menu">회원정보관리</a></li>
+											<li><a href="#" class="nav_toggle_box">로그아웃</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<!-- mobilemenu -->
+			<div class="mobile_nav_panel">
+				<div class="bg_dim"></div>
+				<div class="mobile_nav_wrap">
+					<div class="mobile_nav_top">
+						<!-- <div class="mb_nav_form_wrap">
+                <form>
+                    <input type="text" class="mb_nav_form_input" placeholder="메뉴검색" />
+                </form>
+            </div> -->
+						<div class="mb_nav_tab_wrap">
+							<ul class="mb_nav_tab_list">
+								<li class="active"><a href="#mb_nav_cont01" class="mb_nav_tab"><span class="mb_nav_tab_text">채용정보</span></a></li>
+								<li><a href="#mb_nav_cont02" class="mb_nav_tab"><span class="mb_nav_tab_text">회원메뉴</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="mobile_nav_middle">
+						<div class="mb_nav_cont_wrap">
+							<div class="mb_nav_cont active" id="mb_nav_cont01">
+								<div class="mb_navmenu_wrap">
+									<ul class="mb_navmenu_list">
+										<li class="toggle_active">
+											<a href="javascript:;" class="mb_navmenu_item has_arrow">
+												<span class="mb_navmenu_text">채용정보</span>
+											</a>
+											<div class="mb_navmenu_depth_wrap">
+												<ul class="mb_navmenu_depth_list">
+													<li>
+														<a href="javascript:;" class="mb_navmenu_depth">
+															<i class="ico_nm ico_rec01"></i>
+															<span class="mnav_depth_text">전체채용정보</span>
+														</a>
+													</li>
+													<li>
+														<a href="javascript:;" class="mb_navmenu_depth">
+															<i class="ico_nm ico_rec02"></i>
+															<span class="mnav_depth_text">콜백채용정보</span>
+														</a>
+													</li>
+													<li>
+														<a href="javascript:;" class="mb_navmenu_depth">
+															<i class="ico_nm ico_rec03"></i>
+															<span class="mnav_depth_text">인기채용정보/우수기업전용채용관</span>
+														</a>
+													</li>
+													<li>
+														<a href="javascript:;" class="mb_navmenu_depth">
+															<i class="ico_nm ico_rec04"></i>
+															<span class="mnav_depth_text">인재정보</span>
+														</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li>
+											<a href="javascript:;" class="mb_navmenu_item has_arrow">
+												<span class="mb_navmenu_text">유료서비스 안내</span>
+											</a>
+											<div class="mb_navmenu_depth_wrap">
+												<ul class="mb_navmenu_depth_list">
+													<li>
+														<a href="javascript:;" class="mb_navmenu_depth">
+															<i class="ico_nm ico_fee01"></i>
+															<span class="mnav_depth_text">유료서비스 안내</span>
+														</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li>
+											<a href="javascript:;" class="mb_navmenu_item has_arrow">
+												<span class="mb_navmenu_text">고객센터</span>
+											</a>
+											<div class="mb_navmenu_depth_wrap">
+												<ul class="mb_navmenu_depth_list">
+													<li>
+														<a href="javascript:;" class="mb_navmenu_depth">
+															<i class="ico_nm ico_member01"></i>
+															<span class="mnav_depth_text">고객센터 안내</span>
+														</a>
+													</li>
+													<li>
+														<a href="javascript:;" class="mb_navmenu_depth">
+															<i class="ico_nm ico_member02"></i>
+															<span class="mnav_depth_text">고객센터 카톡방</span>
+														</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="mb_nav_cont" id="mb_nav_cont02">
+								<div class="mb_navmenu_wrap">
+									<ul class="mb_navmenu_list">
+										<li class="toggle_active">
+											<a href="javascript:;" class="mb_navmenu_item has_arrow">
+												<span class="mb_navmenu_text">회원메뉴</span>
+											</a>
+											<div class="mb_navmenu_depth_wrap">
+												<ul class="mb_navmenu_depth_list">
+													<li>
+														<a href="javascript:;" class="mb_navmenu_depth">
+															<i class="ico_nm ico_member01"></i>
+															<span class="mnav_depth_text">로그인</span>
+														</a>
+													</li>
+													<li>
+														<a href="javascript:;" class="mb_navmenu_depth">
+															<i class="ico_nm ico_member02"></i>
+															<span class="mnav_depth_text">회원가입</span>
+														</a>
+													</li>
+													<li>
+														<a href="javascript:;" class="mb_navmenu_depth">
+															<i class="ico_nm ico_member03"></i>
+															<span class="mnav_depth_text">아이디 찾기</span>
+														</a>
+													</li>
+													<li>
+														<a href="javascript:;" class="mb_navmenu_depth">
+															<i class="ico_nm ico_member04"></i>
+															<span class="mnav_depth_text">비밀번호 찾기</span>
+														</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="mobile_nav_bottom">
+            <div class="mb_nav_util_wrap">
+                <ul class="mb_nav_util_list">
+                    <li>
+                        <a href="javascript:;" class="mb_nav_util">
+                            <i class="fa fa-home"></i>
+                            <span class="mb_nav_util_text">텔레잡홈</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="mb_nav_util">
+                            <i class="fa fa-user"></i>
+                            <span class="mb_nav_util_text">회원가입</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="mb_nav_util">
+                            <i class="fa fa-sign-in"></i>
+                            <span class="mb_nav_util_text">로그인</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="mb_nav_util">
+                            <i class="fa fa-sign-out"></i>
+                            <span class="mb_nav_util_text">로그아웃</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div> -->
+				</div>
+				<a href="javascript:;" class="btn_panel_close"><i class="btn_panel_close_ico"></i></a>
+			</div>
+			<!-- // mobilemenu -->
+		</header>
+		<!-- middle -->
+		<section class="middle_wrap">
+			<div class="middle_inner">
+				<div class="core_panel_container">
+					<div class="core_title_row">
+						<h2 class="core_title">채용공고 등록</h2>
+					</div>
+					<div class="core_contents_row">
+						<div class="form_notice_box">
+							<div class="fn_title_row">
+								<div class="ico_cols">
+									<i class="ico import"></i>
+								</div>
+								<div class="spec_cols">
+									<div class="fn_sub_title">등록 전 반드시 확인해 주세요!</div>
+									<div class="fn_main_title">채용공고 등록 시 주의사항</div>
+								</div>
+							</div>
+							<div class="fn_contents_row">
+								<ul class="bullet_list skin_w">
+									<li>근무지 주소는 1개만 등록 가능합니다. 채용공고의 내용은 동일하나, 근무지가 여러 곳일 경우에는 내용을 복사하시어 각각 등록하실 것을 권장드립니다.</li>
+									<li>마감일이 지난 채용공고는 ‘게재 중인 채용공고’에서 ‘보관 중인 채용공고’로 이동되며, 개인회원(구직자)에게 노출되지 않습니다.</li>
+									<li>동일한 내용의 공고를 중복 게재하여 공고 게시판을 도배하거나 허위 정보 및 부적절한 컨텐츠 제공 시, 텔레잡 관리자 권한으로 게재 중지 및 삭제 조치될 수 있습니다.</li>
+								</ul>
+							</div>
+						</div>
+						<div class="form_global_container">
+							<div class="form_section_block">
+								<div class="form_section_title_row">
+									<h3 class="form_section_title">회사정보</h3>
+									<div class="form_section_else_wrap">
+										<span class="import_caption_g">
+											<i class="ico_import"></i>
+											<span class="import_caption_text">필수입력</span>
+										</span>
+									</div>
+								</div>
+								<div class="form_section_contents">
+									<div class="respond_fieldset_zone" id="company_fieldset">
+										<div class="form_map_both_container">
+											<div class="form_cols">
+												<!-- form table -->
+												<div class="respond_fieldset_tb">
+													<div class="fset_tr">
+														<div class="fset_cols_group">
+															<div class="fset_th_cols">
+																<span class="fset_thtext">
+																	회사명
+																	<span class="ico_import"></span>
+																</span>
+															</div>
+															<div class="fset_td_cols">
+																<ul class="inline_connect_list" style="width: 612px" data-pcwid="612px" data-pconly="true">
+																	<li class="short"><input type="text" class="box_input" disabled value="메리츠화재" /></li>
+																	<li class="long">
+																		<select class="form_select">
+																			<option value="0">업종선택</option>
+																			<option value="1">옵션 1</option>
+																			<option value="2">옵션 2</option>
+																		</select>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													<div class="fset_tr">
+														<div class="fset_cols_group">
+															<div class="fset_th_cols">
+																<span class="fset_thtext">
+																	근무지주소
+																	<span class="ico_import"></span>
+																</span>
+															</div>
+															<div class="fset_td_cols">
+																<div class="td_column_wrap">
+																	<div class="td_column tditems_list">
+																		<div class="inline_flex_wrap">
+																			<div class="inline_long">
+																				<input type="text" class="box_input" placeholder="우편번호" style="width: 112px" data-pcwid="112px" />
+																			</div>
+																			<div class="inline_short">
+																				<a href="javascript:;" class="btn_inline_control">주소검색</a>
+																			</div>
+																		</div>
+																		<div class="props_item gap3">
+																			<input type="checkbox" class="props_dom" id="import_data" />
+																			<label for="import_data" class="props_label">기업정보 주소 불러오기</label>
+																		</div>
+																	</div>
+																	<div class="td_column">
+																		<input type="text" class="box_input" placeholder="주소" style="width: 612px" data-pcwid="612px" data-pconly="true" />
+																	</div>
+																	<div class="td_column">
+																		<input type="text" class="box_input" placeholder="상세주소" style="width: 612px" data-pcwid="612px" data-pconly="true" />
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="fset_tr">
+														<div class="fset_cols_group">
+															<div class="fset_th_cols">
+																<span class="fset_thtext">
+																	인근지하철
+																	<span class="ico_import"></span>
+																</span>
+															</div>
+															<div class="fset_td_cols">
+																<div class="many_items_wrap">
+																	<div class="many_items_list">
+																		<div class="inline_connect_wrap">
+																			<ul class="inline_connect_list">
+																				<li>
+																					<select class="form_select" style="width: 160px" data-pcwid="160px" data-pconly="true">
+																						<option value="0">지하철 노선</option>
+																						<option value="1">옵션 1</option>
+																						<option value="2">옵션 2</option>
+																					</select>
+																				</li>
+																				<li>
+																					<select class="form_select" style="width: 182px" data-pcwid="182px" data-pconly="true">
+																						<option value="0">지하철 역명</option>
+																						<option value="1">옵션 1</option>
+																						<option value="2">옵션 2</option>
+																					</select>
+																				</li>
+																			</ul>
+																			<ul class="inline_connect_list">
+																				<li>
+																					<div class="with_unit_obj">
+																						<input type="text" class="box_input" style="width: 80px" data-pcwid="80px" data-pconly="true" />
+																						<span class="unit_node">번 출구</span>
+																					</div>
+																				</li>
+																				<li>
+																					<div class="with_unit_obj">
+																						<select class="form_select" style="width: 120px" data-pcwid="120px" data-pconly="true">
+																							<option value="0">도보걸이</option>
+																							<option value="1">옵션 1</option>
+																							<option value="2">옵션 2</option>
+																						</select>
+																						<span class="unit_node">이내</span>
+																					</div>
+																				</li>
+																			</ul>
+																		</div>
+																		<ul class="btn_event_text_list">
+																			<li><a href="javascript:;" class="btn_event_text">삭제</a></li>
+																		</ul>
+																	</div>
+																	<div class="many_items_list">
+																		<div class="inline_connect_wrap">
+																			<ul class="inline_connect_list">
+																				<li>
+																					<select class="form_select" style="width: 160px" data-pcwid="160px" data-pconly="true">
+																						<option value="0">지하철 노선</option>
+																						<option value="1">옵션 1</option>
+																						<option value="2">옵션 2</option>
+																					</select>
+																				</li>
+																				<li>
+																					<select class="form_select" style="width: 182px" data-pcwid="182px" data-pconly="true">
+																						<option value="0">지하철 역명</option>
+																						<option value="1">옵션 1</option>
+																						<option value="2">옵션 2</option>
+																					</select>
+																				</li>
+																			</ul>
+																			<ul class="inline_connect_list">
+																				<li>
+																					<div class="with_unit_obj">
+																						<input type="text" class="box_input" style="width: 80px" data-pcwid="80px" data-pconly="true" />
+																						<span class="unit_node">번 출구</span>
+																					</div>
+																				</li>
+																				<li>
+																					<div class="with_unit_obj">
+																						<select class="form_select" style="width: 120px" data-pcwid="120px" data-pconly="true">
+																							<option value="0">도보걸이</option>
+																							<option value="1">옵션 1</option>
+																							<option value="2">옵션 2</option>
+																						</select>
+																						<span class="unit_node">이내</span>
+																					</div>
+																				</li>
+																			</ul>
+																		</div>
+																		<ul class="btn_event_text_list">
+																			<li><a href="javascript:;" class="btn_event_text">삭제</a></li>
+																			<li><a href="javascript:;" class="btn_event_text">추가</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="fset_tr">
+														<div class="fset_cols_group">
+															<div class="fset_th_cols">
+																<span class="fset_thtext">
+																	지역분류
+																	<span class="ico_import"></span>
+																</span>
+															</div>
+															<div class="fset_td_cols">
+																<div class="tditems_list type2">
+																	<ul class="inline_connect_list" style="width: 612px" data-pcwid="612px" data-pconly="true">
+																		<li>
+																			<select class="form_select" style="width: 160px" data-pcwid="160px" data-pconly="true">
+																				<option>지역(도,시) 선택</option>
+																			</select>
+																		</li>
+																		<li class="long">
+																			<select class="form_select">
+																				<option>상세지역 선택</option>
+																			</select>
+																		</li>
+																	</ul>
+																	<p class="indent_node_text">
+																		<span class="indent_bullet_node">*</span>
+																		<span class="indent_node_liquid">상세 검색용</span>
+																	</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- // form table -->
+											</div>
+											<div class="map_cols">
+												<div class="map_render">
+													<!-- map api -->
+													<div style="background: #ddd; position: absolute; top: 0; left: 0; width: 100%; display: flex; justify-content: center; align-items: center; height: 100%">NAVER MAP</div>
+													<!-- // map api -->
+												</div>
+											</div>
+										</div>
+										<div class="respond_fieldset_wrap type2">
+											<div class="respond_fieldset_tb">
+												<div class="fset_tr">
+													<div class="fset_cols_group">
+														<div class="fset_th_cols">
+															<span class="fset_thtext">홈페이지</span>
+														</div>
+														<div class="fset_td_cols"><input type="text" class="box_input" placeholder="ex) www.telejob.co.kr" style="width: 612px" data-pcwid="612px" data-pconly="true" /></div>
+													</div>
+												</div>
+												<div class="fset_tr">
+													<div class="fset_cols_group">
+														<div class="fset_th_cols">
+															<span class="fset_thtext">
+																회사소개
+																<i class="ico_import"></i>
+															</span>
+														</div>
+														<div class="fset_td_cols">
+															<div class="box_textarea_wrap">
+																<textarea cols="10" row="10" class="box_textarea"></textarea>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- // middle -->
+		<script>
+			$(function() {
+				responWidFunc();
+				responThFunc(["#company_fieldset"]); // mobile일때 th 최대 넓이 값 지정
+			});
+		</script>
+		<div class="btn_topgo_wrap"><a href="#" class="btn_topgo"></a></div>
+		<footer class="footer_wrap">
+			<div class="footer_mobile_logo_row">
+				<span class="footer_logo"><img src="./assets/images/footer_mb_logo.png" alt=""></span>
+			</div>
+			<div class="footer_menu_row">
+				<div class="footer_menu_container">
+					<ul class="footer_menu_list">
+						<li class="mb_hidden"><a href="#" class="footer_menu">이용약관</a></li>
+						<li><a href="#" class="footer_menu"><strong>개인정보취급방침</strong></a></li>
+						<li><a href="#" class="footer_menu"><strong>권리침해신고센터</strong></a></li>
+						<li><a href="#" class="footer_menu">유료서비스안내</a></li>
+						<li class="mb_hidden"><a href="#" class="footer_menu">제휴문의</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer_main_row">
+				<div class="footer_main_container">
+					<div class="logo_cols">
+						<span class="footer_logo"><img src="./assets/images/bottomlogo.png" alt=""></span>
+					</div>
+					<div class="text_cols">
+						<div class="footer_copy_para_wrap">
+							<div class="footer_copy_para">
+								<span class="footer_copy">경기도 성남시 분당구 판교로 331, 2층 (삼평동, 에이비엔타워) (주)텔레잡</span>
+								<span class="footer_copy">대표: 박민철</span>
+							</div>
+							<div class="footer_copy_para">
+								<span class="footer_copy">사업자등록번호 : 186-81-03178</span>
+								<span class="footer_copy">통신판매업 신고번호 : 제 2024-성남분당A-0935호</span>
+								<span class="footer_copy">직업정보제공사업 신고번호 : J151120240009</span>
+							</div>
+							<div class="footer_copy_para">
+								<span class="footer_copy">Copyright (c) 2025 (주)텔레잡. All rights reserved.</span>
+							</div>
+						</div>
+					</div>
+					<div class="else_cols">
+						<ul class="footer_partner_list">
+							<li>
+								<a href="#" class="footer_partner_item" target="_blank">
+									<div class="logo_row"><img src="./assets/images/bottom_partner_01.png" alt=""></div>
+									<div class="spec_row">
+										<div class="spec_main">㈜한국컨텍센터 산업협회</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="footer_partner_item" target="_blank">
+									<div class="logo_row"><img src="./assets/images/bottom_partner_02.png" alt=""></div>
+									<div class="spec_row">
+										<div class="spec_main">임금체불사업주 명단조회</div>
+										<div class="spec_sub">*근거:근로기준법 제43조의2 및<br>같은법 시행령 계23조의3</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

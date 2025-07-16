@@ -281,8 +281,8 @@ input.form_input{
     &.box_type{border-radius:5px; border:1px solid #E6E6E6;padding:0 13px;}
 }
 input.box_input{
-    appearance: none; height:38px;  @include font(14px, 400, 1, 0, #000); border:1px solid #E6E6E6; border-radius:5px; width:100%; box-sizing: border-box; padding:0 42px 0 13px;
-    &.calendar{background:#fff url("../images/ico_calendar.png") no-repeat calc(100% - 13px) 50%/16px auto;}
+    appearance: none; height:38px;  @include font(14px, 400, 1, 0, #000); border:1px solid #E6E6E6; border-radius:5px; width:100%; box-sizing: border-box;  padding:0 13px 0 13px;
+    &.calendar{background:#fff url("../images/ico_calendar.png") no-repeat calc(100% - 13px) 50%/16px auto;  padding:0 42px 0 13px;}
     &.warn{border-color:#AF0101;}
     &:read-only,
     &:disabled{background:#F8F8F8; color:#aaa;}
@@ -296,6 +296,14 @@ textarea.form_textarea{
     &:disabled{background:#F8F8F8; color:#aaa;}
     &::placeholder{color:#aaa;}
 }
+textarea.box_textarea{
+    appearance: none; height: 300px; border-radius: 5px; padding:13px; vertical-align:top; resize: none;  @include font(16px, 400, 1.3, 0, #000);border:1px solid #E6E6E6; width:100%; box-sizing: border-box;
+    &.warn{border-color:#AF0101;}
+    &:read-only,
+    &:disabled{background:#F8F8F8; color:#aaa;}
+    &::placeholder{color:#aaa;}
+}
+.box_textarea_wrap{}
 .props_item_wrap{}
 .props_item_list{
     display:flex; gap:10px 36px; gap:24px;
@@ -347,7 +355,7 @@ input.props_dom{
     }
     .inline_short{flex:0;white-space:nowrap;}
 }
-.btn_inline_control{display:flex; white-space:nowrap; align-items:center; justify-content:center; text-align:center; min-height:38px; @include font(14px, 500, 1.3, 0, #000); box-sizing:border-box; border-radius:100px; border:1px solid #E6E6E6; padding:6px 24px; background:#F8F8F8;
+.btn_inline_control{display:flex; white-space:nowrap; align-items:center; justify-content:center; text-align:center; min-height:38px; @include font(14px, 500, 1.3, 0, #000); box-sizing:border-box; border-radius:100px; border:1px solid #E6E6E6; padding:4px 24px; background:#F8F8F8;
     &.skin2{background:#fff;}
 }
 .hidden_input_wrap{display:inline-block; position:relative; overflow:hidden;}
@@ -485,7 +493,8 @@ select.form_select{
         > li{flex:0 0 100%;}
     }
     textarea.form_textarea{font-size:13px;padding:15px 0; height:100px;}
-    .btn_inline_control{padding:6px 16px; min-height:40px; font-size:13px;}
+    textarea.box_textarea{font-size:13px;height:100px;}
+    .btn_inline_control{padding:4px 16px; font-size:13px;}
     .field_btn_row{
         &.btn_box_wrap{margin-top:40px;}
     }

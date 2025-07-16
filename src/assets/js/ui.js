@@ -798,6 +798,12 @@ function responWidFunc() {
     if ($(window).width() > 1023) {
       responDom.each(function () {
         const $this = $(this);
+        if($this.attr("data-pconly") === "true"){
+          if($(window).width() > 1440){
+            $this.css("width", $this.attr("data-pcwid"));
+          }
+          return;
+        }
         $this.css("width", $this.attr("data-pcwid"));
       });
     }
