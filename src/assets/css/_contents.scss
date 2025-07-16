@@ -2042,6 +2042,12 @@ strong.color_emp{font-weight:700;}
     color:#B5000F;
     *{color:#B5000F;}
 }
+.blue_emp{
+    *{}
+}
+.tip_emp{
+    *{}
+}
 .emp_link_text{@include font(13px,700,1.33,0,#000); display:inline-block; text-decoration: underline !important;}
 @media (max-width:$mobile_large){
     .bullet_list{

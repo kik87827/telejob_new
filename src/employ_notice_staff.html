@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./include/head.html')
+  <body class="front_body">
+    <div class="page_wrap">
+      @@include('./include/header4.html')
+      <!-- middle -->
+      <section class="middle_wrap">
+        <div class="middle_inner">
+          <div class="core_panel_container">
+            <div class="core_title_row"><h2 class="core_title">채용공고 등록</h2></div>
+            <div class="core_contents_row">
+              <div class="form_notice_box">
+                <div class="fn_title_row">
+                  <div class="ico_cols">
+                    <i class="ico import"></i>
+                  </div>
+                  <div class="spec_cols">
+                    <div class="fn_sub_title">등록 전 반드시 확인해 주세요!</div>
+                    <div class="fn_main_title">채용공고 등록 시 주의사항</div>
+                  </div>
+                </div>
+                <div class="fn_contents_row">
+                  <ul class="bullet_list skin_w">
+                    <li>근무지 주소는 1개만 등록 가능합니다. 채용공고의 내용은 동일하나, 근무지가 여러 곳일 경우에는 내용을 복사하시어 각각 등록하실 것을 권장드립니다.</li>
+                    <li>마감일이 지난 채용공고는 ‘게재 중인 채용공고’에서 ‘보관 중인 채용공고’로 이동되며, 개인회원(구직자)에게 노출되지 않습니다.</li>
+                    <li>동일한 내용의 공고를 중복 게재하여 공고 게시판을 도배하거나 허위 정보 및 부적절한 컨텐츠 제공 시, 텔레잡 관리자 권한으로 게재 중지 및 삭제 조치될 수 있습니다.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="form_global_container">
+                <div class="form_section_block">
+                  <div class="form_section_title_row">
+                    <h3 class="form_section_title">채용담당자</h3>
+                    <div class="form_section_else_wrap">
+                      <span class="import_caption_g">
+                        <i class="ico_import"></i>
+                        <span class="import_caption_text">필수입력</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="form_section_contents type2">
+                    <!-- form table -->
+                    <div class="respond_fieldset_wrap" id="staff_fieldset">
+                      <div class="respond_fieldset_tb">
+                        <div class="fset_tr">
+                          <div class="fset_cols_group">
+                            <div class="fset_th_cols">
+                              <span class="fset_thtext">
+                                담당자명
+                                <span class="ico_import"></span>
+                              </span>
+                            </div>
+                            <div class="fset_td_cols">
+                              <input type="text" class="box_input" placeholder="이름을 입력하세요" style="width: 272px" data-pcwid="272px" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="fset_tr">
+                          <div class="fset_cols_group">
+                            <div class="fset_th_cols">
+                              <span class="fset_thtext">
+                                연락처
+                                <span class="ico_import"></span>
+                              </span>
+                            </div>
+                            <div class="fset_td_cols">
+                              <ul class="linked_horitem_list" style="width: 420px" data-pcwid="420px">
+                                <li class="long">
+                                  <select class="form_select">
+                                    <option value="1">02</option>
+                                    <option value="2">051</option>
+                                  </select>
+                                </li>
+                                <li class="short"><span class="horitem_unit">-</span></li>
+                                <li class="long">
+                                  <input type="text" class="box_input" />
+                                </li>
+                                <li class="short"><span class="horitem_unit">-</span></li>
+                                <li class="long">
+                                  <input type="text" class="box_input" />
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="fset_tr">
+                          <div class="fset_cols_group">
+                            <div class="fset_th_cols">
+                              <span class="fset_thtext emp">
+                                Call-Back 서비스
+                                <span class="ico_import"></span>
+                              </span>
+                            </div>
+                            <div class="fset_td_cols">
+                              <div class="tditems_list">
+                                <ul class="props_item_list">
+                                  <li>
+                                    <div class="props_item gap3">
+                                      <input type="radio" class="props_dom" name="ans" id="ans_yes" />
+                                      <label for="ans_yes" class="props_label">예</label>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="props_item gap3">
+                                      <input type="radio" class="props_dom" name="ans" id="ans_no" />
+                                      <label for="ans_no" class="props_label">아니오</label>
+                                    </div>
+                                  </li>
+                                </ul>
+                                <div class="tooltip_btn_wrap">
+                                  <a href="javascript:;" class="btn_tooltip emp" id="btn_callback_guide">
+                                    <i class="ico"></i>
+                                    <span class="text_node">콜백 서비스란?</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="fset_tr">
+                          <div class="fset_cols_group">
+                            <div class="fset_th_cols">
+                              <span class="fset_thtext">
+                                휴대폰번호
+                                <span class="ico_import"></span>
+                              </span>
+                            </div>
+                            <div class="fset_td_cols">
+                              <div class="fset_td_inner_flex">
+                                <div class="td_cols">
+                                  <ul class="linked_horitem_list" style="width: 420px" data-pcwid="420px">
+                                    <li class="long">
+                                      <select class="form_select">
+                                        <option value="1">010</option>
+                                        <option value="2">011</option>
+                                      </select>
+                                    </li>
+                                    <li class="short"><span class="horitem_unit">-</span></li>
+                                    <li class="long">
+                                      <input type="text" class="box_input" />
+                                    </li>
+                                    <li class="short"><span class="horitem_unit">-</span></li>
+                                    <li class="long">
+                                      <input type="text" class="box_input" />
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="td_cols">
+                                  <p class="indent_node_text">
+                                    <span class="indent_bullet_node">*</span>
+                                    <span class="indent_node_liquid">Call-Back(구직상담요청) 서비스 요청 문자 받으실 담당자 분의 휴대폰 번호를 입력해 주시기 바랍니다.</span>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="fset_tr">
+                          <div class="fset_cols_group">
+                            <div class="fset_th_cols">
+                              <span class="fset_thtext">
+                                이메일
+                                <span class="ico_import"></span>
+                              </span>
+                            </div>
+                            <div class="fset_td_cols">
+                              <ul class="linked_horitem_list" style="width: 540px" data-pcwid="540px">
+                                <li class="long">
+                                  <input type="text" class="box_input" />
+                                </li>
+                                <li class="short"><span class="horitem_unit">@</span></li>
+                                <li class="long">
+                                  <select class="form_select">
+                                    <option value="1">naver.com</option>
+                                    <option value="2">google.com</option>
+                                  </select>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="fset_tr">
+                          <div class="fset_cols_group">
+                            <div class="fset_th_cols">
+                              <span class="fset_thtext">FAX</span>
+                            </div>
+                            <div class="fset_td_cols">
+                              <ul class="linked_horitem_list" style="width: 420px" data-pcwid="420px">
+                                <li class="long">
+                                  <select class="form_select">
+                                    <option value="1">02</option>
+                                    <option value="2">051</option>
+                                  </select>
+                                </li>
+                                <li class="short"><span class="horitem_unit">-</span></li>
+                                <li class="long">
+                                  <input type="text" class="box_input" />
+                                </li>
+                                <li class="short"><span class="horitem_unit">-</span></li>
+                                <li class="long">
+                                  <input type="text" class="box_input" />
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- // form table -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- // middle -->
+      <!-- popup -->
+      <div class="popup_wrap" id="tooltipPopup">
+        <div class="bg_dim"></div>
+        <div class="popup_item sm_type3">
+          <div class="popup_title_row">
+            <h3 class="popup_title">콜백서비스(Call-Back) 란?</h3>
+          </div>
+          <div class="popup_contents_row">
+            <p class="tip_text_copy">
+              텔레잡을 이용하는 구직자들이 별도의
+              <span class="red_emp">로그인이나 이력서 등록의 절차 없이,</span>
+              관심 있는 채용공고의 담당자에게
+              <strong class="tip_emp blue_emp">SMS로 구직 상담</strong>
+              을 요청할 수 있는 서비스입니다.
+              <br />
+              <br />
+
+              구직자는 초간편 지원! 구인회사는 신속채용!
+            </p>
+          </div>
+          <a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
+        </div>
+      </div>
+      <!-- // popup -->
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // 인스턴스 선언
+          let tooltipPopup = new DesignPopup({
+            selector: "#tooltipPopup",
+            beforeCallback() {},
+            callback() {},
+            closeCallback() {},
+          });
+
+          // event
+          document.querySelector("#btn_callback_guide").addEventListener("click", () => {
+            tooltipPopup.popupShow(); // show
+          });
+        });
+      </script>
+      @@include('./include/footer.html')
+    </div>
+  </body>
+</html>

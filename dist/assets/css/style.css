@@ -5337,6 +5337,9 @@ select.form_select:required:invalid {
 .popup_item.sm_type5 {
   max-width: 720px;
 }
+.popup_item.sm_type6 {
+  max-width: 354px;
+}
 .popup_item.single_type {
   max-width: 540px;
 }
@@ -11809,4 +11812,5 @@ strong.color_emp {
   }
 }
 /* main */
+/* 고객센터 */
 /*# sourceMappingURL=style.css.map */

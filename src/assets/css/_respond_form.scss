@@ -16,6 +16,9 @@
 }
 .fset_thtext{
     display:inline-block; @include font2(16px,400,1.5,#595959);
+    &.emp{
+
+    }
     .ico_import{position:relative; top:-4px;}
 }
 .fset_td_inner_flex{
@@ -52,6 +55,26 @@
         }
     }
 }
+.tditems_list{
+    > li{
+
+    }
+    .props_item_list{}
+}
+.tooltip_btn_wrap{
+
+}
+.btn_tooltip{
+    .ico{}
+    .text_node{}
+    &.emp{}
+}
+
+.tip_text_copy{
+    
+}
+
+
 @media (max-width:$mobile_large){
     .fset_td_inner_flex{flex-direction: column; align-items: flex-start; gap:10px;
         .td_cols{flex:0;width:100%; gap:15px;

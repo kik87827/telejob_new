@@ -24,7 +24,8 @@
 
 <body class="front_body">
 	<div class="page_wrap">
-		<header class="header_wrap">
+		<!-- type2 추가 -->
+		<header class="header_wrap type2">
 			<div class="header_main_row">
 				<div class="logo_cols">
 					<a href="javascript:;" class="btn_panel_menu"><i class="btn_panel_menu_ico"></i></a>
@@ -37,39 +38,13 @@
 							</span>
 						</a>
 					</h1>
-					<a href="javascript:;" class="btn_top_icomenu"><i class="icomenu ico_user"></i></a>
-				</div>
-				<div class="search_cols">
-					<div class="top_search_container">
-						<form>
-							<fieldset class="top_search_field">
-								<legend>검색</legend>
-								<input type="text" class="top_search_input" placeholder="텔레마케터 취업의 새로운 시작, 텔레잡!" />
-								<button type="reset" class="btn_search_reset"></button>
-								<button type="submit" class="btn_search_submit"></button>
-							</fieldset>
-						</form>
-					</div>
-					<div class="top_search_keyword_wrap">
-						<div class="top_search_marguee" id="keywordMarquee">
-							<ul class="top_search_keyword_list">
-								<li><a href="#" class="top_search_keyword">상조</a></li>
-								<li><a href="#" class="top_search_keyword">동의콜</a></li>
-								<li><a href="#" class="top_search_keyword">재택</a></li>
-								<li><a href="#" class="top_search_keyword">인바운드</a></li>
-								<li><a href="#" class="top_search_keyword">건강식품</a></li>
-								<li><a href="#" class="top_search_keyword">aia</a></li>
-								<li><a href="#" class="top_search_keyword">현대해상</a></li>
-								<li><a href="#" class="top_search_keyword">실장</a></li>
-							</ul>
-						</div>
-					</div>
 				</div>
 				<div class="util_cols">
 					<div class="top_util_wrap">
 						<ul class="top_util_list">
-							<li><a href="#" class="top_util_item">즐겨찾기</a></li>
-							<li><a href="#" class="top_util_item">유료서비스안내</a></li>
+							<li><a href="#" class="top_util_item">텔레잡 홈</a></li>
+							<li><a href="#" class="top_util_item type2">유료서비스 안내</a></li>
+							<li><a href="#" class="top_util_item type2">디자인신청</a></li>
 							<li><a href="#" class="top_util_item">공지/뉴스</a></li>
 							<li><a href="#" class="top_util_item">고객센터</a></li>
 						</ul>
@@ -82,45 +57,66 @@
 						<ul class="header_nav_menu_list">
 							<li>
 								<div class="header_nav_menu_item active">
-									<div class="nav_tooltip_layer">
-										<span class="nav_tooltip_text">SINCE 2001, 신뢰의 시작!</span>
-									</div>
-									<a href="#" class="header_nav_menu_link">전체 채용정보</a>
+									<a href="#" class="header_nav_menu_link">기업회원 홈</a>
 								</div>
 							</li>
 							<li>
 								<div class="header_nav_menu_item">
-									<a href="#" class="header_nav_menu_link">콜백 채용정보</a>
+									<a href="#" class="header_nav_menu_link">채용공고등록</a>
 								</div>
 							</li>
 							<li>
 								<div class="header_nav_menu_item">
-									<a href="#" class="header_nav_menu_link">인기채용정보/우수기업전용채용관</a>
+									<a href="#" class="header_nav_menu_link">채용공고관리</a>
 								</div>
 							</li>
 							<li>
 								<div class="header_nav_menu_item">
-									<a href="#" class="header_nav_menu_link">인재정보</a>
+									<a href="#" class="header_nav_menu_link">유료서비스관리</a>
+								</div>
+							</li>
+							<li>
+								<div class="header_nav_menu_item">
+									<a href="#" class="header_nav_menu_link">인재관리</a>
+								</div>
+							</li>
+							<li>
+								<div class="header_nav_menu_item">
+									<a href="#" class="header_nav_menu_link">VIP전용관</a>
+								</div>
+							</li>
+							<li>
+								<div class="header_nav_menu_item">
+									<a href="#" class="header_nav_menu_link">기업정보관리</a>
 								</div>
 							</li>
 						</ul>
 					</div>
 					<div class="header_nav_util_wrap">
 						<ul class="header_nav_util_list">
-							<li><a href="#" class="header_nav_util">로그인</a></li>
-							<li><a href="#" class="header_nav_util">회원가입</a></li>
+							<!-- <li><a href="#" class="header_nav_util">로그인</a></li>
+                    <li><a href="#" class="header_nav_util">회원가입</a></li> -->
 							<li>
-								<div class="header_nav_toggle">
-									<a href="javascript:;" class="nav_toggle_target"><span class="toggle_target_text">기업서비스</span></a>
+								<dl class="header_nav_fraction">
+									<dt><span class="key_fraction_label">총지원자 :</span></dt>
+									<dt><strong class="key_fraction_value">22</strong></dt>
+								</dl>
+							</li>
+							<li>
+								<div class="header_nav_toggle type2">
+									<a href="javascript:;" class="nav_toggle_target">
+										<i class="ico ico_men"></i>
+										<span class="toggle_target_text">TelejobUserID</span>
+									</a>
 									<div class="nav_toggle_layer">
 										<ul class="nav_toggle_list">
-											<li><a href="#" class="nav_toggle_menu">기업회원홈</a></li>
-											<li><a href="#" class="nav_toggle_menu">채용공고등록</a></li>
-											<li><a href="#" class="nav_toggle_menu">채용공고관리</a></li>
-											<li><a href="#" class="nav_toggle_menu">유료서비스관리</a></li>
-											<li><a href="#" class="nav_toggle_menu">인재관리</a></li>
-											<li><a href="#" class="nav_toggle_menu">VIP전용관</a></li>
-											<li><a href="#" class="nav_toggle_menu">회원탈퇴</a></li>
+											<li><a href="#" class="nav_toggle_menu">개인회원홈</a></li>
+											<li><a href="#" class="nav_toggle_menu">이력서등록</a></li>
+											<li><a href="#" class="nav_toggle_menu">이력서관리</a></li>
+											<li><a href="#" class="nav_toggle_menu">입사지원관리</a></li>
+											<li><a href="#" class="nav_toggle_menu">채용정보</a></li>
+											<li><a href="#" class="nav_toggle_menu">맞춤정보</a></li>
+											<li><a href="#" class="nav_toggle_menu">회원정보관리</a></li>
 											<li><a href="#" class="nav_toggle_box">로그아웃</a></li>
 										</ul>
 									</div>
@@ -302,258 +298,256 @@
 		</header>
 		<!-- middle -->
 		<section class="middle_wrap">
-			<!-- 고객센터 -->
-			<div class="brief_section">
-				<div class="brief_pixed_table">
-					<div class="brief_pixed_cols">
-						<div class="brief_slice_wrap">
-							<div class="brief_slice_title_row">
-								<div class="brief_slice_title_dom">
-									<i class="ico tel"></i>
-									<div class="slice_title_wrap">
-										<p clsas="slice_title">고객센터</p>
-									</div>
+			<div class="middle_inner">
+				<div class="core_panel_container">
+					<div class="core_title_row">
+						<h2 class="core_title">채용공고 등록</h2>
+					</div>
+					<div class="core_contents_row">
+						<div class="form_notice_box">
+							<div class="fn_title_row">
+								<div class="ico_cols">
+									<i class="ico import"></i>
+								</div>
+								<div class="spec_cols">
+									<div class="fn_sub_title">등록 전 반드시 확인해 주세요!</div>
+									<div class="fn_main_title">채용공고 등록 시 주의사항</div>
 								</div>
 							</div>
-							<div class="brief_slice_contents">
-								<div class="number_row">
-									<p class="brief_main_number">031-706-2229</p>
+							<div class="fn_contents_row">
+								<ul class="bullet_list skin_w">
+									<li>근무지 주소는 1개만 등록 가능합니다. 채용공고의 내용은 동일하나, 근무지가 여러 곳일 경우에는 내용을 복사하시어 각각 등록하실 것을 권장드립니다.</li>
+									<li>마감일이 지난 채용공고는 ‘게재 중인 채용공고’에서 ‘보관 중인 채용공고’로 이동되며, 개인회원(구직자)에게 노출되지 않습니다.</li>
+									<li>동일한 내용의 공고를 중복 게재하여 공고 게시판을 도배하거나 허위 정보 및 부적절한 컨텐츠 제공 시, 텔레잡 관리자 권한으로 게재 중지 및 삭제 조치될 수 있습니다.</li>
+								</ul>
+							</div>
+						</div>
+						<div class="form_global_container">
+							<div class="form_section_block">
+								<div class="form_section_title_row">
+									<h3 class="form_section_title">채용담당자</h3>
+									<div class="form_section_else_wrap">
+										<span class="import_caption_g">
+											<i class="ico_import"></i>
+											<span class="import_caption_text">필수입력</span>
+										</span>
+									</div>
 								</div>
-								<div class="note_row">
-									<p class="brief_note_text">
-										<span class="note_keyword">평일</span>
-										10:00 ~ 17:00 (12:00 ~ 13:00 휴식)
-									</p>
-									<p class="brief_note_text">일요일, 공휴일 휴무</p>
-								</div>
-								<div class="summary_row">
-									<div class="brief_summary_tb">
-										<div class="summary_tr">
-											<div class="summary_td define_th"><span class="summary_thtext">이메일</span></div>
-											<div class="summary_td define_td">
-												<strong class="summary_emptext">telehelp@telejob.co.kr</strong>
-												<span class="summary_tdtext">(업무전용)</span>
+								<div class="form_section_contents type2">
+									<!-- form table -->
+									<div class="respond_fieldset_wrap" id="staff_fieldset">
+										<div class="respond_fieldset_tb">
+											<div class="fset_tr">
+												<div class="fset_cols_group">
+													<div class="fset_th_cols">
+														<span class="fset_thtext">
+															담당자명
+															<span class="ico_import"></span>
+														</span>
+													</div>
+													<div class="fset_td_cols">
+														<input type="text" class="box_input" placeholder="이름을 입력하세요" style="width: 272px" data-pcwid="272px" />
+													</div>
+												</div>
+											</div>
+											<div class="fset_tr">
+												<div class="fset_cols_group">
+													<div class="fset_th_cols">
+														<span class="fset_thtext">
+															연락처
+															<span class="ico_import"></span>
+														</span>
+													</div>
+													<div class="fset_td_cols">
+														<ul class="linked_horitem_list" style="width: 420px" data-pcwid="420px">
+															<li class="long">
+																<select class="form_select">
+																	<option value="1">02</option>
+																	<option value="2">051</option>
+																</select>
+															</li>
+															<li class="short"><span class="horitem_unit">-</span></li>
+															<li class="long">
+																<input type="text" class="box_input" />
+															</li>
+															<li class="short"><span class="horitem_unit">-</span></li>
+															<li class="long">
+																<input type="text" class="box_input" />
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="fset_tr">
+												<div class="fset_cols_group">
+													<div class="fset_th_cols">
+														<span class="fset_thtext emp">
+															Call-Back 서비스
+															<span class="ico_import"></span>
+														</span>
+													</div>
+													<div class="fset_td_cols">
+														<div class="tditems_list">
+															<ul class="props_item_list">
+																<li>
+																	<div class="props_item gap3">
+																		<input type="radio" class="props_dom" name="ans" id="ans_yes" />
+																		<label for="ans_yes" class="props_label">예</label>
+																	</div>
+																</li>
+																<li>
+																	<div class="props_item gap3">
+																		<input type="radio" class="props_dom" name="ans" id="ans_no" />
+																		<label for="ans_no" class="props_label">아니오</label>
+																	</div>
+																</li>
+															</ul>
+															<div class="tooltip_btn_wrap">
+																<a href="javascript:;" class="btn_tooltip emp" id="btn_callback_guide">
+																	<i class="ico"></i>
+																	<span class="text_node">콜백 서비스란?</span>
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="fset_tr">
+												<div class="fset_cols_group">
+													<div class="fset_th_cols">
+														<span class="fset_thtext">
+															휴대폰번호
+															<span class="ico_import"></span>
+														</span>
+													</div>
+													<div class="fset_td_cols">
+														<div class="fset_td_inner_flex">
+															<div class="td_cols">
+																<ul class="linked_horitem_list" style="width: 420px" data-pcwid="420px">
+																	<li class="long">
+																		<select class="form_select">
+																			<option value="1">010</option>
+																			<option value="2">011</option>
+																		</select>
+																	</li>
+																	<li class="short"><span class="horitem_unit">-</span></li>
+																	<li class="long">
+																		<input type="text" class="box_input" />
+																	</li>
+																	<li class="short"><span class="horitem_unit">-</span></li>
+																	<li class="long">
+																		<input type="text" class="box_input" />
+																	</li>
+																</ul>
+															</div>
+															<div class="td_cols">
+																<p class="indent_node_text">
+																	<span class="indent_bullet_node">*</span>
+																	<span class="indent_node_liquid">Call-Back(구직상담요청) 서비스 요청 문자 받으실 담당자 분의 휴대폰 번호를 입력해 주시기 바랍니다.</span>
+																</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="fset_tr">
+												<div class="fset_cols_group">
+													<div class="fset_th_cols">
+														<span class="fset_thtext">
+															이메일
+															<span class="ico_import"></span>
+														</span>
+													</div>
+													<div class="fset_td_cols">
+														<ul class="linked_horitem_list" style="width: 540px" data-pcwid="540px">
+															<li class="long">
+																<input type="text" class="box_input" />
+															</li>
+															<li class="short"><span class="horitem_unit">@</span></li>
+															<li class="long">
+																<select class="form_select">
+																	<option value="1">naver.com</option>
+																	<option value="2">google.com</option>
+																</select>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="fset_tr">
+												<div class="fset_cols_group">
+													<div class="fset_th_cols">
+														<span class="fset_thtext">FAX</span>
+													</div>
+													<div class="fset_td_cols">
+														<ul class="linked_horitem_list" style="width: 420px" data-pcwid="420px">
+															<li class="long">
+																<select class="form_select">
+																	<option value="1">02</option>
+																	<option value="2">051</option>
+																</select>
+															</li>
+															<li class="short"><span class="horitem_unit">-</span></li>
+															<li class="long">
+																<input type="text" class="box_input" />
+															</li>
+															<li class="short"><span class="horitem_unit">-</span></li>
+															<li class="long">
+																<input type="text" class="box_input" />
+															</li>
+														</ul>
+													</div>
+												</div>
 											</div>
 										</div>
-										<div class="summary_tr">
-											<div class="summary_td define_th"><span class="summary_thtext">팩스</span></div>
-											<div class="summary_td define_td"><strong class="summary_emptext">031-326.3169</strong></div>
-										</div>
 									</div>
+									<!-- // form table -->
 								</div>
 							</div>
-						</div>
-					</div>
-					<div class="brief_pixed_cols">
-						<div class="brief_slice_wrap">
-							<div class="brief_slice_title_row">
-								<div class="brief_slice_title_dom">
-									<i class="ico account"></i>
-									<div class="slice_title_wrap">
-										<p clsas="slice_title">입금계좌</p>
-										<span class="slice_title_sub">(무통장)</span>
-									</div>
-								</div>
-							</div>
-							<div class="brief_slice_contents">
-								<div class="number_row">
-									<p class="brief_main_number">100-037-481923</p>
-								</div>
-								<div class="note_row">
-									<ul class="banking_slice_list">
-										<li>
-											<dl class="banking_obj">
-												<dt><img src="./assets/images/img_cus_shinhan.png" alt="" /></dt>
-												<dd><span class="banking_spec_text">(주)텔레잡</span></dd>
-											</dl>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="brief_pixed_cols">
-						<div class="brief_slice_wrap">
-							<div class="brief_slice_title_row">
-								<div class="brief_slice_title_dom">
-									<i class="ico pay"></i>
-									<div class="slice_title_wrap">
-										<p clsas="slice_title">2025 최저임금</p>
-									</div>
-								</div>
-							</div>
-							<div class="brief_slice_contents">
-								<div class="number_row">
-									<div class="brief_amount_dom">
-										<span class="brief_amount_number">10,030</span>
-										<span class="brief_amount_unit">원 (시급)</span>
-									</div>
-								</div>
-								<div class="note_row">
-									<div class="recap_tb_wrap">
-										<table class="recap_tb">
-											<tbody>
-												<tr>
-													<th><span class="recap_thtext">일급</span></th>
-													<td><span class="recap_tdtext">8시간</span></td>
-													<td><span class="recap_tdtext">7,80,240원</span></td>
-												</tr>
-												<tr>
-													<th><span class="recap_thtext">월급</span></th>
-													<td><span class="recap_tdtext">209시간</span></td>
-													<td><span class="recap_tdtext">2,096,270원</span></td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-									<div class="guide_points_wrap">
-										<ul class="guide_bullet_list">
-											<li>주 5일 근무 기준</li>
-											<li>
-												근로계약 기간이 1년 미만인 경우 수습기간 중에도 최저임금이 보장되어야 합니다.
-												<a href="#" class="btn_text_node">[자세히보기]</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="brief_pixed_cols">
-						<div class="brief_banner_wrap">
-							<ul class="brief_banner_list">
-								<li>
-									<a href="#" class="brief_banner_item" style="background-color: #ff494d">
-										<span class="img_cols"><img src="./assets/images/img_cus_design.png" alt="" /></span>
-										<div class="text_cols">
-											<p class="brief_text_node">
-												<strong class="brief_emp_text">채용공고 디자인서비스</strong>
-												<span class="brief_sub_text">이용 안내</span>
-											</p>
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="#" class="brief_banner_item type2" style="background-color: #ffe812">
-										<span class="img_cols"><img src="./assets/images/img_cus_design.png" alt="" /></span>
-										<div class="text_cols">
-											<p class="brief_text_node">
-												<strong class="brief_emp_text">카카오톡 고객상담</strong>
-												<br />
-												검색 아이디
-												<strong class="brief_emp_text">텔레잡</strong>
-											</p>
-										</div>
-									</a>
-								</li>
-							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- // 고객센터 -->
 		</section>
 		<!-- // middle -->
 		<!-- popup -->
-		<div class="popup_wrap scroll_type" id="noticeMainPopup">
+		<div class="popup_wrap" id="tooltipPopup">
 			<div class="bg_dim"></div>
-			<div class="popup_box_tb_wrap">
-				<div class="popup_box_tb">
-					<div class="popup_box_td">
-						<div class="notice_banner_layer">
-							<div class="control_row">
-								<div class="control_cols">
-									<div class="props_item">
-										<input type="checkbox" class="props_dom" id="notice_today" />
-										<label for="notice_today" class="props_label">오늘 하루 보지 않기</label>
-									</div>
-								</div>
-								<div class="control_cols">
-									<a href="javascript:;" class="btn_card close_trigger">
-										<i class="ico close"></i>
-										<span class="text_node">닫기</span>
-									</a>
-								</div>
-							</div>
-							<div class="img_row">
-								<div class="swiper notice_banner_swiper">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<a href="#" class="notice_banner_item"><img src="./assets/images/main_notice_banner.jpg" alt="" /></a>
-										</div>
-										<div class="swiper-slide">
-											<a href="#" class="notice_banner_item"><img src="./assets/images/main_notice_banner02.jpg" alt="" /></a>
-										</div>
-										<div class="swiper-slide">
-											<a href="#" class="notice_banner_item"><img src="./assets/images/main_notice_banner03.jpg" alt="" /></a>
-										</div>
-										<div class="swiper-slide">
-											<a href="#" class="notice_banner_item"><img src="./assets/images/main_notice_banner04.jpg" alt="" /></a>
-										</div>
-										<div class="swiper-slide">
-											<a href="#" class="notice_banner_item"><img src="./assets/images/main_notice_banner05.jpg" alt="" /></a>
-										</div>
-									</div>
-									<div class="swiper-pagination"></div>
-								</div>
-							</div>
-						</div>
-					</div>
+			<div class="popup_item sm_type3">
+				<div class="popup_title_row">
+					<h3 class="popup_title">콜백서비스(Call-Back) 란?</h3>
 				</div>
+				<div class="popup_contents_row">
+					<p class="tip_text_copy">
+						텔레잡을 이용하는 구직자들이 별도의
+						<span class="red_emp">로그인이나 이력서 등록의 절차 없이,</span>
+						관심 있는 채용공고의 담당자에게
+						<strong class="tip_emp blue_emp">SMS로 구직 상담</strong>
+						을 요청할 수 있는 서비스입니다.
+						<br />
+						<br />
+
+						구직자는 초간편 지원! 구인회사는 신속채용!
+					</p>
+				</div>
+				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
 			</div>
 		</div>
 		<!-- // popup -->
 		<script>
 			document.addEventListener("DOMContentLoaded", function() {
 				// 인스턴스 선언
-				let noticeMainPopup = new DesignPopup({
-					selector: "#noticeMainPopup",
+				let tooltipPopup = new DesignPopup({
+					selector: "#tooltipPopup",
 					beforeCallback() {},
 					callback() {},
 					closeCallback() {},
 				});
-				// noticeMainPopup.popupShow(); // show
-				// noticeMainPopup.popupHide(); // hide
 
-				// 공지 팝업 swiper 선언
-				let noticeSwiper = new Swiper(".notice_banner_swiper", {
-					loop: true,
-					speed: 500,
-					autoplay: {
-						delay: 3000,
-						disableOnInteraction: false,
-					},
-					pagination: {
-						el: ".swiper-pagination",
-						clickable: true, // 사용자가 페이지 버튼 클릭 가능
-					},
+				// event
+				document.querySelector("#btn_callback_guide").addEventListener("click", () => {
+					tooltipPopup.popupShow(); // show
 				});
-
-				// 오늘하루보지 않기
-				const notice_today = document.getElementById("notice_today");
-				const todayKey = "todayPopup";
-				// 오늘 날짜 (YYYY-MM-DD)
-				const today = new Date().toISOString().split("T")[0];
-				const storedDate = localStorage.getItem(todayKey);
-				notice_today.addEventListener("click", (e) => {
-					if (e.currentTarget.checked && notice_today.checked) {
-						localStorage.setItem(todayKey, today);
-					}
-				});
-
-				// 퍼블확인용
-				let url = window.location.href.split("?")[1];
-				let url_2 = url !== undefined ? url.split("#")[0] : null;
-				if (url_2 === "notice_popup") {
-					// 오늘 하루 보지 않기
-					if (storedDate !== today) {
-						noticeMainPopup.popupShow({
-							openCallback() {
-								noticeSwiper.update();
-							},
-						});
-					}
-				}
 			});
 		</script>
 		<div class="btn_topgo_wrap"><a href="#" class="btn_topgo"></a></div>
