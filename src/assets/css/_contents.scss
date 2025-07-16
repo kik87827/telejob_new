@@ -2043,10 +2043,12 @@ strong.color_emp{font-weight:700;}
     *{color:#B5000F;}
 }
 .blue_emp{
-    *{}
+    color:#005AAB;
+    *{color:#005AAB;}
 }
 .tip_emp{
-    *{}
+    font-weight:700;
+    *{font-weight:700;}
 }
 .emp_link_text{@include font(13px,700,1.33,0,#000); display:inline-block; text-decoration: underline !important;}
 @media (max-width:$mobile_large){

@@ -5340,6 +5340,9 @@ select.form_select:required:invalid {
 .popup_item.sm_type6 {
   max-width: 354px;
 }
+.popup_item.sm_type7 {
+  max-width: 450px;
+}
 .popup_item.single_type {
   max-width: 540px;
 }
@@ -10114,6 +10117,20 @@ strong.color_emp {
   color: #B5000F;
 }
 
+.blue_emp {
+  color: #005AAB;
+}
+.blue_emp * {
+  color: #005AAB;
+}
+
+.tip_emp {
+  font-weight: 700;
+}
+.tip_emp * {
+  font-weight: 700;
+}
+
 .emp_link_text {
   font-size: 13px;
   font-weight: 700;
@@ -11437,6 +11454,10 @@ strong.color_emp {
   line-height: 1.5;
   color: #595959;
 }
+.fset_thtext.emp {
+  color: #005AAB;
+  font-weight: 500;
+}
 .fset_thtext .ico_import {
   position: relative;
   top: -4px;
@@ -11506,6 +11527,51 @@ strong.color_emp {
   display: flex;
   align-items: center;
 }
+.tditems_list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.tooltip_btn_wrap {
+  display: inline-block;
+}
+
+.btn_tooltip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.btn_tooltip .ico {
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 0;
+  background-image: url("../images/ico_tooltip.png");
+}
+.btn_tooltip .text_node {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: #000;
+  color: inherit;
+  text-decoration: underline !important;
+}
+.btn_tooltip.emp {
+  font-weight: 700;
+  text-decoration: underline !important;
+}
+
+.tip_text_copy {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: inherit;
+  word-break: keep-all;
+}
+
 @media (max-width: 1023px) {
   .fset_td_inner_flex {
     flex-direction: column;

@@ -17,7 +17,7 @@
 .fset_thtext{
     display:inline-block; @include font2(16px,400,1.5,#595959);
     &.emp{
-
+        color:#005AAB; font-weight:500;
     }
     .ico_import{position:relative; top:-4px;}
 }
@@ -56,22 +56,24 @@
     }
 }
 .tditems_list{
+    display:flex; align-items:center; gap:24px; flex-wrap:wrap;
     > li{
 
     }
     .props_item_list{}
 }
 .tooltip_btn_wrap{
-
+    display:inline-block;
 }
 .btn_tooltip{
-    .ico{}
-    .text_node{}
-    &.emp{}
+    display:inline-flex; align-items:center; gap:4px;
+    .ico{width:16px; height:16px; @include bgicon; background-image:url("../images/ico_tooltip.png"); }
+    .text_node{@include font(14px,400,1,#000); text-decoration: underline !important;}
+    &.emp{font-weight:700; text-decoration: underline !important;}
 }
 
 .tip_text_copy{
-    
+    @include font(14px,400,1.6); word-break:keep-all;
 }
 
 
