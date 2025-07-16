@@ -5,9 +5,10 @@
 
 /* 고객센터 */
 .brief_section_zone{background:#F8F8F8; padding:48px 0;}
-.brief_pixed_table{max-width:$pcwid; display:flex;width:100%; margin:0 auto;}
+.brief_pixed_table{max-width:1340px; display:flex;width:100%; margin:0 auto; padding:0 30px; box-sizing:border-box;}
 .brief_pixed_cols{
     flex:1;padding:0 30px;border-right:1px solid #E6E6E6; min-width:0;
+    &:first-of-type{padding-left:0;}
     &:last-of-type{padding-right:0;border-right:0;}
 }
 .brief_slice_wrap{}
@@ -17,8 +18,8 @@
     .ico{
         width:32px;height:32px; @include bgicon;
         &.tel{background-image:url("../images/ico_cus_01.png");}
-        &.account{background-image:url("../images/ico_cus_01.png");}
-        &.pay{background-image:url("../images/ico_cus_01.png");}
+        &.account{background-image:url("../images/ico_cus_02.png");}
+        &.pay{background-image:url("../images/ico_cus_03.png");}
     }
     .slice_title_wrap{display:flex; gap:8px; align-items:center;}
     .slice_title{@include font2(20px,500,1,#000);}
@@ -66,7 +67,7 @@
     dd{}
 }
 .banking_spec_text{@include font2(14px,700,1,#000); display:inline-block;}
-.brief_amount_dom{display:inline-flex;align-items:center;gap:3px;}
+.brief_amount_dom{display:inline-flex;align-items:center;gap:3px; white-space:nowrap;}
 .brief_amount_number{@include font2(30px,700,1,#AF0101); @include spoca; display:inline-block;}
 .brief_amount_unit{@include font2(14px,500,1,#000);  display:inline-block;}
 .recap_tb_wrap{}
@@ -130,3 +131,81 @@
 .brief_sub_text{color:#fff;word-break:keep-all; display:block;}
 .brief_emp_text{font-size:16px; font-weight:700;}
 .brief_sub_text{font-size:14px;}
+
+
+@media (max-width:$pcwid){
+    .brief_pixed_cols{padding:0 20px;}
+    .brief_main_number,
+    .brief_amount_number{font-size:24px;}
+}
+
+@media (max-width:$mobile_large){
+    /* 고객센터 */
+    .brief_section_zone{padding:30px 20px 90px; display:block;}
+    .brief_pixed_table{display:block;width:auto;padding:0;}
+    .brief_pixed_cols{
+        padding:0 0 30px 0; margin-bottom:30px; border:0; border-bottom:1px solid #E6E6E6;
+        &:last-of-type{padding-bottom:0;margin-bottom:0;border-bottom:0;}
+    }
+    .brief_slice_title_dom{
+        gap:5px;
+        .ico{
+            width:24px;height:24px; flex:0 0 24px;
+        }
+        .slice_title{font-size:14px;}
+        .slice_title_sub{font-size:12px;}
+    }
+    .brief_slice_contents{
+        margin-top:14px;
+        .note_row{margin-top:14px;}
+        .summary_row{margin-top:14px;}
+    }
+    .brief_note_text{
+        font-size:12px; margin-bottom:5px;
+    }
+    .brief_main_number{font-size:26px;}
+    .brief_summary_tb{
+        .summary_td{
+            &.define_td{}
+        }
+        .summary_emptext,
+        .summary_thtext,
+        .summary_tdtext{font-size:13px;}
+        .summary_tdtext_sub{font-size:11px;}
+    }
+    .banking_spec_text{font-size:12px;}
+    .brief_amount_dom{font-size:26px;}
+    .brief_amount_number{}
+    .brief_amount_unit{font-size:14px;}
+    .brief_banner_wrap{}
+    .brief_banner_list{
+        > li{
+            margin-bottom:12px;
+        }
+    }
+    .brief_banner_item{
+        gap:20px;border-radius:8px; padding:8px 8px 8px 14px; min-height:50px;
+        &.type2{
+            padding:12px 8px 12px 14px;
+            .img_cols{
+                flex:0 0 54px;
+            }
+            .brief_emp_text{font-size:14px;}
+            .brief_sub_text{font-size:12px;}
+        }
+        .img_cols{
+            flex:0 0 54px;
+        }
+    }
+    .brief_emp_text{font-size:14px;}
+    .brief_sub_text{font-size:12px;}
+
+    .points_bullet_list{
+         > li{font-size:12px;}
+    }
+    .guide_points_wrap{margin-left:0;}
+}
+
+@media (max-width:$mobile){
+
+}

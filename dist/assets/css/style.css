@@ -11898,6 +11898,8 @@ strong.color_emp {
   display: flex;
   width: 100%;
   margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
 }
 
 .brief_pixed_cols {
@@ -11905,6 +11907,9 @@ strong.color_emp {
   padding: 0 30px;
   border-right: 1px solid #E6E6E6;
   min-width: 0;
+}
+.brief_pixed_cols:first-of-type {
+  padding-left: 0;
 }
 .brief_pixed_cols:last-of-type {
   padding-right: 0;
@@ -11927,10 +11932,10 @@ strong.color_emp {
   background-image: url("../images/ico_cus_01.png");
 }
 .brief_slice_title_dom .ico.account {
-  background-image: url("../images/ico_cus_01.png");
+  background-image: url("../images/ico_cus_02.png");
 }
 .brief_slice_title_dom .ico.pay {
-  background-image: url("../images/ico_cus_01.png");
+  background-image: url("../images/ico_cus_03.png");
 }
 .brief_slice_title_dom .slice_title_wrap {
   display: flex;
@@ -12049,6 +12054,7 @@ strong.color_emp {
   display: inline-flex;
   align-items: center;
   gap: 3px;
+  white-space: nowrap;
 }
 
 .brief_amount_number {
@@ -12185,5 +12191,121 @@ strong.color_emp {
 
 .brief_sub_text {
   font-size: 14px;
+}
+
+@media (max-width: 1340px) {
+  .brief_pixed_cols {
+    padding: 0 20px;
+  }
+  .brief_main_number,
+.brief_amount_number {
+    font-size: 24px;
+  }
+}
+@media (max-width: 1023px) {
+  /* 고객센터 */
+  .brief_section_zone {
+    padding: 30px 20px 90px;
+    display: block;
+  }
+  .brief_pixed_table {
+    display: block;
+    width: auto;
+    padding: 0;
+  }
+  .brief_pixed_cols {
+    padding: 0 0 30px 0;
+    margin-bottom: 30px;
+    border: 0;
+    border-bottom: 1px solid #E6E6E6;
+  }
+  .brief_pixed_cols:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+  .brief_slice_title_dom {
+    gap: 5px;
+  }
+  .brief_slice_title_dom .ico {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+  }
+  .brief_slice_title_dom .slice_title {
+    font-size: 14px;
+  }
+  .brief_slice_title_dom .slice_title_sub {
+    font-size: 12px;
+  }
+  .brief_slice_contents {
+    margin-top: 14px;
+  }
+  .brief_slice_contents .note_row {
+    margin-top: 14px;
+  }
+  .brief_slice_contents .summary_row {
+    margin-top: 14px;
+  }
+  .brief_note_text {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .brief_main_number {
+    font-size: 26px;
+  }
+  .brief_summary_tb .summary_emptext,
+.brief_summary_tb .summary_thtext,
+.brief_summary_tb .summary_tdtext {
+    font-size: 13px;
+  }
+  .brief_summary_tb .summary_tdtext_sub {
+    font-size: 11px;
+  }
+  .banking_spec_text {
+    font-size: 12px;
+  }
+  .brief_amount_dom {
+    font-size: 26px;
+  }
+  .brief_amount_unit {
+    font-size: 14px;
+  }
+  .brief_banner_list > li {
+    margin-bottom: 12px;
+  }
+  .brief_banner_item {
+    gap: 20px;
+    border-radius: 8px;
+    padding: 8px 8px 8px 14px;
+    min-height: 50px;
+  }
+  .brief_banner_item.type2 {
+    padding: 12px 8px 12px 14px;
+  }
+  .brief_banner_item.type2 .img_cols {
+    flex: 0 0 54px;
+  }
+  .brief_banner_item.type2 .brief_emp_text {
+    font-size: 14px;
+  }
+  .brief_banner_item.type2 .brief_sub_text {
+    font-size: 12px;
+  }
+  .brief_banner_item .img_cols {
+    flex: 0 0 54px;
+  }
+  .brief_emp_text {
+    font-size: 14px;
+  }
+  .brief_sub_text {
+    font-size: 12px;
+  }
+  .points_bullet_list > li {
+    font-size: 12px;
+  }
+  .guide_points_wrap {
+    margin-left: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
