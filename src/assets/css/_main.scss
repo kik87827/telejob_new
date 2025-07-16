@@ -2,6 +2,33 @@
 .page_wrap{
     &.main{display:block;min-height:0;}
 }
+.main_primary_section{}
+.main_contents_section{
+}
+.mc_row{}
+.mc_pixed_inner{}
+.mc_pixed_title_row{}
+.mc_title_dom{
+    .text_node{}
+}
+.mc_pixed_contents{}
+.sync_data_wrap{}
+.sync_data_list{
+    > li{}
+}
+.sync_data_item{
+    .img_cols{}
+    .title_cols{}
+    .caption_cols{}
+    .btn_cols{
+        .btn_icon{}
+    }
+}
+.sync_img_wrap{
+    > img{}
+}
+.sync_title{}
+.sync_caption{}
 
 /* 고객센터 */
 .brief_section_zone{background:#F8F8F8; padding:48px 0;}
