@@ -405,6 +405,7 @@ input.file_input{display:none;}
 .form_section_contents{border-top:2px solid #E6E6E6;
     &.type2{border-top:0;}
 }
+.form_section_btns{margin-top:48px;}
 .form_message_block_wrap{margin-bottom:16px;}
 .form_message_block{
    margin-top:16px;
@@ -544,7 +545,7 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
     .field_setbox{border-radius:10px; padding:20px;}
 
     .middle_bottom_btn_row{margin-top:30px;}
-    
+    .form_section_btns{margin-top:30px;}
 }
 @media (max-width:$mobile_large){
     .middle_one_title_row{margin:35px 0 20px 0;}
@@ -681,6 +682,7 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
     }
     .import_caption_text{@include font2(12px,400,1,#555)}
     .form_section_contents{border-top:2px solid #E6E6E6;}
+    .form_section_btns{margin-top:30px;}
     .form_message_block_wrap{margin-bottom:16px;}
     .form_message_block{
     margin-top:16px;
@@ -704,7 +706,7 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
         font-size:13px;
     }
     .preview_value_render{
-        font-size:15px;
+        font-size:14px;
     }
     
     .form_fieldset_wrap{
