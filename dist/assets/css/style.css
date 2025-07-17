@@ -11851,6 +11851,7 @@ strong.color_emp {
   align-items: center;
   gap: 4px;
 }
+.btn_text_keyword,
 .textpara_keyword {
   text-decoration: underline !important;
 }

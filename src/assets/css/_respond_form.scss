@@ -155,6 +155,7 @@
     dt{}
     dd{}
 }
+.btn_text_keyword,
 .textpara_keyword{text-decoration:underline !important;}
 .textpara_emp{@include font2(14px,500,1,#005AAB); @include spoca;}
 .textpara_unit{@include font2(14px,400,1,#000);}
