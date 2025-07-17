@@ -12215,6 +12215,61 @@ strong.color_emp {
   color: #000;
 }
 
+@media (max-width: 1299px) {
+  .mc_title_dom .text_node {
+    font-size: 20px;
+  }
+  .mc_pixed_title_row {
+    margin-bottom: 20px;
+  }
+  .sync_data_item {
+    min-height: 55px;
+  }
+  .sync_data_item .img_cols {
+    flex: 0 0 100px;
+  }
+}
+@media (max-width: 1023px) {
+  .main_contents_section {
+    padding-bottom: 50px;
+  }
+  .mc_row {
+    margin-bottom: 30px;
+  }
+  .mc_pixed_inner {
+    padding: 0 20px;
+  }
+  .mc_title_dom .text_node {
+    font-size: 16px;
+  }
+  .mc_pixed_title_row {
+    margin-bottom: 15px;
+  }
+  .sync_data_item {
+    display: block;
+    position: relative;
+    padding: 15px 10px 5px 110px;
+  }
+  .sync_data_item .img_cols {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 80px;
+  }
+  .sync_data_item .btn_cols {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-right: -10px;
+  }
+  .sync_data_item .img_cols,
+.sync_data_item .title_cols,
+.sync_data_item .caption_cols,
+.sync_data_item .btn_cols {
+    padding: 0;
+  }
+}
 /* 고객센터 */
 .brief_section_zone {
   background: #F8F8F8;
