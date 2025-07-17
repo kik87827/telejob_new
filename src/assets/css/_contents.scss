@@ -2037,20 +2037,20 @@ strong.color_emp{font-weight:700;}
 }
 .indent_copy{display:flex; gap:5px;}
 .dark_emp{
-    color:#000;
-    *{color:#000;}
+    color:#000 !important;
+    *{color:#000 !important;}
 }
 .red_emp{
-    color:#B5000F;
-    *{color:#B5000F;}
+    color:#B5000F !important;
+    *{color:#B5000F !important;}
 }
 .blue_emp{
-    color:#005AAB;
-    *{color:#005AAB;}
+    color:#005AAB !important;
+    *{color:#005AAB !important;}
 }
 .tip_emp{
-    font-weight:700;
-    *{font-weight:700;}
+    font-weight:700 !important;
+    *{font-weight:700 !important;}
 }
 .emp_link_text{@include font(13px,700,1.33,0,#000); display:inline-block; text-decoration: underline !important;}
 @media (max-width:$mobile_large){

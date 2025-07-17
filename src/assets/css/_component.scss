@@ -290,7 +290,7 @@ input.box_input{
 }
 .box_input_with_wrap{
     display:flex; align-items: center;  border:1px solid #E6E6E6; border-radius:5px; position:relative;overflow:hidden; padding-right:13px; box-sizing:border-box;
-    input.box_input{flex:1;border:0; border-radius:0;height:36px;}
+    input.box_input{flex:1;border:0; border-radius:0;height:36px; padding:0 8px 0 13px;}
 }
 .with_text_cols{
     white-space:nowrap;
@@ -323,7 +323,7 @@ textarea.box_textarea{
 }
 .props_cols_wrap{
     position:relative; overflow:hidden;
-    &.gap_type2{padding:10px 0;}
+    /* &.gap_type2{padding:10px 0;} */
 }
 .fset_td_note_row + .props_cols_wrap.gap_type2{padding-top:0;}
 .props_cols_list{
@@ -516,9 +516,9 @@ select.form_select{
     .props_cols_list{
         > li{flex:0 0 50% !important;}
     }
-    .props_cols_wrap{
+    /* .props_cols_wrap{
         &.gap_type2{padding:5px 0;}
-    }
+    } */
 }
 @media (max-width:$mobile){
     .inline_flex_wrap{gap:8px;
