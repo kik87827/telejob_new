@@ -114,8 +114,8 @@
     &:after{display:block; content:''; width:10px;height:5px; background:url("../images/ico_tooltip_pointer.png") no-repeat 0 0/100% auto; position:absolute;top:100%;left:50%;transform: translateX(-50%);}
 }
 .btn_only_text_list{display:flex; flex-wrap:wrap; justify-content: center; align-items: center; gap:10px 24px;}
-.btn_only_text{@include font(14px,400,1,#000); display:inline-block; text-decoration: underline !important;}
-
+.btn_only_text{@include font2(14px,400,1,#000); display:inline-block; text-decoration: underline !important;}
+.btn_text_single{@include font2(12px,400,1,#000); display:inline-block; text-decoration: underline !important;}
 //추가
 .link-style {
   cursor: pointer;
@@ -172,6 +172,7 @@
         .btn_box{max-width:100%;}
     }
     .btn_box{min-height:45px;}
+    .btn_text_single{font-size:11px;}
 }
 
 /* tab */

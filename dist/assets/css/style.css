@@ -4067,8 +4067,16 @@ button.swiper-pagination-bullet {
   font-size: 14px;
   font-weight: 400;
   line-height: 1;
-  letter-spacing: #000;
-  color: inherit;
+  color: #000;
+  display: inline-block;
+  text-decoration: underline !important;
+}
+
+.btn_text_single {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  color: #000;
   display: inline-block;
   text-decoration: underline !important;
 }
@@ -4144,6 +4152,9 @@ button.swiper-pagination-bullet {
   }
   .btn_box {
     min-height: 45px;
+  }
+  .btn_text_single {
+    font-size: 11px;
   }
 }
 /* tab */
@@ -12557,11 +12568,65 @@ img.viewer_img {
 }
 
 /* top10 / 우수기업 */
+.fetch_data_panel {
+  display: flex;
+  gap: 48px;
+}
+.fetch_data_panel .data_cols {
+  flex: 1;
+}
+.fetch_title_row {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.fetch_title_main {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.fetch_title_main .ico {
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 0;
+}
+.fetch_title_main .ico.shape_top {
+  width: 31px;
+  height: 36px;
+  background-image: url("../images/ico_top10.png");
+}
+.fetch_title_main .ico.shape_vip {
+  width: 41px;
+  height: 36px;
+  background-image: url("../images/ico_vip.png");
+}
+.fetch_title_main .text_node {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  position: relative;
+  top: -2px;
+  word-break: keep-all;
+}
+
+.fetch_title_sub {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #595959;
+}
+
 .sync_data_list {
   border-top: 1px solid #BDC5D1;
 }
 .sync_data_list > li {
   border-bottom: 1px solid #BDC5D1;
+}
+.sync_data_list.type2 .sync_data_item {
+  min-height: 76px;
 }
 
 .sync_data_item {
@@ -12584,6 +12649,13 @@ img.viewer_img {
 .sync_data_item .title_cols {
   flex: 0 0 20%;
 }
+.sync_data_item .title_caption_cols {
+  flex: 1;
+  min-width: 0;
+}
+.sync_data_item .title_caption_cols .sync_title + .sync_caption {
+  margin-top: 4px;
+}
 .sync_data_item .caption_cols {
   flex: 1;
   min-width: 0;
@@ -12593,6 +12665,11 @@ img.viewer_img {
 }
 .sync_data_item:hover {
   background: #F8F8F8;
+}
+
+.sync_img_else_wrap {
+  text-align: center;
+  margin-top: 8px;
 }
 
 .sync_img_wrap {
@@ -12649,6 +12726,17 @@ img.viewer_img {
   .sync_data_item .img_cols {
     flex: 0 0 100px;
   }
+  .fetch_title_row {
+    display: block;
+  }
+  .fetch_title_main .text_node {
+    font-size: 20px;
+    position: relative;
+    top: -2px;
+  }
+  .fetch_title_sub {
+    margin-top: 10px;
+  }
 }
 @media (max-width: 1023px) {
   .main_contents_section {
@@ -12669,7 +12757,8 @@ img.viewer_img {
   .sync_data_item {
     display: block;
     position: relative;
-    padding: 15px 10px 5px 110px;
+    min-height: 0 !important;
+    padding: 15px 20px 15px 110px;
   }
   .sync_data_item .img_cols {
     position: absolute;
@@ -12681,7 +12770,7 @@ img.viewer_img {
   .sync_data_item .btn_cols {
     display: flex;
     justify-content: flex-end;
-    margin-top: 10px;
+    height: 0;
     margin-right: -10px;
   }
   .sync_data_item .img_cols,
@@ -12689,6 +12778,39 @@ img.viewer_img {
 .sync_data_item .caption_cols,
 .sync_data_item .btn_cols {
     padding: 0;
+  }
+  .sync_data_item .btn_cols .btn_icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateY(-100%);
+  }
+  /* top10 / 우수기업 */
+  .fetch_data_panel {
+    display: block;
+  }
+  .fetch_data_panel .data_cols {
+    margin-bottom: 30px;
+  }
+  .fetch_data_panel .data_cols:last-of-type {
+    margin-bottom: 0;
+  }
+  .fetch_title_row {
+    margin-bottom: 15px;
+    gap: 10px;
+    display: block;
+  }
+  .fetch_title_main .text_node {
+    font-size: 16px;
+    top: 0;
+  }
+  .fetch_title_main .ico.shape_top {
+    width: 20.6px;
+    height: 24px;
+  }
+  .fetch_title_main .ico.shape_vip {
+    width: 27.3px;
+    height: 24px;
   }
 }
 /* 고객센터 */
