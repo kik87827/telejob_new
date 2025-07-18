@@ -500,6 +500,10 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   bottom: 0;
   left: 0;
 }
+.header_main_row .corp_header {
+  justify-content: space-between;
+  margin-bottom: 0px;
+}
 
 .toplogo_container {
   display: inline-block;
@@ -4818,7 +4822,7 @@ input.props_dom:checked {
 }
 
 .field_btn_row.btn_box_wrap {
-  margin-top: 84px;
+  margin-top: 64px;
 }
 
 .ico_import {
@@ -5585,7 +5589,7 @@ select.form_select:required:invalid {
 }
 
 .btn_submit_box_text {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0;
@@ -6231,9 +6235,9 @@ select.form_select:required:invalid {
 
 .import_note_para {
   position: relative;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 1.3;
+  line-height: 0.9;
   letter-spacing: 0;
   color: #595959;
   padding-left: 20px;
@@ -6950,7 +6954,7 @@ input.file_input {
   margin-left: 64px;
 }
 .form_section_block {
-  margin-bottom: 80px;
+  margin-bottom: 46px;
 }
 .form_section_block:last-of-type {
   margin-bottom: 0;
@@ -7985,7 +7989,7 @@ input.input_sms_send::placeholder {
 }
 .respond_tb tbody tr td {
   border-bottom: 1px solid #E6E6E6;
-  padding: 24px 8px 24px;
+  padding: 16px 8px 16px;
 }
 .respond_tb tbody tr td.pc_hidden_cols {
   display: none;

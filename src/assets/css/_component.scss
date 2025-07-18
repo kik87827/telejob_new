@@ -424,7 +424,7 @@ input.props_dom{
     .ico_import{margin-right:5px;}
 }
 .field_btn_row{
-    &.btn_box_wrap{margin-top:84px;}
+    &.btn_box_wrap{margin-top:64px;}
 }
 .ico_import{display:inline-block; @include bgicon; background-image:url("../images/etri.svg"); width:5px;height:6px; vertical-align:middle;}
 .multi_ring_wrap{display:flex; align-items:center; gap:12px;
@@ -797,7 +797,7 @@ select.form_select{
     &.sm_type2{min-width:109px;}
     &.long_type{padding-left:70px;padding-right:70px;}
 }
-.btn_submit_box_text{ @include font(20px, 700, 1, 0, #000); display:inline-block; word-break: keep-all;}
+.btn_submit_box_text{ @include font(18px, 700, 1, 0, #000); display:inline-block; word-break: keep-all;}
 
 .btn_popup_close{display:inline-block;width:24px;height:24px;position:absolute;top:34px;right:36px;font-size:0;line-height:0; @include bgicon; background-image:url("../images/btn_popup_close.png");}
 
