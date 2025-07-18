@@ -16,6 +16,24 @@
     .text_node{@include font2(24px,700,1.3,#000);}
 }
 .mc_pixed_contents{}
+
+
+/* top10 / 우수기업 */
+.fetch_data_panel{
+    .data_cols{}
+    .data_cols{}
+}
+.fetch_panel_group{}
+.fetch_title_row{}
+.fetch_panel_contents{}
+.fetch_title_main{
+    .ico{
+        &.shape_top{}
+        &.shape_vip{}
+    }
+    .text_node{}
+}
+
 .sync_data_wrap{}
 .sync_data_list{
     border-top:1px solid #BDC5D1;
@@ -29,6 +47,10 @@
     .btn_cols{box-sizing:border-box;padding:15px;}
     .img_cols{flex:0 0 180px;}
     .title_cols{flex:0 0 20%;}
+    .title_caption_cols{
+        .sync_title{}
+        .sync_caption{}
+    }
     .caption_cols{flex:1; min-width:0;}
     .btn_cols{
         flex:0 0 16px;
@@ -287,3 +309,4 @@
 @media (max-width:$mobile){
 
 }
+
