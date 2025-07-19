@@ -4604,6 +4604,9 @@ textarea.box_textarea::placeholder {
 .props_cols_list .props_item {
   gap: 8px;
 }
+.props_cols_list.cols_3 > li {
+  flex: 0 0 33.3333333333%;
+}
 .props_cols_list.cols_7 > li {
   flex: 0 0 14.2857142857%;
 }
@@ -5587,7 +5590,6 @@ select.form_select:required:invalid {
   padding-left: 70px;
   padding-right: 70px;
 }
-
 .btn_submit_box_text {
   font-size: 18px;
   font-weight: 700;
@@ -11575,7 +11577,6 @@ strong.color_emp {
 .btn_pouch_nav.next {
   background-image: url("../images/ico_next_calendar.png");
 }
-
 .pouch_fraction {
   font-size: 14px;
   font-weight: 700;
@@ -12425,6 +12426,7 @@ img.viewer_img {
     min-height: 300px;
   }
 }
+/* text */
 .terms_anchor_box {
   display: flex;
   background: #EDF2FB;

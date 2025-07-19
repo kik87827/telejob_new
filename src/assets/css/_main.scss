@@ -275,6 +275,32 @@
 .brief_emp_text{font-size:16px; font-weight:700;}
 .brief_sub_text{font-size:14px;}
 
+.post_data_wrap{}
+.post_data_list{
+    > li{
+
+    }
+}
+.post_data_item{
+
+}
+.post_main_row{
+    .img_cols{}
+    .text_cols{}
+}
+.post_img_wrap{
+    > img{}
+}
+.post_sub_row{
+    .text_cols{}
+    .btn_cols{
+        .btn_icon{}
+    }
+    .text_cols{}
+}
+.post_main_linked_para{}
+.post_sub_linked_para{}
+
 
 @media (max-width:$pcwid){
     .brief_pixed_cols{padding:0 20px;}
