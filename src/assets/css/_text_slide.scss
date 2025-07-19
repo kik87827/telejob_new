@@ -1,22 +1,20 @@
 /* text */
 .node_obj_package{
+    display:flex; justify-content: flex-end; align-items: center; gap:8px;
     dt,dd{}
     dt{}
     dd{}
 }
 .node_keyword{}
 .node_linked_text{
-    .linked_intext{}
+    display:flex; justify-content: flex-end; align-items: center; @include font(14px,400,1.3,#595959); gap:2px;
+    .linked_intext{@include font2(16px,400,1,#000)}
     .price_node{}
 }
 .price_node{
-    .price_number{}
+    display:flex; gap:3px; align-items: center;
+    .price_number{@include font2(20px,700,1,#B5000F); @include spoca;}
     .price_unit{}
-}
-.column_structure{
-    .str_cols{
-        .props_item{}
-    }
 }
 .nodetext_struc_wrap{
     .struc_cols{}
@@ -25,10 +23,11 @@
 .nodetext_emp_text{}
 .nodetext_normal_text{}
 .total_amount_group{
+   
     .amount_row{}
     .copy_row{}
 }
 .amount_price_wrap{}
-.amount_price_main{}
+.amount_price_main{ display:flex; gap:2px;}
 .amount_price_unit{}
 .amount_price_copy{}

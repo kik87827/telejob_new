@@ -4085,6 +4085,19 @@ button.swiper-pagination-bullet {
   text-decoration: underline !important;
 }
 
+.btn_icon_only {
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.btn_icon_only.tooltip {
+  background-image: url("../images/ico_tooltip_x2.png");
+}
+
 .link-style {
   cursor: pointer;
 }
@@ -4577,6 +4590,8 @@ textarea.box_textarea::placeholder {
   display: flex;
   gap: 10px 36px;
   gap: 24px;
+  font-size: 0;
+  line-height: 0;
 }
 .props_item_list.gap_type2 {
   gap: 36px;
@@ -4585,8 +4600,7 @@ textarea.box_textarea::placeholder {
   gap: 10px 12px;
 }
 .props_cols_wrap {
-  position: relative;
-  overflow: hidden;
+  /* position:relative; overflow:hidden; */
   /* &.gap_type2{padding:10px 0;} */
 }
 
@@ -4600,6 +4614,8 @@ textarea.box_textarea::placeholder {
   gap: 12px 0;
   margin: 0 -8px;
   padding: 6px 0;
+  font-size: 0;
+  line-height: 0;
 }
 .props_cols_list .props_item {
   gap: 8px;
@@ -4617,7 +4633,7 @@ textarea.box_textarea::placeholder {
 }
 
 .props_item {
-  display: flex;
+  display: inline-flex;
   gap: 4px;
 }
 .props_item.gap2 {
@@ -4625,6 +4641,11 @@ textarea.box_textarea::placeholder {
 }
 .props_item.gap3 {
   gap: 8px;
+}
+.props_item_inwrap {
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 input.props_dom {
   -webkit-appearance: none;
@@ -5518,6 +5539,9 @@ select.form_select:required:invalid {
 .popup_contents_row.ptype2 {
   padding-bottom: 0;
 }
+.popup_contents_row.ptype3 {
+  padding-bottom: 20px;
+}
 
 .popup_contents_row + .popup_btn_row {
   padding-top: 20px;
@@ -5562,6 +5586,7 @@ select.form_select:required:invalid {
   border: 1px solid #000;
   border-radius: 100px;
   padding: 12px 30px;
+  gap: 4px;
 }
 .btn_submit_box.primary {
   border-color: #005AAB;
@@ -5580,7 +5605,21 @@ select.form_select:required:invalid {
   border-color: #0B51C5;
   background-color: #013284;
 }
-.btn_submit_box.primary_dark_full .btn_box_text {
+.btn_submit_box.primary_dark_full .btn_submit_box_text {
+  color: #fff;
+}
+.btn_submit_box.skin_full2 {
+  background-color: #00A8C2;
+  border-color: #00A8C2;
+}
+.btn_submit_box.skin_full2 .btn_submit_box_text {
+  color: #fff;
+}
+.btn_submit_box.skin_full3 {
+  background-color: #00C285;
+  border-color: #00C285;
+}
+.btn_submit_box.skin_full3 .btn_submit_box_text {
   color: #fff;
 }
 .btn_submit_box.sm_type2 {
@@ -5590,6 +5629,24 @@ select.form_select:required:invalid {
   padding-left: 70px;
   padding-right: 70px;
 }
+.btn_submit_box .ico {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 0;
+}
+.btn_submit_box .ico.shape_01 {
+  background-image: url("../images/ico_submit_shape_01.png");
+}
+.btn_submit_box .ico.shape_02 {
+  background-image: url("../images/ico_submit_shape_02.png");
+}
+.btn_submit_box .ico.shape_03 {
+  background-image: url("../images/ico_submit_shape_03.png");
+}
+
 .btn_submit_box_text {
   font-size: 18px;
   font-weight: 700;
@@ -5729,6 +5786,11 @@ select.form_select:required:invalid {
     min-width: 0;
     padding: 12px 30px 13px;
   }
+  .popup_item .btn_submit_box .ico {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+  }
   .popup_item .btn_submit_box.sm_type2 {
     min-width: 0;
     padding-left: 20px;
@@ -5847,15 +5909,26 @@ select.form_select:required:invalid {
     padding: 12px 12px 13px;
   }
   .popup_item .btn_submit_box.sm_type2 {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
   }
   .popup_item .btn_submit_box.long_type {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .popup_item .btn_submit_box .ico {
+    width: 14px;
+    height: 14px;
+    flex: 0 0 14px;
   }
   .popup_item .btn_submit_box_text {
     font-size: 12px;
+  }
+  .popup_item .popup_btn_row.align_type2 .btn_bottom_long {
+    flex-direction: column;
+  }
+  .popup_item .popup_btn_row.align_type2 .btn_bottom_long .btn_submit_box {
+    flex: 0;
   }
   .popup_btn_row.btn_bottom_wrap {
     flex-wrap: wrap;
@@ -7223,6 +7296,104 @@ input.input_sms_send::placeholder {
 .bottom_pos_agree_row {
   margin-top: 24px;
 }
+.form_field_table_wrap {
+  position: relative;
+  border-top: 2px solid #BDC5D1;
+}
+.form_field_table {
+  width: 100%;
+}
+.form_field_table tr th, .form_field_table tr td {
+  text-align: left;
+  border-bottom: 1px solid #E6E6E6;
+}
+.form_field_table tr th {
+  background: #F8F8F8;
+  padding: 16px;
+  width: 29%;
+}
+.form_field_table tr td {
+  padding: 6px 24px;
+}
+.form_field_table tr td .props_slab_list {
+  padding: 10px 0;
+}
+.form_field_table tr td .props_cols_list {
+  padding: 10px 0;
+}
+
+.form_field_ment {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: #595959;
+  color: inherit;
+}
+
+.props_slab_list > li {
+  margin-bottom: 12px;
+}
+.props_slab_list > li:last-of-type {
+  margin-bottom: 0;
+}
+.props_slab_list .props_item {
+  gap: 8px;
+}
+
+.column_structure {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.column_structure .str_cols {
+  display: flex;
+}
+.tooltip_wrap {
+  position: absolute;
+  bottom: calc(100% + 7px);
+  left: 50%;
+  display: inline-block;
+  width: 370px;
+  transform: translateX(-50%);
+  margin-left: -5px;
+  display: none;
+}
+
+.tooltip_box {
+  background: #fff;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  padding: 16px 12px;
+  position: relative;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #000;
+}
+.tooltip_box .pointer {
+  display: block;
+  content: "";
+  width: 10px;
+  height: 5px;
+  background: url("../images/ico_tooltip_pointer.png") no-repeat 0 0/100% auto;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+}
+
+.tooltip_item_wrap {
+  position: relative;
+}
+
+.tooltip_normal_para {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #000;
+  word-break: keep-all;
+}
+
 @media (max-width: 1299px) {
   .middle_one_title_row {
     margin: 60px 0 30px 0;
@@ -11555,6 +11726,16 @@ strong.color_emp {
   text-align: center;
   align-items: center;
 }
+.pouch_calendar_box.type2 {
+  box-shadow: none;
+  background: none;
+  padding: 0;
+  margin-bottom: 24px;
+}
+.pouch_calendar_box.type2 .pouch_calendar tbody td {
+  height: 31px;
+}
+
 .pouch_title {
   font-size: 16px;
   font-weight: 700;
@@ -11576,6 +11757,28 @@ strong.color_emp {
 }
 .btn_pouch_nav.next {
   background-image: url("../images/ico_next_calendar.png");
+}
+.btn_pouch_nav.with_text {
+  background: none;
+  width: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+.btn_pouch_nav.with_text.prev .ico {
+  background-image: url("../images/ico_prev_calendar.png");
+}
+.btn_pouch_nav.with_text.next .ico {
+  background-image: url("../images/ico_next_calendar.png");
+}
+.btn_pouch_nav.with_text .ico {
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 0;
+  display: inline-block;
 }
 .pouch_fraction {
   font-size: 14px;
@@ -11646,6 +11849,9 @@ strong.color_emp {
 .pouch_tditem {
   font-family: "Spoqa", "NotoSans-Regular", dotum;
 }
+.pouch_tditem > * {
+  display: block;
+}
 .pouch_tditem:disabled {
   cursor: default;
 }
@@ -11655,6 +11861,10 @@ strong.color_emp {
   font-weight: 400;
   line-height: 1;
   color: #aaa;
+}
+
+.pouch_date_copy {
+  margin-top: 2px;
 }
 
 .respond_fieldset_wrap {
@@ -12427,6 +12637,46 @@ img.viewer_img {
   }
 }
 /* text */
+.node_obj_package {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+.node_linked_text {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: #595959;
+  color: inherit;
+  gap: 2px;
+}
+.node_linked_text .linked_intext {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  color: #000;
+}
+.price_node {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+.price_node .price_number {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  color: #B5000F;
+  font-family: "Spoqa", "NotoSans-Regular", dotum;
+}
+.amount_price_main {
+  display: flex;
+  gap: 2px;
+}
+
 .terms_anchor_box {
   display: flex;
   background: #EDF2FB;

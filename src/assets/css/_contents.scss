@@ -479,25 +479,35 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
 }
 
 .form_field_table_wrap{
+    position:relative; border-top:2px solid #BDC5D1;
     &.has_tooltip{}
 }
 .form_field_table{
+    width:100%;
     tr{
-        th{}
+        th,td{text-align: left;border-bottom:1px solid #E6E6E6;}
+        th{background:#F8F8F8;padding:16px; width:29%;}
         td{
+            padding:6px 24px;
             .combo_item{}
+            .props_slab_list{padding:10px 0;}
+            .props_cols_list{padding:10px 0;}
         }
     }
 }
 .form_field_thtext{}
-.form_field_ment{}
+.form_field_ment{@include font(13px,400,1.4,#595959 )}
 .props_slab_list{
     > li{
-        &:last-of-type{}
+        margin-bottom:12px;
+        &:last-of-type{margin-bottom:0;}
     }
+    .props_item{gap:8px;}
 }
 .column_structure{
+    display:flex; justify-content: space-between; align-items: center; gap:20px;
     .str_cols{
+        display:flex;
         .props_item{}
         .node_obj_package{}
     }
@@ -505,11 +515,14 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
 
 .form_field_ment{}
 
-.tooltip_wrap{}
+.tooltip_wrap{position:absolute;bottom:calc(100% + 7px);left:50%;display:inline-block;width:370px; transform: translateX(-50%); margin-left:-5px; display:none;}
 .tooltip_box{
-    &:after{}
+    background:#fff; border:1px solid #E6E6E6; border-radius:4px;padding:16px 12px; position:relative; @include font2(14px,300,1.4,#000);
+    .pointer{display:block;content:'';width:10px;height:5px; background:url("../images/ico_tooltip_pointer.png") no-repeat 0 0/100% auto; position:absolute;top:100%;left:50%; }
 }
+.tooltip_item_wrap{position:relative;}
 
+.tooltip_normal_para{@include font2(14px,300,1.4,#000); word-break: keep-all;}
 @media (max-width:$tablet){
     .middle_one_title_row{
         margin : 60px 0 30px 0;

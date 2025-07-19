@@ -306,7 +306,7 @@
 				<div class="popup_title_row">
 					<h3 class="popup_title">상품신청</h3>
 				</div>
-				<div class="popup_contents_row">
+				<div class="popup_contents_row ptype3">
 					<!-- pouch_calendar_box -->
 					<div class="pouch_calendar_box type2">
 						<div class="control_row">
@@ -492,13 +492,13 @@
 						</div>
 					</div>
 					<!-- // pouch_calendar_box -->
-					<div class="form_field_table_wrap has_tooltip">
+					<div class="form_field_table_wrap">
 						<table class="form_field_table">
 							<tr>
 								<th><span class="form_field_thtext">희망서비스</span></th>
 								<td>
 									<!-- combo -->
-									<div class="combo_item" id="select_product_service_combo">
+									<div class="combo_item fluid" id="select_product_service_combo">
 										<a href="javascript:;" class="combo_target theme2">서비스를 선택하세요</a>
 										<div class="combo_option_group theme2">
 											<div class="combo_option_scroll">
@@ -680,7 +680,7 @@
 												<div class="str_cols">
 													<div class="props_item">
 														<input type="checkbox" class="props_dom" id="service_str06" />
-														<label for="service_str01" class="props_label">Bold</label>
+														<label for="service_str06" class="props_label">Bold</label>
 													</div>
 												</div>
 												<div class="str_cols">
@@ -716,32 +716,42 @@
 										<ul class="props_cols_list cols_3">
 											<li>
 												<div class="props_item">
-													<input type="radio" class="props_dom" id="product_method_chk01" />
+													<input type="radio" class="props_dom" name="product_method" id="product_method_chk01" />
 													<label for="product_method_chk01" class="props_label">카드결제</label>
 												</div>
 											</li>
 											<li>
 												<div class="props_item">
-													<input type="radio" class="props_dom" id="product_method_chk02" />
+													<input type="radio" class="props_dom" name="product_method" id="product_method_chk02" />
 													<label for="product_method_chk02" class="props_label">계좌이체</label>
 												</div>
 											</li>
 											<li>
 												<div class="props_item">
-													<input type="radio" class="props_dom" id="product_method_chk03" />
+													<input type="radio" class="props_dom" name="product_method" id="product_method_chk03" />
 													<label for="product_method_chk03" class="props_label">무통장입금</label>
 												</div>
 											</li>
 											<li>
-												<div class="props_item">
-													<input type="radio" class="props_dom" id="product_method_chk04" />
-													<label for="product_method_chk04" class="props_label">전화결제</label>
+												<div class="props_item_inwrap">
+													<div class="props_item">
+														<input type="radio" class="props_dom" name="product_method" id="product_method_chk04" />
+														<label for="product_method_chk04" class="props_label">전화결제</label>
+													</div>
+													<div class="tooltip_item_wrap">
+														<button class="btn_icon_only tooltip" id="btn_call_tooltip"></button>
+														<!-- <div class="tooltip_wrap">
+                                <div class="tooltip_box">
+                                  텔레잡에서 기업회원의 휴대폰 문자메시지(SMS)로 카드결제하실 수 있는 ARS 링크를 보내드립니다. ARS 링크로 전화 연결하시어 소지하고 계신 카드정보를 입력하시면 결제가 가능합니다.
+                                  <span class="pointer"></span>
+                                </div>
+                              </div> -->
+													</div>
 												</div>
-												<button class="btn_icon_only tooltip" data-target="#call_tooltip"></button>
 											</li>
 											<li>
 												<div class="props_item">
-													<input type="radio" class="props_dom" id="product_method_chk05" />
+													<input type="radio" class="props_dom" name="product_method" id="product_method_chk05" />
 													<label for="product_method_chk05" class="props_label">텔레잡포인트</label>
 												</div>
 											</li>
@@ -750,9 +760,6 @@
 								</td>
 							</tr>
 						</table>
-						<div class="tooltip_wrap" id="call_tooltip">
-							<div class="tooltip_box">텔레잡에서 기업회원의 휴대폰 문자메시지(SMS)로 카드결제하실 수 있는 ARS 링크를 보내드립니다. ARS 링크로 전화 연결하시어 소지하고 계신 카드정보를 입력하시면 결제가 가능합니다.</div>
-						</div>
 					</div>
 				</div>
 				<div class="popup_btn_row btn_bottom_wrap align_type2">
@@ -783,7 +790,7 @@
 				<div class="popup_title_row">
 					<h3 class="popup_title">상품신청</h3>
 				</div>
-				<div class="popup_contents_row">
+				<div class="popup_contents_row ptype3">
 					<!-- pouch_calendar_box -->
 					<div class="pouch_calendar_box type2">
 						<div class="control_row">
@@ -975,7 +982,7 @@
 								<th><span class="form_field_thtext">희망서비스</span></th>
 								<td>
 									<!-- combo -->
-									<div class="combo_item" id="select_product2_service_combo">
+									<div class="combo_item fluid" id="select_product2_service_combo">
 										<a href="javascript:;" class="combo_target theme2">프리미엄 골드(1일:48,000원/최소결제단위:3일)</a>
 										<div class="combo_option_group theme2">
 											<div class="combo_option_scroll">
@@ -1167,7 +1174,7 @@
 												<div class="str_cols">
 													<div class="props_item">
 														<input type="checkbox" class="props_dom" id="service2_str06" />
-														<label for="service2_str01" class="props_label">Bold</label>
+														<label for="service2_str06" class="props_label">Bold</label>
 													</div>
 												</div>
 												<div class="str_cols">
@@ -1223,31 +1230,31 @@
 										<ul class="props_cols_list cols_3">
 											<li>
 												<div class="props_item">
-													<input type="radio" class="props_dom" id="product2_method_chk01" />
+													<input type="radio" class="props_dom" name="product2_method" id="product2_method_chk01" />
 													<label for="product2_method_chk01" class="props_label">카드결제</label>
 												</div>
 											</li>
 											<li>
 												<div class="props_item">
-													<input type="radio" class="props_dom" id="product2_method_chk02" />
+													<input type="radio" class="props_dom" name="product2_method" id="product2_method_chk02" />
 													<label for="product2_method_chk02" class="props_label">계좌이체</label>
 												</div>
 											</li>
 											<li>
 												<div class="props_item">
-													<input type="radio" class="props_dom" id="product2_method_chk03" />
+													<input type="radio" class="props_dom" name="product2_method" id="product2_method_chk03" />
 													<label for="product2_method_chk03" class="props_label">무통장입금</label>
 												</div>
 											</li>
 											<li>
 												<div class="props_item">
-													<input type="radio" class="props_dom" id="product2_method_chk04" />
+													<input type="radio" class="props_dom" name="product2_method" id="product2_method_chk04" />
 													<label for="product2_method_chk04" class="props_label">전화결제</label>
 												</div>
 											</li>
 											<li>
 												<div class="props_item">
-													<input type="radio" class="props_dom" id="product2_method_chk05" />
+													<input type="radio" class="props_dom" name="product2_method" id="product2_method_chk05" />
 													<label for="product2_method_chk05" class="props_label">텔레잡포인트</label>
 												</div>
 											</li>
@@ -1263,15 +1270,15 @@
 						<a href="#" class="btn_submit_box sm_type2 close_trigger"><span class="btn_submit_box_text">닫기</span></a>
 					</div>
 					<div class="btn_bottom_long">
-						<a href="#" class="btn_submit_box sm_type2 has_ico skin_full2">
+						<a href="#" class="btn_submit_box sm_type2 skin_full2">
 							<i class="ico shape_01"></i>
 							<span class="btn_submit_box_text">견적보기</span>
 						</a>
-						<a href="#" class="btn_submit_box sm_type2 has_ico skin_full3">
+						<a href="#" class="btn_submit_box sm_type2 skin_full3">
 							<i class="ico shape_02"></i>
 							<span class="btn_submit_box_text">장바구니</span>
 						</a>
-						<a href="#" class="btn_submit_box sm_type2 has_ico primary_full">
+						<a href="#" class="btn_submit_box sm_type2 primary_full">
 							<i class="ico shape_03"></i>
 							<span class="btn_submit_box_text">결제하기</span>
 						</a>
@@ -1379,6 +1386,18 @@
 				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
 			</div>
 		</div>
+		<div class="popup_wrap" id="tooltipPopup">
+			<div class="bg_dim"></div>
+			<div class="popup_item sm_type7">
+				<div class="popup_title_row">
+					<h3 class="popup_title">전화결제</h3>
+				</div>
+				<div class="popup_contents_row">
+					<p class="tooltip_normal_para">텔레잡에서 기업회원의 휴대폰 문자메시지(SMS)로 카드결제하실 수 있는 ARS 링크를 보내드립니다. ARS 링크로 전화 연결하시어 소지하고 계신 카드정보를 입력하시면 결제가 가능합니다.</p>
+				</div>
+				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
+			</div>
+		</div>
 		<!-- // popup -->
 		<script>
 			// combobox
@@ -1425,8 +1444,20 @@
 					callback() {},
 					closeCallback() {},
 				});
+
+				let toolTipPopup = new DesignPopup({
+					selector: "#tooltipPopup",
+					beforeCallback() {},
+					callback() {},
+					closeCallback() {},
+				});
 				// cartPopup.popupShow(); // show
 				// cartPopup.popupHide(); // hide
+
+				//event
+				document.querySelector("#btn_call_tooltip").addEventListener("click", () => {
+					toolTipPopup.popupShow();
+				});
 
 				// 퍼블확인용
 				let url = window.location.href.split("?")[1];

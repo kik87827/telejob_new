@@ -5,7 +5,12 @@
     .control_else_row{}
     .render_row{}
     &.type2{
-
+        box-shadow: none; background:none; padding:0; margin-bottom:24px;
+        .pouch_calendar{
+            tbody{
+                td{height:31px;}
+            }
+        }
     }
 }
 .pouch_title{@include font2(16px,700,1.6,#005AAB);}
@@ -14,14 +19,15 @@
     &.prev{background-image:url("../images/ico_prev_calendar.png");}
     &.next{background-image:url("../images/ico_next_calendar.png");}
     &.with_text{
+        background:none;width:auto; display:inline-flex; align-items: center; gap:4px; white-space:nowrap;
         &.prev{
-            .ico{}
+            .ico{background-image:url("../images/ico_prev_calendar.png");}
         }
         &.next{
-            .ico{}
+            .ico{background-image:url("../images/ico_next_calendar.png");}
         }
         .text_node{}
-        .ico{}
+        .ico{width:16px; height:16px; @include bgicon; display:inline-block;}
     }
     .text_node{}
 }
@@ -68,7 +74,8 @@
 }
 .pouch_thtext{display:inline-block; @include font2(12px,400,1,#595959);}
 .pouch_tditem{@include spoca;
+    > *{display:block;}
     &:disabled{cursor:default;}
 }
 .pouch_date{@include font2(12px,400,1,#aaa);}
-.pouch_date_copy{}
+.pouch_date_copy{margin-top:2px;}
