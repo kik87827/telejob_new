@@ -335,6 +335,9 @@ textarea.box_textarea{
 .props_cols_list{
     display:flex; flex-wrap:wrap; gap:12px 0; margin:0 -8px; padding:6px 0;
     .props_item{gap:8px;}
+    &.cols_3{
+        > li{flex:0 0 33.33333333333333%;}
+    }
     &.cols_4{
         > li{}
     }
@@ -794,8 +797,21 @@ select.form_select{
         border-color:#0B51C5; background-color:#013284;
         .btn_box_text{ color:#fff; }
     }
+    &.skin_full2{
+        .btn_submit_box_text{}
+    }
+    &.skin_full3{
+        .btn_submit_box_text{}
+    }
     &.sm_type2{min-width:109px;}
     &.long_type{padding-left:70px;padding-right:70px;}
+    &.has_ico{
+        .ico{
+            &.shape_01{}
+            &.shape_02{}
+            &.shape_03{}
+        }
+    }
 }
 .btn_submit_box_text{ @include font(18px, 700, 1, 0, #000); display:inline-block; word-break: keep-all;}
 

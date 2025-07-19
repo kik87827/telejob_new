@@ -478,6 +478,38 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
     .props_item{}
 }
 
+.form_field_table_wrap{
+    &.has_tooltip{}
+}
+.form_field_table{
+    tr{
+        th{}
+        td{
+            .combo_item{}
+        }
+    }
+}
+.form_field_thtext{}
+.form_field_ment{}
+.props_slab_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.column_structure{
+    .str_cols{
+        .props_item{}
+        .node_obj_package{}
+    }
+}
+
+.form_field_ment{}
+
+.tooltip_wrap{}
+.tooltip_box{
+    &:after{}
+}
+
 @media (max-width:$tablet){
     .middle_one_title_row{
         margin : 60px 0 30px 0;
