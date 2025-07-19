@@ -7307,10 +7307,10 @@ input.input_sms_send::placeholder {
 .form_field_table tr th {
   background: #F8F8F8;
   padding: 16px;
-  width: 29%;
+  width: 26%;
 }
 .form_field_table tr td {
-  padding: 6px 24px;
+  padding: 6px 15px;
 }
 .form_field_table tr td .props_slab_list {
   padding: 10px 0;
@@ -11808,6 +11808,11 @@ strong.color_emp {
 .btn_pouch_nav.with_text.next .ico {
   background-image: url("../images/ico_next_calendar.png");
 }
+.btn_pouch_nav.with_text .text_node {
+  display: inline-block;
+  position: relative;
+  top: -1px;
+}
 .btn_pouch_nav.with_text .ico {
   width: 16px;
   height: 16px;
@@ -12683,6 +12688,7 @@ img.viewer_img {
   justify-content: flex-end;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
 }
 .node_linked_text {
   display: flex;
@@ -12694,6 +12700,7 @@ img.viewer_img {
   letter-spacing: #595959;
   color: inherit;
   gap: 2px;
+  white-space: nowrap;
 }
 .node_linked_text .linked_intext {
   font-size: 16px;
@@ -12705,6 +12712,7 @@ img.viewer_img {
   display: flex;
   gap: 3px;
   align-items: center;
+  white-space: nowrap;
 }
 .price_node .price_number {
   font-size: 20px;
@@ -12712,10 +12720,72 @@ img.viewer_img {
   line-height: 1;
   color: #B5000F;
   font-family: "Spoqa", "NotoSans-Regular", dotum;
+  word-break: keep-all;
 }
-.amount_price_main {
+.nodetext_struc_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.nodetext_emp_text {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #005AAB;
+  font-family: "Spoqa", "NotoSans-Regular", dotum;
+}
+
+.nodetext_normal_text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #000;
+  position: relative;
+  top: -1px;
+}
+
+.total_amount_group {
+  text-align: right;
+}
+.amount_price_wrap {
   display: flex;
   gap: 2px;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.amount_price_main {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: #B5000F;
+  font-family: "Spoqa", "NotoSans-Regular", dotum;
+}
+
+.amount_price_unit {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #595959;
+}
+
+.amount_price_copy {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #595959;
+  margin-top: 4px;
+}
+
+.with_number_para {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #000000;
+  font-family: "Spoqa", "NotoSans-Regular", dotum;
 }
 
 @media (max-width: 1023px) {
@@ -12730,6 +12800,27 @@ img.viewer_img {
   }
   .price_node .price_number {
     font-size: 17px;
+  }
+  .nodetext_emp_text {
+    font-size: 16px;
+  }
+  .nodetext_normal_text {
+    font-size: 13px;
+  }
+  .with_number_para {
+    font-size: 14px;
+  }
+  .nodetext_obj_wrap .nodetext_normal_text {
+    display: block;
+  }
+  .nodetext_struc_wrap {
+    justify-content: flex-end;
+  }
+  .amount_price_main {
+    font-size: 20px;
+  }
+  .amount_price_copy {
+    font-size: 13px;
   }
 }
 .terms_anchor_box {
