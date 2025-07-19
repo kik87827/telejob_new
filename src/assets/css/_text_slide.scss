@@ -31,3 +31,16 @@
 .amount_price_main{ display:flex; gap:2px;}
 .amount_price_unit{}
 .amount_price_copy{}
+
+@media (max-width:$mobile_large){
+    .node_obj_package{justify-content: flex-start;}
+    .node_linked_text{
+        font-size:13px;
+        .linked_intext{font-size:14px;}
+        .price_node{}
+    }
+    .price_node{
+        .price_number{font-size:17px;}
+        .price_unit{}
+    }
+}

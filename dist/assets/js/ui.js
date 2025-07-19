@@ -447,7 +447,7 @@ function popupEventFunc() {
   let $combo_option_group = $(".combo_option_group , .combo_item");
   $popup_contents_row.on("scroll", function(e) {
     $combo_option_group.removeClass("active");
-  })
+  });
 }
 
 function designModal(option) {
@@ -661,7 +661,6 @@ function comboFunc() {
       if (appendOption.querySelectorAll("li")[appendOptionListOption] !== undefined) {
         combo_option_scroll.style.maxHeight = `${appendOption.querySelectorAll("li")[appendOptionListOption].offsetTop /* +7 */}px`;
       }
-      console.log(appendOptionListOption);
       combo_option_scroll.classList.add("addHeight");
     }
   });

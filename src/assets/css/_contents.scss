@@ -760,6 +760,35 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
         .form_cols{}
         .btn_cols{}
     }
+
+
+    .form_field_table{
+        tr{
+            th{background:#F8F8F8;padding:10px; width:1px;white-space: nowrap;}
+            td{
+                padding:10px;
+                .combo_item{}
+                .props_slab_list{padding:5px 0;}
+                .props_cols_list{padding:5px 0;}
+            }
+        }
+    }
+    .form_field_thtext{}
+    .form_field_ment{@include font(13px,400,1.4,#595959 )}
+    .props_slab_list{
+        > li{
+            margin-bottom:20px;
+        }
+        .props_item{gap:8px;}
+    }
+    .column_structure{
+        flex-direction: column; gap:5px; align-items: flex-start; justify-content: flex-start;
+        .str_cols{
+            display:block; flex:0; width:100%;
+            .props_item{}
+            .node_obj_package{}
+        }
+    }
 }
 @media (max-width:$mobile){
     

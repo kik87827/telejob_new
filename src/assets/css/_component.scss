@@ -914,7 +914,10 @@ select.form_select{
             gap:10px; 
             /* .btn_bottom_short,
             .btn_bottom_long{flex:auto;width:auto;display:inline-flex;} */
-            .btn_bottom_long{gap:5px; justify-content:center;}
+            .btn_bottom_long{
+                flex-direction: column;gap:5px;
+                .btn_submit_box{flex:0;}
+            }
         }
         &.align_type3{
             .btn_submit_box{min-width:75px;}
@@ -934,10 +937,7 @@ select.form_select{
         .btn_submit_box_text{font-size:12px;}
         .popup_btn_row{
             &.align_type2{
-                 .btn_bottom_long{
-                    flex-direction: column;
-                    .btn_submit_box{flex:0;}
-                 }
+                 
             }
         }
     }

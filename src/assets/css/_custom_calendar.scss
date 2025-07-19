@@ -79,3 +79,7 @@
 }
 .pouch_date{@include font2(12px,400,1,#aaa);}
 .pouch_date_copy{margin-top:2px;}
+
+@media (max-width:$mobile_large){
+    .pouch_date_copy{font-size:9px;}
+}

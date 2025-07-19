@@ -5897,8 +5897,11 @@ select.form_select:required:invalid {
     .btn_bottom_long{flex:auto;width:auto;display:inline-flex;} */
   }
   .popup_btn_row.align_type2 .btn_bottom_long {
+    flex-direction: column;
     gap: 5px;
-    justify-content: center;
+  }
+  .popup_btn_row.align_type2 .btn_bottom_long .btn_submit_box {
+    flex: 0;
   }
   .popup_btn_row.align_type3 .btn_submit_box {
     min-width: 75px;
@@ -5923,12 +5926,6 @@ select.form_select:required:invalid {
   }
   .popup_item .btn_submit_box_text {
     font-size: 12px;
-  }
-  .popup_item .popup_btn_row.align_type2 .btn_bottom_long {
-    flex-direction: column;
-  }
-  .popup_item .popup_btn_row.align_type2 .btn_bottom_long .btn_submit_box {
-    flex: 0;
   }
   .popup_btn_row.btn_bottom_wrap {
     flex-wrap: wrap;
@@ -7781,6 +7778,45 @@ input.input_sms_send::placeholder {
   }
   .form_fieldset_wrap .label_cols {
     flex: 0 0 100%;
+  }
+  .form_field_table tr th {
+    background: #F8F8F8;
+    padding: 10px;
+    width: 1px;
+    white-space: nowrap;
+  }
+  .form_field_table tr td {
+    padding: 10px;
+  }
+  .form_field_table tr td .props_slab_list {
+    padding: 5px 0;
+  }
+  .form_field_table tr td .props_cols_list {
+    padding: 5px 0;
+  }
+  .form_field_ment {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: #595959;
+    color: inherit;
+  }
+  .props_slab_list > li {
+    margin-bottom: 20px;
+  }
+  .props_slab_list .props_item {
+    gap: 8px;
+  }
+  .column_structure {
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .column_structure .str_cols {
+    display: block;
+    flex: 0;
+    width: 100%;
   }
 }
 @media (max-width: 767px) {
@@ -11867,6 +11903,11 @@ strong.color_emp {
   margin-top: 2px;
 }
 
+@media (max-width: 1023px) {
+  .pouch_date_copy {
+    font-size: 9px;
+  }
+}
 .respond_fieldset_wrap {
   border-top: 2px solid #BDC5D1;
 }
@@ -12677,6 +12718,20 @@ img.viewer_img {
   gap: 2px;
 }
 
+@media (max-width: 1023px) {
+  .node_obj_package {
+    justify-content: flex-start;
+  }
+  .node_linked_text {
+    font-size: 13px;
+  }
+  .node_linked_text .linked_intext {
+    font-size: 14px;
+  }
+  .price_node .price_number {
+    font-size: 17px;
+  }
+}
 .terms_anchor_box {
   display: flex;
   background: #EDF2FB;
