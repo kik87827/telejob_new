@@ -5912,7 +5912,7 @@ select.form_select:required:invalid {
   display: none;
   position: relative;
   overflow: hidden;
-  z-index: 20;
+  z-index: 100500;
   background: #FFFFFF;
   width: calc(100% - 2px);
   border: 1px solid #E6E6E6;

@@ -944,7 +944,7 @@ select.form_select{
     &:after{display:block;content:'';width:7px;height:7px;border-left:2px solid #000;border-bottom:2px solid #000; transform:rotate(-45deg); position:absolute;top:50%;right:17px; margin-top:-6px;}
 }
 .combo_option_group{
-    display:none;position:relative;overflow:hidden;z-index:20;background: #FFFFFF;width:calc(100% - 2px);border: 1px solid #E6E6E6;border-top:0;border-radius:0 0 4px 4px;box-sizing: border-box; position:absolute;top:calc(100% + 5px);left:0;
+    display:none;position:relative;overflow:hidden;z-index:100500;background: #FFFFFF;width:calc(100% - 2px);border: 1px solid #E6E6E6;border-top:0;border-radius:0 0 4px 4px;box-sizing: border-box; position:absolute;top:calc(100% + 5px);left:0;
     &.type2{
         .combo_option{ font-size:16px;padding:10px 12px;}
     }

@@ -391,6 +391,7 @@ class DesignPopup {
       this.option.callback();
     }
     this.layer_wrap_parent.append(this.selector);
+    popupEventFunc();
     this.dimCheck();
   }
   popupHide(option) {
@@ -431,6 +432,14 @@ class DesignPopup {
       }
     }
   }
+}
+
+function popupEventFunc(){
+  let $popup_contents_row = $(".popup_contents_row");
+  let $combo_option_group = $(".combo_option_group , .combo_item");
+  $popup_contents_row.on("scroll",function(e){
+    $combo_option_group.removeClass("active");
+  })
 }
 
 function designModal(option) {
