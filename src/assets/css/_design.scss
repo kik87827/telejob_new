@@ -34,66 +34,91 @@
 
 .style_box_wrap{}
 .style_box_list{
-    > li{}
+    display:flex;
+    > li{flex:1; display:flex;}
 }
 .style_box{
-    .title_row{}
-    .contents_row{}
+    background-color:#FFF2F2;flex:1;  padding:16px 24px;
+    .title_row{margin-bottom:10px;}
+    .contents_row{margin-bottom:10px;}
     &.skin2{
+         background-color:#F2FFF7;
         .title_row{}
         .contents_row{}
-        .style_box_title{}
+        .style_box_title{color:#25B05A;}
+        .style_box_number{}
+        .style_box_cpara{}
+    }
+    &.skin3{
+        background-color:#F6F2FF;
+        .title_row{}
+        .contents_row{}
+        .style_box_title{color:#7447D8;}
         .style_box_number{}
         .style_box_cpara{}
     }
 }
-.style_box_title{}
-.style_box_number{}
-.style_box_cpara{}
+.style_box_title{@include font2(16px,400,1,#FC4C4C);}
+.style_box_number{@include font2(20px,500,1,#000); @include spoca;}
+.style_box_cpara{margin-top:10px;@include font2(14px,400,1.5,#595959);}
+.style_box_cpara2{margin-top:10px;@include font2(16px,400,1.5,#000);}
 
 .info_block_wrap{}
 .info_block_list{
     > li{
-        &:last-of-type{}
+        margin-top:36px;
     }
 }
 .info_block{
-    .title_row{}
+    .title_row{margin-bottom:16px;}
     .contents_row{}
 }
 .info_block_title{
+    display:flex;gap:3px;
     .ico{
-        &.chk{}
+        width:24px;height:24px; @include bgicon; flex-basis: 24px; display:block;
+        &.chk{background-image:url("../images/ico_design_chk.png")}
     }
-    .text_node{}
+    .text_node{@include font2(16px,500,1.3,#000); display:inline-block;padding-top:1px;}
 }
 .info_box_list{
     > li{
-        &:last-of-type{}
+        margin-bottom:12px;
+        &:last-of-type{margin-bottom:0;}
     }
 }
 .info_box_item{
-    .info_cols{}
-    .info_row{}
+    background: #FFFFFF; border: 1px solid #E6E6E6; border-radius: 12px; padding:28px 36px; display:flex; flex-direction: column; align-items: flex-start; gap:16px 0;
+    &.dis_type2{gap:24px; align-items: center; justify-content: flex-start; flex-direction: row;}
+    .info_cols{flex:none; }
+    .info_row{flex:0;align-items: flex-start;
+        &.cont_row{margin-left:20px;}
+    }
     .info_cols{
         .btn_action_func{}
     }
     .indent_dom_list{}
 }
 .info_node_para{
-    &.emp{}
+    @include font2(13px,400,1.5,#595959);
+    margin-bottom:8px;
+    &:last-of-type{margin-bottom:0;}
+    &.emp{color:#000; font-size:14px;}
 }
 .indent_para_node{
-    .indent_bullet{}
-    .indent_liquid_para{}
+    display:flex; @include font2(16px,500,1.4,#005AAB); gap:5px;
+    .indent_bullet{flex:0; white-space: nowrap;}
+    .indent_liquid_para{flex:1;}
 }
 
-.diagram_text_wrap{}
+.diagram_text_wrap{width:100%;}
 .diagram_text_list{
+    display:flex; gap:60px; text-align: center;
     > li{
-        &:after{}
+        flex:1; position:relative;
+        &:after{display:block;content:'';width:60px;height:60px;position:absolute;top:50%;right:-60px; transform: translateY(-50%); @include bgicon; background-image:url("../images/ico_arrow_dia.png");}
         &:last-of-type{
-            &:after{}
+            &:after{display:none;}
         }
     }
 }
@@ -101,13 +126,13 @@
 
 }
 .diagram_box_node{
-    .text_node{}
+    display:flex;justify-content: center; align-items: center; width:120px;height:120px; background:#EDF2FB; border-radius:100%; text-align: center; margin:0 auto;
+    .text_node{@include font2(16px,500,1.4,#005AAB);}
 }
-.diagram_box_node{}
 .diagram_sub_row{
-
+ margin-top:24px; 
 }
-.diagram_sub_para{}
+.diagram_sub_para{@include font(14px,400,1.5,#000);}
 
 @media (max-width:$mobile_large){
     .stack_title{font-size:14px;}

@@ -122,10 +122,12 @@
 }
 
 .btn_action_func{
+    display:inline-flex; gap:8px; align-items: center; border:1px solid #E6E6E6; border-radius:100px; padding:8px 16px;
     .ico{
-        &.download{}
+        width:16px; height:16px; @include bgicon; flex:0 0 16px; 
+        &.download{background-image:url("../images/ico_download_16.png");}
     }
-    .text_node{}
+    .text_node{@include font2(14px,700,1,#000); display:inline-block;}
 }
 
 //추가

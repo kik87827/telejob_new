@@ -67,9 +67,11 @@ i{display:flex;align-items: center;justify-content: center;font-size:0;line-heig
 img.ico_img{max-width:100%;}
 .vhidden{}
 .mb_br{display:none;}
+.pc_br{display:block;}
 
 
 @media (max-width:$mobile_large){
+    .pc_br{display:none !important;}
     .mb_br{display:block !important;}
 }
 @media (max-width:$mobile){
