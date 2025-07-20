@@ -14210,4 +14210,17 @@ img.viewer_img {
 .square_sub_para {
   margin-top: 4px;
 }
+
+@media (max-width: 1023px) {
+  .square_data_list > li {
+    flex: 0 0 calc(50% - 8px);
+  }
+  .square_img_wrap {
+    height: 40px;
+  }
+  .square_data_item {
+    min-height: 0;
+    border-radius: 8px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
