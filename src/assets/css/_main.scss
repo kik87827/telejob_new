@@ -404,21 +404,35 @@
 /* 포커스 채용정보 */
 .square_data_wrap{}
 .square_data_list{
+    display:flex; flex-wrap:wrap; gap:8px; margin-right:-8px;
     > li{
+        flex:0 0 calc(20% - 8px);
         &:last-of-type{}
     }
 }
-.square_data_item{}
-.square_data_cont{
-    .img_row{}
-    .spec_row{}
-    .btn_row{
+.square_data_item{
+    background: #FFFFFF;border: 1px solid #E6E6E6;border-radius: 16px; box-sizing: border-box; min-height:160px; text-align: center; padding:12px 16px; outline:0; 
+     .spec_row{margin-top:12px;}
+     .btn_row{
+        margin-top:8px; text-align: right; font-size:0;line-height:0;
         .btn_icon{}
     }
+    &:hover{border:1px solid #000;outline:1px solid #000;}
+}
+.square_data_cont{
+    
+    .img_row{}
+   
+    
 }
 .square_img_wrap{
-    img{}
+    height:60px; display:flex; justify-content: center; align-items: center;
+    img{height:20px; max-width:100%;object-fit: contain; object-position: 50% 50%;}
 }
 .square_para_group{}
-.square_main_para{}
-.square_sub_para{}
+
+.square_main_para,
+.square_sub_para{@include clamp(1);}
+.square_main_para{@include font2(14px,700,1.3,#000); }
+
+.square_sub_para{margin-top:4px;}
