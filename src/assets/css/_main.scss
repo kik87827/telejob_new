@@ -401,3 +401,24 @@
 
 }
 
+/* 포커스 채용정보 */
+.square_data_wrap{}
+.square_data_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.square_data_item{}
+.square_data_cont{
+    .img_row{}
+    .spec_row{}
+    .btn_row{
+        .btn_icon{}
+    }
+}
+.square_img_wrap{
+    img{}
+}
+.square_para_group{}
+.square_main_para{}
+.square_sub_para{}
