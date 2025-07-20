@@ -121,6 +121,13 @@
     &.tooltip{background-image:url("../images/ico_tooltip_x2.png");}
 }
 
+.btn_action_func{
+    .ico{
+        &.download{}
+    }
+    .text_node{}
+}
+
 //추가
 .link-style {
   cursor: pointer;

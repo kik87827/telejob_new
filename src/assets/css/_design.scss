@@ -32,6 +32,83 @@
 }
 .screen_slice_word_group{display:inline-flex; gap:8px; flex-wrap:wrap;}
 
+.style_box_wrap{}
+.style_box_list{
+    > li{}
+}
+.style_box{
+    .title_row{}
+    .contents_row{}
+    &.skin2{
+        .title_row{}
+        .contents_row{}
+        .style_box_title{}
+        .style_box_number{}
+        .style_box_cpara{}
+    }
+}
+.style_box_title{}
+.style_box_number{}
+.style_box_cpara{}
+
+.info_block_wrap{}
+.info_block_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.info_block{
+    .title_row{}
+    .contents_row{}
+}
+.info_block_title{
+    .ico{
+        &.chk{}
+    }
+    .text_node{}
+}
+.info_box_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.info_box_item{
+    .info_cols{}
+    .info_row{}
+    .info_cols{
+        .btn_action_func{}
+    }
+    .indent_dom_list{}
+}
+.info_node_para{
+    &.emp{}
+}
+.indent_para_node{
+    .indent_bullet{}
+    .indent_liquid_para{}
+}
+
+.diagram_text_wrap{}
+.diagram_text_list{
+    > li{
+        &:after{}
+        &:last-of-type{
+            &:after{}
+        }
+    }
+}
+.diagram_text_dom{
+
+}
+.diagram_box_node{
+    .text_node{}
+}
+.diagram_box_node{}
+.diagram_sub_row{
+
+}
+.diagram_sub_para{}
+
 @media (max-width:$mobile_large){
     .stack_title{font-size:14px;}
     .word_key_text,

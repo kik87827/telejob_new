@@ -39,6 +39,9 @@
 .core_title{@include font2(30px,500,1.4,#000000);}
 .core_title_else_wrap{}
 .core_contents_row{}
+.core_contents_para{}
+.brick_message_row{}
+.brick_message_para{}
 @media (max-width:$tablet){
 }
 @media (max-width:$mobile_large){
@@ -2110,6 +2113,14 @@ strong.color_emp{font-weight:700;}
     }
 }
 .indent_copy{display:flex; gap:5px;}
+.indent_dom_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.indent_bullet_dom{}
+.indent_bullet_liquid{}
+
 .dark_emp{
     color:#000 !important;
     *{color:#000 !important;}

@@ -34,6 +34,8 @@
 
 .with_number_para{@include font2(16px,500,1.3,#000000); @include spoca;}
 
+
+
 @media (max-width:$mobile_large){
     .node_obj_package{justify-content: flex-start;}
     .node_linked_text{
