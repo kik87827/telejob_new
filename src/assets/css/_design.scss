@@ -132,7 +132,7 @@
 .diagram_sub_row{
  margin-top:24px; 
 }
-.diagram_sub_para{@include font(14px,400,1.5,#000);}
+.diagram_sub_para{@include font(14px,400,1.5,#000); word-break: keep-all;}
 
 @media (max-width:$mobile_large){
     .stack_title{font-size:14px;}
@@ -147,4 +147,51 @@
         .color_marking{font-size:14px;}
     }
     .screen_box_container{min-height:300px;}
+    
+    .style_box_wrap{}
+    .style_box_list{
+        flex-direction: column;
+        > li{flex:0}
+    }
+    .style_box{
+         padding:16px;
+         .contents_row{margin-bottom:0;}
+    }
+    .style_box_title{font-size:14px;}
+    .style_box_number{font-size:16px;}
+    .style_box_cpara{font-size:14px;}
+    .style_box_cpara2{font-size:14px;}
+
+    .info_block_title{
+         .ico{width:20px;height:20px;flex-basis: 20px;}
+         .text_node{padding:0; font-size:14px;}
+    }
+
+    .info_block{
+         .title_row{margin-bottom:10px;}
+    }
+
+    .info_box_item{padding:20px 20px; border-radius:8px; gap:5px 0;
+        &.dis_type2{flex-direction: column; align-items: flex-start; gap:10px;}
+        .info_row{
+            &.cont_row{margin:5px 0 0 0;}
+        }
+    }
+    .indent_para_node{font-size:14px;}
+
+
+    .diagram_text_list{
+        display:block;
+        > li{
+            padding-bottom:0;
+            &:after{width:60px;height:60px;position:static;transform: translateY(0); margin:0 auto;transform: rotate(90deg);}
+            &:last-of-type{
+                &:after{display:none;}
+            }
+        }
+    }
+    .diagram_box_node{width:100px;height:100px;
+        .text_node{font-size:14px;}
+    }
+    .diagram_sub_row{margin-top:15px;}
 }

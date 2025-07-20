@@ -268,6 +268,15 @@
             .tailtab_text{font-size:14px;}
         }
     }
+
+    .boxtab_wrap.mb_break{
+        .boxtab_list{
+            flex-wrap:wrap;
+            > li{
+                flex-basis: 50%;  min-height:40px;
+            }
+        }
+    }
 }
 
 /* form */
