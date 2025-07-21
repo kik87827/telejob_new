@@ -19,7 +19,7 @@ html:not(.touchmode){
 }
 .header_wrap{ padding:36px 0 0 0; position:relative; z-index:50;
     &.type2{
-        .header_main_row{justify-content: space-between; margin-bottom:50px;}
+        .header_main_row{justify-content: space-between; margin-bottom:0;}
         .header_nav_menu_list {gap:36px;}
         .header_nav_util_list{gap:24px;}
     }
