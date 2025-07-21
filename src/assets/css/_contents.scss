@@ -35,7 +35,7 @@
 .core_panel_container{padding:44px 0 0;
     &.pdtype2{padding-top:36px;}
 }
-.core_title_row{margin-bottom:42px;display:flex; justify-content:space-between; align-items:center;
+.core_title_row{margin-bottom:36px;display:flex; justify-content:space-between; align-items:center;
     &.type2{margin-bottom:16px;}
 }
 .core_title{@include font2(30px,500,1.4,#000000);}

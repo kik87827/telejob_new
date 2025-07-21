@@ -1,0 +1,106 @@
+.both_panel_container{
+    .contents_cols{}
+    .else_cols{}
+}
+.result_message_row{}
+.result_message_para{
+}
+.result_keyword{}
+.context_box_wrap{
+
+}
+.context_box_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.context_box_item{
+    .title_row{
+        .title_node_para{}
+        .title_fraction_word{
+            .emp{}
+        }
+    }
+}
+.context_box{
+    .img_cols{}
+    .description_cols{}
+}
+.context_thumnail_wrap{
+    > img{}
+}
+.des_main_row{
+    .primary_cols{}
+    .sub_cols{}
+}
+.des_main_title{}
+.des_sub_title{}
+.des_summary_row{}
+.des_tuple_list{
+    > li{
+        &.full{}
+    }
+}
+.des_tuple_obj{
+    dt,dd{}
+    dt{}
+    dd{}
+}
+.des_tuple_obj{}
+.tuple_keyword{}
+.tuple_value{}
+
+.nodata_noticebox{}
+.nodata_copy_group{
+    .main_copy{}
+    .sub_copy{}
+}
+
+
+.hor_column_wrap{}
+.hor_column_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.hor_column_item{
+    .title_cols{}
+    .summary_cols{}
+    .btn_cols{
+        .btn_icon{}
+    }
+}
+.hor_column_copy_group{
+    .main_copy{}
+    .sub_copy{}
+}
+.des_tuple_list{
+    > li{
+        &.full{}
+    }
+}
+.des_tuple_obj{
+    dt,dd{}
+    dt{}
+    dd{}
+}
+.tuple_keyword{}
+.tuple_value{}
+
+.state_box{}
+.state_title_row{}
+.state_title{
+    .ico{
+        &.search{}
+    }
+    .text_node{}
+}
+.state_contents_row{}
+.state_rank_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.state_rank_item{}
+.rank_number{}
+.rank_text_node{}
