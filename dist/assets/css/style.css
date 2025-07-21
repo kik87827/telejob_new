@@ -13344,11 +13344,14 @@ img.viewer_img {
 .mc_row:last-of-type {
   margin-bottom: 0;
 }
+.mc_row.skin2 {
+  background: #F8F8F8;
+  padding: 55px 0;
+}
 
 .mc_pixed_inner {
   max-width: 1340px;
   margin: 0 auto;
-  padding: 0 30px;
   padding: 0 30px;
 }
 
@@ -14223,4 +14226,9 @@ img.viewer_img {
     border-radius: 8px;
   }
 }
+/* 플러스 채용정보 */
+.box_shape_item > a, .box_shape_item button {
+  outline: 0;
+}
+/* // 플러스 채용정보 */
 /*# sourceMappingURL=style.css.map */
