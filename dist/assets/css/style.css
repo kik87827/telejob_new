@@ -12068,6 +12068,10 @@ strong.color_emp {
 
 .fset_cols_container {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: center;
 }
 .fset_cols_container .fset_cols_group {
   border-bottom: 1px solid #E6E6E6;
@@ -12095,6 +12099,7 @@ strong.color_emp {
   padding: 6px 24px;
   flex: 1;
   min-width: 0;
+  justify-content: center;
 }
 .fset_td_cols > * {
   width: 100%;
@@ -12156,6 +12161,10 @@ strong.color_emp {
   color: inherit;
   white-space: nowrap;
   display: inline-block;
+}
+
+.hor_props_item_wrap {
+  margin: 5px 0 0 0;
 }
 
 .indent_node_text {
