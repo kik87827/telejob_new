@@ -309,7 +309,13 @@ const uiBase = {
         showOtherMonths: true, // 👉 이전/다음 달 날짜도 달력에 표시
         selectOtherMonths: true, // 👉 이전/다음 달 날짜도 선택 가능
         onSelect: function(dateText, inst) {
-          console.log("선택한 날짜:", dateText);
+          const $input = inst.input; // 현재 선택된 input
+          if ($input.attr("id") === "wiEdate") {
+            const wiEdateType = document.getElementsByName("wiEdateType");
+            for (let i = 0; i < wiEdateType.length; i++) {
+              wiEdateType[i].checked = false;
+            }
+          }
         },
       });
     });

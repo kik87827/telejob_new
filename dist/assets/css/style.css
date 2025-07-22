@@ -13391,6 +13391,48 @@ img.viewer_img {
   flex: 0 0 160px;
 }
 
+.result_message_row + .context_box_wrap {
+  margin-top: 48px;
+}
+
+.result_message_para {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #595959;
+}
+
+.result_keyword {
+  color: #B5000F;
+}
+
+.context_box_list > li {
+  margin-bottom: 48px;
+}
+.context_box_item .title_row {
+  margin-bottom: 16px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.context_box_item .title_row .title_node_para {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000;
+}
+.context_box_item .title_row .title_fraction_word {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000;
+}
+.context_box_item .title_row .title_fraction_word .emp {
+  font-family: "Spoqa", "NotoSans-Regular", dotum;
+  color: #B5000F;
+  font-weight: 700;
+}
+
 .context_box {
   border: 1px solid #E6E6E6;
   border-radius: 16px;
@@ -13462,6 +13504,23 @@ img.viewer_img {
   margin-top: 36px;
 }
 
+.des_tuple_list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -20px;
+  gap: 14px 20px;
+}
+.des_tuple_list > li {
+  flex: 0 0 calc(33.3333333% - 20px);
+}
+.des_tuple_list > li.full {
+  flex: 0 0 100%;
+}
+
+.des_tuple_obj {
+  display: flex;
+  gap: 12px;
+}
 .tuple_keyword {
   display: inline-block;
   background: #BDC5D1;
@@ -13470,8 +13529,18 @@ img.viewer_img {
   line-height: 21px;
   color: #fff;
   border-radius: 4px;
+  white-space: nowrap;
   height: 22px;
   padding: 0 8px;
+  text-align: center;
+}
+
+.tuple_value {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000;
 }
 
 .state_box_wrap {
