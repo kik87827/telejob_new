@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./include/head.html')
+  <body class="front_body">
+    <div class="page_wrap">
+      @@include('./include/header.html')
+      <!-- middle -->
+      <section class="middle_wrap">
+        <div class="middle_inner">
+          <div class="core_panel_container">
+            <div class="core_title_row">
+              <h2 class="core_title">콘포넌트</h2>
+            </div>
+            <div class="core_contents_row">
+              <div class="components_block">
+                <p class="components_title">라디오,체크박스</p>
+                <div class="components_cont_group">
+                  <div class="components_cont">
+                    <div class="inner_title">normal</div>
+                    <div class="inner_cont">
+                      <ul class="props_item_list">
+                        <li>
+                          <div class="props_item">
+                            <input type="checkbox" class="props_dom" id="test_props_01" />
+                            <label for="test_props_02" class="props_label">전체 선택</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="props_item">
+                            <input type="radio" class="props_dom" name="jobrec" id="test_props_02" />
+                            <label for="test_props_02" class="props_label">아웃바운드</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="components_cont">
+                    <div class="inner_title">disabled</div>
+                    <div class="inner_cont">
+                      <ul class="props_item_list">
+                        <li>
+                          <div class="props_item">
+                            <input type="checkbox" class="props_dom" id="test_props_03" disabled />
+                            <label for="test_props_03" class="props_label">전체 선택</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="props_item">
+                            <input type="radio" class="props_dom" name="jobrec" id="test_props_04" disabled />
+                            <label for="test_props_04" class="props_label">아웃바운드</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- // middle -->
+      @@include('./include/footer.html')
+    </div>
+  </body>
+</html>

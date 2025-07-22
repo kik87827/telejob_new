@@ -1,6 +1,7 @@
 .both_panel_container{
-    .contents_cols{}
-    .else_cols{}
+    display:flex; gap:48px;
+    .contents_cols{flex:1;min-width:0;}
+    .else_cols{flex:0 0 160px;}
 }
 .result_message_row{}
 .result_message_para{
@@ -23,19 +24,24 @@
     }
 }
 .context_box{
-    .img_cols{}
-    .description_cols{}
+    border:1px solid #E6E6E6; border-radius:16px; padding:36px; display:flex; gap:86px;
+    .img_cols{flex:0 0 226px; display:flex;  }
+    .description_cols{flex:1;}
 }
 .context_thumnail_wrap{
-    > img{}
+    flex:1; outline:1px solid red; display:flex; justify-content: center; align-items:center;   padding:20px;
+    > img{object-fit:contain; object-position:50% 50%; height:45px; max-width:100%;}
 }
 .des_main_row{
-    .primary_cols{}
-    .sub_cols{}
+    display:flex; flex-wrap:wrap; gap:20px;
+    .primary_cols{flex:0 0 calc(60% - 20px);}
+    .sub_cols{flex:0 0 40%;}
 }
-.des_main_title{}
-.des_sub_title{}
-.des_summary_row{}
+.des_main_title,
+.des_sub_title{@include clamp(1);}
+.des_main_title{@include font2(16px,700,1.4,#000);}
+.des_sub_title{@include font2(14px,400,1.4,#000);}
+.des_summary_row{margin-top:36px;}
 .des_tuple_list{
     > li{
         &.full{}
@@ -47,7 +53,7 @@
     dd{}
 }
 .des_tuple_obj{}
-.tuple_keyword{}
+.tuple_keyword{display:inline-block; background:#BDC5D1; @include font2(13px,500,21px,#fff); border-radius:4px; height:22px; padding:0 8px;}
 .tuple_value{}
 
 .nodata_noticebox{}
@@ -87,7 +93,8 @@
 .tuple_keyword{}
 .tuple_value{}
 
-.state_box{}
+.state_box_wrap{position:sticky; top:0;}
+.state_box{border:1px solid #E6E6E6; border-radius:12px;padding:16px 12px 24px;}
 .state_title_row{}
 .state_title{
     .ico{

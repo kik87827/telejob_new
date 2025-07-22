@@ -390,6 +390,9 @@ input.props_dom{
     &.sm{
         
     }
+    &:disabled{opacity:.3; cursor:default;
+        & + .props_label{opacity:.3;cursor:default;}
+    }
 }
 .props_label{@include font2(14px, 400, 1.3, #000); display:inline-block; padding-top:2px; cursor:pointer;
     &.sm{

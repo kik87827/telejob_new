@@ -1,0 +1,15 @@
+.components_block{
+    margin-bottom:50px;
+    &:last-of-type{margin-bottom:0;}
+}
+.components_title{@include font(20px,700,1.4,#000)}
+.components_cont_group{margin-top:20px;}
+.components_cont{
+    margin-bottom:30px;
+    &:last-of-type{margin-bottom:0;}
+    .inner_title{@include font(16px,700,1.4,#000);margin-bottom:10px;}
+    .inner_cont{}
+}
+.components_block{}
+.components_block{}
+.components_block{}
