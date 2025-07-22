@@ -89,7 +89,7 @@ input.docu_big_input{height:76px;border:0;border-bottom:2px solid #1D1D1F;width:
     > li{}
 }
 .btn_tc{
-    display:inline-block; @include font2(14px,700,1.3,#000); text-decoration: underline !important;
+    display:inline-block;  white-space: nowrap; @include font2(14px,700,1.3,#000); text-decoration: underline !important;
     &.skin2{color:#595959;}
 }
 .dfgate_main_row{
@@ -145,7 +145,40 @@ input.docu_big_input{height:76px;border:0;border-bottom:2px solid #1D1D1F;width:
     .left_cols{
         .btn_box{}
     }
-    .center_cols{
-        .btn_box{}
+}
+
+@media (max-width:$mobile_large){
+    .docform_templete{padding-top:20px;}
+    .df_gate_row,
+    .df_field_row,
+    .df_title_row{margin-bottom:30px;}
+    input.docu_big_input{height:50px; font-size:18px;}
+    .docform_short{display:none;}
+    .docuform_gate_box{padding:15px; border-radius:10px; gap:20px;
+        
+        .img_cols{flex-basis: 80px;}
     }
+
+    .docu_thumnail_wrap{width:80px; height:100px;
+    }
+    .btn_tc_list{margin-top:10px; gap:10px;}
+    .btn_tc{font-size:12px;}
+
+    .dfgate_who{font-size:14px;}
+    .dfgate_main_row{flex-direction: column; align-items: normal;}
+
+    .docu_summary_tb{
+        display:block;
+        tr{
+            display:block;
+            &:last-of-type{padding-bottom:0;}
+            th,td{display:block;padding:0;}
+            th{width:auto;padding:0 0 5px;
+                &:last-of-type{padding-bottom:5px;}
+            }
+            td{padding-bottom:20px;}
+        }
+    }
+    .docu_summary_thtext,
+    .docu_summary_tdtext{font-size:13px;}
 }
