@@ -1,15 +1,82 @@
 <!DOCTYPE html>
 <html lang="ko">
-    @@include('./include/head.html')
-    <body class="front_body">
-        <div class="page_wrap">
-            @@include('./include/header4.html')
-            <!-- middle -->
-            <section class="middle_wrap">
-                내용이 들어갑니다.
-            </section>
-            <!-- // middle -->
-             @@include('./include/footer.html')
+  @@include('./include/head.html')
+  <body class="front_body">
+    <div class="page_wrap">
+      @@include('./include/header3.html')
+      <!-- middle -->
+      <section class="middle_wrap">
+        <div class="middle_inner middle_template">
+          <div class="menu_cols">@@include('./middle_box_service_02.html')</div>
+          <div class="contents_cols">
+            <div class="contents_title_row type2"><h3 class="contents_title">서비스 예약현황</h3></div>
+            <div class="sub_contents_row">
+              <div class="contain_note_wrap">
+                <p class="contain_note_para">예약제상품인 플래티넘 배너 / 로얄 배너의 예약현황을 한 눈에 볼 수 있습니다.</p>
+                <ul class="indent_note_list">
+                  <li>
+                    <span class="indent_note_bullet">1.</span>
+                    <!-- prettier-ignore -->
+                    <span class="indent_note_liquid"><span class="color_emp blue">플래티넘 배너</span>의 예약현황을 달력을 통해 확인할 수 있습니다.</span>
+                  </li>
+                  <li>
+                    <span class="indent_note_bullet">2.</span>
+                    <!-- prettier-ignore -->
+                    <span class="indent_note_liquid"><span class="color_emp blue">로얄 배너</span> : 좌측1/2, 우측1,2 배너의 예약현황을 달력을 통해 확인할 수 있습니다.</span>
+                  </li>
+                  <li>
+                    <span class="indent_note_bullet">*</span>
+                    <!-- prettier-ignore -->
+                    <span class="indent_note_liquid"><span class="color_emp blue">예약 바로가기 버튼</span>을 눌러 예약 가능한 날을 선택하여 서비스를 신청하시기 바랍니다</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="contain_guide_wrap">
+                <div class="contain_guide_item">
+                  <img src="./assets/images/img_res_current_dummy.png" alt="" />
+                </div>
+              </div>
+              <div class="btn_cbox_wrap">
+                <a href="#" class="btn_cbox"><span class="cbox_text">예약 바로가기</span></a>
+              </div>
+              <div class="calendar_control_wrap">
+                <div class="control_row">
+                  <!-- pouch_calendar_box -->
+                  @@include('pouch_calendar_dis.html')
+                  <!-- // pouch_calendar_box -->
+                </div>
+                <div class="control_row">
+                  <div class="pouch_calendar_multi_wrap">
+                    <div class="multi_cols">
+                      <!-- pouch_calendar_box -->
+                      @@include('pouch_calendar_dis.html')
+                      <!-- // pouch_calendar_box -->
+                    </div>
+                    <div class="multi_cols">
+                      <!-- pouch_calendar_box -->
+                      @@include('pouch_calendar_ena.html')
+                      <!-- // pouch_calendar_box -->
+                    </div>
+                    <div class="multi_cols">
+                      <!-- pouch_calendar_box -->
+                      @@include('pouch_calendar_half.html')
+                      <!-- // pouch_calendar_box -->
+                    </div>
+                    <div class="multi_cols">
+                      <!-- pouch_calendar_box -->
+                      @@include('pouch_calendar_half2.html')
+                      <!-- // pouch_calendar_box -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </body>
+      </section>
+      <!-- // middle -->
+      <script></script>
+      @@include('./include/footer.html')
+    </div>
+  </body>
 </html>

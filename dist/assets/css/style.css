@@ -10459,6 +10459,9 @@ input.ui_input {
   }
 }
 /* text */
+.color_emp.blue {
+  color: #005AAB !important;
+}
 .color_emp.black {
   color: #000 !important;
 }

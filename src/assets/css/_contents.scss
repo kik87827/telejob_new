@@ -2073,6 +2073,7 @@ input.ui_input{width:100%; appearance: none;box-sizing:border-box; height:48px; 
 
 /* text */
 .color_emp{
+    &.blue{color:#005AAB !important;}
     &.black{color:#000 !important;}
     &.red{color:#B5000F !important;}
 }
@@ -2127,6 +2128,14 @@ strong.color_emp{font-weight:700;}
 }
 .indent_bullet_dom{flex:0; white-space: nowrap;}
 .indent_bullet_liquid{flex:1;}
+
+
+.indent_note_list{
+
+}
+.indent_note_bullet{}
+.indent_note_liquid{}
+
 
 .dark_emp{
     color:#000 !important;

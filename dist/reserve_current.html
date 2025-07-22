@@ -24,8 +24,7 @@
 
 <body class="front_body">
 	<div class="page_wrap">
-		<!-- type2 추가 -->
-		<header class="header_wrap type2">
+		<header class="header_wrap">
 			<div class="header_main_row">
 				<div class="logo_cols">
 					<a href="javascript:;" class="btn_panel_menu"><i class="btn_panel_menu_ico"></i></a>
@@ -39,12 +38,37 @@
 						</a>
 					</h1>
 				</div>
+				<div class="search_cols">
+					<div class="top_search_container">
+						<form>
+							<fieldset class="top_search_field">
+								<legend>검색</legend>
+								<input type="text" class="top_search_input" placeholder="텔레마케터 취업의 새로운 시작, 텔레잡!" />
+								<button type="reset" class="btn_search_reset"></button>
+								<button type="submit" class="btn_search_submit"></button>
+							</fieldset>
+						</form>
+					</div>
+					<div class="top_search_keyword_wrap">
+						<div class="top_search_marguee" id="keywordMarquee">
+							<ul class="top_search_keyword_list">
+								<li><a href="#" class="top_search_keyword">상조</a></li>
+								<li><a href="#" class="top_search_keyword">동의콜</a></li>
+								<li><a href="#" class="top_search_keyword">재택</a></li>
+								<li><a href="#" class="top_search_keyword">인바운드</a></li>
+								<li><a href="#" class="top_search_keyword">건강식품</a></li>
+								<li><a href="#" class="top_search_keyword">aia</a></li>
+								<li><a href="#" class="top_search_keyword">현대해상</a></li>
+								<li><a href="#" class="top_search_keyword">실장</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
 				<div class="util_cols">
 					<div class="top_util_wrap">
 						<ul class="top_util_list">
-							<li><a href="#" class="top_util_item">텔레잡 홈</a></li>
-							<li><a href="#" class="top_util_item type2">유료서비스 안내</a></li>
-							<li><a href="#" class="top_util_item type2">디자인신청</a></li>
+							<li><a href="#" class="top_util_item">즐겨찾기</a></li>
+							<li><a href="#" class="top_util_item">유료서비스안내</a></li>
 							<li><a href="#" class="top_util_item">공지/뉴스</a></li>
 							<li><a href="#" class="top_util_item">고객센터</a></li>
 						</ul>
@@ -57,48 +81,36 @@
 						<ul class="header_nav_menu_list">
 							<li>
 								<div class="header_nav_menu_item active">
-									<a href="#" class="header_nav_menu_link">기업회원 홈</a>
+									<div class="nav_tooltip_layer">
+										<span class="nav_tooltip_text">SINCE 2001, 신뢰의 시작!</span>
+									</div>
+									<a href="#" class="header_nav_menu_link">전체 채용정보</a>
 								</div>
 							</li>
 							<li>
 								<div class="header_nav_menu_item">
-									<a href="#" class="header_nav_menu_link">채용공고등록</a>
+									<a href="#" class="header_nav_menu_link">콜백 채용정보</a>
 								</div>
 							</li>
 							<li>
 								<div class="header_nav_menu_item">
-									<a href="#" class="header_nav_menu_link">채용공고관리</a>
+									<a href="#" class="header_nav_menu_link">인기채용정보/우수기업전용채용관</a>
 								</div>
 							</li>
 							<li>
 								<div class="header_nav_menu_item">
-									<a href="#" class="header_nav_menu_link">유료서비스관리</a>
-								</div>
-							</li>
-							<li>
-								<div class="header_nav_menu_item">
-									<a href="#" class="header_nav_menu_link">인재관리</a>
-								</div>
-							</li>
-							<li>
-								<div class="header_nav_menu_item">
-									<a href="#" class="header_nav_menu_link">VIP전용관</a>
-								</div>
-							</li>
-							<li>
-								<div class="header_nav_menu_item">
-									<a href="#" class="header_nav_menu_link">기업정보관리</a>
+									<a href="#" class="header_nav_menu_link">인재정보</a>
 								</div>
 							</li>
 						</ul>
 					</div>
 					<div class="header_nav_util_wrap">
-						<ul class="header_nav_util_list">
+						<ul class="header_nav_util_list type2">
 							<!-- <li><a href="#" class="header_nav_util">로그인</a></li>
                     <li><a href="#" class="header_nav_util">회원가입</a></li> -->
 							<li>
 								<dl class="header_nav_fraction">
-									<dt><span class="key_fraction_label">총지원자 :</span></dt>
+									<dt><span class="key_fraction_label">입사지원현황 :</span></dt>
 									<dt><strong class="key_fraction_value">22</strong></dt>
 								</dl>
 							</li>
@@ -298,9 +310,842 @@
 		</header>
 		<!-- middle -->
 		<section class="middle_wrap">
-			내용이 들어갑니다.
+			<div class="middle_inner middle_template">
+				<div class="menu_cols">
+					<div class="middle_menu_box">
+						<div class="box_top_row">
+							<h2 class="middle_menu_title">유료서비스 관리</h2>
+						</div>
+						<div class="box_middle_row">
+							<ul class="box_menu_list">
+								<li><a href="#" class="depth_one_title">채용정보 연결</a></li>
+								<li><a href="#" class="depth_one_title">유료서비스 이용내역</a></li>
+								<li><a href="#" class="depth_one_title active">서비스 예약현황</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="middle_banner_wrap">
+						<ul class="middle_banner_list">
+							<li>
+								<a href="#" class="middle_banner_item" style="background-color: #ff494d">
+									<span class="img_cols"><img src="./assets/images/banner_img_design.png" alt="" /></span>
+									<div class="text_cols">
+										<p class="banner_text_node">
+											채용공고
+											<br />
+											디자인 신청
+										</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="contents_cols">
+					<div class="contents_title_row type2">
+						<h3 class="contents_title">서비스 예약현황</h3>
+					</div>
+					<div class="sub_contents_row">
+						<div class="contain_note_wrap">
+							<p class="contain_note_para">예약제상품인 플래티넘 배너 / 로얄 배너의 예약현황을 한 눈에 볼 수 있습니다.</p>
+							<ul class="indent_note_list">
+								<li>
+									<span class="indent_note_bullet">1.</span>
+									<!-- prettier-ignore -->
+									<span class="indent_note_liquid"><span class="color_emp blue">플래티넘 배너</span>의 예약현황을 달력을 통해 확인할 수 있습니다.</span>
+								</li>
+								<li>
+									<span class="indent_note_bullet">2.</span>
+									<!-- prettier-ignore -->
+									<span class="indent_note_liquid"><span class="color_emp blue">로얄 배너</span> : 좌측1/2, 우측1,2 배너의 예약현황을 달력을 통해 확인할 수 있습니다.</span>
+								</li>
+								<li>
+									<span class="indent_note_bullet">*</span>
+									<!-- prettier-ignore -->
+									<span class="indent_note_liquid"><span class="color_emp blue">예약 바로가기 버튼</span>을 눌러 예약 가능한 날을 선택하여 서비스를 신청하시기 바랍니다</span>
+								</li>
+							</ul>
+						</div>
+						<div class="contain_guide_wrap">
+							<div class="contain_guide_item">
+								<img src="./assets/images/img_res_current_dummy.png" alt="" />
+							</div>
+						</div>
+						<div class="btn_cbox_wrap">
+							<a href="#" class="btn_cbox"><span class="cbox_text">예약 바로가기</span></a>
+						</div>
+						<div class="calendar_control_wrap">
+							<div class="control_row">
+								<!-- pouch_calendar_box -->
+								<!-- pouch_calendar_box -->
+								<div class="pouch_calendar_box">
+									<div class="title_row">
+										<p class="pouch_title">로얄배너 우측1</p>
+									</div>
+									<div class="control_row">
+										<button class="btn_pouch_nav prev"></button>
+										<p class="pouch_fraction">2025년 4월</p>
+										<button class="btn_pouch_nav next"></button>
+									</div>
+									<div class="control_else_row"><a href="#" class="btn_pouch_text">오늘로 이동</a></div>
+									<div class="render_row">
+										<div class="pouch_calendar_wrap">
+											<table class="pouch_calendar">
+												<thead>
+													<tr>
+														<th class="sun"><span class="pouch_thtext">일</span></th>
+														<th><span class="pouch_thtext">월</span></th>
+														<th><span class="pouch_thtext">화</span></th>
+														<th><span class="pouch_thtext">수</span></th>
+														<th><span class="pouch_thtext">목</span></th>
+														<th><span class="pouch_thtext">금</span></th>
+														<th class="sat"><span class="pouch_thtext">토</span></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="not_month_date">
+															<button class="pouch_tditem" disabled><span class="pouch_date">30</span></button>
+														</td>
+														<td class="not_month_date">
+															<button class="pouch_tditem" disabled><span class="pouch_date">31</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">1</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">2</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">3</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">4</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">5</span></button>
+														</td>
+													</tr>
+													<tr>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">6</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">7</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">8</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">9</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">10</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">11</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">12</span></button>
+														</td>
+													</tr>
+													<tr>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">13</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">14</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem emp" disabled><span class="pouch_date">15</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">16</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">17</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">18</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">19</span></button>
+														</td>
+													</tr>
+													<tr>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">20</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">21</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">22</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">23</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">24</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">25</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">26</span></button>
+														</td>
+													</tr>
+													<tr>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">27</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">28</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">29</span></button>
+														</td>
+														<td class="disabled">
+															<button class="pouch_tditem" disabled><span class="pouch_date">30</span></button>
+														</td>
+														<td class="not_month_date">
+															<button class="pouch_tditem" disabled><span class="pouch_date">1</span></button>
+														</td>
+														<td class="not_month_date">
+															<button class="pouch_tditem" disabled><span class="pouch_date">2</span></button>
+														</td>
+														<td class="not_month_date">
+															<button class="pouch_tditem" disabled><span class="pouch_date">3</span></button>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<!-- // pouch_calendar_box -->
+
+								<!-- // pouch_calendar_box -->
+							</div>
+							<div class="control_row">
+								<div class="pouch_calendar_multi_wrap">
+									<div class="multi_cols">
+										<!-- pouch_calendar_box -->
+										<!-- pouch_calendar_box -->
+										<div class="pouch_calendar_box">
+											<div class="title_row">
+												<p class="pouch_title">로얄배너 우측1</p>
+											</div>
+											<div class="control_row">
+												<button class="btn_pouch_nav prev"></button>
+												<p class="pouch_fraction">2025년 4월</p>
+												<button class="btn_pouch_nav next"></button>
+											</div>
+											<div class="control_else_row"><a href="#" class="btn_pouch_text">오늘로 이동</a></div>
+											<div class="render_row">
+												<div class="pouch_calendar_wrap">
+													<table class="pouch_calendar">
+														<thead>
+															<tr>
+																<th class="sun"><span class="pouch_thtext">일</span></th>
+																<th><span class="pouch_thtext">월</span></th>
+																<th><span class="pouch_thtext">화</span></th>
+																<th><span class="pouch_thtext">수</span></th>
+																<th><span class="pouch_thtext">목</span></th>
+																<th><span class="pouch_thtext">금</span></th>
+																<th class="sat"><span class="pouch_thtext">토</span></th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td class="not_month_date">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">30</span></button>
+																</td>
+																<td class="not_month_date">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">31</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">1</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">2</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">3</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">4</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">5</span></button>
+																</td>
+															</tr>
+															<tr>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">6</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">7</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">8</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">9</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">10</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">11</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">12</span></button>
+																</td>
+															</tr>
+															<tr>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">13</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">14</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem emp" disabled><span class="pouch_date">15</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">16</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">17</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">18</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">19</span></button>
+																</td>
+															</tr>
+															<tr>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">20</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">21</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">22</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">23</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">24</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">25</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">26</span></button>
+																</td>
+															</tr>
+															<tr>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">27</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">28</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">29</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">30</span></button>
+																</td>
+																<td class="not_month_date">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">1</span></button>
+																</td>
+																<td class="not_month_date">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">2</span></button>
+																</td>
+																<td class="not_month_date">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">3</span></button>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<!-- // pouch_calendar_box -->
+
+										<!-- // pouch_calendar_box -->
+									</div>
+									<div class="multi_cols">
+										<!-- pouch_calendar_box -->
+										<!-- pouch_calendar_box -->
+										<div class="pouch_calendar_box">
+											<div class="title_row">
+												<p class="pouch_title">로얄배너 우측1</p>
+											</div>
+											<div class="control_row">
+												<button class="btn_pouch_nav prev"></button>
+												<p class="pouch_fraction">2025년 4월</p>
+												<button class="btn_pouch_nav next"></button>
+											</div>
+											<div class="control_else_row"><a href="#" class="btn_pouch_text">오늘로 이동</a></div>
+											<div class="render_row">
+												<div class="pouch_calendar_wrap">
+													<table class="pouch_calendar">
+														<thead>
+															<tr>
+																<th class="sun"><span class="pouch_thtext">일</span></th>
+																<th><span class="pouch_thtext">월</span></th>
+																<th><span class="pouch_thtext">화</span></th>
+																<th><span class="pouch_thtext">수</span></th>
+																<th><span class="pouch_thtext">목</span></th>
+																<th><span class="pouch_thtext">금</span></th>
+																<th class="sat"><span class="pouch_thtext">토</span></th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td class="not_month_date">
+																	<button class="pouch_tditem"><span class="pouch_date">30</span></button>
+																</td>
+																<td class="not_month_date">
+																	<button class="pouch_tditem"><span class="pouch_date">31</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">1</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">2</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">3</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">4</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">5</span></button>
+																</td>
+															</tr>
+															<tr>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">6</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">7</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">8</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">9</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">10</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">11</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">12</span></button>
+																</td>
+															</tr>
+															<tr>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">13</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">14</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem emp"><span class="pouch_date">15</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">16</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">17</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">18</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">19</span></button>
+																</td>
+															</tr>
+															<tr>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">20</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">21</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">22</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">23</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">24</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">25</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">26</span></button>
+																</td>
+															</tr>
+															<tr>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">27</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">28</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">29</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">30</span></button>
+																</td>
+																<td class="not_month_date">
+																	<button class="pouch_tditem"><span class="pouch_date">1</span></button>
+																</td>
+																<td class="not_month_date">
+																	<button class="pouch_tditem"><span class="pouch_date">2</span></button>
+																</td>
+																<td class="not_month_date">
+																	<button class="pouch_tditem"><span class="pouch_date">3</span></button>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<!-- // pouch_calendar_box -->
+
+										<!-- // pouch_calendar_box -->
+									</div>
+									<div class="multi_cols">
+										<!-- pouch_calendar_box -->
+										<!-- pouch_calendar_box -->
+										<div class="pouch_calendar_box">
+											<div class="title_row">
+												<p class="pouch_title">로얄배너 우측1</p>
+											</div>
+											<div class="control_row">
+												<button class="btn_pouch_nav prev"></button>
+												<p class="pouch_fraction">2025년 4월</p>
+												<button class="btn_pouch_nav next"></button>
+											</div>
+											<div class="control_else_row"><a href="#" class="btn_pouch_text">오늘로 이동</a></div>
+											<div class="render_row">
+												<div class="pouch_calendar_wrap">
+													<table class="pouch_calendar">
+														<thead>
+															<tr>
+																<th class="sun"><span class="pouch_thtext">일</span></th>
+																<th><span class="pouch_thtext">월</span></th>
+																<th><span class="pouch_thtext">화</span></th>
+																<th><span class="pouch_thtext">수</span></th>
+																<th><span class="pouch_thtext">목</span></th>
+																<th><span class="pouch_thtext">금</span></th>
+																<th class="sat"><span class="pouch_thtext">토</span></th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td class="not_month_date">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">30</span></button>
+																</td>
+																<td class="not_month_date">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">31</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">1</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">2</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">3</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">4</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">5</span></button>
+																</td>
+															</tr>
+															<tr>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">6</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">7</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">8</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">9</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">10</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">11</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">12</span></button>
+																</td>
+															</tr>
+															<tr>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">13</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">14</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">15</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">16</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">17</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">18</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">19</span></button>
+																</td>
+															</tr>
+															<tr>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">20</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">21</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">22</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">23</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">24</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">25</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">26</span></button>
+																</td>
+															</tr>
+															<tr>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">27</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">28</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">29</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">30</span></button>
+																</td>
+																<td class="not_month_date">
+																	<button class="pouch_tditem"><span class="pouch_date">1</span></button>
+																</td>
+																<td class="not_month_date">
+																	<button class="pouch_tditem"><span class="pouch_date">2</span></button>
+																</td>
+																<td class="not_month_date">
+																	<button class="pouch_tditem"><span class="pouch_date">3</span></button>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<!-- // pouch_calendar_box -->
+
+										<!-- // pouch_calendar_box -->
+									</div>
+									<div class="multi_cols">
+										<!-- pouch_calendar_box -->
+										<!-- pouch_calendar_box -->
+										<div class="pouch_calendar_box">
+											<div class="title_row">
+												<p class="pouch_title">로얄배너 우측2</p>
+											</div>
+											<div class="control_row">
+												<button class="btn_pouch_nav prev"></button>
+												<p class="pouch_fraction">2025년 4월</p>
+												<button class="btn_pouch_nav next"></button>
+											</div>
+											<div class="control_else_row"><a href="#" class="btn_pouch_text">오늘로 이동</a></div>
+											<div class="render_row">
+												<div class="pouch_calendar_wrap">
+													<table class="pouch_calendar">
+														<thead>
+															<tr>
+																<th class="sun"><span class="pouch_thtext">일</span></th>
+																<th><span class="pouch_thtext">월</span></th>
+																<th><span class="pouch_thtext">화</span></th>
+																<th><span class="pouch_thtext">수</span></th>
+																<th><span class="pouch_thtext">목</span></th>
+																<th><span class="pouch_thtext">금</span></th>
+																<th class="sat"><span class="pouch_thtext">토</span></th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td class="not_month_date">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">30</span></button>
+																</td>
+																<td class="not_month_date">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">31</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">1</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">2</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">3</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">4</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">5</span></button>
+																</td>
+															</tr>
+															<tr>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">6</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">7</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">8</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">9</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">10</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">11</span></button>
+																</td>
+																<td class="disabled">
+																	<button class="pouch_tditem" disabled><span class="pouch_date">12</span></button>
+																</td>
+															</tr>
+															<tr>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">13</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">14</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">15</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">16</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">17</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">18</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">19</span></button>
+																</td>
+															</tr>
+															<tr>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">20</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">21</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">22</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">23</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">24</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">25</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">26</span></button>
+																</td>
+															</tr>
+															<tr>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">27</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">28</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">29</span></button>
+																</td>
+																<td class="enabled">
+																	<button class="pouch_tditem"><span class="pouch_date">30</span></button>
+																</td>
+																<td class="not_month_date">
+																	<button class="pouch_tditem"><span class="pouch_date">1</span></button>
+																</td>
+																<td class="not_month_date">
+																	<button class="pouch_tditem"><span class="pouch_date">2</span></button>
+																</td>
+																<td class="not_month_date">
+																	<button class="pouch_tditem"><span class="pouch_date">3</span></button>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<!-- // pouch_calendar_box -->
+
+										<!-- // pouch_calendar_box -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
 		<!-- // middle -->
+		<script></script>
 		<div class="btn_topgo_wrap"><a href="#" class="btn_topgo"></a></div>
 		<footer class="footer_wrap">
 			<div class="footer_mobile_logo_row">

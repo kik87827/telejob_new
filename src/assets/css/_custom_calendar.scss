@@ -80,6 +80,17 @@
 .pouch_date{@include font2(12px,400,1,#aaa);}
 .pouch_date_copy{margin-top:2px;}
 
+.calendar_control_wrap{
+    .control_row{
+        &:last-of-type{}
+        .pouch_calendar_box{}
+    }
+}
+.pouch_calendar_multi_wrap{
+    .multi_cols{}
+    .pouch_calendar_box{}
+}
+
 @media (max-width:$mobile_large){
     .pouch_date_copy{font-size:9px;}
 }

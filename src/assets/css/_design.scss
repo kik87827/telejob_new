@@ -134,6 +134,14 @@
 }
 .diagram_sub_para{@include font(14px,400,1.5,#000); word-break: keep-all;}
 
+.contain_guide_wrap{}
+.contain_guide_item{
+    img{}
+}
+
+.contain_note_wrap{}
+.contain_note_para{}
+
 @media (max-width:$mobile_large){
     .stack_title{font-size:14px;}
     .word_key_text,
