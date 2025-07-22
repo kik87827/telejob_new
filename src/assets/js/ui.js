@@ -303,11 +303,11 @@ const uiBase = {
         onSelect: function (dateText, inst) {
           const $input = inst.input; // 현재 선택된 input
           if ($input.attr("id") === "wiEdate") {
-              const wiEdateType = document.getElementsByName("wiEdateType");
-              for (let i = 0; i < wiEdateType.length; i++) {
-                wiEdateType[i].checked = false;
-              }
+            const wiEdateType = document.getElementsByName("wiEdateType");
+            for (let i = 0; i < wiEdateType.length; i++) {
+              wiEdateType[i].checked = false;
             }
+          }
         },
       });
     });
