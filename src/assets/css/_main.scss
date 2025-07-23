@@ -555,3 +555,76 @@
         }
     }
 }
+
+
+/* 프리미엄 채용정보 */
+.mold_card_wrap{}
+.mold_card_list{
+    > li{}
+}
+.mold_card_item{
+    .inner_contents{
+        .img_row{}
+        .spec_row{}
+        .btn_else_row{}
+        .btn_else_list{
+            > li{}
+            .btn_icon{}
+        }
+    }
+    .hover_contents{}
+    &.spe{
+        .btn_mold_more{}
+    }
+    &:hover{
+        &.spe{
+            .btn_mold_more{}
+        }
+        &.gold{
+            .btn_mold_more{}
+        }
+        .hover_contents{}
+    }
+}
+.mold_img_wrap{
+    > img{}
+}
+.mold_main_copy{}
+.mold_sub_copy{}
+.mold_else_text{}
+.mold_summary_block{}
+.mold_summay_tb{
+    th,td{}
+    th,
+    td{}
+}
+.mold_thtext{}
+.mold_tdtext{}
+.btn_mold_block{}
+.btn_mold_box{
+    .text_node{}
+}
+.btn_mold_more{}
+
+.mc_panel_layer{}
+.mc_panel_space{
+    .panel_block{
+        &:last-of-type{}
+        .title_row{}
+        .contents_row{}
+    }
+}
+.mc_panel_title{}
+.flymenu_list{
+    &.cols_2{
+        > li{
+
+        }
+    }
+    > li{
+        &:last-of-type{}
+    }
+}
+.flymenu{
+    &:hover{}
+}
