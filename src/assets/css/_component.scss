@@ -139,6 +139,16 @@
 .btn_cbox{display:inline-flex; min-height:52px; box-sizing: border-box; border:1px solid #0B51C5; border-radius:100px; align-items:center; padding:10px 24px;}
 .cbox_text{@include font2(16px,700,1,#005AAB);}
 
+.btn_actbox{
+    .ico{
+        &.reset{}
+    }
+    .text_node{}
+}
+.btn_actbox_list{
+    > li{}
+}
+
 //추가
 .link-style {
   cursor: pointer;
@@ -392,6 +402,9 @@ textarea.box_textarea{
         > li{flex:0 0 33.33333333333333%;}
     }
     &.cols_4{
+        > li{}
+    }
+    &.cols_6{
         > li{}
     }
     &.cols_7{

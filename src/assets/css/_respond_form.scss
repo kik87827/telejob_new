@@ -175,6 +175,47 @@
 img.viewer_img{position:absolute;top:0;left:0;width:100%;height:100%; object-fit: contain; object-position: 50% 50%;background:#fff;}
 .logo_viewer_copy{@include font2(12px,400,1.3,#595959);margin-top:8px;}
 
+.form_cluster_wrap{}
+.form_cluster_list{
+     >li{
+        &:last-of-type{}
+        .th_cols{}
+        .td_cols{
+            .props_cols_wrap{}
+        }
+     }
+}
+.cluster_thtext{}
+.btn_keyword_chip_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.btn_keyword_chip{
+    &.active{}
+}
+.getchip_container{
+    .chip_cols{
+        &.nodata_cols{}
+    }
+    .btn_cols{
+        .btn_submit_square{}
+    }
+}
+.btn_submit_square{
+    .text_node{}
+}
+.recorded_item_wrap{}
+.recorded_item_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.recorded_item{
+    .btn_ico_delete{}
+    .text_node{}
+}
+
 @media (max-width:$pcwid_large){
     .tditems_list{
         &.type2, &.type3{

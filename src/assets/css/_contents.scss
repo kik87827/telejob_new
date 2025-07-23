@@ -39,7 +39,9 @@
     &.type2{margin-bottom:16px;}
 }
 .core_title{@include font2(30px,500,1.4,#000000);}
-.core_title_else_wrap{}
+.core_title_else_wrap{
+    .btn_actbox_list{}
+}
 .core_contents_row{}
 .core_contents_para{@include font2(13px,400,1.4,#595959)}
 .brick_message_row{margin-bottom:36px;}
