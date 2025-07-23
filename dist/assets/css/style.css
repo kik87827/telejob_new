@@ -4187,7 +4187,7 @@ button.swiper-pagination-bullet {
   border-radius: 100px;
   box-sizing: border-box;
   align-items: center;
-  padding: 8px 16px;
+  padding: 5px 16px;
 }
 .btn_actbox .ico {
   width: 24px;
@@ -4765,13 +4765,15 @@ textarea.box_textarea::placeholder {
 .props_cols_list.cols_3 > li {
   flex: 0 0 33.3333333333%;
 }
+.props_cols_list.cols_6 > li {
+  flex: 0 0 16.6666666667%;
+}
 .props_cols_list.cols_7 > li {
   flex: 0 0 14.2857142857%;
 }
 .props_cols_list > li {
   box-sizing: border-box;
   flex: 0 0 25%;
-  padding: 0 8px;
 }
 
 .props_item {
@@ -12692,6 +12694,148 @@ img.viewer_img {
   line-height: 1.3;
   color: #595959;
   margin-top: 8px;
+}
+
+.form_cluster_list {
+  border-top: 2px solid #BDC5D1;
+  display: table;
+  width: 100%;
+}
+.form_cluster_list > li {
+  display: table-row;
+}
+.form_cluster_list > li .th_cols,
+.form_cluster_list > li .td_cols {
+  display: table-cell;
+  border-bottom: 1px solid #E6E6E6;
+}
+.form_cluster_list > li .th_cols {
+  width: 1px;
+  padding-right: 66px;
+}
+.form_cluster_list > li .th_cols.type2 {
+  vertical-align: middle;
+}
+.form_cluster_list > li .th_cols.type2 .cluster_thtext {
+  top: 0;
+}
+.form_cluster_list > li .td_cols {
+  padding: 24px 0;
+}
+.cluster_thtext {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #000;
+  white-space: nowrap;
+  position: relative;
+  top: -6px;
+}
+
+.btn_keyword_chip_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.btn_keyword_chip {
+  display: inline-block;
+  white-space: nowrap;
+  box-sizing: border-box;
+  height: 32px;
+  border: 1px solid #E6E6E6;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #595959;
+  border-radius: 100px;
+  padding: 0 12px;
+}
+.btn_keyword_chip.active {
+  color: #000;
+  font-weight: 700;
+  border-color: #000;
+}
+
+.getchip_container {
+  min-height: 68px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.getchip_container:last-of-type {
+  margin-bottom: 0;
+}
+.getchip_container .chip_cols {
+  flex: 1;
+  min-width: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #E6E6E6;
+  display: flex;
+  align-items: center;
+  padding: 24px;
+}
+.getchip_container .chip_cols.nodata_cols {
+  background: #F8F8F8;
+  border: 1px solid #F8F8F8;
+  text-align: center;
+  justify-content: center;
+}
+.getchip_container .chip_cols.nodata_cols .nodata_para {
+  color: #595959;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #595959;
+}
+.getchip_container .btn_cols {
+  flex: 0 0 100px;
+}
+.btn_submit_square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  border-radius: 12px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+.btn_submit_square .text_node {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  display: inline-block;
+  padding: 10px;
+}
+
+.recorded_item_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+}
+.recorded_item {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+.recorded_item .btn_ico_delete {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 0;
+  background-image: url("../images/btn_close_16.png");
+}
+.recorded_item .text_node {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #000000;
+  display: inline-block;
 }
 
 @media (max-width: 1440px) {
