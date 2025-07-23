@@ -1,15 +1,426 @@
 <!DOCTYPE html>
 <html lang="ko">
-    @@include('./include/head.html')
-    <body class="front_body">
-        <div class="page_wrap">
-            @@include('./include/header.html')
-            <!-- middle -->
-            <section class="middle_wrap">
-                내용이 들어갑니다.
-            </section>
-            <!-- // middle -->
-             @@include('./include/footer.html')
+  @@include('./include/head.html')
+  <body class="front_body">
+    <div class="page_wrap">
+      @@include('./include/header.html')
+      <!-- middle -->
+      <section class="middle_wrap">
+        <div class="middle_inner">
+          <div class="core_panel_container">
+            <div class="core_title_row">
+              <h2 class="core_title">채용정보 상세검색</h2>
+              <div class="core_title_else_wrap">
+                <ul class="btn_actbox_list">
+                  <li>
+                    <a href="#" class="btn_actbox">
+                      <i class="ico reset"></i>
+                      <span class="text_node">초기화</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="core_contents_row">
+              <div class="form_cluster_wrap">
+                <ul class="form_cluster_list">
+                  <li>
+                    <div class="th_cols"><span class="cluster_thtext">인기 키워드</span></div>
+                    <div class="td_cols">
+                      <div class="props_cols_wrap">
+                        <ul class="props_cols_list cols_6">
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="popular_chk_01" />
+                              <label for="popular_chk_01" class="props_label">인바운드</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="popular_chk_02" />
+                              <label for="popular_chk_02" class="props_label">아웃바운드</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="popular_chk_03" />
+                              <label for="popular_chk_03" class="props_label">인/아웃바운드</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="popular_chk_04" />
+                              <label for="popular_chk_04" class="props_label">TM지원</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="popular_chk_05" />
+                              <label for="popular_chk_05" class="props_label">금융컨설턴트(FC)</label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="th_cols"><span class="cluster_thtext">상세업무</span></div>
+                    <div class="td_cols">
+                      <div class="props_cols_wrap">
+                        <ul class="props_cols_list cols_6">
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="work_chk_01" />
+                              <label for="work_chk_01" class="props_label">고객상담(CS/QA)</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="work_chk_02" />
+                              <label for="work_chk_02" class="props_label">주문접수</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="work_chk_03" />
+                              <label for="work_chk_03" class="props_label">판매영업</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="work_chk_04" />
+                              <label for="work_chk_04" class="props_label">전화홍보</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="work_chk_05" />
+                              <label for="work_chk_05" class="props_label">설문/여론조사</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="work_chk_06" />
+                              <label for="work_chk_06" class="props_label">해피콜</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="work_chk_07" />
+                              <label for="work_chk_07" class="props_label">섭외/스케줄러</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="work_chk_08" />
+                              <label for="work_chk_08" class="props_label">전화강의</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="work_chk_09" />
+                              <label for="work_chk_09" class="props_label">단순안내</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="work_chk_10" />
+                              <label for="work_chk_10" class="props_label">관리자</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="work_chk_11" />
+                              <label for="work_chk_11" class="props_label">교육</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="work_chk_12" />
+                              <label for="work_chk_12" class="props_label">행정지원</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="work_chk_13" />
+                              <label for="work_chk_13" class="props_label">금융컨설턴트(FC)</label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="th_cols"><span class="cluster_thtext">지역</span></div>
+                    <div class="td_cols">
+                      <div class="props_cols_wrap">
+                        <ul class="props_cols_list cols_6">
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="local_chk_01" />
+                              <label for="local_chk_01" class="props_label">전국</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="local_chk_02" />
+                              <label for="local_chk_02" class="props_label">서울</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="local_chk_03" />
+                              <label for="local_chk_03" class="props_label">경기</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="local_chk_04" />
+                              <label for="local_chk_04" class="props_label">부산</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="local_chk_05" />
+                              <label for="local_chk_05" class="props_label">대구</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="local_chk_06" />
+                              <label for="local_chk_06" class="props_label">인천</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="local_chk_07" />
+                              <label for="local_chk_07" class="props_label">대전</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="local_chk_08" />
+                              <label for="local_chk_08" class="props_label">세종</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="local_chk_09" />
+                              <label for="local_chk_09" class="props_label">광주</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="local_chk_10" />
+                              <label for="local_chk_10" class="props_label">울산</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="local_chk_11" />
+                              <label for="local_chk_11" class="props_label">강원</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="local_chk_12" />
+                              <label for="local_chk_12" class="props_label">충북</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="local_chk_13" />
+                              <label for="local_chk_13" class="props_label">충남</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="local_chk_14" />
+                              <label for="local_chk_14" class="props_label">경북</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="local_chk_15" />
+                              <label for="local_chk_15" class="props_label">경남</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="local_chk_16" />
+                              <label for="local_chk_16" class="props_label">전북</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="local_chk_17" />
+                              <label for="local_chk_17" class="props_label">전남</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="local_chk_18" />
+                              <label for="local_chk_18" class="props_label">제주</label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="th_cols"><span class="cluster_thtext">고용형태</span></div>
+                    <div class="td_cols">
+                      <div class="props_cols_wrap">
+                        <ul class="props_cols_list cols_6">
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="rectype_chk_01" />
+                              <label for="rectype_chk_01" class="props_label">정규</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="rectype_chk_02" />
+                              <label for="rectype_chk_02" class="props_label">계약</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="rectype_chk_03" />
+                              <label for="rectype_chk_03" class="props_label">파견</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="rectype_chk_04" />
+                              <label for="rectype_chk_04" class="props_label">위임도급</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="rectype_chk_05" />
+                              <label for="rectype_chk_05" class="props_label">위촉</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="rectype_chk_06" />
+                              <label for="rectype_chk_06" class="props_label">인턴</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="rectype_chk_07" />
+                              <label for="rectype_chk_07" class="props_label">교육/연수생</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="rectype_chk_08" />
+                              <label for="rectype_chk_08" class="props_label">알바</label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="th_cols"><span class="cluster_thtext">업종</span></div>
+                    <div class="td_cols">
+                      <div class="props_cols_wrap">
+                        <ul class="props_cols_list cols_6">
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="kind_chk_01" />
+                              <label for="kind_chk_01" class="props_label">보험</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="kind_chk_02" />
+                              <label for="kind_chk_02" class="props_label">신용카드</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="kind_chk_03" />
+                              <label for="kind_chk_03" class="props_label">은행</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="kind_chk_04" />
+                              <label for="kind_chk_04" class="props_label">증권/투신/캐피탈</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="kind_chk_05" />
+                              <label for="kind_chk_05" class="props_label">상조/대출/기타금융</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="kind_chk_06" />
+                              <label for="kind_chk_06" class="props_label">TV/홈쇼핑</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="kind_chk_07" />
+                              <label for="kind_chk_07" class="props_label">백화점/유통/도소매</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="kind_chk_08" />
+                              <label for="kind_chk_08" class="props_label">통신서비스</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="kind_chk_09" />
+                              <label for="kind_chk_09" class="props_label">인터넷쇼핑몰</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="kind_chk_10" />
+                              <label for="kind_chk_10" class="props_label">인터넷(포털/게임/커뮤니티)</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="kind_chk_11" />
+                              <label for="kind_chk_11" class="props_label">신문/방송/미디어</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="props_item">
+                              <input type="checkbox" class="props_dom" id="kind_chk_12" />
+                              <label for="kind_chk_12" class="props_label">물류/운송/배송</label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="th_cols"><span class="cluster_thtext">인기키워드</span></div>
+                    <div class="td_cols">내용</div>
+                  </li>
+                  <li>
+                    <div class="th_cols"><span class="cluster_thtext">선택한 조건</span></div>
+                    <div class="td_cols">내용</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-    </body>
+      </section>
+      <!-- // middle -->
+      @@include('./include/footer.html')
+    </div>
+  </body>
 </html>
