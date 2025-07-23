@@ -140,10 +140,12 @@
 .cbox_text{@include font2(16px,700,1,#005AAB);}
 
 .btn_actbox{
+    display:inline-flex; gap:2px; min-height:36px; border:1px solid #E6E6E6; border-radius:100px; box-sizing: border-box; align-items: center; padding:8px 16px;
     .ico{
-        &.reset{}
+        width:24px; height:24px; @include bgicon; flex:0 0 24px;
+        &.reset{background-image:url("../images/ico_reset_24.png");}
     }
-    .text_node{}
+    .text_node{@include font2(14px,700,1,#000); display:inline-block;}
 }
 .btn_actbox_list{
     > li{}
