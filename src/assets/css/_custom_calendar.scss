@@ -75,6 +75,9 @@
 .pouch_thtext{display:inline-block; @include font2(12px,400,1,#595959);}
 .pouch_tditem{@include spoca;
     > *{display:block;}
+    &.emp{
+        .pouch_date{color:#00A7FC !important;}
+    }
     &:disabled{cursor:default;}
 }
 .pouch_date{@include font2(12px,400,1,#aaa);}
@@ -82,15 +85,47 @@
 
 .calendar_control_wrap{
     .control_row{
+        margin-top:24px;
         &:last-of-type{}
-        .pouch_calendar_box{}
+        .pouch_calendar_box{max-width:311px;}
     }
 }
 .pouch_calendar_multi_wrap{
-    .multi_cols{}
-    .pouch_calendar_box{}
+    display:flex; gap:8px; flex-wrap:wrap;
+     background: #FFFFFF;box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.12);border-radius: 24px; padding:12px 24px;
+    .multi_cols{flex:1;}
+    .pouch_calendar_box{box-shadow:none; border:1px solid #fff; border-radius:12px; max-width:100%;
+        &:hover{border-color:#003482;}
+    }
 }
-
+@media (max-width:$tablet){
+    .calendar_control_wrap{
+        .control_row{
+            .pouch_calendar_multi_wrap{
+                margin-right:-8px;
+                .multi_cols{flex:0 0 calc(50% - 8px);
+                    .pouch_calendar_box{max-width:100%;}
+                }
+            }
+        }
+    }
+}
 @media (max-width:$mobile_large){
     .pouch_date_copy{font-size:9px;}
+
+
+    .calendar_control_wrap{
+        .control_row{
+            .pouch_calendar_box{max-width:100%;}
+        }
+    }
+
+    .calendar_control_wrap{
+        .control_row{
+            .pouch_calendar_multi_wrap{
+                flex-direction: column; align-items: normal;  padding:15px;
+                .pouch_calendar_box{max-width:100%;}
+            }
+        }
+    }
 }

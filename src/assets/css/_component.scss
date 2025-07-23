@@ -135,9 +135,9 @@
     .text_node{@include font2(14px,700,1,#000); display:inline-block;}
 }
 
-.btn_cbox_wrap{}
-.btn_cbox{}
-.cbox_text{}
+.btn_cbox_wrap{margin-top:24px; text-align:right;}
+.btn_cbox{display:inline-flex; min-height:52px; box-sizing: border-box; border:1px solid #0B51C5; border-radius:100px; align-items:center; padding:10px 24px;}
+.cbox_text{@include font2(16px,700,1,#005AAB);}
 
 //추가
 .link-style {
@@ -186,6 +186,10 @@
     }
 
     .btn_only_text_list{gap:10px 15px;}
+
+    .btn_cbox_wrap{margin-top:15px;}
+    .btn_cbox{min-height:40px; padding:8px 18px;}
+    .cbox_text{font-size:14px;}
 }
 @media (max-width:$mobile){
     .btn_box_wrap{

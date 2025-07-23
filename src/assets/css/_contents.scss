@@ -2152,10 +2152,13 @@ strong.color_emp{font-weight:700;}
 
 
 .indent_note_list{
-
+    @include font2(13px,400,1.4,#595959);
+    > li{
+        display:flex;
+    }
 }
-.indent_note_bullet{}
-.indent_note_liquid{}
+.indent_note_bullet{flex:0;white-space:nowrap;}
+.indent_note_liquid{flex:1;}
 
 
 .dark_emp{

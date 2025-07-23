@@ -134,13 +134,16 @@
 }
 .diagram_sub_para{@include font(14px,400,1.5,#000); word-break: keep-all;}
 
-.contain_guide_wrap{}
+.contain_guide_wrap{margin-top:36px;}
 .contain_guide_item{
-    img{}
+    text-align:center; background:#F8F8F8;
+    img{vertical-align:top; max-width:340px; margin:0 auto;padding:15px 0;}
 }
 
 .contain_note_wrap{}
-.contain_note_para{}
+.contain_note_para{@include font2(16px,500,1.4,#000); 
+    & + .indent_note_list{margin-top:12px;}
+}
 
 @media (max-width:$mobile_large){
     .stack_title{font-size:14px;}
@@ -202,4 +205,13 @@
         .text_node{font-size:14px;}
     }
     .diagram_sub_row{margin-top:15px;}
+
+    .contain_note_para{font-size:14px;}
+    
+
+    .contain_guide_wrap{margin-top:36px;}
+    .contain_guide_item{
+        padding:10px;
+        img{ max-width:100%;}
+    }
 }

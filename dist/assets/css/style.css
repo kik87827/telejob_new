@@ -4157,6 +4157,28 @@ button.swiper-pagination-bullet {
   display: inline-block;
 }
 
+.btn_cbox_wrap {
+  margin-top: 24px;
+  text-align: right;
+}
+
+.btn_cbox {
+  display: inline-flex;
+  min-height: 52px;
+  box-sizing: border-box;
+  border: 1px solid #0B51C5;
+  border-radius: 100px;
+  align-items: center;
+  padding: 10px 24px;
+}
+
+.cbox_text {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  color: #005AAB;
+}
+
 .link-style {
   cursor: pointer;
 }
@@ -4215,6 +4237,16 @@ button.swiper-pagination-bullet {
   }
   .btn_only_text_list {
     gap: 10px 15px;
+  }
+  .btn_cbox_wrap {
+    margin-top: 15px;
+  }
+  .btn_cbox {
+    min-height: 40px;
+    padding: 8px 18px;
+  }
+  .cbox_text {
+    font-size: 14px;
   }
 }
 @media (max-width: 767px) {
@@ -10653,6 +10685,25 @@ strong.color_emp {
   flex: 1;
 }
 
+.indent_note_list {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #595959;
+}
+.indent_note_list > li {
+  display: flex;
+}
+
+.indent_note_bullet {
+  flex: 0;
+  white-space: nowrap;
+}
+
+.indent_note_liquid {
+  flex: 1;
+}
+
 .dark_emp {
   color: #000 !important;
 }
@@ -12106,6 +12157,9 @@ strong.color_emp {
 .pouch_tditem > * {
   display: block;
 }
+.pouch_tditem.emp .pouch_date {
+  color: #00A7FC !important;
+}
 .pouch_tditem:disabled {
   cursor: default;
 }
@@ -12121,9 +12175,60 @@ strong.color_emp {
   margin-top: 2px;
 }
 
+.calendar_control_wrap .control_row {
+  margin-top: 24px;
+}
+.calendar_control_wrap .control_row .pouch_calendar_box {
+  max-width: 311px;
+}
+
+.pouch_calendar_multi_wrap {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 24px;
+  padding: 12px 24px;
+}
+.pouch_calendar_multi_wrap .multi_cols {
+  flex: 1;
+}
+.pouch_calendar_multi_wrap .pouch_calendar_box {
+  box-shadow: none;
+  border: 1px solid #fff;
+  border-radius: 12px;
+  max-width: 100%;
+}
+.pouch_calendar_multi_wrap .pouch_calendar_box:hover {
+  border-color: #003482;
+}
+
+@media (max-width: 1299px) {
+  .calendar_control_wrap .control_row .pouch_calendar_multi_wrap {
+    margin-right: -8px;
+  }
+  .calendar_control_wrap .control_row .pouch_calendar_multi_wrap .multi_cols {
+    flex: 0 0 calc(50% - 8px);
+  }
+  .calendar_control_wrap .control_row .pouch_calendar_multi_wrap .multi_cols .pouch_calendar_box {
+    max-width: 100%;
+  }
+}
 @media (max-width: 1023px) {
   .pouch_date_copy {
     font-size: 9px;
+  }
+  .calendar_control_wrap .control_row .pouch_calendar_box {
+    max-width: 100%;
+  }
+  .calendar_control_wrap .control_row .pouch_calendar_multi_wrap {
+    flex-direction: column;
+    align-items: normal;
+    padding: 15px;
+  }
+  .calendar_control_wrap .control_row .pouch_calendar_multi_wrap .pouch_calendar_box {
+    max-width: 100%;
   }
 }
 .respond_fieldset_wrap {
@@ -13505,6 +13610,31 @@ input.docu_big_input::placeholder {
   word-break: keep-all;
 }
 
+.contain_guide_wrap {
+  margin-top: 36px;
+}
+
+.contain_guide_item {
+  text-align: center;
+  background: #F8F8F8;
+}
+.contain_guide_item img {
+  vertical-align: top;
+  max-width: 340px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+.contain_note_para {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #000;
+}
+.contain_note_para + .indent_note_list {
+  margin-top: 12px;
+}
+
 @media (max-width: 1023px) {
   .stack_title {
     font-size: 14px;
@@ -13610,6 +13740,18 @@ input.docu_big_input::placeholder {
   }
   .diagram_sub_row {
     margin-top: 15px;
+  }
+  .contain_note_para {
+    font-size: 14px;
+  }
+  .contain_guide_wrap {
+    margin-top: 36px;
+  }
+  .contain_guide_item {
+    padding: 10px;
+  }
+  .contain_guide_item img {
+    max-width: 100%;
   }
 }
 /* text */
