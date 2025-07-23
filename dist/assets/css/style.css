@@ -3834,6 +3834,12 @@ button.swiper-pagination-bullet {
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: 0 0;
+  flex-basis: 24px;
+}
+.btn_ico.size2 {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
 }
 .btn_ico.delete {
   background-image: url("../images/ico_delete_24.png");
@@ -6967,8 +6973,9 @@ select.form_select:required:invalid {
   display: flex;
   background: #F8F8F8;
   padding: 8px 16px;
-  gap: 12px;
+  gap: 8px 12px;
   align-items: center;
+  flex-wrap: wrap;
 }
 .form_fieldset_wrap .label_cols {
   display: flex;
@@ -6986,6 +6993,9 @@ select.form_select:required:invalid {
 .form_fieldset_wrap .btn_cols {
   flex: 0;
   white-space: nowrap;
+}
+.form_fieldset_wrap .file_cols {
+  flex: 0 0 100%;
 }
 
 .fieldset_label {
@@ -7046,6 +7056,26 @@ input.file_input {
 }
 .btn_fieldset_submit.type2 {
   padding: 10px 24px;
+}
+
+.db_file_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 15px;
+}
+.db_file_item {
+  display: inline-flex;
+  gap: 5px 5px;
+}
+.db_file_item .text_node {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #000;
+}
+.db_file_item .btn_ico {
+  position: relative;
+  top: 2px;
 }
 
 .multi_fileform_list > li {
@@ -7961,6 +7991,15 @@ input.input_sms_send::placeholder {
     display: block;
     flex: 0;
     width: 100%;
+  }
+  .db_file_list {
+    gap: 8px 15px;
+  }
+  .db_file_item .text_node {
+    font-size: 13px;
+  }
+  .db_file_item .btn_ico {
+    top: 0;
   }
 }
 @media (max-width: 767px) {

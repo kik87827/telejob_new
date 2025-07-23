@@ -38,7 +38,8 @@
     .center_cols{display:flex; justify-content: center; gap:12px; align-items: center;}
 }
 .btn_ico{
-    display:inline-block; width:24px;height:24px; @include bgicon;
+    display:inline-block; width:24px;height:24px; @include bgicon; flex-basis:24px;
+    &.size2{width:16px;height:16px; flex:0 0 16px;}
     &.delete{background-image:url("../images/ico_delete_24.png");}
 }
 .btn_quad{
