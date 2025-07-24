@@ -11101,6 +11101,9 @@ strong.color_emp {
   margin-top: 16px;
 }
 .middle_banner_list > li {
+  margin-bottom: 8px;
+}
+.middle_banner_list > li:last-of-type {
   margin-bottom: 0;
 }
 
@@ -11110,8 +11113,16 @@ strong.color_emp {
   gap: 12px;
   min-height: 80px;
   align-items: center;
-  padding: 16px;
+  padding: 0 16px;
   box-sizing: border-box;
+}
+.middle_banner_item.has_bg_img {
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+.middle_banner_item.bg_star {
+  background-image: url("../images/bg_star.png");
+  background-size: 115px auto;
 }
 .middle_banner_item .img_cols {
   flex: 0 0 60px;
