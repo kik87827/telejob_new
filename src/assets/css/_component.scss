@@ -665,6 +665,13 @@ select.form_select{
         &.mb_cols2{
              > li{flex:0 0 50% !important;}
         }
+        
+        &.resmb_2{
+            > li {flex:0 0 50% !important;}
+        }
+        &.resmb_3{
+            > li {flex:0 0 33.333333333% !important;}
+        }
         > li{flex:0 0 100% !important;}
     }
 }
