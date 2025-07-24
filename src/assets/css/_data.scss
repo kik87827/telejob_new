@@ -50,6 +50,12 @@
 .des_summary_row{margin-top:36px;}
 .des_tuple_list{
     display:flex; flex-wrap:wrap;margin-right:-20px; gap:14px 20px;
+    &.cols_2{
+        > li{
+            flex:0 0 calc(50% - 20px);
+            &.full{flex:0 0 100%;}
+        }
+    }
     > li{
         flex:0 0 calc(33.3333333% - 20px);
         &.full{flex:0 0 100%;}
@@ -126,6 +132,47 @@
 .rank_text_node{}
 
 
+.craft_pair_zone{}
+.craft_pair_section{}
+.craft_pair_title_row{}
+.craft_pair_title{}
+.craft_pair_contents{}
+.pair_card_wrap{}
+.pair_card_list{
+    > li{
+        &.nodata_li{
+            .nodata_copy_box{}
+        }
+    }
+}
+.pair_card_item{
+    .img_cols{
+        
+    }
+    .spec_cols{
+
+    }
+    &.type2{
+        .img_cols{
+            
+        }
+        .spec_cols{
+
+        }
+    }
+}
+.pair_img_wrap{
+    > img{}
+}
+.pair_main_copy{}
+.pair_sub_copy{}
+.pair_else_container{
+    .else_cols{
+        .btn_icon{}
+    }
+}
+.pair_else_text{}
+
 @media (max-width:$mobile_large){
     .both_panel_container{
         flex-direction: column; align-items: normal; 
@@ -164,7 +211,7 @@
     .tuple_value{font-size:12px;}
     .tuple_value{padding-top:1px;}
     .des_tuple_list{
-        margin-right:-10px; gap:5px 10;
+        margin-right:-10px; gap:5px 10px;
         > li{
             flex:0 0 calc(50% - 10px);
             &.full{flex:0 0 100%;}

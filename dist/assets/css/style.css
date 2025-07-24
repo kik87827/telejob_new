@@ -8428,7 +8428,6 @@ input.input_sms_send::placeholder {
 .respond_tb_wrap.ptype2 .respond_tb tbody tr.rowspan_end td {
   border-style: solid;
 }
-
 .respond_tb {
   width: 100%;
 }
@@ -8479,7 +8478,7 @@ input.input_sms_send::placeholder {
   gap: 20px;
   align-items: center;
 }
-.respond_td_obj dt {
+.respond_td_obj > dt {
   display: none;
 }
 .respond_tdkey,
@@ -11622,6 +11621,10 @@ strong.color_emp {
   display: none;
 }
 
+.mt48 {
+  margin-top: 48px !important;
+}
+
 @media (max-width: 374px) {
   .mb_sm_br {
     display: block;
@@ -14376,6 +14379,12 @@ input.docu_big_input::placeholder {
   margin-right: -20px;
   gap: 14px 20px;
 }
+.des_tuple_list.cols_2 > li {
+  flex: 0 0 calc(50% - 20px);
+}
+.des_tuple_list.cols_2 > li.full {
+  flex: 0 0 100%;
+}
 .des_tuple_list > li {
   flex: 0 0 calc(33.3333333% - 20px);
 }
@@ -14628,7 +14637,7 @@ input.docu_big_input::placeholder {
   }
   .des_tuple_list {
     margin-right: -10px;
-    gap: 5px 10;
+    gap: 5px 10px;
   }
   .des_tuple_list > li {
     flex: 0 0 calc(50% - 10px);
