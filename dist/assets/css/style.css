@@ -15774,6 +15774,7 @@ input.docu_big_input::placeholder {
 .mold_card_list > li {
   flex: 0 0 calc(25% - 24px);
   position: relative;
+  background: #fff;
 }
 .mold_card_list > li:hover, .mold_card_list > li.hover {
   z-index: 5;
@@ -16101,5 +16102,60 @@ input.docu_big_input::placeholder {
 .flymenu:hover {
   color: #0258AD;
   text-decoration: underline;
+}
+
+@media (max-width: 1440px) {
+  .mc_panel_layer {
+    display: none;
+  }
+}
+@media (max-width: 1023px) {
+  .mold_card_list {
+    gap: 15px 10px;
+    margin-right: -10px;
+  }
+  .mold_card_list > li {
+    flex: 0 0 calc(50% - 10px);
+    z-index: 0 !important;
+  }
+  .mold_card_item {
+    border-radius: 16px;
+    min-height: 100%;
+  }
+  .mold_card_item .inner_contents {
+    padding: 26px 15px;
+  }
+  .mold_card_item .hover_contents {
+    display: none !important;
+    border-radius: 0 0 16px 16px;
+  }
+  .mold_card_item:hover, .mold_card_item.hover {
+    border-radius: 16px;
+  }
+  .mold_card_item:hover .mold_img_wrap, .mold_card_item.hover .mold_img_wrap {
+    height: 80px;
+  }
+  .mold_card_item:hover .inner_contents, .mold_card_item.hover .inner_contents {
+    padding-top: 26px;
+  }
+  .mold_card_item:hover .hover_contents, .mold_card_item.hover .hover_contents {
+    display: none;
+  }
+  .mold_main_copy {
+    font-size: 16px;
+    height: auto;
+  }
+  .mold_sub_copy {
+    font-size: 14px;
+    height: 40px;
+  }
+}
+@media (max-width: 767px) {
+  /*  .mold_card_list{
+       margin-right:0; 
+       > li{
+           flex:0 0 100%;
+       }
+   } */
 }
 /*# sourceMappingURL=style.css.map */

@@ -562,7 +562,7 @@
 .mold_card_list{
     display:flex; flex-wrap:wrap; gap:24px; margin-right:-24px; 
     > li{
-        flex:0 0 calc(25% - 24px); position:relative;
+        flex:0 0 calc(25% - 24px); position:relative; background:#fff;
         &:hover,&.hover{z-index:5;}
         &.hover{z-index:10;}
     }
@@ -679,4 +679,49 @@
 .flymenu{
     display:inline-block; @include font2(14px,700,1.3,#000);
     &:hover{color:#0258AD; text-decoration: underline;}
+}
+
+@media (max-width:$pcwid_large){
+    .mc_panel_layer{display:none}
+}
+
+@media (max-width:$mobile_large){
+    .mold_card_list{
+        gap:15px 10px; margin-right:-10px; 
+        > li{
+            flex:0 0 calc(50% - 10px); z-index:0 !important;
+        }
+    }
+    .mold_card_item{
+        border-radius:16px; min-height:100%;
+        .inner_contents{
+            padding:26px 15px;
+            .img_row{}
+            .spec_row{}
+            .btn_else_row{}
+            .btn_else_list{
+                > li{}
+                .btn_icon{}
+            }
+        }
+        .hover_contents{display:none !important; border-radius:0 0 16px 16px;}
+        &:hover, &.hover{
+            border-radius:16px;
+            .mold_img_wrap{height:80px;}
+            .inner_contents{
+                padding-top:26px;
+            }
+            .hover_contents{display:none;}
+        }
+    }
+    .mold_main_copy{font-size:16px;height:auto;}
+    .mold_sub_copy{font-size:14px;height:40px;}
+}
+@media (max-width:$mobile){
+   /*  .mold_card_list{
+        margin-right:0; 
+        > li{
+            flex:0 0 100%;
+        }
+    } */
 }
