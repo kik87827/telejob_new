@@ -1,0 +1,54 @@
+.feature_detail_page{}
+.feature_gate_row{}
+.fdata_title_row{
+    .main_cols{}
+    .util_cols{
+        .btn_actbox_list{}
+    }
+}
+.fdata_title{}
+.fullsquare_items_wrap{}
+.btn_fullspuare_box{
+    .ico{
+        &.callback{}
+    }
+    .text_node{}
+}
+.fdata_compact_row{}
+.fdata_compact_wrap{
+    .compact_cols{}
+}
+.fdata_thumnail_wrap{
+    .thumnail_row{
+         
+    }
+    .spec_row{}
+}
+.fdata_fiqure_wrap{
+    > img{}
+}
+.fdata_imgspec_maincopy{}
+.fdata_imgspec_subcopy{}
+
+.compact_chip_obj{
+    .key_row{}
+    .data_row{
+        &.type2{}
+    }
+}
+.compact_each_wrap{}
+.compact_each_tb{
+    th,td{}
+    th{}
+    td{}
+}
+.compact_each_thtext{}
+.compact_each_tdtext{}
+.compact_each_tb{
+    &.emp{
+        th,td{}
+        th{}
+        td{}
+    }
+}
+.compact_chip_obj{}

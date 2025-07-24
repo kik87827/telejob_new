@@ -144,6 +144,8 @@
     .ico{
         width:24px; height:24px; @include bgicon; flex:0 0 24px;
         &.reset{background-image:url("../images/ico_reset_24.png");}
+        &.email{background-image:url("../images/ico_email_24.png");}
+        &.print{background-image:url("../images/ico_print_24.png");}
     }
     .text_node{@include font2(14px,700,1,#000); display:inline-block;}
 }
