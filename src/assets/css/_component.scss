@@ -159,6 +159,12 @@
         &.reset{background-image:url("../images/ico_reset_24.png");}
         &.email{background-image:url("../images/ico_email_24.png");}
         &.print{background-image:url("../images/ico_print_24.png");}
+        &.star{background-image:url("../images/ico_scrap_star_24.png");}
+    }
+    &.active{
+        .ico{
+            &.star{background-position:0 100%;}
+        }
     }
     &.gap_2{gap:8px;}
     .text_node{@include font2(14px,700,1,#000); display:inline-block;}
