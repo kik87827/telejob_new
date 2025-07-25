@@ -1,6 +1,6 @@
 /* button */
 .btn_box{
-    display:flex; box-sizing:border-box; min-height:56px;  appearance:none; justify-content:center; align-items:center; text-align:center; border:1px solid #000; color:#000; border-radius:120px; padding:12px 36px;
+    display:flex; box-sizing:border-box; min-height:56px;  appearance:none; gap:12px; justify-content:center; align-items:center; text-align:center; border:1px solid #000; color:#000; border-radius:120px; padding:12px 36px;
     &.primary{
         border-color:#0B51C5;
         .btn_box_text{color:#0258AD;}
@@ -13,8 +13,21 @@
         border-color:#0B51C5; background-color:#013284;
         .btn_box_text{ color:#fff; }
     }
+    &.light_skin{
+        border-color:#E6E6E6;
+    }
     &.max_reset{max-width:fit-content !important;}
     &:disabled{opacity:.4;cursor:default;}
+    .ico{width:24px;height:24px; flex:0 0 24px; @include bgicon;
+        &.star{
+            background-image:url("../images/ico_btn_star.png");
+        }
+    }
+    &.active{
+        .ico{
+            &.star{background-position:0 100%;}
+        }
+    }
 }
 .btn_box_text{@include font(20px, 700, 1, 0, #000); display:inline-block;}
 .btn_box_wrap{
@@ -147,10 +160,11 @@
         &.email{background-image:url("../images/ico_email_24.png");}
         &.print{background-image:url("../images/ico_print_24.png");}
     }
+    &.gap_2{gap:8px;}
     .text_node{@include font2(14px,700,1,#000); display:inline-block;}
 }
 .btn_actbox_list{
-    display:flex; justify-content: flex-end; gap:8px; align-items: center;
+    display:flex; justify-content: flex-end; gap:8px; align-items: center; flex-wrap:wrap;
     > li{}
 }
 
@@ -193,7 +207,9 @@
         
         .btn_box:not(.sm_size2):only-child{max-width:150px; min-width:150px !important; margin:0 auto;}
     }
-    .btn_box{min-height:45px;}
+    .btn_box{min-height:45px;gap:5px;
+        .ico{width:18px;height:18px;flex-basis:18px;}
+    }
     .btn_box_text{font-size:16px; position:relative;top:-1px;}
 
     .btn_box_wrap{
@@ -205,6 +221,17 @@
     .btn_cbox_wrap{margin-top:15px;}
     .btn_cbox{min-height:40px; padding:8px 18px;}
     .cbox_text{font-size:14px;}
+
+
+    .btn_actbox{
+        min-height:30px; padding:3px 12px;
+        .ico{
+            width:18px; height:18px; @include bgicon; flex:0 0 18px;
+        }
+        &.gap_2{gap:4px;}
+        .text_node{font-size:12px;}
+    }
+
 }
 @media (max-width:$mobile){
     .btn_box_wrap{

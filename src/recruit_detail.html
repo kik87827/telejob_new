@@ -21,13 +21,13 @@
                     <div class="util_cols">
                       <ul class="btn_actbox_list">
                         <li>
-                          <a href="#" class="btn_actbox">
+                          <a href="#" class="btn_actbox gap_2">
                             <i class="ico email"></i>
                             <span class="text_node">이메일 지원</span>
                           </a>
                         </li>
-                        <li>
-                          <a href="#" class="btn_actbox">
+                        <li class="pc_item">
+                          <a href="#" class="btn_actbox gap_2">
                             <i class="ico print"></i>
                             <span class="text_node">인쇄하기</span>
                           </a>
@@ -155,29 +155,31 @@
                   </div>
                   <div class="fdata_btn_row btn_box_wrap">
                     <a href="javascript:;" class="btn_box primary">
-                      <i class="ico star"></i>
                       <span class="btn_box_text">온라인지원</span>
                     </a>
-                    <a href="javascript:;" class="btn_box"><span class="btn_box_text">공고스크랩</span></a>
+                    <a href="javascript:;" class="btn_box light_skin toggle_item">
+                      <i class="ico star"></i>
+                      <span class="btn_box_text">공고스크랩</span>
+                    </a>
                   </div>
                 </div>
-                <div class="feature_article_row">
+                <div class="feature_article_row sticky_ui">
                   <!-- tab area -->
-                  <div class="rise_tab_zone">
+                  <div class="rise_tab_zone sticky_tab_area">
                     <div class="floting_tab_wrap">
                       <div class="boxtab_wrap">
                         <ul class="boxtab_list">
                           <li>
-                            <a href="#" class="boxtab active"><span class="boxtab_text">상세내용</span></a>
+                            <a href="#rec_deatil_01" class="boxtab active"><span class="boxtab_text">상세내용</span></a>
                           </li>
                           <li>
-                            <a href="#" class="boxtab"><span class="boxtab_text">회사소개</span></a>
+                            <a href="#rec_deatil_02" class="boxtab"><span class="boxtab_text">회사소개</span></a>
                           </li>
                           <li>
-                            <a href="#" class="boxtab"><span class="boxtab_text">자격 및 근무조건</span></a>
+                            <a href="#rec_deatil_03" class="boxtab"><span class="boxtab_text">자격 및 근무조건</span></a>
                           </li>
                           <li>
-                            <a href="#" class="boxtab"><span class="boxtab_text">접수 및 연락처</span></a>
+                            <a href="#rec_deatil_04" class="boxtab"><span class="boxtab_text">접수 및 연락처</span></a>
                           </li>
                         </ul>
                       </div>
@@ -188,6 +190,17 @@
                   <div class="rise_contents_zone">
                     <div class="rise_contents" id="rec_deatil_01" style="background-color: lightcoral">
                       rec_deatil_01
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
                       <br />
                       <br />
                       <br />
@@ -213,9 +226,65 @@
                       <br />
                       <br />
                       <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
                     </div>
                     <div class="rise_contents" id="rec_deatil_03" style="background-color: lightseagreen">
                       rec_deatil_03
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
                       <br />
                       <br />
                       <br />
@@ -383,6 +452,10 @@
           if (url_2 === "popup") {
             counselingPopup.popupShow(); // show
           }
+        });
+
+        window.addEventListener("load", () => {
+          stickyTabUI();
         });
       </script>
       @@include('./include/footer.html')

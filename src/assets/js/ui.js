@@ -312,6 +312,11 @@ const uiBase = {
       });
     });
   },
+  toggleItem() {
+    $(document).on("click", ".toggle_item", function () {
+      $(this).toggleClass("active");
+    });
+  },
 };
 
 /* popup */
@@ -874,5 +879,116 @@ function responFileLabelFunc(target) {
         $thisThCols.css("width", Math.max.apply(null, $thisMaxArray));
       }
     });
+  }
+}
+
+function stickyTabUI() {
+  const sticky_ui_container = document.querySelector(".sticky_ui");
+  const sticky_tab_area = sticky_ui_container.querySelector(".sticky_tab_area");
+  const sticky_tab_wrap = sticky_ui_container.querySelector(".floting_tab_wrap");
+  const sticky_tab_list = sticky_ui_container.querySelector(".floting_tab_wrap .boxtab_list");
+  const sticky_tab = sticky_ui_container.querySelectorAll(".floting_tab_wrap .boxtab");
+  let sticky_tab_active = Array.from(sticky_tab).find((tab) => tab.classList.contains("active"));
+  const sticky_section = document.querySelectorAll(".rise_contents_zone .rise_contents");
+  let contMargin = window.innerWidth > 1023 ? 60 : 30;
+  let tabclick_is = false;
+  initUpdate({
+    tabarea: sticky_tab_area,
+  });
+
+  sticky_tab.forEach((item, index) => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      const thisEventTarget = e.currentTarget;
+      const thisEventContent = document.querySelector(thisEventTarget.getAttribute("href"));
+      const thisEventParent = thisEventTarget.closest(".boxtab_list");
+      const thisEventParentHeight = thisEventParent.offsetHeight;
+
+      if (sticky_tab_active) {
+        sticky_tab_active.classList.remove("active");
+      }
+      thisEventTarget.classList.add("active");
+      sticky_tab_active = thisEventTarget;
+
+      if (!!thisEventContent) {
+        window.scrollTo({
+          top: thisEventContent.getBoundingClientRect().top + window.scrollY - thisEventParentHeight - contMargin,
+          left: 0,
+          behavior: "smooth",
+        });
+      }
+      tabclick_is = true;
+    });
+  });
+  window.addEventListener("scroll", () => {
+    fixedTabAction();
+    scrollMenuUpdate();
+  });
+
+  window.addEventListener("touchstart", () => {
+    tabclick_is = false;
+  });
+
+  window.addEventListener("mousewheel", () => {
+    tabclick_is = false;
+  });
+
+  window.addEventListener("mousedown", () => {
+    tabclick_is = false;
+  });
+  window.addEventListener("resize", () => {
+    initUpdate({
+      tabarea: sticky_tab_area,
+    });
+  });
+
+  function initUpdate({ tabarea }) {
+    const firstChild = tabarea.firstElementChild;
+    if (!firstChild) return;
+
+    tabarea.style.removeProperty("height");
+    tabarea.style.height = firstChild.getBoundingClientRect().height + "px";
+  }
+  function fixedTabAction() {
+    if (sticky_tab_area.getBoundingClientRect().top + window.scrollY <= window.scrollY) {
+      sticky_tab_wrap.classList.add("fixed");
+    } else {
+      sticky_tab_wrap.classList.remove("fixed");
+    }
+  }
+  function scrollMenuUpdate() {
+    if (tabclick_is) {
+      return;
+    }
+    const contentsPos = updateTabPos();
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight) {
+      // 스크롤을 끝까지 내렸을 때 실행
+      const last_tabmenu = sticky_tab[sticky_tab.length - 1];
+      if (sticky_tab_active) {
+        sticky_tab_active.classList.remove("active");
+      }
+      last_tabmenu.classList.add("active");
+      sticky_tab_active = last_tabmenu;
+      return;
+    }
+    sticky_tab.forEach((item, index) => {
+      if (window.scrollY > contentsPos[index]) {
+        item.classList.add("active");
+        if (sticky_tab_active) {
+          sticky_tab_active.classList.remove("active");
+        }
+        item.classList.add("active");
+        sticky_tab_active = item;
+      }
+    });
+  }
+  function updateTabPos() {
+    let posArray = [];
+    let listHeight = sticky_tab_list.getBoundingClientRect().height;
+    sticky_section.forEach((item, index) => {
+      posArray.push(item.getBoundingClientRect().top + window.scrollY - listHeight - contMargin);
+    });
+
+    return posArray;
   }
 }
