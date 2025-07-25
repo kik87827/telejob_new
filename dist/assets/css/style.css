@@ -4181,6 +4181,7 @@ button.swiper-pagination-bullet {
 
 .btn_actbox {
   display: inline-flex;
+  white-space: nowrap;
   gap: 2px;
   min-height: 36px;
   border: 1px solid #E6E6E6;
@@ -4214,6 +4215,12 @@ button.swiper-pagination-bullet {
   display: inline-block;
 }
 
+.btn_actbox_list {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  align-items: center;
+}
 .link-style {
   cursor: pointer;
 }
@@ -14706,6 +14713,46 @@ input.docu_big_input::placeholder {
     margin-top: 8px;
   }
 }
+.fdata_title_row {
+  margin-bottom: 48px;
+  border-bottom: 1px solid #E6E6E6;
+  border-top: 2px solid #BDC5D1;
+  display: flex;
+}
+.fdata_title_row .main_cols {
+  flex: 1;
+}
+.fdata_compact_wrap {
+  display: flex;
+}
+.fdata_compact_wrap .compact_cols {
+  flex: 1;
+  padding: 0 24px;
+  border-right: 1px solid #E6E6E6;
+}
+.fdata_compact_wrap .compact_cols:first-of-type {
+  padding-left: 0;
+}
+.fdata_compact_wrap .compact_cols:last-of-type {
+  border-right: 0;
+  padding-right: 0;
+}
+
+.fdata_fiqure_wrap {
+  height: 174px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fdata_fiqure_wrap > img {
+  height: 44px;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+
 /* main */
 .page_wrap.main {
   display: block;

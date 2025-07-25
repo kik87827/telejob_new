@@ -1,7 +1,8 @@
 .feature_detail_page{}
 .feature_gate_row{}
 .fdata_title_row{
-    .main_cols{}
+    margin-bottom:48px; border-bottom:1px solid #E6E6E6; border-top:2px solid #BDC5D1; display:flex;
+    .main_cols{flex:1;}
     .util_cols{
         .btn_actbox_list{}
     }
@@ -16,7 +17,12 @@
 }
 .fdata_compact_row{}
 .fdata_compact_wrap{
-    .compact_cols{}
+    display:flex;
+
+    .compact_cols{flex:1; padding:0 24px; border-right:1px solid #E6E6E6;
+        &:first-of-type{padding-left:0;}
+        &:last-of-type{border-right:0;padding-right:0;}
+    }
 }
 .fdata_thumnail_wrap{
     .thumnail_row{
@@ -25,7 +31,8 @@
     .spec_row{}
 }
 .fdata_fiqure_wrap{
-    > img{}
+    height:174px; display:flex; align-items:center; justify-content: center;
+    > img{height:44px; max-width:100%; object-fit: contain; object-position: 50% 50%;}
 }
 .fdata_imgspec_maincopy{}
 .fdata_imgspec_subcopy{}
@@ -51,4 +58,32 @@
         td{}
     }
 }
-.compact_chip_obj{}
+.compact_chip_obj{
+    .key_row{}
+    .data_row{}
+}
+.compact_chip_title{}
+.compact_each_wrap{}
+.compact_each_tb{
+    th,td{}
+    th{}
+    td{}
+    &.compact_each_tb{
+        th,td{}
+    }
+}
+.compact_each_thtext{}
+.compact_each_tdtext{}
+
+.fdata_btn_row{
+    &.btn_box_wrap{}
+    .btn_box{}
+}
+
+.feature_article_row{}
+.rise_tab_zone{}
+.floting_tab_wrap{
+    .boxtab_wrap{}
+}
+.rise_contents_zone{}
+.rise_contents{}
