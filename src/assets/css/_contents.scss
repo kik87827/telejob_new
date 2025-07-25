@@ -1098,12 +1098,18 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
     &:hover{text-decoration: underline;}
 }
 
-.des_tdcopy_group{}
+.des_tdcopy_group{text-align: left;padding:0 10px;}
 .des_copy_main_row{
+    display:flex; gap:4px; align-items: center;
     .btn_icon{}
 }
-.des_copy_main{}
+.des_copy_main{@include font2(16px,700,1.3,#000);}
 .des_copy_summary_row{
+    margin-top:16px;
+    .des_tuple_list{}
+}
+.des_tuple_tdwrap{
+    padding:0 10px;
     .des_tuple_list{}
 }
 

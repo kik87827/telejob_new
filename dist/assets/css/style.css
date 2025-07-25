@@ -8585,6 +8585,29 @@ input.input_sms_send::placeholder {
   text-decoration: underline;
 }
 
+.des_tdcopy_group {
+  text-align: left;
+  padding: 0 10px;
+}
+
+.des_copy_main_row {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.des_copy_main {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #000;
+}
+
+.des_copy_summary_row {
+  margin-top: 16px;
+}
+.des_tuple_tdwrap {
+  padding: 0 10px;
+}
 .normal_tdlink {
   color: #005AAB;
   font-size: 16px;
@@ -14447,6 +14470,18 @@ input.docu_big_input::placeholder {
 .des_tuple_list.cols_2 > li.full {
   flex: 0 0 100%;
 }
+.des_tuple_list.cols_2_2 {
+  gap: 10px 20px;
+}
+.des_tuple_list.cols_2_2 > li {
+  flex: 0 0 calc(60% - 20px);
+}
+.des_tuple_list.cols_2_2 > li:nth-child(2n) {
+  flex-basis: calc(40% - 20px);
+}
+.des_tuple_list.cols_2_2 > li.full {
+  flex: 0 0 100%;
+}
 .des_tuple_list > li {
   flex: 0 0 calc(33.3333333% - 20px);
 }
@@ -14623,6 +14658,171 @@ input.docu_big_input::placeholder {
   text-align: center;
   white-space: nowrap;
   font-family: "Spoqa", "NotoSans-Regular", dotum;
+}
+
+.craft_pair_zone {
+  padding: 45px 0 0 0;
+}
+
+.craft_pair_section {
+  margin-bottom: 56px;
+}
+.craft_pair_section:last-of-type {
+  margin-bottom: 0;
+}
+
+.craft_pair_title_row {
+  margin-bottom: 24px;
+}
+
+.craft_pair_title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #000000;
+}
+
+.pair_card_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-right: -16px;
+}
+.pair_card_list.cols_type2 > li {
+  flex: 0 0 calc(33.3333333% - 16px);
+}
+.pair_card_list > li {
+  flex: 0 0 calc(50% - 16px);
+}
+.pair_card_list > li.nodata_li {
+  padding: 0;
+  flex: 0 0 calc(100% - 16px) !important;
+}
+.pair_card_item {
+  display: flex;
+  border: 1px solid #E6E6E6;
+  border-radius: 16px;
+  padding: 16px 24px;
+  gap: 24px;
+  background: #fff;
+}
+.pair_card_item:hover {
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+}
+.pair_card_item .img_cols {
+  flex: 0 0 148px;
+}
+.pair_card_item .spec_cols {
+  flex: 1;
+  min-width: 0;
+  padding-top: 23px;
+}
+.pair_card_item.type2 {
+  flex-direction: column;
+  gap: 16px 0;
+  align-items: normal;
+}
+.pair_card_item.type2 .img_cols {
+  flex: 0;
+  max-width: 100px;
+}
+.pair_card_item.type2 .img_cols .pair_img_wrap {
+  height: 72px;
+  text-align: left;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.pair_card_item.type2 .img_cols .pair_img_wrap img {
+  -o-object-position: 0 50%;
+     object-position: 0 50%;
+}
+.pair_card_item.type2 .spec_cols {
+  flex: 0;
+  padding-top: 0;
+}
+
+.pair_img_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 114px;
+  font-size: 0;
+  line-height: 0;
+}
+.pair_img_wrap > img {
+  height: 44px;
+  width: 100%;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+
+.pair_main_copy,
+.pair_sub_copy,
+.pair_else_text {
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.pair_main_copy {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #000;
+}
+
+.pair_sub_copy {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #000;
+  margin-top: 4px;
+}
+
+.pair_else_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+.pair_else_text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #595959;
+  display: inline-block;
+}
+
+.nodata_copy_box {
+  padding: 50px 20px;
+  background: #F8F8F8;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+.nodata_copy_box.type2 {
+  background: none;
+}
+
+.nodata_primary_copy {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000;
+}
+
+.nodata_secondary_copy {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #595959;
+  margin-top: 8px;
 }
 
 @media (max-width: 1023px) {
