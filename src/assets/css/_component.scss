@@ -173,6 +173,13 @@
     display:flex; justify-content: flex-end; gap:8px; align-items: center; flex-wrap:wrap;
     > li{}
 }
+.data_rolebox_list{
+    display:flex; gap:5px 10px; align-items: center;
+    > li{
+
+    }
+}
+.btn_rolebox{@include font2(13px,700,1,#000); text-align: center; display:inline-block; padding:7px 16px;  border:1px solid #000000; border-radius: 100px;}
 
 //추가
 .link-style {
@@ -237,6 +244,10 @@
         &.gap_2{gap:4px;}
         .text_node{font-size:12px;}
     }
+    .data_rolebox_list{
+        gap:5px;
+    }
+    .btn_rolebox{ padding:7px 10px; font-size:12px;}
 
 }
 @media (max-width:$mobile){
