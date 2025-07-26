@@ -147,6 +147,85 @@ input.docu_big_input{height:76px;border:0;border-bottom:2px solid #1D1D1F;width:
     }
 }
 
+.draft_container{}
+.draft_long{}
+.draft_short{}
+.draft_block{}
+.draft_title_row{
+    .title_else_wrap{
+        .btn_actbox_list{}
+    }
+}
+.draft_title{}
+.draft_content{}
+.draft_guide_para{
+    & + .bullet_list{}
+}
+
+.process_diagram_wrap{}
+.process_diagram_list{
+    > li{}
+}
+.process_diagram_item{}
+.process_img_row{
+    img{}
+}
+.process_spec_row{}
+.process_spec_para{}
+
+.render_paper_box{}
+.paper_title_row{}
+.paper_title{}
+.paper_contents{
+    .pc_row{
+        &.define_current{}
+        &.define_summary{}
+        &.define_total{}
+    }
+}
+.paper_current_price_obj{
+    dt,dd{}
+    dt{
+        .key_text{}
+    }
+    dd{}
+}
+.price_package{
+    .price_main_number{}
+    .price_unit_text{}
+}
+.paper_form_obj{
+    > li{}
+}
+.paper_current_price_obj{
+    dt,dd{}
+    dt{}
+    dd{}
+    .key_text_wrap{}
+    .key_text{}
+    .key_sub_wrap{
+        .btn_node_only{}
+    }
+}
+.price_input_form{
+    input.price_input{}
+    .price_unit_text{}
+}
+.price_fraction_wrap{
+    .emp{}
+}
+.paper_total_price_obj{
+    dt,dd{}
+    dt{}
+    dd{}
+    .key_text{}
+    .key_sub_text{}
+    .price_package{
+        .price_main_number{}
+        .price_unit_text{}
+    }
+}
+
 @media (max-width:$mobile_large){
     .docform_templete{padding-top:20px;}
     .df_gate_row,

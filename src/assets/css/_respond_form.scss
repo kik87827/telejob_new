@@ -238,6 +238,24 @@ img.viewer_img{position:absolute;top:0;left:0;width:100%;height:100%; object-fit
     .text_node{@include font2(14px,400,1,#000000); display:inline-block;}
 }
 
+.rsdata_package{}
+.rsdata_main_text{}
+.rsdata_sub_text{}
+
+.with_number_obj{
+    .number_value{}
+    .number_unit{}
+}
+.field_tape_box{
+    .label_cols{
+        &.pos_dp{}
+    }
+    .form_cols{
+        .props_item_list{}
+    }
+}
+.ft_label_text{}
+
 @media (max-width:$pcwid_large){
     .tditems_list{
         &.type2, &.type3{
