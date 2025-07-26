@@ -197,7 +197,7 @@
 .pair_main_copy{ @include font2(16px,700,1.3,#000);}
 .pair_sub_copy{ @include font2(14px,400,1.3,#000); margin-top:4px;}
 .pair_else_container{
-    display:flex; justify-content: space-between; gap:10px; align-items: center; margin-top:10px;
+    display:flex; justify-content: space-between; gap:10px; align-items: center; margin-top:10px; font-size:0;line-height:0;
     .else_cols{
         .btn_icon{}
     }
@@ -210,6 +210,22 @@
 .nodata_primary_copy{@include font2(14px,400,1.4,#000);}
 .nodata_secondary_copy{@include font2(14px,400,1.4,#595959); margin-top:8px;}
 
+@media (max-width:$tablet){
+    .des_tuple_list{
+        &.tablet_break{
+             > li{
+                flex:0 0 100% !important;
+                .des_tuple_obj{
+                    width:100%;
+                    dt,
+                    dd{text-align: left;}
+                    dt{flex:0;}
+                    dd{flex:1;}
+                }
+            }
+        }    
+    }
+}
 @media (max-width:$mobile_large){
     .both_panel_container{
         flex-direction: column; align-items: normal; 
@@ -261,6 +277,64 @@
         .main_copy,
         .sub_copy{font-size:13px;}
     }
+
+    
+    .craft_pair_zone{padding:20px 0 0 0;}
+    .craft_pair_section{margin-bottom:30px;
+    }
+    .craft_pair_title_row{margin-bottom:12px;}
+    .craft_pair_title{font-size:16px;}
+    .pair_card_list{
+        display:flex; flex-wrap:wrap;gap:10px; margin-right:-10px;
+        &.cols_type2{
+            > li{
+                flex:0 0 calc(50% - 10px); 
+            }
+        }
+        > li{
+            flex:0 0 calc(50% - 10px); 
+            &.nodata_li{
+                padding:0; flex:0 0 calc(100% - 10px) !important; 
+                .nodata_copy_box{}
+            }
+        }
+    }
+    .pair_card_item{
+        border-radius:10px; padding:10px; gap:5px; flex-direction: column; align-items: normal;
+        .img_cols{
+            flex:0 0 80px;
+        }
+        .spec_cols{
+            padding-top:7px;
+        }
+        &.type2{
+            gap:5px 0;
+            .img_cols{
+                flex:0; max-width:100px; 
+                .pair_img_wrap{height:72px;
+                }
+            }
+            .spec_cols{
+                flex:0; padding-top:0;
+            }
+        }
+    }
+    .pair_img_wrap{
+       height:80px;
+        > img{height:30px;}
+    }
+    .pair_main_copy{font-size:14px;}
+    .pair_sub_copy{font-size:12px;}
+    .pair_else_container{
+        margin-top:12px;
+    }
+    .pair_else_text{ }
+
+    .nodata_copy_box{padding:30px 15px;  border-radius:10px;}
+    .nodata_primary_copy,
+    .nodata_secondary_copy{font-size:13px}
+    
+    .nodata_secondary_copy{margin-top:5px;}
 }
 
 @media (max-width:$mobile){
