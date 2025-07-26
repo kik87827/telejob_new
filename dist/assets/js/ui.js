@@ -1005,3 +1005,48 @@ function stickyTabUI() {
     return posArray;
   }
 }
+
+function floatingBottomLayer() {
+  const bottom_layer_wrap = $(".bottom_layer_wrap");
+  const bottom_layer_item = $(".bottom_layer_item");
+  const bottom_layer_control = bottom_layer_item.find(".btn_bl_control");
+  const middle_inner = $(".middle_inner");
+  const btn_topgo_wrap = $(".btn_topgo_wrap");
+
+  btn_topgo_wrap.hide();
+  action();
+  $(window).on("resize", () => {
+    action();
+  });
+
+  bottom_layer_control.attr("data-close", bottom_layer_control.text());
+
+  bottom_layer_control.on("click", function(e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $thisLayer = $this.closest(".bottom_layer_item");
+    $thisLayer.toggleClass("close");
+    if ($thisLayer.hasClass("close")) {
+      $this.find(".text_node").text($this.attr("data-open"));
+    } else {
+      $this.find(".text_node").text($this.attr("data-close"));
+    }
+    action();
+  });
+
+  function action() {
+    let marginValue = $(window).width() > 1023 ? 80 : 40;
+    middle_inner.css("padding-bottom", "");
+    //bottom_layer_wrap.css("margin-bottom", "");
+    if (bottom_layer_wrap.length === 0 && middle_inner.length === 0) {
+      return;
+    }
+    if ($(window).width() > 1023) {
+      //bottom_layer_wrap.css("margin-bottom", "");
+      middle_inner.css("padding-bottom", bottom_layer_item.outerHeight() + marginValue);
+    } else {
+      //bottom_layer_wrap.css("margin-bottom", 90);
+      middle_inner.css("padding-bottom", marginValue);
+    }
+  }
+}
