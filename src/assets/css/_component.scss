@@ -793,6 +793,17 @@ select.form_select{
         }
         > li{flex:0 0 100% !important;}
     }
+
+    .props_item_list{
+        &.mb_break{
+            display:flex; flex-wrap:wrap;margin-right:-10px; gap:10px;
+            > li{flex:0 0 calc(50% - 10px)}
+            > li{&.full{flex:1;}}
+        }
+    }
+    .props_item{
+        &.gap2{gap:6px}
+    }
 }
 @media (max-width:$mobile_size3){
     input.form_input{
