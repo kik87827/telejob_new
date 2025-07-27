@@ -68,8 +68,12 @@ img.ico_img{max-width:100%;}
 .vhidden{}
 .mb_br{display:none;}
 .pc_br{display:block;}
+.pc_wide_br{display:block;}
 .pc_item{}
 
+@media (max-width:$pcwid_large2){
+    .pc_wide_br{display:none;}
+}
 @media (max-width:$mobile_large){
     .pc_item{display:none !important;}
     .pc_br{display:none !important;}

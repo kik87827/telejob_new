@@ -16,3 +16,24 @@
 }
 .view_util_item{@include font2(14px,500,1.3,#595959);}
 .view_board_row{}
+
+@media (max-width:$tablet){
+}
+@media (max-width:$mobile_large){
+    .view_section_title_row{ gap:5px; flex-direction: column; align-items: normal;padding:10px;}
+    .view_linked_wrap{
+        gap:0; flex-direction: column; align-items: normal;
+        .linked_cols{}
+    }
+    .linked_flag{margin-top:0; white-space: normal; font-size:13px;}
+    .view_section_title{font-size:16px;}
+    .view_util_wrap{white-space: normal; margin-top:5px;font-size:13px; }
+    .view_util_item_list{
+        gap:10px;
+        > li{}
+    }
+    .view_util_item{font-size:13px;}
+    .view_board_row{}
+}
+@media (max-width:$mobile){
+}

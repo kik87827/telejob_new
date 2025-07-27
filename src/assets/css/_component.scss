@@ -270,6 +270,11 @@
         }
         
         .btn_box:not(.sm_size2):only-child{max-width:150px; min-width:150px !important; margin:0 auto;}
+        
+        &.align_type2{
+            text-align: right; align-items: flex-end;
+            .btn_box{margin:0 !important;}
+        }
     }
     .btn_box{min-height:45px;gap:5px;
         .ico{width:18px;height:18px;flex-basis:18px;}
@@ -310,6 +315,10 @@
             width:16px;height:16px; flex:0 0 16px;
         }
         .text_node{font-size:13px;}
+    }
+
+    .btn_chipcard{
+        height:30px;padding:0 10px; line-height:28px;
     }
 }
 @media (max-width:$mobile){
