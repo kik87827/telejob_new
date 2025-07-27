@@ -239,22 +239,24 @@ img.viewer_img{position:absolute;top:0;left:0;width:100%;height:100%; object-fit
 }
 
 .rsdata_package{}
-.rsdata_main_text{}
-.rsdata_sub_text{}
+.rsdata_main_text{@include font2(16px,400,1.3,#000);}
+.rsdata_sub_text{@include font2(14px,400,1.3,#595959); margin-top:4px;}
 
 .with_number_obj{
-    .number_value{}
-    .number_unit{}
+    display:inline-flex; gap:3px; align-items: center;
+    .number_value{@include font2(16px,400,1.3,#000000); @include spoca;}
+    .number_unit{@include font2(14px,400,1.3,#595959);}
 }
 .field_tape_box{
+    display:flex; padding:18px; justify-content: space-between; align-items: center; background:#F8F8F8;
     .label_cols{
-        &.pos_dp{}
+        &.pos_dp{visibility: hidden}
     }
     .form_cols{
         .props_item_list{}
     }
 }
-.ft_label_text{}
+.ft_label_text{@include font2(16px,400,1.3,#000000);}
 
 @media (max-width:$pcwid_large){
     .tditems_list{

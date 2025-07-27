@@ -20,7 +20,7 @@
                       <div class="title_else_wrap">
                         <ul class="btn_actbox_list">
                           <li class="pc_item">
-                            <a href="#" class="btn_actbox gap2">
+                            <a href="#" class="btn_actbox gap_2">
                               <i class="ico print"></i>
                               <span class="text_node">견적서 출력하기</span>
                             </a>
@@ -33,7 +33,7 @@
                         <table class="respond_tb">
                           <colgroup>
                             <col />
-                            <col style="width: 20%" />
+                            <col style="width: 17%" />
                             <col style="width: 12%" />
                             <col style="width: 12%" />
                             <col style="width: 12%" />
@@ -501,64 +501,81 @@
                   </div>
                 </div>
                 <div class="draft_short">
-                  <div class="render_paper_box">
-                    <div class="paper_title_row"><p class="paper_title">최종 결제 금액</p></div>
-                    <div class="paper_contents">
-                      <div class="pc_row define_current">
-                        <dl class="paper_current_price_obj">
-                          <dt><span class="key_text">총 상품 가격</span></dt>
-                          <dd>
-                            <div class="price_package">
-                              <strong class="price_main_number">480,000</strong>
-                              <span class="price_unit_text">원</span>
-                            </div>
-                          </dd>
-                        </dl>
-                      </div>
-                      <div class="pc_row define_summary">
-                        <ul class="paper_form_obj">
-                          <li>
-                            <dl class="paper_current_price_obj">
-                              <dt>
-                                <div class="key_text_wrap">
-                                  <span class="key_text">텔레잡 포인트</span>
-                                </div>
-                                <div class="key_sub_wrap"><a href="#" class="btn_node_only">전액사용</a></div>
-                              </dt>
-                              <dd>
-                                <div class="price_input_form">
-                                  <input type="text" class="price_input" value="0" />
-                                  <span class="price_unit_text">원</span>
-                                </div>
-                                <!-- prettier-ignore -->
-                                <div class="price_fraction_wrap">(잔여 <strong class="emp">2,000</strong> 원)</div>
-                              </dd>
-                            </dl>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="pc_row define_total">
-                        <dl class="paper_total_price_obj">
-                          <dt>
-                            <strong class="key_text">총 결제금액</strong>
-                            <p class="key_sub_text">(부가세포함)</p>
-                          </dt>
-                          <dd>
-                            <div class="price_package">
-                              <strong class="price_main_number">432,000</strong>
-                              <span class="price_unit_text">원</span>
-                            </div>
-                          </dd>
-                        </dl>
+                  <div class="render_sticky_wrap">
+                    <div class="render_paper_box">
+                      <div class="paper_title_row"><p class="paper_title">최종 결제 금액</p></div>
+                      <div class="paper_contents">
+                        <div class="pc_row define_current">
+                          <dl class="paper_sum_price_obj">
+                            <dt><span class="key_text">총 상품 가격</span></dt>
+                            <dd>
+                              <div class="price_package">
+                                <strong class="price_main_number">480,000</strong>
+                                <span class="price_unit_text">원</span>
+                              </div>
+                            </dd>
+                          </dl>
+                        </div>
+                        <div class="pc_row define_summary">
+                          <ul class="paper_form_obj">
+                            <li>
+                              <dl class="paper_current_price_obj">
+                                <dt>
+                                  <div class="key_text_wrap">
+                                    <span class="key_text_sub">총 할인금액</span>
+                                  </div>
+                                </dt>
+                                <dd>
+                                  <div class="price_package">
+                                    <strong class="price_sub_number">- 48,000</strong>
+                                    <span class="price_unit_text">원</span>
+                                  </div>
+                                </dd>
+                              </dl>
+                            </li>
+                            <li>
+                              <dl class="paper_current_price_obj">
+                                <dt>
+                                  <div class="key_text_wrap">
+                                    <span class="key_text">텔레잡 포인트</span>
+                                  </div>
+                                  <div class="key_sub_wrap"><a href="#" class="btn_node_only">전액사용</a></div>
+                                </dt>
+                                <dd>
+                                  <div class="price_input_form">
+                                    <input type="text" class="price_input" value="0" />
+                                    <span class="price_unit_text">원</span>
+                                  </div>
+                                  <!-- prettier-ignore -->
+                                  <div class="price_fraction_wrap">(잔여 <strong class="emp">2,000</strong> 원)</div>
+                                </dd>
+                              </dl>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="pc_row define_total">
+                          <dl class="paper_total_price_obj">
+                            <dt>
+                              <strong class="key_text">총 결제금액</strong>
+                              <p class="key_sub_text">(부가세포함)</p>
+                            </dt>
+                            <dd>
+                              <div class="price_package">
+                                <strong class="price_main_number">432,000</strong>
+                                <span class="price_unit_text">원</span>
+                              </div>
+                            </dd>
+                          </dl>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="btn_submit_card_wrap">
-                    <div class="short_cols">
-                      <a href="#" class="btn_submit_card"><span class="text_node">취소</span></a>
-                    </div>
-                    <div class="long_cols">
-                      <a href="#" class="btn_submit_card primary"><span class="text_node">결제하기</span></a>
+                    <div class="btn_submit_card_wrap">
+                      <div class="short_cols">
+                        <a href="#" class="btn_submit_card"><span class="text_node">취소</span></a>
+                      </div>
+                      <div class="long_cols">
+                        <a href="#" class="btn_submit_card primary"><span class="text_node">결제하기</span></a>
+                      </div>
                     </div>
                   </div>
                 </div>

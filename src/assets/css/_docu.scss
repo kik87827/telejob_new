@@ -147,85 +147,120 @@ input.docu_big_input{height:76px;border:0;border-bottom:2px solid #1D1D1F;width:
     }
 }
 
-.draft_container{}
-.draft_long{}
-.draft_short{}
-.draft_block{}
+.draft_container{display:flex;gap:36px;}
+.draft_long{flex:1; min-width:0;}
+.draft_short{flex:0 0 300px;}
+.draft_block{
+    margin-bottom:50px;
+    &:last-of-type{margin-bottom:0;}
+}
 .draft_title_row{
+    display:flex; margin-bottom:16px; justify-content: space-between; gap:20px; align-items: center;
     .title_else_wrap{
         .btn_actbox_list{}
     }
 }
-.draft_title{}
+.draft_title{@include font2(16px,500,1,#000000);}
 .draft_content{}
 .draft_guide_para{
-    & + .bullet_list{}
+    font-size:13px;
+    & + .bullet_list{margin-top:12px;}
 }
 
-.process_diagram_wrap{}
+.process_diagram_wrap{margin-top:48px;}
 .process_diagram_list{
-    > li{}
+    display:flex; gap:80px;
+    > li{
+        flex:1; position:relative; 
+        &:after{display:block;content:'';width:60px;height:60px; @include bgicon; background-image:url("../images/ico_arrow_dia.png"); position:absolute;top:50%;right:-70px; transform: translateY(-50%);}
+        &:last-of-type{
+            &:after{display:none;}
+        }
+    }
 }
 .process_diagram_item{}
 .process_img_row{
     img{}
 }
-.process_spec_row{}
-.process_spec_para{}
+.process_spec_row{text-align: center;}
+.process_spec_para{@include font2(14px,400,1.3,#000000); margin:30px -40px 0;}
 
-.render_paper_box{}
-.paper_title_row{}
-.paper_title{}
+.render_paper_box{border:2px solid #0053C2; border-radius:12px;padding:24px 16px 40px}
+.paper_title_row{padding-bottom:24px;border-bottom:1px solid #BDC5D1;}
+.paper_title{@include font2(20px,500,1,#000000);}
 .paper_contents{
+    padding-top:30px;
     .pc_row{
+        margin-bottom:36px;
+        &:last-of-type{margin-bottom:0;}
         &.define_current{}
-        &.define_summary{}
+        &.define_summary{background:#F8F8F8; border-radius:4px; padding:16px 12px;}
         &.define_total{}
     }
 }
-.paper_current_price_obj{
+.paper_sum_price_obj{
+    display : flex; justify-content: space-between; gap:20px; align-items: center;
     dt,dd{}
     dt{
-        .key_text{}
+        .key_text{@include font2(16px,400,1,#000);}
+    }
+    dd{}
+}
+.paper_current_price_obj{
+    display : flex; justify-content: space-between; gap:20px; align-items: center;
+    dt,dd{}
+    dt{
+        .key_text{@include font2(14px,400,1,#000);}
     }
     dd{}
 }
 .price_package{
-    .price_main_number{}
-    .price_unit_text{}
+    display:inline-flex; align-items: center; gap:3px;
+    .price_main_number{@include spoca; @include font2(20px,700,1,#B5000F);}
+    .price_sub_number{@include spoca; @include font2(16px,400,1,#000);}
+    .price_unit_text{@include font2(14px,400,1.3,#595959);}
 }
 .paper_form_obj{
-    > li{}
+    > li{
+        margin-bottom:24px;
+        &:last-of-type{margin-bottom:0;}
+    }
 }
 .paper_current_price_obj{
-    dt,dd{}
-    dt{}
-    dd{}
-    .key_text_wrap{}
+    display : flex;gap:20px; align-items: center;
+    dt,dd{flex:1;}
+    dt{white-space: nowrap;}
+    dd{text-align: right}
+    .key_text_wrap{display:flex; min-height:40px; align-items: center}
     .key_text{}
+    .key_text_sub{@include font2(14px,400,1.3,#000000);}
     .key_sub_wrap{
+        margin-top:4px;
         .btn_node_only{}
     }
 }
 .price_input_form{
-    input.price_input{}
-    .price_unit_text{}
+    display:flex; justify-content: flex-end; max-width:110px; align-items: center; gap:3px; height:40px;border:1px solid #E6E6E6; padding:0 10px; box-sizing: border-box; border-radius:8px; background-color: #fff;
+    input.price_input{height:38px; background:none;border:0; text-align: right; @include spoca;}
+    .price_unit_text{@include font2(14px,400,1,#AAAAAA); }
 }
 .price_fraction_wrap{
-    .emp{}
+    margin-top:4px; @include font2(13px,400,1.3,#595959);
+    .emp{@include spoca; color:#000;}
 }
 .paper_total_price_obj{
+    display : flex; justify-content: space-between; gap:20px; align-items: center;
     dt,dd{}
     dt{}
     dd{}
-    .key_text{}
-    .key_sub_text{}
+    .key_text{@include font2(16px,500,1,#000000)}
+    .key_sub_text{color:#595959;margin-top:2px;}
     .price_package{
-        .price_main_number{}
+        .price_main_number{font-size:24px;}
         .price_unit_text{}
     }
 }
-
+.render_sticky_wrap{position:sticky;top:20px;}
 @media (max-width:$mobile_large){
     .docform_templete{padding-top:20px;}
     .df_gate_row,
