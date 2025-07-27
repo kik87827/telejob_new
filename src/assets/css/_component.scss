@@ -228,7 +228,8 @@
     .ico{width:24px;height:24px; flex:0 0 24px; @include bgicon; background-image:url("../images/ico_toggle_close.png");}
 }
 .btn_chipcard{
-    &.primary{}
+    display:inline-block; height:36px; box-sizing: border-box; white-space:nowrap; border:1px solid #000; @include font2(13px,700,34px,#000000); padding:0 16px; border-radius: 100px;
+    &.primary{border-color:#005AAB; color:#005AAB;}
 }
 
 //추가
