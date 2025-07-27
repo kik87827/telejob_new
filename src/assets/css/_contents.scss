@@ -869,6 +869,7 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
         .form_select{min-width:120px;}
     }
     &.type2{background:none;padding:0;}
+    &.align_type2{justify-content: flex-end}
 }
 .sort_fraction_text{
     @include font(13px, 700, 1, 0, #000);
@@ -982,6 +983,8 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
 .list_table_thtext{@include font(14px,400,1,0,#000);}
 .list_table_tdtext{@include font(16px,400,1.3,0,#000); @include spoca;}
 .list_td_item_wrap{display:flex; position:relative;top:-1px;}
+.ico_reply{}
+.flag_smbox{}
 .list_td_item{flex:1; @include clamp(1); @include font(16px,400,1.3,0,#000);}
 .nodata_tdtext{@include font(16px,400,1,0,#000);}
 

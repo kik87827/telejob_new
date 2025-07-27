@@ -52,6 +52,9 @@
         .props_label{white-space: nowrap;}
    } 
 }
+.fset_data{
+    &.long_data{}
+}
 .linked_horitem_list{
     display:flex; align-items: center;
     > li{
@@ -257,6 +260,14 @@ img.viewer_img{position:absolute;top:0;left:0;width:100%;height:100%; object-fit
     }
 }
 .ft_label_text{@include font2(16px,400,1.3,#000000);}
+
+.td_dom_list{
+    > li{}
+}
+.upload_dom{
+    .ico{}
+    .text_node{}
+}
 
 @media (max-width:$pcwid_large){
     .tditems_list{

@@ -32,6 +32,7 @@
 .btn_box_text{@include font(20px, 700, 1, 0, #000); display:inline-block;}
 .btn_box_wrap{
     display:flex; justify-content: center; gap:12px; text-align:center; flex-wrap:wrap; position:relative;
+    &.align_type2{justify-content: flex-end;}
     &.each_type{
         .btn_box{
             flex:auto; min-width:260px; max-width:fit-content;
@@ -42,6 +43,7 @@
     }
     .btn_box{flex:1;max-width:260px;
         &.sm_size2{min-width:181px;}
+        &.sm_size3{max-width:200px;}
     }
     &.sub_bottom_pos{margin-top:64px;}
     &.size_wrap{
@@ -224,6 +226,9 @@
     display:inline-flex; gap:4px; align-items: center;
     .text_node{@include font2(14px,700,1,#fff);}
     .ico{width:24px;height:24px; flex:0 0 24px; @include bgicon; background-image:url("../images/ico_toggle_close.png");}
+}
+.btn_chipcard{
+    &.primary{}
 }
 
 //추가

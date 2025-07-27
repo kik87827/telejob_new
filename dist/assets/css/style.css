@@ -3808,6 +3808,9 @@ button.swiper-pagination-bullet {
   flex-wrap: wrap;
   position: relative;
 }
+.btn_box_wrap.align_type2 {
+  justify-content: flex-end;
+}
 .btn_box_wrap.each_type .btn_box {
   flex: auto;
   min-width: 260px;
@@ -3832,6 +3835,9 @@ button.swiper-pagination-bullet {
 }
 .btn_box_wrap .btn_box.sm_size2 {
   min-width: 181px;
+}
+.btn_box_wrap .btn_box.sm_size3 {
+  max-width: 200px;
 }
 .btn_box_wrap.sub_bottom_pos {
   margin-top: 64px;
@@ -8550,6 +8556,9 @@ input.input_sms_send::placeholder {
 .board_sort_row.type2 {
   background: none;
   padding: 0;
+}
+.board_sort_row.align_type2 {
+  justify-content: flex-end;
 }
 
 .sort_fraction_text {
@@ -15481,6 +15490,7 @@ input.docu_big_input::placeholder {
     margin-top: 24px;
   }
 }
+/* 서비스 이용안내 */
 /* text */
 .node_obj_package {
   display: flex;

@@ -311,3 +311,73 @@
         img{}
     }
 }
+
+
+/* 서비스 이용안내 */
+.stylebox_grid_wrap{}
+.stylebox_grid_list{
+    > li{
+        &.full{}
+    }
+}
+.stylebox_item{
+    .copy_cols{}
+    .img_cols{}
+    &.skin2{}
+    &.skin3{}
+    &.skin4{}
+}
+.sb_title_row{}
+.sb_title_node{}
+.sb_title_emp{}
+.sb_cont_main_ment{}
+.sb_cont_sub_ment{}
+.sb_cont_row{}
+.shape_wrap{
+    img{}
+}
+.sb_process_list{
+    > li{
+        &:after{}
+        &:last-of-type{
+             &:after{}
+        }
+    }
+}
+.sb_cont_main_ment{}
+.sb_cont_sub_ment{}
+.sb_cont_sub2_ment{}
+
+.shape_step_wrap{
+
+}
+.shape_step_list{
+    > li{
+        &:after{}
+        &:last-of-type{
+             &:after{}
+        }
+    }
+}
+.shape_step_item{
+
+}
+.shape_node_group{
+    .text_node{}
+}
+.shape_spec_group{
+
+}
+.main_spec_copy{}
+.sub_spec_copy{}
+
+.remark_guide_wrap{}
+.remark_block{
+    &:last-of-type{}
+}
+.remark_title{}
+.remark_content{}
+.remark_card_box{}
+.remark_card_title{}
+.remark_card_cont{}
+.remark_card_copy{}
