@@ -1305,6 +1305,43 @@ li.nodata_li{
         
     }
 }
+
+.swiper{
+    &.company_swiper_list{
+        .swiper-wrapper{}
+        .swiper-slide{}
+    }
+}
+.digest_card{
+  .img_row{
+
+  }  
+  .spec_row{
+
+  }
+}
+.digest_imgwrap{
+    img{}
+}
+.digest_main_copy{}
+.compact_info_box{
+    .img_cols{}
+    .spec_cols{}
+}
+.compact_imgwrap{
+    img{}
+}
+.compact_spec_tb{}
+.compact_spec_tr{}
+.compact_cell_group{}
+.compact_cell{
+    &.define_th{}
+    &.define_td{}
+}
+.compact_thtext{}
+.compact_tdtext{}
+.compact_tdlink{}
+
 @media (max-width:$pcwid_large){
     .list_spec_obj{flex-direction: column;}
 }
