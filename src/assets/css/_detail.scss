@@ -137,59 +137,81 @@
 }
 
 .api_info_templete{
+    display:flex; gap:60px; min-height:438px;
+    .spec_cols,
+    .api_cols{flex:1;}
     .spec_cols{}
-    .api_cols{}
+    .api_cols{border:1px solid #e6e6e6;display:flex;flex-direction: column;
+        
+    }
 }
-.api_map_render{}
-.api_main_copy{}
+.api_map_render{flex:1;position:relative;}
+.api_main_copy{margin-bottom:48px; @include font2(20px,400,1.4,#000); text-align:center;}
 .explan_info_tb_wrap{}
 .explan_info_tb{
+    width:100%;
     tr{
         &:last-of-type{
-            th,td{}
+            th,td{padding-bottom:0;}
         }
-        th,td{}
-        th{}
+        th,td{text-align:left; padding-bottom:24px;vertical-align:top;}
+        th{width:120px; white-space:nowrap;padding-right:30px; box-sizing: border-box}
         td{
             .bullet_info_list{}
         }
     }
 }
-.explan_info_thtext{}
+.explan_info_thtext{@include font2(16px,400,1.4,#595959);}
 .explan_info_tditem_group{
+    display:flex; gap:5px 12px; flex-wrap:wrap; align-items:center;
     .btn_actbox{
         .text_node{}
     }
 }
-.explan_info_tdtext{}
-.explan_info_tdlink{}
-.overview_obj_container{
-    .obj_cols{}
+.explan_info_tdtext,
+.explan_info_tdlink{@include font2(16px,400,1.4,#000);}
+.explan_info_tdlink{text-decoration:underline !important; display:inline-flex; align-items:center; gap:8px;
+    .ico{@include bgicon; width:24px;height:24px ;flex:0 0 24px; background-image:url("../images/ico_blank_24.png"); position:relative;top:1px;}
 }
-.overview_title_row{}
-.overview_title{}
+.overview_obj_wrap{position:relative; overflow:hidden;}
+.overview_obj_container{
+    display:flex; gap:60px; flex-wrap:wrap; margin-right:-60px;
+    .obj_cols{flex:0 0 calc(50% - 60px)}
+}
+.overview_title_row{margin-bottom:36px;}
+.overview_title{@include font2(16px,500,1.3,#000);}
 .overview_contents{
     .explan_info_tb_wrap{}
 }
 .band_info_tb_wrap{}
 .band_info_tb{
+    width:100%;
     tr{
         &:last-of-type{
-            th,td{}
+            th,td{padding-bottom:0;}
         }
     }
-    th,td{}
-    th{}
-    td{}
+    th,td{text-align:left;padding-bottom:24px;vertical-align: top;}
+    th{width:1px; padding-right:24px;}
+    td{padding-top:5px;}
 }
+
+
+.band_info_thtext{
+    display:inline-flex; min-height:32px; align-items: center; justify-content: center; box-sizing: border-box; padding:6px 16px 7px; white-space:nowrap;
+    border:1px solid #005AAB; border-radius:100px; @include font2(13px,700,1,#005AAB); background:#fff; white-space: nowrap;
+}
+
 .recom_keyword_list{
+    display:flex; flex-wrap:wrap; gap:8px;
      > li{
 
      }
 }
 .recom_keyword{
+    padding:10px 24px; min-height:52px; border:1px solid #E6E6E6; border-radius:100px; @include font2(20px,400,1.3,#595959); display:inline-flex; box-sizing: border-box; text-align:center; align-items: center;
     &:hover,
-    &.active{}
+    &.active{color:#000;border-color:#000; font-weight:700;}
     &:hover{}
     &.active{}
 }
@@ -280,6 +302,70 @@
     }
     .arc_btn_row{
         &.btn_box_wrap{margin-top:30px;}
+    }
+
+
+    
+    .api_info_templete{
+        gap:30px; min-height:0; flex-direction: column; align-items: normal;
+        .spec_cols,
+        .api_cols{flex:0;}
+    }
+    .api_map_render{min-height:400px;}
+    .api_main_copy{margin-bottom:30px; font-size:16px;}
+    .explan_info_tb{
+        tr{
+            th,td{padding-bottom:15px;}
+            th{width:1px;padding-right:20px; }
+            td{
+                .bullet_info_list{}
+            }
+        }
+    }
+    .explan_info_thtext{font-size:14px;}
+    .explan_info_tditem_group{
+        display:block;
+        .explan_info_tdtext{display:block;}
+        .btn_actbox{
+            margin-top:5px;
+            .text_node{}
+        }
+    }
+    .explan_info_tdtext,
+    .explan_info_tdlink{font-size:14px;}
+    .explan_info_tdlink{
+        gap:5px;
+        .ico{width:20px;height:20px ;flex:0 0 20px;}
+    }
+    .overview_obj_wrap{position:relative; overflow:hidden;}
+    .overview_obj_container{
+        gap:35px 0; margin-right:0; flex-direction: column;
+        .obj_cols{flex:0 0 100%}
+    }
+    .overview_title_row{margin-bottom:15px;}
+    .overview_title{font-size:16px;}
+    .overview_contents{
+        .explan_info_tb_wrap{}
+    }
+    .band_info_tb_wrap{}
+    .band_info_tb{
+        th,td{}
+        th{padding-right:15px;}
+    }
+
+
+    .band_info_thtext{
+       
+    }
+
+    .recom_keyword_list{
+        display:flex; flex-wrap:wrap; gap:8px;
+        > li{
+
+        }
+    }
+    .recom_keyword{
+        padding:5px 12px; min-height:30px; font-size:14px;
     }
 }
 

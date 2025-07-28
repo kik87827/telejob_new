@@ -163,7 +163,7 @@
         &.email{background-image:url("../images/ico_email_24.png");}
         &.print{background-image:url("../images/ico_print_24.png");}
         &.star{background-image:url("../images/ico_scrap_star_24.png");}
-        &.marker{}
+        &.marker{background-image:url("../images/ico_marker_16.png");}
     }
     &.active{
         .ico{
@@ -171,6 +171,10 @@
         }
     }
     &.gap_2{gap:8px;}
+    &.sm{
+        min-height:32px;
+        .ico{width:16px;height:16px; flex-basis:16px;}
+    }
     .text_node{@include font2(14px,700,1,#000); display:inline-block;}
 }
 .btn_actbox_list{
