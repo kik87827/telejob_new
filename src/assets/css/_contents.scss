@@ -2344,6 +2344,18 @@ strong.color_emp{font-weight:700;}
 .indent_note_bullet{flex:0;white-space:nowrap;}
 .indent_note_liquid{flex:1;}
 
+.bullet_info_list{
+    > li{
+        &:before{}
+        &:last-of-type{margin-bottom:0;}
+    }
+}
+
+.nobullet_info_list{
+    > li{
+        &:last-of-type{margin-bottom:0;}
+    }
+}
 
 .dark_emp{
     color:#000 !important;

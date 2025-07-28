@@ -11499,6 +11499,14 @@ strong.color_emp {
   flex: 1;
 }
 
+.bullet_info_list > li:last-of-type {
+  margin-bottom: 0;
+}
+
+.nobullet_info_list > li:last-of-type {
+  margin-bottom: 0;
+}
+
 .dark_emp {
   color: #000 !important;
 }
@@ -17179,6 +17187,10 @@ input.docu_big_input::placeholder {
 }
 .rise_contents:last-of-type {
   margin-bottom: 0;
+}
+
+.rise_linkage_zone img {
+  vertical-align: top;
 }
 
 .arc_block {

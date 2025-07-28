@@ -85,6 +85,9 @@
 .rise_contents{margin-bottom:136px;
     &:last-of-type{margin-bottom:0;}
 }
+.rise_linkage_zone{
+    img{vertical-align:top;}
+}
 
 .archive_container{}
 .arc_block_wrap{}
@@ -131,6 +134,64 @@
 }
 .arc_btn_row{
     &.btn_box_wrap{margin-top:48px;}
+}
+
+.api_info_templete{
+    .spec_cols{}
+    .api_cols{}
+}
+.api_map_render{}
+.api_main_copy{}
+.explan_info_tb_wrap{}
+.explan_info_tb{
+    tr{
+        &:last-of-type{
+            th,td{}
+        }
+        th,td{}
+        th{}
+        td{
+            .bullet_info_list{}
+        }
+    }
+}
+.explan_info_thtext{}
+.explan_info_tditem_group{
+    .btn_actbox{
+        .text_node{}
+    }
+}
+.explan_info_tdtext{}
+.explan_info_tdlink{}
+.overview_obj_container{
+    .obj_cols{}
+}
+.overview_title_row{}
+.overview_title{}
+.overview_contents{
+    .explan_info_tb_wrap{}
+}
+.band_info_tb_wrap{}
+.band_info_tb{
+    tr{
+        &:last-of-type{
+            th,td{}
+        }
+    }
+    th,td{}
+    th{}
+    td{}
+}
+.recom_keyword_list{
+     > li{
+
+     }
+}
+.recom_keyword{
+    &:hover,
+    &.active{}
+    &:hover{}
+    &.active{}
 }
 
 @media (max-width:$pcwid){
