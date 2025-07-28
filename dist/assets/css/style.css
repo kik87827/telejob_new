@@ -11365,6 +11365,9 @@ input.ui_input {
 .color_emp.black {
   color: #000 !important;
 }
+.color_emp.sky {
+  color: #00A7FC !important;
+}
 .color_emp.red {
   color: #B5000F !important;
 }
@@ -15465,7 +15468,6 @@ input.docu_big_input::placeholder {
   border: 1px solid #E6E6E6;
   padding: 24px 36px;
 }
-
 .render_pos_box {
   border: 1px solid #E6E6E6;
   border-radius: 16px;
