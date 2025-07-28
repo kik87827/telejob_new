@@ -1120,6 +1120,8 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
     &.clamp01{@include clamp(1);}
 }
 .respond_tdlink{@include clamp(2); color:#005AAB; font-size:14px;
+    &.clamp_01{@include clamp(1);}
+    &.dark{color:#000;}
     &:hover{text-decoration: underline;}
 }
 

@@ -9042,6 +9042,16 @@ input.input_sms_send::placeholder {
   color: #005AAB;
   font-size: 14px;
 }
+.respond_tdlink.clamp_01 {
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.respond_tdlink.dark {
+  color: #000;
+}
 .respond_tdlink:hover {
   text-decoration: underline;
 }
