@@ -480,6 +480,7 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   padding: 36px 0 0 0;
   position: relative;
   z-index: 50;
+  background: #fff;
 }
 .header_wrap.type2 .header_main_row {
   justify-content: space-between;
@@ -15781,6 +15782,95 @@ input.docu_big_input::placeholder {
   margin-top: 24px;
   text-align: center;
 }
+.service_step_list {
+  display: flex;
+  gap: 20px 60px;
+}
+.service_step_list > li {
+  position: relative;
+  flex: 1;
+}
+.service_step_list .step_arrow {
+  width: 60px;
+  flex: 0 0 60px;
+  position: absolute;
+  top: 0;
+  right: -60px;
+  height: 120px;
+}
+.service_step_list .step_arrow:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -5px;
+  width: 18px;
+  height: 18px;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.service_step_item {
+  flex: 1;
+  text-align: center;
+}
+.service_step_item .img_row {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+.service_step_item .img_row img {
+  vertical-align: top;
+}
+.service_step_item .spec_row {
+  margin-top: 24px;
+}
+
+.service_step_maincopy {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #000;
+}
+
+.service_step_subcopy {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000;
+}
+
+@media (max-width: 1299px) {
+  .service_step_list {
+    gap: 20px 40px;
+  }
+  .service_step_list .step_arrow {
+    width: 40px;
+    flex: 0 0 40px;
+    right: -40px;
+    height: 90px;
+  }
+  .service_step_list .step_arrow:after {
+    margin-left: -5px;
+  }
+  .service_step_item .img_row {
+    width: 90px;
+    height: 90px;
+  }
+  .service_step_item .spec_row {
+    margin-top: 18px;
+    /*  br{display:none;} */
+  }
+  .service_step_maincopy {
+    font-size: 14px;
+  }
+  .service_step_subcopy {
+    font-size: 14px;
+  }
+}
 @media (max-width: 1023px) {
   .stack_title {
     font-size: 14px;
@@ -15959,6 +16049,33 @@ input.docu_big_input::placeholder {
     border-radius: 10px;
     padding: 20px;
     margin-top: 24px;
+  }
+  .service_step_wrap {
+    position: relative;
+    overflow: hidden;
+  }
+  .service_step_list {
+    gap: 20px 40px;
+    flex-wrap: wrap;
+    margin-right: -40px;
+  }
+  .service_step_list > li {
+    flex: 0 0 calc(50% - 40px);
+  }
+  .service_step_list > li:nth-child(2n) .step_arrow {
+    display: none;
+  }
+  .service_step_list .step_arrow {
+    width: 40px;
+    flex: 0 0 40px;
+    right: -40px;
+    height: 90px;
+  }
+  .service_step_maincopy {
+    font-size: 14px;
+  }
+  .service_step_subcopy {
+    font-size: 13px;
   }
 }
 /* 서비스 이용안내 */
