@@ -402,7 +402,7 @@ input.file_input{display:none;}
 
 .form_notice_box{background:#333;margin-bottom:48px;padding:28px 36px;}
 .fn_title_row{
-    display:flex; gap:14px; align-items: center; margin-bottom:50px;
+    display:flex; gap:14px; align-items: center; margin-bottom:20px;
     .ico_cols{
         .ico{
             width:46px;height:46px; border:2px solid #fff; border-radius:100%; @include bgicon;
@@ -1271,7 +1271,7 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
     .props_dom{}
     .props_label{}
 }
-.sc_table_block{margin-top:48px;}
+.sc_table_block{margin-top:38px;}
 
 .td_title_package{}
 .td_title_main{@include font2(16px,400,1.3,#000);}

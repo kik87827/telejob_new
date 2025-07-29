@@ -3843,6 +3843,9 @@ button.swiper-pagination-bullet {
   flex: 1;
   max-width: 260px;
 }
+.btn_box_wrap .btn_box.sm_size1 {
+  min-width: 161px;
+}
 .btn_box_wrap .btn_box.sm_size2 {
   min-width: 181px;
 }
@@ -7761,7 +7764,7 @@ input.file_input {
   display: flex;
   gap: 14px;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 .fn_title_row .ico_cols .ico {
   width: 46px;
@@ -9481,7 +9484,7 @@ input.input_sms_send::placeholder {
   align-items: center;
 }
 .sc_table_block {
-  margin-top: 48px;
+  margin-top: 38px;
 }
 
 .td_title_main {
@@ -13624,7 +13627,7 @@ strong.color_emp {
 
 .fset_thtext {
   display: inline-block;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   color: #595959;
@@ -13654,12 +13657,10 @@ strong.color_emp {
 }
 
 .fset_data {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  min-height: 38px;
+  /* display:flex; flex-wrap:wrap; align-items: center; min-height:38px; */
   padding: 10px 0;
   box-sizing: border-box;
+  display: inline-block;
 }
 
 .linked_horitem_list {
