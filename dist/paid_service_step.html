@@ -524,7 +524,7 @@
 																	, 21일 이상
 																	<span class="color_emp red">z20%</span>
 																</li>
-																<li>30일 이상 결제 시, 해당 일수만큼 풀옵션(8,800원) 서비스 추가</li>
+																<li class="color_emp black">30일 이상 결제 시, 해당 일수만큼 풀옵션(8,800원) 서비스 추가</li>
 															</ul>
 														</div>
 													</div>
@@ -656,17 +656,20 @@
 								</div>
 								<div class="render_cols">
 									<div class="boxtab_wrap">
-										<ul class="boxtab_list">
+										<ul class="boxtab_list" id="render_tabmenu_group">
 											<li>
-												<a href="#" class="boxtab active"><span class="boxtab_text">PC 노출위치</span></a>
+												<a href="#render_tc01" class="boxtab active"><span class="boxtab_text">PC 노출위치</span></a>
 											</li>
 											<li>
-												<a href="#" class="boxtab"><span class="boxtab_text">모바일 노출위치</span></a>
+												<a href="#render_tc02" class="boxtab"><span class="boxtab_text">모바일 노출위치</span></a>
 											</li>
 										</ul>
 									</div>
-									<div class="render_pos_box">
-										<img src="./assets/images/ex_img.png" alt="" />
+									<div class="render_pos_box" id="render_tabcont_group">
+										<div class="render_tabcont active" id="render_tc01">
+											<img src="./assets/images/ex_img.png" alt="" />
+										</div>
+										<div class="render_tabcont" id="render_tc02">모바일 노출위치</div>
 									</div>
 								</div>
 							</div>
@@ -1907,6 +1910,15 @@
 				callback(value) {
 					console.log(value);
 				},
+			});
+			// "#render_tabmenu_group .tabmenu", "#render_tabcont_group", ".render_tabcont"
+
+			document.addEventListener("DOMContentLoaded", () => {
+				tabUI([{
+					tabmenu: "#render_tabmenu_group .boxtab",
+					tabcontgroup: "#render_tabcont_group",
+					tabcont: ".render_tabcont"
+				}]);
 			});
 		</script>
 		<script>

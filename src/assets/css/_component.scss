@@ -234,7 +234,7 @@
     > li{}
 }
 .btn_taskbox{
-    display:inline-flex; min-height:52px; align-items: center; text-align: center; gap:4px; padding:14px 24px; box-sizing: border-box; background:#0053C2; border-radius:100px;
+    display:inline-flex; justify-content:center; min-height:52px; align-items: center; text-align: center; gap:4px; padding:14px 24px; box-sizing: border-box; background:#0053C2; border-radius:100px;
     .ico{
         width:24px;height:24px; flex:0 0 24px; @include bgicon;
         &.pay{background-image:url("../images/ico_submit_shape_03.png")}
