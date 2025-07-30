@@ -72,6 +72,43 @@
       <!-- // popup -->
       <script>
         document.addEventListener("DOMContentLoaded", function () {
+          // main right banner
+          mvSticky();
+
+          // main banner
+          let mv_banner = new Swiper(".mv_cardbanner_wrap", {
+            loop: true,
+            speed: 500,
+            autoplay: {
+              delay: 4000,
+              disableOnInteraction: false,
+            },
+            pagination: {
+              el: ".mv_fraction_wrap",
+              type: "fraction",
+              renderFraction: function (currentClass, totalClass) {
+                // 여기에서 직접 원하는 구조로 조합
+                return `
+                  <span class="${currentClass}"></span><span class="slash">/</span><span class="${totalClass}"></span>
+                `;
+              },
+            },
+          });
+          const autobtn = document.querySelector(".btn_mv_timer.auto");
+          const stopbtn = document.querySelector(".btn_mv_timer.stop");
+          autobtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.currentTarget.style.display = "none";
+            stopbtn.style.display = "block";
+            mv_banner.autoplay.start();
+          });
+          stopbtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.currentTarget.style.display = "none";
+            autobtn.style.display = "block";
+            mv_banner.autoplay.stop();
+          });
+
           // 인스턴스 선언
           let noticeMainPopup = new DesignPopup({
             selector: "#noticeMainPopup",

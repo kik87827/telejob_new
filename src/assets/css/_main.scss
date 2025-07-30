@@ -11,9 +11,9 @@
 .mv_container_tb{
     display:flex; gap:24px;padding:48px 0;
     .mv_cols{
-        &.cols_01{flex:0 0 340px;}
+        &.cols_01{flex:0 0 340px; width:340px;}
         &.cols_02{flex:1;}
-        &.cols_03{flex:0 0 312px;}
+        &.cols_03{flex:0 0 312px; width:312px;}
     }
 }
 .mv_cols_title_row{display:flex; justify-content: space-between; align-items: center; margin-bottom:24px;}
@@ -41,7 +41,7 @@
     }
     > li{
         flex:0 0 100%; position:relative;
-        &.hover{
+        &:hover{
             z-index:5;
             .mv_banner_box{
                 z-index:0;
@@ -60,16 +60,16 @@
     background:#fff; border:1px solid #E6E6E6; border-radius:24px; padding:24px 24px 16px; position:relative;
     .inner_contents{
         position:relative;z-index:1;
-        .img_row{}
+        .img_row{margin-bottom:24px;}
         .spec_row{}
         .btn_else_row{}
     }
     .hover_contents{
-        display:none; position:absolute;top:0;left:0;width:100%;min-height:100%; box-sizing:border-box;padding:3px;
-        .img_row{}
+        display:none; position:absolute;top:0;left:0;width:100%;min-height:542px; box-sizing:border-box;padding:3px;
+        .img_row{margin-bottom:42px;}
         .spec_row{}
-        .btn_else_row{}
-        .mv_img_wrap{height:174px;margin-bottom:42px;}
+        .btn_else_row{margin-top:13px;}
+        .mv_img_wrap{height:174px;}
         &:before{
             display:block;
             content: "";
@@ -126,26 +126,26 @@
     display:flex; justify-content: center; align-items: center; height:84px;
     img{height:54px; max-width:70%; object-fit: contain; object-position: 50% 50%;vertical-align:top;}
 }
-.mv_main_copy{text-align:center; @include font2(24px,700,1.4,#000); @include clamp(1); height:34px;}
-.mv_sub_copy{margin-top:8px; @include font2(16px,400,1.4,#595959); @include clamp(2); height:45px;}
+.mv_main_copy{text-align:center; @include font2(24px,700,1.4,#000); @include clamp(1); height:34px;overflow:hidden;}
+.mv_sub_copy{margin-top:8px; @include font2(16px,400,1.4,#595959); @include clamp(2); height:45px;overflow:hidden;}
 .mv_summary_block{margin-top:42px;border:1px solid #E6E6E6; border-radius:12px; padding:16px 12px;}
 .mv_summay_tb{
     width:100%;
-    th,td{}
+    th,td{padding-bottom:8px;}
     th{}
-    td{}
+    td{text-align:left;padding-left:8px;}
     tr{
         &:last-of-type{
-            th{}
-            td{}
+            th,
+            td{padding-bottom:0;}
         }
     }
 }
 
 
-.mv_thtext{display:inline-block; background:#F8F8F8; border-radius:4px;}
-.mv_tdtext{}
-.mv_tapebanner_wrap{}
+.mv_thtext{display:block; text-align:center; background:#F8F8F8; border-radius:4px;height:26px;@include font2(13px,400,26px,#000000);padding:0 10px;}
+.mv_tdtext{display:inline-block; @include font2(16px,500,26px,#000);}
+.mv_tapebanner_wrap{min-height:230px;}
 .mv_tapebanner_list{
     > li{
         margin-bottom:4px;
@@ -153,12 +153,12 @@
     }
 }
 .mv_tapebanner_item{
-    display:flex; align-items: center; padding:10px 24px; gap:24px; background:#fff; border:1px solid #E6E6E6; border-radius:16px;
+    display:flex; align-items: center; padding:8px 24px; gap:24px; box-sizing:border-box; background:#fff; border:1px solid #E6E6E6; border-radius:16px; min-height:74px;
     .img_cols{}
     .spec_cols{
-        .btn_else_row{}
+        .btn_else_row{margin-top:4px;}
     }
-    &:hover{}
+    &:hover{border-color:#000;box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);}
 }
 .mv_tapeimg_wrap{
     img{}
@@ -175,15 +175,23 @@
     img{vertical-align: top;}
 }
 .mv_cardbanner_control_layer{
-    position:absolute;top:12px;right:20px; z-index: 5;
+    position:absolute;top:12px;right:20px; z-index: 5; height:24px; display:flex; align-items: center; background:rgba(0,0,0,.25); border-radius:100px; padding:0 0 0 8px;
+    @include font2(12px,700,1,#fff);
+    > *{@include font2(12px,700,1,#fff);}
 }
-.mv_fraction_wrap{}
-.mv_auto_stop_cols{}
+.mv_fraction_wrap{flex:1; min-width:0;}
+.mv_auto_stop_cols{flex:0;display:flex; align-items:center;}
 .btn_mv_timer{
-    &.auto{}
+    display:block;width:24px;height:24px;@include bgicon; background-image:url("../images/ico_play_stop_24.png");
+    &.auto{background-position:0 100%; display:none;}
     &.stop{}
 }
-.mv_sticky_layer{position:absolute;top:48px;right:-174px;}
+.layer_get_stan{position:absolute;top:48px;height:0;}
+.mv_sticky_layer{position:absolute;top:48px;right:-174px;
+    &.fixed{position:fixed; top:20px; width:100%;max-width: 1340px; left:50%; transform:translateX(-50%);
+        .mv_sticky_item{position:absolute;top:0;right:-204px;}
+    }
+}
 .mv_sticky_item{ width:180px; position:sticky; top:0; text-align: center;}
 .mv_sticky_title{@include font2(24px,700,1.3,#000); margin-bottom:24px;}
 .mv_vbox_wrap{}
@@ -193,16 +201,17 @@
         &:last-of-type{margin-bottom:0;}
     }
 }
-.mv_vbox{display:block; background:#fff; border:1px solid #E6E6E6; border-radius:12px;}
+.mv_vbox{display:block; background:#fff; border:1px solid #E6E6E6; border-radius:12px; padding:18px 12px;}
 .mv_vimg_row{}
 .mv_vboxthum_wrap{
-    img{}
+    display:flex; justify-content: center; align-items: center; height:40px;
+    img{height:21px;width:100%; max-width:70%; object-fit: contain; object-position: 50% 50%; vertical-align:middle;}
 }
 .mv_vspec_row{
-
+    margin-top:12px;
 }
-.mv_vspec_main{}
-.mv_vspec_sub{}
+.mv_vspec_main{@include font2(13px,500,1.3,#000); @include clamp(1);}
+.mv_vspec_sub{@include font2(12px,400,1.3,#000); @include clamp(2);margin-top:4px; height:32px; overflow:hidden;}
 .mv_sticky_copy_wrap{margin-top:24px;}
 .mv_sticky_copy{}
 
@@ -783,7 +792,7 @@
         .spec_row{}
         
     }
-    .hover_contents{display:none;position:absolute; top:100%;left:-1px;background:#fff;width:100%; border:1px solid #1D1D1F; box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12); border-top:0; border-radius:0 0 24px 24px;
+    .hover_contents{display:none;position:absolute; top:100%;left:-1px; min-height:315px; background:#fff;width:100%; border:1px solid #1D1D1F; box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12); border-top:0; border-radius:0 0 24px 24px;
         &:before{display:block;content:'';width:100%;height:20px; background:#fff;position:absolute;top:-20px;left:0;}
         > *{position:relative;z-index:1;}
     }
