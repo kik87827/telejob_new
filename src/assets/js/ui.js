@@ -1073,19 +1073,27 @@ function mvSticky() {
   // window.scrollTo(0, 0);
   const layer_get_stan = document.querySelector(".layer_get_stan");
   const mv_sticky_layer = document.querySelector(".mv_sticky_layer");
-  let mv_sticky_pos = !!layer_get_stan ? layer_get_stan.getBoundingClientRect().top + window.scrollY : 0;
 
-  scrollAction();
-
-  window.addEventListener("scroll", () => {
-    scrollAction();
+  action();
+  window.addEventListener("resize", () => {
+    action();
   });
 
-  function scrollAction() {
-    if (window.scrollY >= mv_sticky_pos) {
-      mv_sticky_layer.classList.add("fixed");
-    } else {
-      mv_sticky_layer.classList.remove("fixed");
+  function action() {
+    let mv_sticky_pos = !!layer_get_stan ? layer_get_stan.getBoundingClientRect().top + window.scrollY : 0;
+
+    scrollAction();
+
+    window.addEventListener("scroll", () => {
+      scrollAction();
+    });
+
+    function scrollAction() {
+      if (window.scrollY >= mv_sticky_pos) {
+        mv_sticky_layer.classList.add("fixed");
+      } else {
+        mv_sticky_layer.classList.remove("fixed");
+      }
     }
   }
 }
