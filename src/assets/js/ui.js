@@ -631,6 +631,7 @@ function tableTrSelector(selector) {
 function comboFunc() {
   const combo_item = document.querySelectorAll(".combo_item");
   const combo_option_group = document.querySelectorAll(".combo_option_group");
+
   addDynamicEventListener(document.body, "click", ".combo_target", function (e) {
     let thisTarget = e.target;
     let thisParent = thisTarget.closest(".combo_item");
@@ -647,6 +648,9 @@ function comboFunc() {
         element.classList.remove("active");
       }
     });
+
+    thisTarget.style.width = thisTarget.getBoundingClientRect().width + "px";
+
     appendOption = document.querySelector(`[data-option='${thisParent.getAttribute("id")}']`);
     combo_option_scroll = appendOption.querySelector(".combo_option_scroll");
     appendOptionListOption = combo_option_scroll.getAttribute("data-rowCount") !== null ? combo_option_scroll.getAttribute("data-rowCount") : 5;

@@ -3971,11 +3971,11 @@ button.swiper-pagination-bullet {
 
 .btn_tile {
   display: inline-flex;
-  min-height: 32px;
+  min-height: 26px;
   background-color: #00A7FC;
   border-radius: 4px;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 600;
   line-height: 1;
   color: #fff;
   align-items: center;
@@ -4068,7 +4068,7 @@ button.swiper-pagination-bullet {
 }
 .btn_ovalbox .text_node {
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
   color: #000;
   white-space: nowrap;
@@ -4742,7 +4742,7 @@ button.swiper-pagination-bullet {
 }
 
 .tailtab_wrap {
-  margin-bottom: 36px;
+  margin-bottom: 20px;
 }
 .tailtab_wrap.mb_type2 {
   margin-bottom: 8px;
@@ -6722,6 +6722,14 @@ select.form_select:required:invalid {
     width: 5px;
     height: 5px;
     margin-top: -4px;
+  }
+  .combo_item {
+    display: flex;
+    width: 100%;
+  }
+  .combo_target {
+    width: 100% !important;
+    flex: 1;
   }
 }
 .components_block {
@@ -9137,7 +9145,7 @@ input.input_sms_send::placeholder {
 }
 
 .preview_main_copy {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.3;
   color: #000;
@@ -9145,7 +9153,7 @@ input.input_sms_send::placeholder {
 }
 
 .preview_sub_copy {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
   line-height: 1.3;
   color: #595959;
@@ -9183,7 +9191,7 @@ input.input_sms_send::placeholder {
   align-items: center;
 }
 .preview_pair_obj .pair_key {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 1.3;
   color: #595959;
@@ -9194,7 +9202,7 @@ input.input_sms_send::placeholder {
   gap: 3px;
 }
 .pari_value_dom .value_bowl {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 1.3;
   color: #000;
@@ -9210,7 +9218,7 @@ input.input_sms_send::placeholder {
 }
 
 .vtile_title {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.3;
   color: #000;
@@ -9765,6 +9773,9 @@ li.nodata_li .nodata_li_para {
   }
   .board_front_row.align_type2 {
     text-align: left;
+  }
+  .board_front_row.align_type2 .sort_cols {
+    flex: 1;
   }
   .linked_key {
     font-size: 13px;
@@ -12443,7 +12454,7 @@ strong.color_emp {
   display: flex;
   padding: 24px 36px;
   gap: 60px;
-  margin-bottom: 48px;
+  margin-bottom: 18px;
   border: 1px solid #E6E6E6;
   border-radius: 16px;
 }
@@ -12574,7 +12585,7 @@ strong.color_emp {
   color: #000000;
 }
 .data_note_row {
-  margin: 0 40px 48px;
+  margin: 0 40px 38px;
 }
 .column_data_list {
   display: flex;
