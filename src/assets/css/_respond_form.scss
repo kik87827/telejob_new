@@ -38,7 +38,7 @@
     .props_cols_wrap + .multi_fileform_wrap{margin-top:10px;}
 }
 .fset_thtext{
-    display:inline-block; @include font2(16px,400,1.5,#595959);
+    display:inline-block; @include font2(14px,400,1.5,#595959);
     &.emp{
         color:#005AAB; font-weight:500;
     }
@@ -53,7 +53,7 @@
    } 
 }
 .fset_data{
-    display:flex; flex-wrap:wrap; align-items: center; min-height:38px;padding:10px 0; box-sizing: border-box;
+    /* display:flex; flex-wrap:wrap; align-items: center; min-height:38px; */padding:10px 0; box-sizing: border-box; display:inline-block;
 }
 .linked_horitem_list{
     display:flex; align-items: center;

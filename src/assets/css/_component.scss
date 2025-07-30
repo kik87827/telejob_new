@@ -42,6 +42,7 @@
         }
     }
     .btn_box{flex:1;max-width:260px;
+        &.sm_size1{min-width:161px;}
         &.sm_size2{min-width:181px;}
         &.sm_size3{max-width:200px;}
     }
