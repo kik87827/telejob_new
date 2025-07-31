@@ -9141,6 +9141,9 @@ input.input_sms_send::placeholder {
 .respond_tb tbody tr td.pc_hidden {
   display: none;
 }
+.respond_tb tbody tr td[colspan] {
+  background: #fff !important;
+}
 .respond_tb tbody tr:hover td {
   background: rgba(237, 242, 251, 0.5);
 }

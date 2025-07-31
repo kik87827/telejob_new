@@ -1099,6 +1099,9 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
                     .nodata_tdtext{}
                 }
                 &.pc_hidden{display:none;}
+                &[colspan]{
+                    background:#fff !important;
+                }
             }
             &:hover{
                 td{background: rgba(237, 242, 251, 0.5);}
