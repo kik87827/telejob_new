@@ -1095,10 +1095,13 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
                     text-align: left; 
                 }
                 &.nodata_td{
-                    padding:100px 20px;
+                    padding:100px 20px; background:#fff !important;
                     .nodata_tdtext{}
                 }
                 &.pc_hidden{display:none;}
+            }
+            &:hover{
+                td{background: rgba(237, 242, 251, 0.5);}
             }
         }
     }
@@ -1632,6 +1635,10 @@ li.nodata_li{
                     &.has_btn{text-align:right;}
                     &.mb_hidden{display:none;}
                     &.pc_hidden{display:block;}
+                }
+                
+                &:hover{
+                    td{background:#fff !important;}
                 }
             }
          }

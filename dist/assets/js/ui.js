@@ -870,6 +870,34 @@ function responThFunc(targets) {
   }
 }
 
+function responMaxFunc(targets) {
+  // 문자열이면 배열로 변환
+  const targetArray = typeof targets === "string" ? [targets] : targets;
+
+  const $elements = targetArray.map((selector) => $(selector)).filter(Boolean);
+
+  action(); // 초기 실행
+  $(window).on("resize", action); // 리사이즈 대응
+
+  function action() {
+    $elements.forEach(($fieldset) => {
+      $fieldset.each(function() {
+        const $thisTb = $(this);
+        const $thisThText = $thisTb.find(".cluster_thtext");
+        const $thisThCols = $thisTb.find(".th_cols");
+        let $thisMaxArray = [];
+        $thisThCols.css("flex-basis", "");
+
+        if ($(window).width() <= 1023) {}
+        $thisThText.each(function() {
+          $thisMaxArray.push($(this).outerWidth());
+        });
+        $thisThCols.css("flex-basis", Math.max.apply(null, $thisMaxArray));
+      });
+    });
+  }
+}
+
 function responFileLabelFunc(target) {
   const respond_fieldset_tb = $(target) || target;
   action();

@@ -318,7 +318,7 @@
 								<li><a href="#" class="btn_filter">금융컨설턴트(FC)</a></li>
 							</ul>
 						</div>
-						<div class="form_cluster_flex_wrap">
+						<div class="form_cluster_flex_wrap" id="cluster_flex_tb">
 							<ul class="form_cluster_flex_list">
 								<li>
 									<div class="cluster_cell_group">
@@ -440,96 +440,98 @@
 									</div>
 								</li>
 								<li>
-									<div class="cluster_cell_group">
-										<div class="th_cols"><span class="cluster_thtext">경력</span></div>
-										<div class="td_cols">
-											<div class="tditems_list">
-												<ul class="linked_horitem_list" style="width: 272px" data-pcwid="272px">
-													<li class="long">
-														<select class="form_select">
-															<option>전체</option>
-															<option>옵션 1</option>
-															<option>옵션 2</option>
-														</select>
-													</li>
-													<li class="short"><span class="horitem_unit">~</span></li>
-													<li class="long">
-														<select class="form_select">
-															<option>전체</option>
-															<option>옵션 1</option>
-															<option>옵션 2</option>
-														</select>
-													</li>
-												</ul>
-												<div class="tditems_slice_cols">
-													<div class="props_item">
-														<input type="checkbox" class="props_dom" id="insert_work" />
-														<label for="insert_work" class="props_label">무관포함</label>
+									<div class="cluster_cell_wrap">
+										<div class="cluster_cell_group">
+											<div class="th_cols"><span class="cluster_thtext">경력</span></div>
+											<div class="td_cols">
+												<div class="tditems_list">
+													<ul class="linked_horitem_list" style="width: 272px" data-pcwid="272px">
+														<li class="long">
+															<select class="form_select">
+																<option>전체</option>
+																<option>옵션 1</option>
+																<option>옵션 2</option>
+															</select>
+														</li>
+														<li class="short"><span class="horitem_unit">~</span></li>
+														<li class="long">
+															<select class="form_select">
+																<option>전체</option>
+																<option>옵션 1</option>
+																<option>옵션 2</option>
+															</select>
+														</li>
+													</ul>
+													<div class="tditems_slice_cols">
+														<div class="props_item">
+															<input type="checkbox" class="props_dom" id="insert_work" />
+															<label for="insert_work" class="props_label">무관포함</label>
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="cluster_cell_group">
-										<div class="th_cols"><span class="cluster_thtext">업종</span></div>
-										<div class="td_cols">
-											<select required class="form_select">
-												<option>전체</option>
-												<option>옵션 1</option>
-												<option>옵션 2</option>
-											</select>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="cluster_cell_group">
-										<div class="th_cols"><span class="cluster_thtext">연령</span></div>
-										<div class="td_cols">
-											<div class="tditems_list">
-												<select class="form_select" style="width: 272px" data-pcwid="272px">
+										<div class="cluster_cell_group">
+											<div class="th_cols"><span class="cluster_thtext">업종</span></div>
+											<div class="td_cols">
+												<select required class="form_select" style="width: 272px" data-pcwid="272px">
 													<option>전체</option>
 													<option>옵션 1</option>
 													<option>옵션 2</option>
 												</select>
-												<div class="tditems_slice_cols">
-													<div class="props_item">
-														<input type="checkbox" class="props_dom" id="insert_work2" />
-														<label for="insert_work2" class="props_label">무관포함</label>
+											</div>
+										</div>
+										<div class="cluster_cell_group">
+											<div class="th_cols"><span class="cluster_thtext">연령</span></div>
+											<div class="td_cols">
+												<div class="tditems_list">
+													<select class="form_select" style="width: 272px" data-pcwid="272px">
+														<option>전체</option>
+														<option>옵션 1</option>
+														<option>옵션 2</option>
+													</select>
+													<div class="tditems_slice_cols">
+														<div class="props_item">
+															<input type="checkbox" class="props_dom" id="insert_work2" />
+															<label for="insert_work2" class="props_label">무관포함</label>
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="cluster_cell_group">
-										<div class="th_cols"><span class="cluster_thtext">성별</span></div>
-										<div class="td_cols">
-											<ul class="props_item_list">
-												<li>
-													<div class="props_item">
-														<input type="radio" class="props_dom" name="gender_props" id="gender_props_01" />
-														<label for="gender_props_01" class="props_label">남</label>
-													</div>
-												</li>
-												<li>
-													<div class="props_item">
-														<input type="radio" class="props_dom" name="gender_props" id="gender_props_02" />
-														<label for="gender_props_02" class="props_label">여</label>
-													</div>
-												</li>
-											</ul>
+										<div class="cluster_cell_group">
+											<div class="th_cols"><span class="cluster_thtext">성별</span></div>
+											<div class="td_cols">
+												<div class="props_item_wrap minh">
+													<ul class="props_item_list">
+														<li>
+															<div class="props_item">
+																<input type="radio" class="props_dom" name="gender_props" id="gender_props_01" />
+																<label for="gender_props_01" class="props_label">남</label>
+															</div>
+														</li>
+														<li>
+															<div class="props_item">
+																<input type="radio" class="props_dom" name="gender_props" id="gender_props_02" />
+																<label for="gender_props_02" class="props_label">여</label>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
 										</div>
 									</div>
 								</li>
 							</ul>
 						</div>
 						<div class="cluster_btn_row btn_box_wrap">
-							<a href="#" class="btn_box primary">
+							<a href="#" class="btn_box primary sm_size4">
 								<i class="ico search_primary"></i>
-								<span class="text_node">검색하기</span>
+								<span class="btn_box_text">검색하기</span>
 							</a>
-							<a href="#" class="btn_box">
+							<a href="#" class="btn_box sm_size4">
 								<i class="ico reset"></i>
-								<span class="text_node">초기화</span>
+								<span class="btn_box_text">초기화</span>
 							</a>
 						</div>
 						<div class="board_container">
@@ -624,10 +626,74 @@
 													</dl>
 												</td>
 											</tr>
+											<tr>
+												<td>
+													<dl class="respond_td_obj">
+														<dt><span class="respond_tdkey">No.</span></dt>
+														<dd><span class="respond_tdtext spoca">0016</span></dd>
+													</dl>
+												</td>
+												<td>
+													<dl class="respond_td_obj">
+														<dt><span class="respond_tdkey">이름</span></dt>
+														<dd><span class="respond_tdtext">성◯◯ (여)</span></dd>
+													</dl>
+												</td>
+												<td>
+													<dl class="respond_td_obj">
+														<dt><span class="respond_tdkey">나이</span></dt>
+														<dd><span class="respond_tdtext">61세 (65년생)</span></dd>
+													</dl>
+												</td>
+												<td>
+													<dl class="respond_td_obj">
+														<dt><span class="respond_tdkey">희망근무지</span></dt>
+														<dd><span class="respond_tdtext">서울,인천,경기</span></dd>
+													</dl>
+												</td>
+												<td>
+													<dl class="respond_td_obj">
+														<dt><span class="respond_tdkey">희망업종</span></dt>
+														<dd><span class="respond_tdtext">상조/대출</span></dd>
+													</dl>
+												</td>
+												<td>
+													<dl class="respond_td_obj">
+														<dt><span class="respond_tdkey">희망직종</span></dt>
+														<dd><span class="respond_tdtext">TM지원</span></dd>
+													</dl>
+												</td>
+												<td>
+													<dl class="respond_td_obj">
+														<dt><span class="respond_tdkey">경력</span></dt>
+														<dd><span class="respond_tdtext">3년 11개월</span></dd>
+													</dl>
+												</td>
+												<td>
+													<dl class="respond_td_obj">
+														<dt><span class="respond_tdkey">수정일</span></dt>
+														<dd><span class="respond_tdtext spoca">2025.03.28</span></dd>
+													</dl>
+												</td>
+											</tr>
 										</tbody>
 									</table>
 								</div>
 								<!-- // board -->
+							</div>
+							<div class="board_paging_row">
+								<a href="javascript:;" class="btn_paging_control first"></a>
+								<a href="javascript:;" class="btn_paging_control prev"></a>
+								<ul class="paging_num_list">
+									<li><a href="javascript:;" class="btn_paging_num active">1</a></li>
+									<li><a href="javascript:;" class="btn_paging_num">2</a></li>
+									<li><a href="javascript:;" class="btn_paging_num">3</a></li>
+									<!-- <li><span class="btn_paging_num clamp_text">...</span></li> -->
+									<li><a href="javascript:;" class="btn_paging_num">4</a></li>
+									<li><a href="javascript:;" class="btn_paging_num">5</a></li>
+								</ul>
+								<a href="javascript:;" class="btn_paging_control next"></a>
+								<a href="javascript:;" class="btn_paging_control last"></a>
 							</div>
 						</div>
 					</div>
@@ -635,6 +701,11 @@
 			</div>
 		</section>
 		<!-- // middle -->
+		<script>
+			$(function() {
+				responMaxFunc("#cluster_flex_tb");
+			});
+		</script>
 		<div class="btn_topgo_wrap"><a href="#" class="btn_topgo"></a></div>
 		<footer class="footer_wrap">
 			<div class="footer_mobile_logo_row">
