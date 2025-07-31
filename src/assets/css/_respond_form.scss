@@ -294,6 +294,50 @@ img.viewer_img{position:absolute;top:0;left:0;width:100%;height:100%; object-fit
     .text_node{@include font2(14px,400,1.3,#000);}
 }
 
+.nesting_section_wrap{padding:12px 16px 24px; border-bottom:1px solid #E6E6E6;}
+.nesting_section{
+    margin-bottom:24px;
+    &:last-of-type{margin-bottom:0;}
+}
+.nesting_title_row{margin-bottom:16px;}
+.nesting_title{@include font2(16px,500,1.3,#000000);}
+.nesting_contents{}
+.nesting_formblock_wrap{}
+.nesting_formblock{
+    margin-bottom:24px;
+    &:last-of-type{margin-bottom:0;}
+}
+.btn_control_bottom{
+    &.btn_ovalbox_wrap{
+        display:flex; justify-content: flex-end; gap:8px; margin-top:24px;
+    }
+}
+.btn_handle_bottom{
+    &.btn_ovalbox_wrap{
+        padding-bottom:24px; border-bottom:1px solid #E6E6E6;
+        display:flex; justify-content: flex-end; gap:8px; margin-top:16px;
+    }
+}
+.handle_form_wrap{  
+    border-top:1px solid #BDC5D1;
+    .respond_fieldset_wrap{border-top-width:1px;}
+}
+.handle_form_block{
+    margin-bottom:16px;border-top:1px solid #BDC5D1;
+    &:last-of-type{margin-bottom:0;}
+}
+.handle_top_row{
+    display:flex; justify-content: space-between; gap:20px; padding:24px 16px; align-items:center;
+    .top_cols{
+        display:flex; gap:24px;
+    }
+}
+.inner_colobj_wrap{
+    display:flex; gap:24px; align-items:center;
+    .props_item{}
+}
+.colobj_keyword{@include font2(16px,500,1.3,#000);}
+
 @media (max-width:$pcwid_large){
     .tditems_list{
         &.type2, &.type3{
@@ -474,8 +518,23 @@ img.viewer_img{position:absolute;top:0;left:0;width:100%;height:100%; object-fit
     }
     .ft_label_text{font-size:14px; white-space: nowrap;
     }
+    .nesting_title_row{margin-bottom:10px;}
+    .nesting_title{font-size:14px;}
 
-    
+    .nesting_formblock{margin-bottom:15px;}
+
+    .btn_control_bottom{
+        &.btn_ovalbox_wrap{margin-top:15px;}
+    }
+    .nesting_section_wrap{padding:15px;}
+    .handle_top_row{gap:10px;padding:15px;}
+    .inner_colobj_wrap{gap:10px;}
+    .colobj_keyword{font-size:14px;}
+    .btn_handle_bottom{
+        &.btn_ovalbox_wrap{
+            padding-bottom:15px;
+        }
+    }
 }
 @media (max-width:$mobile){
     .fset_td_inner_flex{
