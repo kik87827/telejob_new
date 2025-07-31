@@ -3797,6 +3797,12 @@ button.swiper-pagination-bullet {
 .btn_box .ico.star {
   background-image: url("../images/ico_btn_star.png");
 }
+.btn_box .ico.search_primary {
+  background-image: url("../images/ico_search_primary_24.png");
+}
+.btn_box .ico.reset {
+  background-image: url("../images/ico_reset2_24.png");
+}
 .btn_box.active .ico.star {
   background-position: 0 100%;
 }
@@ -8666,6 +8672,10 @@ input.input_sms_send::placeholder {
   }
 }
 /* board layout */
+.cluster_btn_row + .board_container {
+  margin-top: 24px;
+}
+
 .board_sort_row {
   display: flex;
   background: #F8F8F8;
@@ -12873,6 +12883,10 @@ strong.color_emp {
 /* etc */
 .mb_sm_br {
   display: none;
+}
+
+.mt24 {
+  margin-top: 24px !important;
 }
 
 .mt48 {

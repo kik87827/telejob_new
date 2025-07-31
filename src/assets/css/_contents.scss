@@ -861,6 +861,7 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
 }
 
 /* board layout */
+.cluster_btn_row + .board_container{margin-top:24px;}
 .board_container{}
 .board_sort_row{
     display:flex; background:#F8F8F8; justify-content: space-between; gap:20px; align-items:center; margin-bottom:12px; padding: 8px 16px;
@@ -2966,6 +2967,7 @@ strong.color_emp{font-weight:700;}
 
 /* etc */
 .mb_sm_br{display:none;}
+.mt24{margin-top:24px !important;}
 .mt48{margin-top:48px !important;}
 @media (max-width:$mobile_size3){
    .mb_sm_br{display:block;}

@@ -22,6 +22,12 @@
         &.star{
             background-image:url("../images/ico_btn_star.png");
         }
+        &.search_primary{
+            background-image:url("../images/ico_search_primary_24.png");
+        }
+        &.reset{
+            background-image:url("../images/ico_reset2_24.png");
+        }
     }
     &.active{
         .ico{
@@ -727,6 +733,18 @@ select.form_select{
 }
 .mobile_sm_placeholder,
 .mobile_placeholder{font-size:12px; color:#aaa; margin-top:10px; display:none;}
+
+.btn_filter_wrap{
+
+}
+.btn_filter_list{
+    > li{
+
+    }
+}
+.btn_filter{
+    &.active{}
+}
 @media (max-width:$tablet){
     /* .btn_inline_control{padding:12px 20px;} */
     
