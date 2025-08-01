@@ -441,6 +441,19 @@
     &.mb_type2{margin-bottom:8px;}
     &.mb_type3{margin-bottom:16px;}
     &.mb_type4{margin-bottom:48px;}
+
+    &.flex_type{
+        display:flex; align-items:flex-start; gap:30px; position:relative;
+        .tailtab_list{
+            min-height:60px;
+            .tailtab{min-width:200px; padding:14px 20px;}
+            &:before{display:none;}
+        }
+        > .combo_item{flex:1;
+            .combo_target{width:auto !important;}
+        }
+        &:before{display:block;content:'';height:1px;position:absolute;bottom:0;left:0;width:100%;background:#0053C2;}
+    }
 }
 .tailtab_list{
     display:flex;position:relative; min-height: 52px;
@@ -479,6 +492,15 @@
     .boxtab_list{min-height:45px;}
 
     .tailtab_wrap{margin-bottom:24px;
+        &.flex_type{
+            &:before{display:none;}
+            flex-direction: column; align-items:normal;
+            gap:16px;
+             .tailtab_list{
+                flex:1;
+                 .tailtab{min-width:0;}
+             }
+        }
         &.mb_type4{margin-bottom:24px;}
     }
 

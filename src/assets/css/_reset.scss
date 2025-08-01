@@ -70,6 +70,7 @@ img.ico_img{max-width:100%;}
 .pc_br{display:block;}
 .pc_wide_br{display:block;}
 .pc_item{}
+.mb_item{display:none !important;}
 
 .swiper,.swiper-container{
     img, a {
@@ -92,6 +93,7 @@ img.ico_img{max-width:100%;}
     .pc_item{display:none !important;}
     .pc_br{display:none !important;}
     .mb_br{display:block !important;}
+    .mb_item{display:block !important;}
 }
 @media (max-width:$mobile){
     .mb_hide{display:none !important;}

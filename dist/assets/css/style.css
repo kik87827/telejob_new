@@ -275,6 +275,10 @@ img.ico_img {
   display: block;
 }
 
+.mb_item {
+  display: none !important;
+}
+
 .swiper img, .swiper a, .swiper-container img, .swiper-container a {
   user-drag: none; /* Safari/Chrome 전용 */
   -webkit-user-drag: none; /* Safari */
@@ -300,6 +304,9 @@ img.ico_img {
     display: none !important;
   }
   .mb_br {
+    display: block !important;
+  }
+  .mb_item {
     display: block !important;
   }
 }
@@ -4791,6 +4798,38 @@ button.swiper-pagination-bullet {
 .tailtab_wrap.mb_type4 {
   margin-bottom: 48px;
 }
+.tailtab_wrap.flex_type {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  position: relative;
+}
+.tailtab_wrap.flex_type .tailtab_list {
+  min-height: 60px;
+}
+.tailtab_wrap.flex_type .tailtab_list .tailtab {
+  min-width: 200px;
+  padding: 14px 20px;
+}
+.tailtab_wrap.flex_type .tailtab_list:before {
+  display: none;
+}
+.tailtab_wrap.flex_type > .combo_item {
+  flex: 1;
+}
+.tailtab_wrap.flex_type > .combo_item .combo_target {
+  width: auto !important;
+}
+.tailtab_wrap.flex_type:before {
+  display: block;
+  content: "";
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #0053C2;
+}
 
 .tailtab_list {
   display: flex;
@@ -4886,6 +4925,20 @@ button.swiper-pagination-bullet {
   }
   .tailtab_wrap {
     margin-bottom: 24px;
+  }
+  .tailtab_wrap.flex_type {
+    flex-direction: column;
+    align-items: normal;
+    gap: 16px;
+  }
+  .tailtab_wrap.flex_type:before {
+    display: none;
+  }
+  .tailtab_wrap.flex_type .tailtab_list {
+    flex: 1;
+  }
+  .tailtab_wrap.flex_type .tailtab_list .tailtab {
+    min-width: 0;
   }
   .tailtab_wrap.mb_type4 {
     margin-bottom: 24px;
