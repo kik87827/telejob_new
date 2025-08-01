@@ -4692,6 +4692,8 @@ button.swiper-pagination-bullet {
   }
   .btn_box {
     min-height: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .btn_text_single {
     font-size: 11px;
@@ -5659,6 +5661,9 @@ select.form_select:required:invalid {
     font-size: 13px;
     padding-top: 3px;
   }
+  .props_cols_list.mb_basis_33 > li {
+    flex: 0 0 33.333333333% !important;
+  }
   .props_cols_list > li {
     flex: 0 0 50% !important;
   }
@@ -5682,6 +5687,14 @@ select.form_select:required:invalid {
   }
   textarea.box_textarea.medium {
     height: 130px;
+  }
+  .btn_filter_list {
+    gap: 8px;
+  }
+  .btn_filter {
+    min-height: 30px;
+    padding: 5px 15px;
+    font-size: 13px;
   }
 }
 @media (max-width: 767px) {
@@ -14331,6 +14344,7 @@ img.viewer_img {
 }
 .cluster_cell_group .td_cols {
   flex: 1;
+  padding-right: 40px;
 }
 .cluster_cell_group .td_cols .props_cols_list {
   padding: 0;
@@ -14339,6 +14353,10 @@ img.viewer_img {
   top: 2px;
   min-width: 125px;
 }
+.cluster_cell_group:last-of-type .td_cols {
+  padding-right: 0;
+}
+
 .cluster_thtext {
   font-size: 16px;
   font-weight: 500;
@@ -14631,8 +14649,13 @@ img.viewer_img {
 }
 
 @media (max-width: 1440px) {
-  .tditems_list.type2 > .inline_connect_list, .tditems_list.type3 > .inline_connect_list {
+  .tditems_list.type2 > .break_long,
+.tditems_list.type2 > .inline_connect_list, .tditems_list.type3 > .break_long,
+.tditems_list.type3 > .inline_connect_list {
     flex: 1;
+  }
+  .tditems_list.type2 > .break_long, .tditems_list.type3 > .break_long {
+    width: 100%;
   }
   .tditems_list.type3 {
     gap: 5px 10px;
@@ -14691,6 +14714,9 @@ img.viewer_img {
   }
   .word_slice_package .box_input_with_wrap {
     flex: 1;
+  }
+  .cluster_cell_group .cluster_thtext {
+    min-width: 80px;
   }
 }
 @media (max-width: 1023px) {
@@ -14822,9 +14848,19 @@ img.viewer_img {
   .form_cluster_list > li .td_cols {
     padding: 0 8px;
   }
+  .cluster_cell_group .cluster_thtext {
+    min-width: 0;
+  }
+  .cluster_cell_group .td_cols {
+    padding-right: 0;
+  }
   .cluster_thtext {
-    font-size: 14px;
-    top: 0;
+    font-size: 13px;
+    top: 10px;
+    min-width: 0;
+  }
+  .cluster_cell_wrap .cluster_cell_group .cluster_thtext {
+    top: 11px;
   }
   .getchip_container {
     min-height: 50px;
@@ -14887,6 +14923,12 @@ img.viewer_img {
   }
   .btn_handle_bottom.btn_ovalbox_wrap {
     padding-bottom: 15px;
+  }
+  .cluster_cell_wrap .cluster_cell_group {
+    flex: 0 0 100%;
+  }
+  .cluster_cell_group {
+    gap: 0 20px;
   }
 }
 @media (max-width: 767px) {

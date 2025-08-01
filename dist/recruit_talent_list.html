@@ -325,7 +325,7 @@
 										<div class="th_cols"><span class="cluster_thtext">지역</span></div>
 										<div class="td_cols">
 											<div class="props_cols_wrap">
-												<ul class="props_cols_list cols_6">
+												<ul class="props_cols_list cols_6 mb_basis_33">
 													<li>
 														<div class="props_item">
 															<input type="checkbox" class="props_dom" id="local_chk_01" />
@@ -444,8 +444,8 @@
 										<div class="cluster_cell_group">
 											<div class="th_cols"><span class="cluster_thtext">경력</span></div>
 											<div class="td_cols">
-												<div class="tditems_list">
-													<ul class="linked_horitem_list" style="width: 272px" data-pcwid="272px">
+												<div class="tditems_list type2">
+													<ul class="linked_horitem_list break_long" style="width: 272px" data-pcwid="272px">
 														<li class="long">
 															<select class="form_select">
 																<option>전체</option>
@@ -524,12 +524,12 @@
 								</li>
 							</ul>
 						</div>
-						<div class="cluster_btn_row btn_box_wrap">
+						<div class="cluster_btn_row btn_box_wrap nobreak">
 							<a href="#" class="btn_box primary sm_size4">
 								<i class="ico search_primary"></i>
 								<span class="btn_box_text">검색하기</span>
 							</a>
-							<a href="#" class="btn_box sm_size4">
+							<a href="#" class="btn_box sm_size4 light_skin">
 								<i class="ico reset"></i>
 								<span class="btn_box_text">초기화</span>
 							</a>
@@ -702,7 +702,9 @@
 		</section>
 		<!-- // middle -->
 		<script>
+			/* jquery */
 			$(function() {
+				responWidFunc();
 				responMaxFunc("#cluster_flex_tb");
 			});
 		</script>

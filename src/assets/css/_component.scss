@@ -396,7 +396,7 @@
             }
         }
     }
-    .btn_box{min-height:45px;}
+    .btn_box{min-height:45px;padding-left:10px;padding-right:10px;}
     .btn_text_single{font-size:11px;}
 
     .bl_util_list{
@@ -819,6 +819,9 @@ select.form_select{
     }
     .props_label{font-size:13px;padding-top:3px;}
     .props_cols_list{
+        &.mb_basis_33{
+            > li{flex:0 0 33.333333333% !important;}
+        }
         > li{flex:0 0 50% !important;}
     }
     /* .props_cols_wrap{
@@ -843,6 +846,14 @@ select.form_select{
         &.medium{
             height:130px;
         }
+    }
+
+
+    .btn_filter_list{
+        gap:8px;
+    }
+    .btn_filter{
+       min-height:30px;padding:5px 15px; font-size:13px; 
     }
 }
 @media (max-width:$mobile){
