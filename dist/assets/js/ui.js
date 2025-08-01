@@ -841,33 +841,79 @@ function responWidFunc() {
   }
 }
 
-function responThFunc(targets) {
-  // 문자열이면 배열로 변환
-  const targetArray = typeof targets === "string" ? [targets] : targets;
+function mbLabelFunc(selectorGroups) {
+  selectorGroups.forEach((selectors) => {
+    const [
+      boxSelector, // wrapper
+      thCellSelector, // width 적용 대상
+      thTextSelector, // width 측정 기준
+      rowSelector, // 줄 (tr)
+      groupSelector, // 열 그룹 (좌/우)
+    ] = selectors;
 
-  const $elements = targetArray.map((selector) => $(selector)).filter(Boolean);
+    const $boxes = $(boxSelector);
 
-  action(); // 초기 실행
-  $(window).on("resize", action); // 리사이즈 대응
+    function action() {
+      $boxes.each(function() {
+        const $box = $(this);
+        const isMobile = $(window).width() <= 767;
 
-  function action() {
-    $elements.forEach(($fieldset) => {
-      $fieldset.each(function() {
-        const $thisTb = $(this);
-        const $thisThText = $thisTb.find(".fset_thtext");
-        const $thisThCols = $thisTb.find(".fset_th_cols");
-        let $thisMaxArray = [];
-        $thisThCols.css("width", "");
+        // 초기화
+        $box.find(thCellSelector).css("width", "");
 
-        if ($(window).width() <= 1023) {
-          $thisThText.each(function() {
-            $thisMaxArray.push($(this).outerWidth());
+        if (isMobile) {
+          // ✅ 모바일: 전체 thCell 중 최대값 하나 구함
+          const $allThCells = $box.find(thCellSelector);
+          let maxW = 0;
+
+          $allThCells.each(function() {
+            const $text = $(this).find(thTextSelector);
+            if ($text.length > 0) {
+              maxW = Math.max(maxW, $text.outerWidth() || 0);
+            }
           });
-          $thisThCols.css("width", Math.max.apply(null, $thisMaxArray) + 20);
+
+          // 전체 셀에 동일하게 적용
+          $allThCells.css("width", maxW + 10);
+        } else {
+          // ✅ PC: 열 분리 기준으로 좌/우 최대값 측정
+          const col1 = [];
+          const col2 = [];
+
+          $box.find(rowSelector).each(function() {
+            const $groups = $(this).find(groupSelector);
+
+            if ($groups.eq(0).length) {
+              col1.push($groups.eq(0).find(thCellSelector));
+            }
+            if ($groups.eq(1).length) {
+              col2.push($groups.eq(1).find(thCellSelector));
+            }
+          });
+
+          const maxW1 = Math.max(
+            ...col1.map(($el) => {
+              const $text = $el.find(thTextSelector);
+              return $text.length > 0 ? $text.outerWidth() || 0 : 0;
+            })
+          );
+
+          const maxW2 = Math.max(
+            ...col2.map(($el) => {
+              const $text = $el.find(thTextSelector);
+              return $text.length > 0 ? $text.outerWidth() || 0 : 0;
+            })
+          );
+
+          col1.forEach(($el) => $el.css("width", maxW1 + 10));
+          col2.forEach(($el) => $el.css("width", maxW2 + 10));
         }
       });
-    });
-  }
+    }
+
+    action();
+    $(window).on("resize", action);
+  });
 }
 
 function responMaxFunc(targets) {

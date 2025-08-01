@@ -71,6 +71,20 @@ img.ico_img{max-width:100%;}
 .pc_wide_br{display:block;}
 .pc_item{}
 
+.swiper,.swiper-container{
+    img, a {
+      user-drag: none;       /* Safari/Chrome 전용 */
+      -webkit-user-drag: none; /* Safari */
+      -khtml-user-drag: none;
+      -moz-user-drag: none;
+      -o-user-drag: none;
+      user-select: none;     /* 텍스트 선택 방지 */
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
+}
+
 @media (max-width:$pcwid_large2){
     .pc_wide_br{display:none;}
 }
