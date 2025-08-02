@@ -833,6 +833,35 @@ function responWidFunc() {
   }
 }
 
+function responThFunc(targets) {
+  // 문자열이면 배열로 변환
+  const targetArray = typeof targets === "string" ? [targets] : targets;
+
+  const $elements = targetArray.map((selector) => $(selector)).filter(Boolean);
+
+  action(); // 초기 실행
+  $(window).on("resize", action); // 리사이즈 대응
+
+  function action() {
+    $elements.forEach(($fieldset) => {
+      $fieldset.each(function () {
+        const $thisTb = $(this);
+        const $thisThText = $thisTb.find(".fset_thtext");
+        const $thisThCols = $thisTb.find(".fset_th_cols");
+        let $thisMaxArray = [];
+        $thisThCols.css("width", "");
+
+        if ($(window).width() <= 1023) {
+          $thisThText.each(function () {
+            $thisMaxArray.push($(this).outerWidth());
+          });
+          $thisThCols.css("width", Math.max.apply(null, $thisMaxArray) + 20);
+        }
+      });
+    });
+  }
+}
+
 function mbLabelFunc(selectorGroups) {
   selectorGroups.forEach((selectors) => {
     const [
