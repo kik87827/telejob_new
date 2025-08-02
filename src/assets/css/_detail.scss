@@ -129,12 +129,16 @@
     display:flex;background: #EDF2FB;border-radius: 16px; gap:24px; padding:48px;
     .ico{width:60px; height:60px; flex:0 0 60px; @include bgicon; background-image:url("../images/ico_men_search.png");}
     .text_cols{flex:1; min-width:0;}
-
+    .btn_cols{
+        .btn_rolebox{}
+    }
     &.type2{padding-bottom:24px;}
 }
 .arc_btn_row{
     &.btn_box_wrap{margin-top:48px;}
 }
+
+.voice_copy_group{}
 
 .api_info_templete{
     display:flex; gap:60px; min-height:438px;
@@ -215,6 +219,138 @@
     &:hover{}
     &.active{}
 }
+
+
+.profile_docu_wrap{
+    .img_cols{}
+    .explain_cols{}
+}
+.imgdocu_thumnail_wrap{
+    img{}
+}
+.who_explain_row{
+
+}
+.who_name_para{}
+.who_explain_word_wrap{
+    > li{
+        &:after{}
+        &:last-of-type{
+            &:after{}
+        }
+    }
+}
+.who_explain_word{}
+.who_exptb_wrap{
+
+}
+.who_exptb_list{
+    > li{
+        
+    }
+}
+.who_expcell_wrap{}
+.who_expcell{
+    &.define_th{}
+    &.define_td{}
+}
+.expcell_thtext{}
+.expcell_tdtext{}
+
+.liner_data_wrap{
+
+}
+.liner_data_tb{
+    tr{
+        td{
+            &:last-of-type{}
+            &.has_summary{
+
+            }
+        }
+    }
+}
+.liner_data_text{}
+.liner_summary_item{
+    .liner_row{
+        &:last-of-type{}
+    }
+}
+.liner_keyword{}
+.liner_bundle_list{
+    > li{
+
+    }
+}
+.liner_bundle_obj{
+    dt,dd{}
+    dt{}
+    dd{}
+}
+.liner_bundle_key{}
+.liner_bundle_value{}
+.liner_keyword_list{
+    > li{
+        &:last-of-type{
+            &:after{
+    
+            }
+        }
+        &:after{
+
+        }
+    }
+}
+.liner_keyword{}
+.liner_bundle_list{
+    > li{
+
+    }
+}
+.liner_bundle_obj{
+    dt,dd{}
+    dt{}
+    dd{}
+}
+.liner_bundle_key{}
+.liner_bundle_value{}
+
+.parcel_obj_wrap{}
+.parcel_obj_list{
+    > li{
+
+    }
+}
+.parcel_obj{
+    dt,dd{}
+    dt{}
+    dd{}
+}
+.parcel_key{}
+.parcel_value{}
+.ready_data_wrap{}
+.ready_data_para{}
+.kit_data_wrap{}
+.kit_data_list{
+    > li{
+
+    }
+}
+.kit_data_obj{
+
+}
+.kit_data_cell{
+    &.define_th{}
+    &.define_td{}
+}
+.kit_main_para{
+    .ico{
+        &.docu{}
+    }
+    .text_node{}
+}
+.kit_else_main_para{}
+.kit_else_sub_para{}
 
 @media (max-width:$pcwid){
     .floting_tab_wrap{

@@ -14022,6 +14022,10 @@ strong.color_emp {
   padding: 10px 0;
   box-sizing: border-box;
   display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #000;
 }
 
 .linked_horitem_list {
@@ -14983,6 +14987,13 @@ img.viewer_img {
   .cluster_cell_group {
     gap: 0 20px;
   }
+  .fset_data {
+    padding: 0;
+    font-size: 13px;
+  }
+  .fset_data.long_data {
+    padding: 0;
+  }
 }
 @media (max-width: 767px) {
   .fset_td_inner_flex .td_cols {
@@ -15031,9 +15042,6 @@ img.viewer_img {
   }
   .upload_dom .text_node {
     font-size: 13px;
-  }
-  .fset_data.long_data {
-    padding: 0;
   }
 }
 .docform_templete {
