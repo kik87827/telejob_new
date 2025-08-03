@@ -8,7 +8,21 @@
         flex:1; min-width:0;
         .respond_fieldset_tb{}
     }
+    .auth_cols{
+        flex: 0 0 504px;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 20px;
+        background: #FFFFFF;
+        border-bottom: 1px solid #E6E6E6;
+    }
     .map_cols{flex:0 0 404px; display:flex; flex-direction: column; box-sizing: border-box; padding:20px; background:#F8F8F8; border-bottom:1px solid #E6E6E6}
+}
+.auth_render{
+     flex: 1;
+    border: 0px solid #E6E6E6;
+    position: relative;
 }
 .respond_fieldset_tb{
 }

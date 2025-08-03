@@ -32,13 +32,13 @@
     margin-bottom:36px;
     .bullet_list{}
 }
-.core_panel_container{padding:44px 0 0;
+.core_panel_container{padding:38px 0 0;
     &.pdtype2{padding-top:36px;}
 }
-.core_title_row{margin-bottom:36px;display:flex; justify-content:space-between; align-items:center;
+.core_title_row{margin-bottom:22px;display:flex; justify-content:space-between; align-items:center;
     &.type2{margin-bottom:16px;}
 }
-.core_title{@include font2(30px,500,1.4,#000000);}
+.core_title{@include font2(26px,500,1.4,#000000);}
 .core_title_else_wrap{
     .btn_actbox_list{}
 }
