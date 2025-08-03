@@ -1066,6 +1066,18 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
     .nodata_copy_box{}
     .nodata_primary_copy{}
     .nodata_secondary_copy{}
+
+    &.viewtype{
+        .respond_tb{
+            tbody{
+                tr{
+                    &:hover{
+                        td{background:#fff;}
+                    }
+                }
+            }
+        }
+    }
 }
 .respond_tb{
     width:100%;

@@ -337,7 +337,7 @@
 									<div class="profile_docu_wrap">
 										<div class="img_cols">
 											<div class="imgdocu_thumnail_wrap">
-												<img src="./assets/images/temp_woman.png" alt="" />
+												<!-- <img src="./assets/images/temp_woman.png" alt="" /> -->
 											</div>
 										</div>
 										<div class="explain_cols">
@@ -350,7 +350,7 @@
 											</div>
 											<div class="who_exptb_wrap">
 												<ul class="who_exptb_list">
-													<li>
+													<li class="who_exptr">
 														<div class="who_expcell_wrap">
 															<div class="who_expcell define_th"><span class="expcell_thtext">아이디</span></div>
 															<div class="who_expcell define_td"><span class="expcell_tdtext">TelejobUserID0324</span></div>
@@ -360,7 +360,7 @@
 															<div class="who_expcell define_td"><span class="expcell_tdtext spoca">010-1234-5678</span></div>
 														</div>
 													</li>
-													<li>
+													<li class="who_exptr">
 														<div class="who_expcell_wrap">
 															<div class="who_expcell define_th"><span class="expcell_thtext">이메일</span></div>
 															<div class="who_expcell define_td"><span class="expcell_tdtext">testteljobbb@naver.com</span></div>
@@ -370,7 +370,7 @@
 															<div class="who_expcell define_td"><span class="expcell_tdtext">www.naver.com/blog/testID0223</span></div>
 														</div>
 													</li>
-													<li>
+													<li class="who_exptr">
 														<div class="who_expcell_wrap">
 															<div class="who_expcell define_th"><span class="expcell_thtext">주소</span></div>
 															<div class="who_expcell define_td"><span class="expcell_tdtext">서울 영등포구 여의대방로 67길 9 (여의도동 두일빌딩) 333호</span></div>
@@ -455,7 +455,7 @@
 											</div>
 										</div>
 										<div class="btn_cols">
-											<a href="#" class="btn_rolebox"><span class="text_node">인재보기 유료적용</span></a>
+											<a href="#" class="btn_rolecard"><span class="text_node">인재보기 유료적용</span></a>
 										</div>
 									</div>
 								</div>
@@ -501,7 +501,7 @@
 											</div>
 										</div>
 										<div class="btn_cols">
-											<a href="#" class="btn_rolebox"><span class="text_node">인재 검색 사용하기</span></a>
+											<a href="#" class="btn_rolecard"><span class="text_node">인재 검색 사용하기</span></a>
 										</div>
 									</div>
 								</div>
@@ -515,7 +515,7 @@
 										</div>
 									</div>
 									<div class="contents_row">
-										<div class="respond_tb_wrap skin2 ptype3">
+										<div class="respond_tb_wrap skin2 ptype3 viewtype">
 											<table class="respond_tb">
 												<colgroup>
 													<col />
@@ -615,8 +615,13 @@
 									<div class="contents_row">
 										<div class="liner_data_wrap">
 											<table class="liner_data_tb">
+												<colgroup>
+													<col style="width: 15%" />
+													<col style="width: 25%" />
+													<col />
+												</colgroup>
 												<tr>
-													<td><span class="liner_data_text spoca">2025.05.28 ~ 2010.11</span></td>
+													<td class="align_2 nobreak"><span class="liner_data_text spoca">2025.05.28 ~ 2010.11</span></td>
 													<td><span class="liner_data_text">열람불가</span></td>
 													<td class="has_summary">
 														<div class="liner_summary_item">
@@ -646,7 +651,7 @@
 													</td>
 												</tr>
 												<tr>
-													<td><span class="liner_data_text spoca">2025.05.28 ~ 2010.11</span></td>
+													<td class="align_2 nobreak"><span class="liner_data_text spoca">2025.05.28 ~ 2010.11</span></td>
 													<td><span class="liner_data_text">열람불가</span></td>
 													<td class="has_summary">
 														<div class="liner_summary_item">
@@ -776,7 +781,7 @@
 										<p class="arc_block_title">OA 능력 및 보유기술</p>
 									</div>
 									<div class="contents_row">
-										<div class="respond_tb_wrap skin2 ptype3">
+										<div class="respond_tb_wrap skin2 ptype3 viewtype">
 											<table class="respond_tb">
 												<colgroup>
 													<col />
@@ -857,6 +862,15 @@
 		<script>
 			$(window).on("load", function() {
 				responThFunc("#work_fieldset"); // mobile일때 th 최대 넓이 값 지정
+				mbLabelFunc([
+					[
+						".who_exptb_wrap", // wrapper
+						".who_expcell.define_th", // 셀에 width 적용
+						".expcell_thtext", // 텍스트 기준으로 width 측정
+						".who_exptr", // 행(row)
+						".who_expcell_wrap", // 열 그룹 (왼쪽/오른쪽)
+					],
+				]);
 			});
 		</script>
 		<div class="btn_topgo_wrap"><a href="#" class="btn_topgo"></a></div>

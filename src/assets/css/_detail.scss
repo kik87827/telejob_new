@@ -134,19 +134,42 @@
     }
 }
 .arc_block_banner{
-    display:flex;background: #EDF2FB;border-radius: 16px; gap:24px; padding:48px;
+    display:flex;background: #EDF2FB;border-radius: 16px; gap:24px; padding:48px; align-items: center;
     .ico{width:60px; height:60px; flex:0 0 60px; @include bgicon; background-image:url("../images/ico_men_search.png");}
     .text_cols{flex:1; min-width:0;}
     .btn_cols{
         .btn_rolebox{}
     }
-    &.type2{padding-bottom:24px;}
 }
 .arc_btn_row{
     &.btn_box_wrap{margin-top:48px;}
 }
 
 .voice_copy_group{}
+.voice_main_copy{
+    @include font2(20px,400,1.3,#005AAB);
+    .emp{font-weight:700;}
+    .copy_sub{font-size:14px;}
+}
+.voice_second_copy{
+    @include font2(14px,400,1.3,#000); margin-top:8px;
+}
+
+.fraction_infocont_list{
+    margin-top:12px; background:#fff; display:inline-flex; padding:8px 24px; border-radius: 100px; align-items: center; gap:10px 24px;
+    > li{}
+}
+.fractino_info_package{
+    display:inline-flex; align-items: center;
+    .info_slice{
+        padding:0 3px;
+        &.part{font-size:16px; color:#000;}
+    }
+    .keytext{@include font2(16px,400,1.3,#000)}
+    .valuetext{}
+    .number_tc{@include spoca; font-size:16px; font-weight:700;}
+    .unit_tc{font-size:14px; color:#595959;}
+}
 
 .api_info_templete{
     display:flex; gap:60px; min-height:438px;
@@ -231,67 +254,92 @@
 
 
 .profile_docu_wrap{
-    .img_cols{}
-    .explain_cols{}
+    display:flex; gap:60px;
+    .img_cols{flex:0 0 103px;}
+    .explain_cols{flex:1; min-width:0;}
 }
 .imgdocu_thumnail_wrap{
-    img{}
+    width:103px;height:132px;box-sizing:border-box; background:#F8F8F8 url("../images/img_no.png") no-repeat 50% 50%/36px auto; 
+    position:relative; border:1px solid #E6E6E6;
+    img{@include dataImage2}
 }
 .who_explain_row{
-
+    display:flex; flex-wrap:wrap; align-items: center;gap:24px;
 }
-.who_name_para{}
+.who_name_para{@include font2(24px,400,1,#000);}
 .who_explain_word_wrap{
+    display:flex; gap:19px;
     > li{
-        &:after{}
+        position:relative;
+        &:after{display:block;content:'';width:3px;height:3px;background:#C1C1C1; border-radius:100%; position:absolute;top:50%;right:-12px;}
         &:last-of-type{
-            &:after{}
+            &:after{display:none;}
         }
     }
 }
-.who_explain_word{}
+.who_explain_word{@include font2(16px,400,1,#000);}
 .who_exptb_wrap{
-
+    margin-top:24px;
 }
 .who_exptb_list{
     > li{
-        
-    }
-}
-.who_expcell_wrap{}
-.who_expcell{
-    &.define_th{}
-    &.define_td{}
-}
-.expcell_thtext{}
-.expcell_tdtext{}
-
-.liner_data_wrap{
-
-}
-.liner_data_tb{
-    tr{
-        td{
-            &:last-of-type{}
-            &.has_summary{
-
-            }
+        display:flex; margin-bottom:8px;
+        &:last-of-type{
+            margin-bottom:0;
         }
     }
 }
-.liner_data_text{}
-.liner_summary_item{
-    .liner_row{
-        &:last-of-type{}
+.who_expcell_wrap{
+    flex:1;display:flex;
+}
+.who_expcell{
+    &.define_th{padding-right:30px; padding-top:4px;}
+    &.define_td{flex:1;}
+}
+.expcell_thtext{@include font2(14px,400,1.3,#595959)}
+.expcell_tdtext{@include font2(20px,400,1.3,#000)}
+
+.liner_data_wrap{
+    border-top:2px solid #BDC5D1;
+}
+.liner_data_tb{
+    width:100%;
+    tr{
+        td{
+            border-bottom:1px solid #E6E6E6;padding:36px 30px; text-align: center;
+            &:first-of-type{padding-left:0;}
+            &:last-of-type{padding-right:0;}
+            &.has_summary{
+                text-align: left;
+            }
+            &.align_2{
+                text-align: left;
+            }
+            &.nobreak{
+                white-space: nowrap; 
+            }
+        }
+        /* &:last-of-type{
+            td{border-bottom:0;}
+        } */
     }
 }
-.liner_keyword{}
+.liner_data_text{@include font2(16px,400,1.3,#000)}
+.liner_summary_item{
+    .liner_row{
+        margin-bottom:16px;
+        &:last-of-type{margin-bottom:0;}
+    }
+}
+.liner_keyword{@include font2(16px,400,1.3,#000)}
 .liner_bundle_list{
+    display:flex; gap:80px;
     > li{
 
     }
 }
 .liner_bundle_obj{
+     display:flex; gap:46px;
     dt,dd{}
     dt{}
     dd{}
@@ -299,18 +347,19 @@
 .liner_bundle_key{}
 .liner_bundle_value{}
 .liner_keyword_list{
+    display:flex; gap:19px; flex-wrap:wrap;
     > li{
+        position:relative;
         &:last-of-type{
             &:after{
-    
+                display:none;
             }
         }
         &:after{
-
+            display:block; content:''; width:3px;height:3px; background:#C1C1C1; border-radius:100%; position:absolute;top:50%;right:-12px;
         }
     }
 }
-.liner_keyword{}
 .liner_bundle_list{
     > li{
 
@@ -321,45 +370,49 @@
     dt{}
     dd{}
 }
-.liner_bundle_key{}
-.liner_bundle_value{}
+.liner_bundle_key{@include font2(14px,400,1.3,#595959);}
+.liner_bundle_value{@include font2(16px,400,1.3,#000)}
 
-.parcel_obj_wrap{}
+.parcel_obj_wrap{border:1px solid #E6E6E6; border-radius:16px; padding:36px 120px;}
 .parcel_obj_list{
+    display:flex; justify-content: space-between; gap:30px; text-align: center; 
     > li{
-
+        
     }
 }
 .parcel_obj{
     dt,dd{}
     dt{}
-    dd{}
+    dd{margin-top:12px;}
 }
-.parcel_key{}
-.parcel_value{}
-.ready_data_wrap{}
-.ready_data_para{}
-.kit_data_wrap{}
+.parcel_key{@include font2(14px,400,1.3,#595959);}
+.parcel_value{@include font2(16px,400,1.3,#000000);}
+.ready_data_wrap{min-height:136px; border-bottom:1px solid #E6E6E6; box-sizing:border-box;padding:20px; border-top:2px solid #BDC5D1; display:flex; align-items: center; justify-content: center; text-align: center; background-size:contain; background-position:0 0;background-repeat:no-repeat;}
+.ready_data_para{@include font2(14px,400,1.3,#000000);}
+.kit_data_wrap{border-bottom:1px solid #E6E6E6;border-top:2px solid #BDC5D1;}
 .kit_data_list{
+    display:flex; flex-wrap:wrap; gap:0 80px; margin-right:-80px;
     > li{
-
+        flex:0 0 calc(50% - 80px); box-sizing: border-box; padding:16px 0;
     }
 }
 .kit_data_obj{
-
+    display:flex; justify-content: space-between; gap:30px;
 }
 .kit_data_cell{
     &.define_th{}
-    &.define_td{}
+    &.define_td{ text-align: right;}
 }
 .kit_main_para{
+    display:inline-flex; gap:4px;
     .ico{
-        &.docu{}
+        width:24px; height:24px; flex:0 0 24px; @include bgicon;
+        &.docu{background-image: url("../images/ico_iden_24.png");}
     }
-    .text_node{}
+    .text_node{@include font2(16px,500,1.3,#000); position:relative;top:1px;}
 }
-.kit_else_main_para{}
-.kit_else_sub_para{}
+.kit_else_main_para{@include font2(14px,400,1.3,#000); @include spoca}
+.kit_else_sub_para{@include font2(14px,400,1.3,#595959); margin-top:4px;}
 
 @media (max-width:$pcwid){
     .floting_tab_wrap{

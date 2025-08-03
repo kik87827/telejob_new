@@ -234,7 +234,10 @@
     }
 }
 .btn_rolebox{@include font2(13px,700,1,#000); text-align: center; display:inline-block; padding:7px 16px;  border:1px solid #000000; border-radius: 100px;}
-
+.btn_rolecard{
+    display:inline-flex; min-height:48px; background:#0053C2; border-radius:100px; align-items: center; justify-content: center; text-align: center; padding:10px 36px; box-sizing: border-box;
+    .text_node{@include font2(16px,700,1.3,#fff); display:inline-block;}
+}
 .btn_submit_card_wrap{
     display:flex; gap:8px; margin-top:16px;
     .short_cols{flex:0;}
