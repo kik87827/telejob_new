@@ -885,13 +885,13 @@
         .spec_row{}
         
     }
-    .hover_contents{display:none;position:absolute; top:100%;left:-1px; min-height:315px; background:#fff;width:100%; border:1px solid #1D1D1F; box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12); border-top:0; border-radius:0 0 24px 24px;
+    .hover_contents{display:none;position:absolute; top:100%;left:-1px; min-height:315px; background:#fff;width:100%; border:1px solid #1D1D1F;  outline:1px solid #1D1D1F; box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12); border-top:0; border-radius:0 0 24px 24px;
         &:before{display:block;content:'';width:100%;height:20px; background:#fff;position:absolute;top:-20px;left:0;}
         > *{position:relative;z-index:1;}
     }
     .btn_mold_more{display:none;width:82px;height:70px;background:url("../images/ico_box_more_spe.png") no-repeat 0 0/100% auto; position:absolute;top:0;right:0;}
     &.spe{
-        border-color:#CA69FF; border-width:2px;
+        border-color:#CA69FF; border-width:2px;  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
         .hover_contents{border-width:2px; left:-2px; border-top:0;border-color:#CA69FF; outline:1px solid #CA69FF;}
         .btn_mold_more{display:block;top:-14px;right:-14px;}
         .btn_mold_block,
@@ -901,7 +901,7 @@
         .mold_thtext{background: rgba(202, 105, 255, 0.1); color:#9219D4;}
     }
     &.gold{
-        border-color:#E79200;  border-width:2px;
+        border-color:#E79200;  border-width:2px;  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
         .hover_contents{border-width:2px; left:-2px; border-top:0; border-color:#E79200; outline:1px solid #E79200;}
         .btn_mold_more{background-image:url("../images/ico_box_more_gold.png"); display:block;top:-15px;right:-14px;}
         .btn_mold_block,
@@ -911,7 +911,7 @@
         .mold_thtext{background:#fff0d7; color:#E79200;}
     }
     &:hover, &.hover{
-       border-color:#1D1D1F; box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12); border-radius:24px 24px 0 0;
+       border-color:#1D1D1F; outline:1px solid #1D1D1F; border-radius:24px 24px 0 0;
         .mold_img_wrap{height:116px;}
         &.spe{
             border-color:#CA69FF; outline:1px solid #CA69FF;

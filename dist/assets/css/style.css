@@ -20759,6 +20759,7 @@ input.docu_big_input::placeholder {
   background: #fff;
   width: 100%;
   border: 1px solid #1D1D1F;
+  outline: 1px solid #1D1D1F;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
   border-top: 0;
   border-radius: 0 0 24px 24px;
@@ -20789,6 +20790,7 @@ input.docu_big_input::placeholder {
 .mold_card_item.spe {
   border-color: #CA69FF;
   border-width: 2px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
 }
 .mold_card_item.spe .hover_contents {
   border-width: 2px;
@@ -20813,6 +20815,7 @@ input.docu_big_input::placeholder {
 .mold_card_item.gold {
   border-color: #E79200;
   border-width: 2px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
 }
 .mold_card_item.gold .hover_contents {
   border-width: 2px;
@@ -20837,7 +20840,7 @@ input.docu_big_input::placeholder {
 }
 .mold_card_item:hover, .mold_card_item.hover {
   border-color: #1D1D1F;
-  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
+  outline: 1px solid #1D1D1F;
   border-radius: 24px 24px 0 0;
 }
 .mold_card_item:hover .mold_img_wrap, .mold_card_item.hover .mold_img_wrap {
