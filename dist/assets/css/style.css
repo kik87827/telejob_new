@@ -21050,6 +21050,62 @@ input.docu_big_input::placeholder {
     background-image: url("../images/ico_twinkle03.png");
   }
 }
+.mold_sub_marking {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+}
+.mold_sub_marking .ico {
+  flex: 0 0 24px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 0;
+}
+.mold_sub_marking .ico.yellow {
+  background-image: url("../images/ico_twinkle01.png");
+}
+.mold_sub_marking .ico.sky {
+  background-image: url("../images/ico_twinkle02.png");
+}
+.mold_sub_marking .ico.purple {
+  background-image: url("../images/ico_twinkle03.png");
+}
+.mold_sub_marking .ico.animation {
+  -webkit-animation: twinkle_ico 0.8s infinite;
+          animation: twinkle_ico 0.8s infinite;
+}
+.mold_sub_marking.option2 .mold_sub_caption {
+  font-weight: 700;
+}
+.mold_sub_marking.option3 .mold_sub_caption {
+  background-color: #C6FF00;
+}
+
+.mold_sub_caption_wrap {
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  height: 48px;
+}
+
+.mold_sub_caption {
+  display: inline;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #595959;
+  word-break: break-all;
+}
+.mold_sub_caption.animation {
+  -webkit-animation: twinkle 0.8s infinite;
+          animation: twinkle 0.8s infinite;
+}
+
 .mold_sub_ani {
   display: flex;
   gap: 4px;
@@ -21275,6 +21331,17 @@ input.docu_big_input::placeholder {
     flex: 0 0 20px;
     width: 20px;
     height: 20px;
+  }
+  .mold_sub_marking .ico {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+  }
+  .mold_sub_caption_wrap {
+    height: 42px;
+  }
+  .mold_sub_caption {
+    font-size: 14px;
   }
   .btn_else_list {
     gap: 5px;
