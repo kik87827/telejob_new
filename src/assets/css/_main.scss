@@ -902,7 +902,7 @@
         .mold_thtext{background: rgba(202, 105, 255, 0.1); color:#9219D4;}
     }
     &.gold{
-        border-color:#E79200;  border-width:2px;
+        border-color:#E79200;  border-width:2px; box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
         .hover_contents{border-width:2px; left:-2px; border-top:0; border-color:#E79200; outline:1px solid #E79200;}
         .btn_mold_more{background-image:url("../images/ico_box_more_gold.png"); display:block;top:-15px;right:-14px;}
         .btn_mold_block,

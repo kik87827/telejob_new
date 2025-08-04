@@ -21536,6 +21536,7 @@ input.docu_big_input::placeholder {
 .mold_card_item.gold {
   border-color: #E79200;
   border-width: 2px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
 }
 .mold_card_item.gold .hover_contents {
   border-width: 2px;
