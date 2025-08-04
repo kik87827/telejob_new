@@ -378,6 +378,11 @@
     .btn_chipcard{
         height:30px;padding:0 10px; line-height:28px;
     }
+
+    .btn_rolecard{
+        min-height:40px;padding:10px 24px;
+        .text_node{font-size:14px;}
+    }
 }
 @media (max-width:$mobile){
     .btn_box_wrap{
