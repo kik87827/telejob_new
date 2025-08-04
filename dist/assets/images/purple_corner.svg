@@ -1,0 +1,18 @@
+<svg width="70" height="58" viewBox="-1 -1 72 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- 흰색 배경 패인 부분 -->
+  <path d="
+      M 0,0
+      Q 20,0 20,20
+      Q 20,40 40,40
+      Q 60,40 60,58
+      L 0,58 Z
+    " fill="white"></path>
+
+  <!-- 보라색 테두리 곡선 -->
+  <path d="
+      M 0,0
+      Q 20,0 20,20
+      Q 20,40 40,40
+      Q 60,40 60,58
+    " fill="none" stroke="#c084fc" stroke-width="2"></path>
+</svg>
