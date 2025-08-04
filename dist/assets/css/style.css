@@ -21511,7 +21511,6 @@ input.docu_big_input::placeholder {
 .mold_card_item.spe {
   border-color: #CA69FF;
   border-width: 2px;
-  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
 }
 .mold_card_item.spe .hover_contents {
   border-width: 2px;
@@ -21536,7 +21535,6 @@ input.docu_big_input::placeholder {
 .mold_card_item.gold {
   border-color: #E79200;
   border-width: 2px;
-  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
 }
 .mold_card_item.gold .hover_contents {
   border-width: 2px;
@@ -21570,6 +21568,7 @@ input.docu_big_input::placeholder {
 .mold_card_item:hover.spe, .mold_card_item.hover.spe {
   border-color: #CA69FF;
   outline: 1px solid #CA69FF;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
 }
 .mold_card_item:hover.spe .btn_mold_more, .mold_card_item.hover.spe .btn_mold_more {
   background-position: 0 100%;
@@ -21579,6 +21578,7 @@ input.docu_big_input::placeholder {
 .mold_card_item:hover.gold, .mold_card_item.hover.gold {
   border-color: #E79200;
   outline: 1px solid #E79200;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
 }
 .mold_card_item:hover.gold .btn_mold_more, .mold_card_item.hover.gold .btn_mold_more {
   background-position: 0 100%;
