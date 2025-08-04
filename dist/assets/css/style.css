@@ -19072,11 +19072,16 @@ input.docu_big_input::placeholder {
   font-weight: 400;
   line-height: 1.3;
   color: #000000;
+  word-break: keep-all;
+  background-color: #fff;
+  display: inline;
 }
 
 .kit_data_wrap {
   border-bottom: 1px solid #E6E6E6;
   border-top: 2px solid #BDC5D1;
+  position: relative;
+  overflow: hidden;
 }
 
 .kit_data_list {
@@ -19209,6 +19214,12 @@ input.docu_big_input::placeholder {
   } */
   .who_name_para {
     font-size: 20px;
+  }
+  .liner_data_tb tr td {
+    padding: 18px 15px;
+  }
+  .parcel_obj_wrap {
+    padding: 20px 60px;
   }
 }
 @media (max-width: 1023px) {
@@ -19345,11 +19356,25 @@ input.docu_big_input::placeholder {
     padding: 8px 12px;
     display: flex;
   }
+  .fraction_infocont_list > li {
+    flex: 1;
+    width: 100%;
+  }
   .fraction_infocont_list .info_slice .keytext {
     font-size: 13px;
   }
   .fraction_infocont_list .info_slice .valuetext {
     display: block;
+  }
+  .fraction_infocont_list .info_slice.part {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  .fractino_info_package {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
   }
   .fractino_info_package .number_tc {
     font-size: 16px;
@@ -19481,6 +19506,62 @@ input.docu_big_input::placeholder {
   .arc_block_banner .btn_cols {
     flex: 0 0 100%;
     text-align: center;
+    padding-left: 52px;
+    box-sizing: border-box;
+  }
+  .ready_data_wrap {
+    background-position: 50% 50%;
+    background-size: auto 100%;
+  }
+  .liner_keyword {
+    font-size: 13px;
+  }
+  .liner_keyword_list > li:after {
+    margin-top: -1px;
+  }
+  .liner_summary_item .liner_row {
+    margin-bottom: 10px;
+  }
+  .liner_summary_item .liner_row:last-of-type {
+    margin-bottom: 0;
+  }
+  .liner_bundle_obj {
+    gap: 10px 10px;
+  }
+  .liner_data_text,
+.liner_bundle_value,
+.liner_bundle_key {
+    font-size: 13px;
+  }
+  .liner_data_tb {
+    display: block;
+  }
+  .liner_data_tb tbody {
+    display: block;
+  }
+  .liner_data_tb tr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #E6E6E6;
+  }
+  .liner_data_tb tr th, .liner_data_tb tr td {
+    display: inline-block;
+    border-bottom: 0;
+    padding: 0;
+  }
+  .liner_data_tb tr td.has_summary {
+    display: block;
+    flex: 0 0 100%;
+  }
+  .liner_data_tb tr td.nobreak {
+    white-space: normal;
+  }
+  .liner_bundle_list {
+    gap: 5px;
+    flex-direction: column;
   }
 }
 .view_section_container {
