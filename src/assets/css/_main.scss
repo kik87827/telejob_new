@@ -59,16 +59,21 @@
 }
 .mv_banner_box{
     background:#fff; border:1px solid #E6E6E6; border-radius:24px; padding:24px 24px 16px; position:relative;
+    .spec_row{
+        .mold_sub_caption{@include font2(16px,400,1.4,#595959);}
+    }
     .inner_contents{
         position:relative;z-index:1;
         .img_row{margin-bottom:24px;}
-        .spec_row{}
+        
         .btn_else_row{}
     }
     .hover_contents{
         display:none; position:absolute;top:0;left:0;width:100%;min-height:542px; box-sizing:border-box;padding:3px;
         .img_row{margin-bottom:42px;}
-        .spec_row{}
+        .spec_row{
+            
+        }
         .btn_else_row{margin-top:13px;}
         .mv_img_wrap{height:174px;}
         &:before{
@@ -105,7 +110,9 @@
     img{height:54px; max-width:70%; object-fit: contain; object-position: 50% 50%;vertical-align:top;}
 }
 .mv_main_copy{text-align:center; @include font2(24px,700,1.4,#000); @include clamp(1); height:34px;overflow:hidden;}
-.mv_sub_copy{margin-top:8px; @include font2(16px,400,1.4,#595959); @include clamp(2); height:45px;overflow:hidden;}
+.mv_sub_copy{margin-top:8px; @include font2(16px,400,1.4,#595959); @include clamp(2); height:45px;overflow:hidden;
+    
+}
 .mv_summary_block{margin-top:42px;border:1px solid #E6E6E6; border-radius:12px; padding:16px 12px;}
 .mv_summay_tb{
     width:100%;
@@ -229,6 +236,7 @@
     .mv_cardbanner_zone{margin-top:10px;}
     .mv_summary_block{margin-top:30px;}
     .mv_banner_box{
+       
         .hover_contents{
              .img_row{margin-bottom:30px;}
         }
@@ -288,6 +296,10 @@
         }
     }
     .mv_banner_box{border-radius:10px; position:relative; padding:15px 15px 10px;
+         .spec_row{
+            .mold_sub_caption_wrap{height:auto;}
+            .mold_sub_caption{@include font2(13px,400,1.4,#595959); height:auto;}
+        }
         .inner_contents {
             .img_row{margin-bottom:10px;}
         }
@@ -299,7 +311,7 @@
         img{height:35px;}
     }
     .mv_main_copy{font-size:14px;}
-    .mv_sub_copy{font-size:13px;height:auto; margin-top:5px;}
+    .mv_sub_copy{font-size:13px;height:auto; margin-top:5px; }
 
     .mv_tapebanner_item{padding:8px;gap:15px; border-radius:10px;
         .img_cols{}
@@ -984,7 +996,7 @@
     display: inline;
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.4;
     color: #595959;
     word-break: break-all;
     &.animation{animation: twinkle 0.8s infinite;}

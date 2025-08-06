@@ -19848,6 +19848,12 @@ input.docu_big_input::placeholder {
   padding: 24px 24px 16px;
   position: relative;
 }
+.mv_banner_box .spec_row .mold_sub_caption {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #595959;
+}
 .mv_banner_box .inner_contents {
   position: relative;
   z-index: 1;
@@ -20331,6 +20337,16 @@ input.docu_big_input::placeholder {
     border-radius: 10px;
     position: relative;
     padding: 15px 15px 10px;
+  }
+  .mv_banner_box .spec_row .mold_sub_caption_wrap {
+    height: auto;
+  }
+  .mv_banner_box .spec_row .mold_sub_caption {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #595959;
+    height: auto;
   }
   .mv_banner_box .inner_contents .img_row {
     margin-bottom: 10px;
@@ -21739,7 +21755,7 @@ input.docu_big_input::placeholder {
   display: inline;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.4;
   color: #595959;
   word-break: break-all;
 }

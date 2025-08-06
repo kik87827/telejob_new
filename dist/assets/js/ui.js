@@ -149,6 +149,9 @@ const uiBase = {
     function mobileTotal() {
       let motionTimer = 0;
       let closeItems = [mobile_nav_panel_dim, btn_panel_close];
+      if (!btn_panel_menu) {
+        return;
+      }
       if (!!btn_panel_menu) {
         btn_panel_menu.addEventListener("click", (e) => {
           e.preventDefault();
@@ -187,6 +190,9 @@ const uiBase = {
       const mb_nav_tab_li = document.querySelectorAll(".mb_nav_tab_list > li");
       const mb_nav_tab = document.querySelectorAll(".mb_nav_tab");
       const mb_nav_cont = document.querySelectorAll(".mb_nav_cont");
+      if (!btn_panel_menu) {
+        return;
+      }
       if (!!mb_nav_tab) {
         mb_nav_tab.forEach((eventItem) => {
           eventItem.addEventListener("click", (e) => {
@@ -228,6 +234,9 @@ const uiBase = {
     }
 
     function mobileTotalReset() {
+      if (!btn_panel_menu) {
+        return;
+      }
       let motionTimer2 = 0;
       btn_panel_close.classList.remove("active");
       btn_panel_menu.classList.remove("hidden");
