@@ -769,7 +769,15 @@
     height:60px; display:flex; justify-content: center; align-items: center;
     img{height:20px; max-width:100%;object-fit: contain; object-position: 50% 50%;}
 }
-.square_para_group{}
+.square_para_group{
+    .mold_sub_marking{
+        text-align: center; justify-content: center;
+        .ico{width:15px;height:15px; flex-basis: 15px; position:relative;top:2px;}
+    }
+    .mold_sub_caption_wrap{text-align: center; justify-content: center;height:auto;}
+    .mold_sub_caption{@include clamp(1); font-size:12px;}
+    .mold_sub_marking{}
+}
 
 .square_main_para,
 .square_sub_para{@include clamp(1);}

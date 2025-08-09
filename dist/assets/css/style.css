@@ -21281,6 +21281,30 @@ input.docu_big_input::placeholder {
      object-position: 50% 50%;
 }
 
+.square_para_group .mold_sub_marking {
+  text-align: center;
+  justify-content: center;
+}
+.square_para_group .mold_sub_marking .ico {
+  width: 15px;
+  height: 15px;
+  flex-basis: 15px;
+  position: relative;
+  top: 2px;
+}
+.square_para_group .mold_sub_caption_wrap {
+  text-align: center;
+  justify-content: center;
+  height: auto;
+}
+.square_para_group .mold_sub_caption {
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  font-size: 12px;
+}
 .square_main_para,
 .square_sub_para {
   word-break: break-all;
