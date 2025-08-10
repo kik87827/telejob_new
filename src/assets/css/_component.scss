@@ -799,7 +799,12 @@ select.form_select{
     &.block_type{
          border:0; border-bottom:1px solid #BDC5D1; border-radius:0; padding-left:0;
     }
-    &:required:invalid{color:#aaa;}
+    
+    &:required:invalid{color:#aaa;
+        &:hover{
+            option{color:#000;}
+        }
+    }
 }
 
 .field_setbox{
@@ -846,7 +851,14 @@ select.form_select{
         &.btn_box_wrap{margin-top:60px;}
     }
 
-    
+    .props_item_list{
+        &.respon_break{
+            flex-wrap:wrap; gap:10px 15px; margin:0 -15px 0 0;
+            > li{
+                flex:0 0 calc(25% - 15px);
+            }
+        }
+    }
 
     .props_cols_list{
         gap:5px 0;
@@ -921,6 +933,16 @@ select.form_select{
     .btn_filter{
        min-height:30px;padding:5px 15px; font-size:13px; 
     }
+
+
+    .props_item_list{
+        &.respon_break{
+            gap:10px; margin:0 -10px 0 0;
+            > li{
+                flex:0 0 calc(50% - 10px);
+            }
+        }
+    }
 }
 @media (max-width:$mobile){
     .inline_flex_wrap{gap:8px;
@@ -994,6 +1016,7 @@ select.form_select{
     }
 
     .props_item_list{
+        gap:15px;
         &.mb_break{
             display:flex; flex-wrap:wrap;margin-right:-10px; gap:10px;
             > li{flex:0 0 calc(50% - 10px)}
@@ -1003,6 +1026,14 @@ select.form_select{
     .props_item{
         &.gap2{gap:6px}
     }
+    .props_item_list{
+        &.respon_mb_break{
+            gap:10px; margin:0 -10px 0 0; flex-wrap:wrap;
+            > li{
+                flex:0 0 calc(50% - 10px);
+            }
+        }
+    }
 }
 @media (max-width:$mobile_size3){
     input.form_input{
@@ -1011,6 +1042,15 @@ select.form_select{
         }
     }
     .mobile_sm_placeholder{display:block;}
+
+    .props_item_list{
+        &.respon_break{
+            gap:10px; margin:0;
+            > li{
+                flex:0 0 100%;
+            }
+        }
+    }
 }
 
 /* modal */

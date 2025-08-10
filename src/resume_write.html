@@ -68,14 +68,57 @@
                                 <!-- prettier-ignore -->
                                 <span class="fset_thtext">보훈대상<br class="mb_br" /> 여부</span>
                               </div>
-                              <div class="fset_td_cols">내용</div>
+                              <div class="fset_td_cols">
+                                <div class="props_item_wrap">
+                                  <ul class="props_item_list">
+                                    <li>
+                                      <div class="props_item gap3">
+                                        <input type="radio" class="props_dom" name="rewarding" id="rewarding_props_01" checked />
+                                        <label for="rewarding_props_01" class="props_label">대상</label>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="props_item gap3">
+                                        <input type="radio" class="props_dom" name="rewarding" id="rewarding_props_02" />
+                                        <label for="rewarding_props_02" class="props_label">비대상</label>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
                             </div>
                             <div class="fset_cols_group">
                               <div class="fset_th_cols">
                                 <!-- prettier-ignore -->
                                 <span class="fset_thtext">장애<br class="mb_br" /> 여부</span>
                               </div>
-                              <div class="fset_td_cols">내용</div>
+                              <div class="fset_td_cols">
+                                <div class="tditems_container">
+                                  <div class="props_item_wrap">
+                                    <ul class="props_item_list">
+                                      <li>
+                                        <div class="props_item gap3">
+                                          <input type="radio" class="props_dom" name="disorder" id="disorder_props_01" checked />
+                                          <label for="disorder_props_01" class="props_label">장애</label>
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div class="props_item gap3">
+                                          <input type="radio" class="props_dom" name="disorder" id="disorder_props_02" />
+                                          <label for="disorder_props_02" class="props_label">비장애</label>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div class="long_cols">
+                                    <select required class="form_select">
+                                      <option value="" disabled selected>장애등급 선택</option>
+                                      <option value="1">옵션 1</option>
+                                      <option value="2">옵션 2</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                           <div class="fset_tr">
@@ -83,7 +126,79 @@
                               <div class="fset_th_cols">
                                 <span class="fset_thtext">병역사항</span>
                               </div>
-                              <div class="fset_td_cols">내용</div>
+                              <div class="fset_td_cols">
+                                <div class="tditems_container">
+                                  <div class="props_item_wrap">
+                                    <ul class="props_item_list respon_mb_break">
+                                      <li>
+                                        <div class="props_item gap3">
+                                          <input type="radio" class="props_dom" name="army" id="army_props_01" />
+                                          <label for="army_props_01" class="props_label">군필</label>
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div class="props_item gap3">
+                                          <input type="radio" class="props_dom" name="army" id="army_props_02" />
+                                          <label for="army_props_02" class="props_label">면제</label>
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div class="props_item gap3">
+                                          <input type="radio" class="props_dom" name="army" id="army_props_03" />
+                                          <label for="army_props_03" class="props_label">해당없음</label>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div class="chip_form_wrap long_cols">
+                                    <ul class="chip_form_list">
+                                      <li>
+                                        <div class="chip_inline_wrap">
+                                          <div class="chip_inline_item">
+                                            <select required class="form_select">
+                                              <option value="" disabled selected>입대년도</option>
+                                              <option value="1">옵션 1</option>
+                                              <option value="2">옵션 2</option>
+                                            </select>
+                                          </div>
+                                          <div class="chip_inline_item">
+                                            <select required class="form_select">
+                                              <option value="" disabled selected>월 선택</option>
+                                              <option value="1">옵션 1</option>
+                                              <option value="2">옵션 2</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div class="chip_inline_wrap">
+                                          <div class="chip_inline_item">
+                                            <select required class="form_select">
+                                              <option value="" disabled selected>제대년도</option>
+                                              <option value="1">옵션 1</option>
+                                              <option value="2">옵션 2</option>
+                                            </select>
+                                          </div>
+                                          <div class="chip_inline_item">
+                                            <select required class="form_select">
+                                              <option value="" disabled selected>월 선택</option>
+                                              <option value="1">옵션 1</option>
+                                              <option value="2">옵션 2</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                      </li>
+                                      <li class="auto_type">
+                                        <select required class="form_select" style="width: 120px" data-pcwid="120px" data-pconly="true">
+                                          <option value="" disabled selected>계급</option>
+                                          <option value="1">옵션 1</option>
+                                          <option value="2">옵션 2</option>
+                                        </select>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -103,7 +218,150 @@
                                 <!-- prettier-ignore -->
                                 <span class="fset_thtext">근무<br class="mb_br" /> 희망지역</span>
                               </div>
-                              <div class="fset_td_cols">내용</div>
+                              <div class="fset_td_cols">
+                                <div class="many_sliceform_wrap">
+                                  <ul class="many_sliceform_list">
+                                    <li>
+                                      <div class="sliceform_item">
+                                        <span class="bullet_cols"><span class="sliceform_bullet">1)</span></span>
+                                        <div class="form_cols">
+                                          <ul class="grow_item_list">
+                                            <li class="short">
+                                              <select required class="form_select">
+                                                <option value="" disabled selected>지역선택</option>
+                                                <option value="1">옵션 1</option>
+                                                <option value="2">옵션 2</option>
+                                              </select>
+                                            </li>
+                                            <li>
+                                              <select required class="form_select">
+                                                <option value="" disabled selected>상세지역</option>
+                                                <option value="1">옵션 1</option>
+                                                <option value="2">옵션 2</option>
+                                              </select>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="sliceform_item">
+                                        <span class="bullet_cols"><span class="sliceform_bullet">2)</span></span>
+                                        <div class="form_cols">
+                                          <ul class="grow_item_list">
+                                            <li class="short">
+                                              <select required class="form_select">
+                                                <option value="" disabled selected>지역선택</option>
+                                                <option value="1">옵션 1</option>
+                                                <option value="2">옵션 2</option>
+                                              </select>
+                                            </li>
+                                            <li>
+                                              <select required class="form_select">
+                                                <option value="" disabled selected>상세지역</option>
+                                                <option value="1">옵션 1</option>
+                                                <option value="2">옵션 2</option>
+                                              </select>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="sliceform_item">
+                                        <span class="bullet_cols"><span class="sliceform_bullet">3)</span></span>
+                                        <div class="form_cols">
+                                          <ul class="grow_item_list">
+                                            <li class="short">
+                                              <select required class="form_select">
+                                                <option value="" disabled selected>지역선택</option>
+                                                <option value="1">옵션 1</option>
+                                                <option value="2">옵션 2</option>
+                                              </select>
+                                            </li>
+                                            <li>
+                                              <select required class="form_select">
+                                                <option value="" disabled selected>상세지역</option>
+                                                <option value="1">옵션 1</option>
+                                                <option value="2">옵션 2</option>
+                                              </select>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="sliceform_item">
+                                        <span class="bullet_cols"><span class="sliceform_bullet">4)</span></span>
+                                        <div class="form_cols">
+                                          <ul class="grow_item_list">
+                                            <li class="short">
+                                              <select required class="form_select">
+                                                <option value="" disabled selected>지역선택</option>
+                                                <option value="1">옵션 1</option>
+                                                <option value="2">옵션 2</option>
+                                              </select>
+                                            </li>
+                                            <li>
+                                              <select required class="form_select">
+                                                <option value="" disabled selected>상세지역</option>
+                                                <option value="1">옵션 1</option>
+                                                <option value="2">옵션 2</option>
+                                              </select>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="sliceform_item">
+                                        <span class="bullet_cols"><span class="sliceform_bullet">5)</span></span>
+                                        <div class="form_cols">
+                                          <ul class="grow_item_list">
+                                            <li class="short">
+                                              <select required class="form_select">
+                                                <option value="" disabled selected>지역선택</option>
+                                                <option value="1">옵션 1</option>
+                                                <option value="2">옵션 2</option>
+                                              </select>
+                                            </li>
+                                            <li>
+                                              <select required class="form_select">
+                                                <option value="" disabled selected>상세지역</option>
+                                                <option value="1">옵션 1</option>
+                                                <option value="2">옵션 2</option>
+                                              </select>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="sliceform_item">
+                                        <span class="bullet_cols"><span class="sliceform_bullet">6)</span></span>
+                                        <div class="form_cols">
+                                          <ul class="grow_item_list">
+                                            <li class="short">
+                                              <select required class="form_select">
+                                                <option value="" disabled selected>지역선택</option>
+                                                <option value="1">옵션 1</option>
+                                                <option value="2">옵션 2</option>
+                                              </select>
+                                            </li>
+                                            <li>
+                                              <select required class="form_select">
+                                                <option value="" disabled selected>상세지역</option>
+                                                <option value="1">옵션 1</option>
+                                                <option value="2">옵션 2</option>
+                                              </select>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
                             </div>
                           </div>
                           <div class="fset_tr">
@@ -111,7 +369,48 @@
                               <div class="fset_th_cols">
                                 <span class="fset_thtext">희망 직무</span>
                               </div>
-                              <div class="fset_td_cols">내용</div>
+                              <div class="fset_td_cols">
+                                <div class="props_item_wrap minh">
+                                  <ul class="props_item_list respon_break">
+                                    <li>
+                                      <div class="props_item gap3">
+                                        <input type="checkbox" class="props_dom" id="hopework_props_01" />
+                                        <label for="hopework_props_01" class="props_label">구분없음</label>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="props_item gap3">
+                                        <input type="checkbox" class="props_dom" id="hopework_props_02" />
+                                        <label for="hopework_props_02" class="props_label">인바운드</label>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="props_item gap3">
+                                        <input type="checkbox" class="props_dom" id="hopework_props_03" />
+                                        <label for="hopework_props_03" class="props_label">아웃바운드</label>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="props_item gap3">
+                                        <input type="checkbox" class="props_dom" id="hopework_props_04" />
+                                        <label for="hopework_props_04" class="props_label">인/아웃바운드</label>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="props_item gap3">
+                                        <input type="checkbox" class="props_dom" id="hopework_props_05" />
+                                        <label for="hopework_props_05" class="props_label">TM지원</label>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="props_item gap3">
+                                        <input type="checkbox" class="props_dom" id="hopework_props_06" />
+                                        <label for="hopework_props_06" class="props_label">금융컨설턴트(FC)</label>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
                             </div>
                           </div>
                           <div class="fset_tr">
@@ -119,7 +418,39 @@
                               <div class="fset_th_cols">
                                 <span class="fset_thtext">희망 업종</span>
                               </div>
-                              <div class="fset_td_cols">내용</div>
+                              <div class="fset_td_cols">
+                                <div class="fset_td_note_row">
+                                  <p class="indent_node_text">
+                                    <span class="indent_bullet_node">*</span>
+                                    <span class="indent_node_liquid">3개까지 선택 가능합니다</span>
+                                  </p>
+                                </div>
+                                <div class="grow_item_wrap">
+                                  <ul class="grow_item_list">
+                                    <li>
+                                      <select required class="form_select">
+                                        <option value="" disabled selected>업종선택</option>
+                                        <option value="1">옵션 1</option>
+                                        <option value="2">옵션 2</option>
+                                      </select>
+                                    </li>
+                                    <li>
+                                      <select required class="form_select">
+                                        <option value="" disabled selected>업종선택</option>
+                                        <option value="1">옵션 1</option>
+                                        <option value="2">옵션 2</option>
+                                      </select>
+                                    </li>
+                                    <li>
+                                      <select required class="form_select">
+                                        <option value="" disabled selected>업종선택</option>
+                                        <option value="1">옵션 1</option>
+                                        <option value="2">옵션 2</option>
+                                      </select>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
                             </div>
                           </div>
                           <div class="fset_tr">
@@ -128,7 +459,18 @@
                                 <!-- prettier-ignore -->
                                 <span class="fset_thtext">급여(보수)<br class="mb_br" />수준</span>
                               </div>
-                              <div class="fset_td_cols">내용</div>
+                              <div class="fset_td_cols">
+                                <div class="tditems_list mb_break">
+                                  <div class="with_unit_obj">
+                                    <input type="text" class="box_input" readonly style="width: 160px" data-pcwid="160px" data-pconly="true" />
+                                    <span class="unit_node">만원</span>
+                                  </div>
+                                  <div class="props_item gap3">
+                                    <input type="checkbox" class="props_dom" id="pay_props_01" />
+                                    <label for="pay_props_01" class="props_label">급여무관</label>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                           <div class="fset_tr">
@@ -136,7 +478,60 @@
                               <div class="fset_th_cols">
                                 <span class="fset_thtext">고용 형태</span>
                               </div>
-                              <div class="fset_td_cols">내용</div>
+                              <div class="fset_td_cols">
+                                <div class="props_item_wrap minh">
+                                  <ul class="props_item_list respon_break">
+                                    <li>
+                                      <div class="props_item gap3">
+                                        <input type="checkbox" class="props_dom" id="worktype_props_01" />
+                                        <label for="worktype_props_01" class="props_label">정규</label>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="props_item gap3">
+                                        <input type="checkbox" class="props_dom" id="worktype_props_02" />
+                                        <label for="worktype_props_02" class="props_label">계약</label>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="props_item gap3">
+                                        <input type="checkbox" class="props_dom" id="worktype_props_03" />
+                                        <label for="worktype_props_03" class="props_label">아르바이트</label>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="props_item gap3">
+                                        <input type="checkbox" class="props_dom" id="worktype_props_04" />
+                                        <label for="worktype_props_04" class="props_label">교육/연수생</label>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="props_item gap3">
+                                        <input type="checkbox" class="props_dom" id="worktype_props_05" />
+                                        <label for="worktype_props_05" class="props_label">파견</label>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="props_item gap3">
+                                        <input type="checkbox" class="props_dom" id="worktype_props_06" />
+                                        <label for="worktype_props_06" class="props_label">인턴</label>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="props_item gap3">
+                                        <input type="checkbox" class="props_dom" id="worktype_props_07" />
+                                        <label for="worktype_props_07" class="props_label">위임/도급</label>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="props_item gap3">
+                                        <input type="checkbox" class="props_dom" id="worktype_props_08" />
+                                        <label for="worktype_props_08" class="props_label">위촉</label>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -283,7 +678,7 @@
                             <div class="top_cols">
                               <div class="inner_colobj_wrap">
                                 <p class="colobj_keyword">경력1</p>
-                                <div class="props_item">
+                                <div class="props_item gap3">
                                   <input type="checkbox" class="props_dom" id="recprops_01" />
                                   <label for="recprops_01" class="props_label">비공개</label>
                                 </div>
@@ -383,7 +778,7 @@
                             <div class="top_cols">
                               <div class="inner_colobj_wrap">
                                 <p class="colobj_keyword">경력2</p>
-                                <div class="props_item">
+                                <div class="props_item gap3">
                                   <input type="checkbox" class="props_dom" id="recprops_02" />
                                   <label for="recprops_02" class="props_label">비공개</label>
                                 </div>
@@ -701,6 +1096,9 @@
       <script>
         responThFunc([".respond_fieldset_wrap"]); // 기본 클래스명 호출
         responThFunc(["#employment_fieldset", "#holp_fieldset", "#academic_fieldset", "#uni01_fieldset", "#uni02_fieldset", "#career01_fieldset", "#career02_fieldset", "#license01_fieldset", "#oa_fieldset"]); // 직접 지정 호출
+        $(function () {
+          responWidFunc();
+        });
       </script>
       @@include('./include/footer.html')
     </div>
