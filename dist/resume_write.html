@@ -862,7 +862,13 @@
 														<div class="fset_th_cols">
 															<span class="fset_thtext">학교구분</span>
 														</div>
-														<div class="fset_td_cols">내용</div>
+														<div class="fset_td_cols">
+															<select required class="form_select" style="width: 180px" data-pcwid="180px" data-pconly="true">
+																<option value="" disabled selected>선택하세요</option>
+																<option value="1">옵션 1</option>
+																<option value="2">옵션 2</option>
+															</select>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -873,7 +879,40 @@
 												<div class="nesting_title_row">
 													<p class="nesting_title">고등학교</p>
 												</div>
-												<div class="nesting_contents">내용이 들어갑니다.</div>
+												<div class="nesting_contents">
+													<div class="piece_form_container">
+														<div class="piece_form_cols">
+															<ul class="grow_item_list">
+																<li>
+																	<input type="text" class="box_input" placeholder="학교명" />
+																</li>
+																<li class="short">
+																	<select required class="form_select">
+																		<option value="" disabled selected>소재지 선택</option>
+																		<option value="1">옵션 1</option>
+																		<option value="2">옵션 2</option>
+																	</select>
+																</li>
+															</ul>
+														</div>
+														<div class="piece_form_cols">
+															<ul class="grow_item_list">
+																<li>
+																	<input type="text" class="box_input" placeholder="졸업년도" />
+																</li>
+																<li class="short">
+																	<select class="form_select">
+																		<option value="1">졸업</option>
+																		<option value="2">옵션 2</option>
+																	</select>
+																</li>
+															</ul>
+														</div>
+														<div class="piece_form_cols auto_cols">
+															<input type="text" class="box_input" placeholder="전공" style="width: 200px" data-pcwid="200px" />
+														</div>
+													</div>
+												</div>
 											</div>
 											<div class="nesting_section">
 												<div class="nesting_title_row">
@@ -890,13 +929,42 @@
 																			<div class="fset_th_cols">
 																				<span class="fset_thtext">분류</span>
 																			</div>
-																			<div class="fset_td_cols">내용</div>
+																			<div class="fset_td_cols">
+																				<div class="props_item_wrap">
+																					<ul class="props_item_list">
+																						<li>
+																							<div class="props_item gap3">
+																								<input type="radio" class="props_dom" name="uni" id="uni_props_01" checked="" />
+																								<label for="uni_props_01" class="props_label">대학</label>
+																							</div>
+																						</li>
+																						<li>
+																							<div class="props_item gap3">
+																								<input type="radio" class="props_dom" name="uni" id="uni_props_02" />
+																								<label for="uni_props_02" class="props_label">대학교</label>
+																							</div>
+																						</li>
+																					</ul>
+																				</div>
+																			</div>
 																		</div>
 																		<div class="fset_cols_group">
 																			<div class="fset_th_cols">
 																				<span class="fset_thtext">학교명</span>
 																			</div>
-																			<div class="fset_td_cols">내용</div>
+																			<div class="fset_td_cols">
+																				<ul class="grow_item_list">
+																					<li>
+																						<input type="text" class="box_input" placeholder="학교명" />
+																					</li>
+																					<li class="half_short">
+																						<select class="form_select">
+																							<option value="1">소재지</option>
+																							<option value="2">옵션 2</option>
+																						</select>
+																					</li>
+																				</ul>
+																			</div>
 																		</div>
 																	</div>
 																	<div class="fset_tr">
@@ -904,13 +972,26 @@
 																			<div class="fset_th_cols">
 																				<span class="fset_thtext">전공</span>
 																			</div>
-																			<div class="fset_td_cols">내용</div>
+																			<div class="fset_td_cols"><input type="text" class="box_input" placeholder="전공명" /></div>
 																		</div>
 																		<div class="fset_cols_group">
 																			<div class="fset_th_cols">
 																				<span class="fset_thtext">학점</span>
 																			</div>
-																			<div class="fset_td_cols">내용</div>
+																			<div class="fset_td_cols">
+																				<ul class="linked_horitem_list">
+																					<li class="long">
+																						<input type="text" class="box_input" placeholder="학교명" />
+																					</li>
+																					<li class="short2"><span class="horitem_unit">/</span></li>
+																					<li class="long">
+																						<select class="form_select">
+																							<option value="1">총점</option>
+																							<option value="2">옵션 2</option>
+																						</select>
+																					</li>
+																				</ul>
+																			</div>
 																		</div>
 																	</div>
 																	<div class="fset_tr">
@@ -918,7 +999,37 @@
 																			<div class="fset_th_cols">
 																				<span class="fset_thtext">재학기간</span>
 																			</div>
-																			<div class="fset_td_cols">내용</div>
+																			<div class="fset_td_cols">
+																				<div class="tditems_container">
+																					<ul class="linked_horitem_list long_cols">
+																						<li class="long">
+																							<ul class="grow_item_list">
+																								<li>
+																									<input type="text" class="box_input spoca" placeholder="2020" />
+																								</li>
+																								<li>
+																									<input type="text" class="box_input spoca" placeholder="12" />
+																								</li>
+																							</ul>
+																						</li>
+																						<li class="short2"><span class="horitem_unit">~</span></li>
+																						<li class="long">
+																							<ul class="grow_item_list">
+																								<li>
+																									<input type="text" class="box_input spoca" placeholder="2020" />
+																								</li>
+																								<li>
+																									<input type="text" class="box_input spoca" placeholder="12" />
+																								</li>
+																							</ul>
+																						</li>
+																					</ul>
+																					<select class="form_select" style="width: 160px" data-pcwid="160px" data-pconly="true">
+																						<option value="1">졸업</option>
+																						<option value="2">옵션 2</option>
+																					</select>
+																				</div>
+																			</div>
 																		</div>
 																	</div>
 																</div>
@@ -934,13 +1045,42 @@
 																			<div class="fset_th_cols">
 																				<span class="fset_thtext">분류</span>
 																			</div>
-																			<div class="fset_td_cols">내용</div>
+																			<div class="fset_td_cols">
+																				<div class="props_item_wrap">
+																					<ul class="props_item_list">
+																						<li>
+																							<div class="props_item gap3">
+																								<input type="radio" class="props_dom" name="uni2" id="uni2_props_01" checked="" />
+																								<label for="uni2_props_01" class="props_label">대학</label>
+																							</div>
+																						</li>
+																						<li>
+																							<div class="props_item gap3">
+																								<input type="radio" class="props_dom" name="uni2" id="uni2_props_02" />
+																								<label for="uni2_props_02" class="props_label">대학교</label>
+																							</div>
+																						</li>
+																					</ul>
+																				</div>
+																			</div>
 																		</div>
 																		<div class="fset_cols_group">
 																			<div class="fset_th_cols">
 																				<span class="fset_thtext">학교명</span>
 																			</div>
-																			<div class="fset_td_cols">내용</div>
+																			<div class="fset_td_cols">
+																				<ul class="grow_item_list">
+																					<li>
+																						<input type="text" class="box_input" placeholder="학교명" />
+																					</li>
+																					<li class="half_short">
+																						<select class="form_select">
+																							<option value="1">소재지</option>
+																							<option value="2">옵션 2</option>
+																						</select>
+																					</li>
+																				</ul>
+																			</div>
 																		</div>
 																	</div>
 																	<div class="fset_tr">
@@ -948,13 +1088,26 @@
 																			<div class="fset_th_cols">
 																				<span class="fset_thtext">전공</span>
 																			</div>
-																			<div class="fset_td_cols">내용</div>
+																			<div class="fset_td_cols"><input type="text" class="box_input" placeholder="전공명" /></div>
 																		</div>
 																		<div class="fset_cols_group">
 																			<div class="fset_th_cols">
 																				<span class="fset_thtext">학점</span>
 																			</div>
-																			<div class="fset_td_cols">내용</div>
+																			<div class="fset_td_cols">
+																				<ul class="linked_horitem_list">
+																					<li class="long">
+																						<input type="text" class="box_input" placeholder="학교명" />
+																					</li>
+																					<li class="short2"><span class="horitem_unit">/</span></li>
+																					<li class="long">
+																						<select class="form_select">
+																							<option value="1">총점</option>
+																							<option value="2">옵션 2</option>
+																						</select>
+																					</li>
+																				</ul>
+																			</div>
 																		</div>
 																	</div>
 																	<div class="fset_tr">
@@ -962,7 +1115,37 @@
 																			<div class="fset_th_cols">
 																				<span class="fset_thtext">재학기간</span>
 																			</div>
-																			<div class="fset_td_cols">내용</div>
+																			<div class="fset_td_cols">
+																				<div class="tditems_container">
+																					<ul class="linked_horitem_list long_cols">
+																						<li class="long">
+																							<ul class="grow_item_list">
+																								<li>
+																									<input type="text" class="box_input spoca" placeholder="2020" />
+																								</li>
+																								<li>
+																									<input type="text" class="box_input spoca" placeholder="12" />
+																								</li>
+																							</ul>
+																						</li>
+																						<li class="short2"><span class="horitem_unit">~</span></li>
+																						<li class="long">
+																							<ul class="grow_item_list">
+																								<li>
+																									<input type="text" class="box_input spoca" placeholder="2020" />
+																								</li>
+																								<li>
+																									<input type="text" class="box_input spoca" placeholder="12" />
+																								</li>
+																							</ul>
+																						</li>
+																					</ul>
+																					<select class="form_select" style="width: 160px" data-pcwid="160px" data-pconly="true">
+																						<option value="1">졸업</option>
+																						<option value="2">옵션 2</option>
+																					</select>
+																				</div>
+																			</div>
 																		</div>
 																	</div>
 																</div>
