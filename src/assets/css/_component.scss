@@ -402,9 +402,17 @@
         .btn_box{max-width:100%;}
 
         &.respond_break{
-            flex-direction: column-reverse;
-            .btn_box{
-                &.sm_size2{}
+            flex-direction: row; gap:5px;
+        }
+
+        &.btn_field_bottom_wrap{
+            &.respond_break{
+                .btn_box{
+                    &.sm_size2{min-width:0;}
+                }
+                .left_cols{
+                    flex:1;
+                }
             }
         }
     }
@@ -425,6 +433,17 @@
 @media (max-width:$mobile_size3){
     .btn_taskbox_list{flex-direction: column;gap:10px 0; text-align: center;}
     .btn_taskbox{justify-content: center;}
+
+    .btn_box_wrap{
+        &.btn_field_bottom_wrap{
+            &.respond_break{
+                flex-direction: column-reverse;
+                .btn_box{
+                    &.sm_size2{}
+                }
+            }
+        }
+    }
 }
 
 /* tab */
@@ -607,6 +626,7 @@ input.box_input{
     &:read-only,
     &:disabled{background:#F8F8F8; color:#aaa;}
     &::placeholder{color:#aaa;}
+    &.align_center{text-align:center;}
 }
 .box_input_with_wrap{
     display:flex; align-items: center;  border:1px solid #E6E6E6; border-radius:5px; position:relative;overflow:hidden; padding-right:13px; box-sizing:border-box;

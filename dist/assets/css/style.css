@@ -4721,7 +4721,14 @@ button.swiper-pagination-bullet {
     max-width: 100%;
   }
   .btn_box_wrap.respond_break {
-    flex-direction: column-reverse;
+    flex-direction: row;
+    gap: 5px;
+  }
+  .btn_box_wrap.btn_field_bottom_wrap.respond_break .btn_box.sm_size2 {
+    min-width: 0;
+  }
+  .btn_box_wrap.btn_field_bottom_wrap.respond_break .left_cols {
+    flex: 1;
   }
   .btn_box {
     min-height: 45px;
@@ -4756,6 +4763,9 @@ button.swiper-pagination-bullet {
   }
   .btn_taskbox {
     justify-content: center;
+  }
+  .btn_box_wrap.btn_field_bottom_wrap.respond_break {
+    flex-direction: column-reverse;
   }
 }
 /* tab */
@@ -5144,6 +5154,9 @@ input.box_input::-moz-placeholder {
 }
 input.box_input::placeholder {
   color: #aaa;
+}
+input.box_input.align_center {
+  text-align: center;
 }
 
 .box_input_with_wrap {
