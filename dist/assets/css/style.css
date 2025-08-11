@@ -15336,6 +15336,9 @@ img.viewer_img {
     gap: 5px;
     flex-direction: column;
   }
+  .grow_item_list.nobreak {
+    flex-direction: row;
+  }
   .many_sliceform_list {
     margin: 0;
   }
@@ -15349,6 +15352,9 @@ img.viewer_img {
   }
   .chip_form_list > li.auto_type > select.form_select {
     width: 100%;
+  }
+  .grow_item_list.nobreak {
+    flex-direction: column;
   }
 }
 .docform_templete {

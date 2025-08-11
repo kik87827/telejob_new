@@ -730,6 +730,7 @@ img.viewer_img{position:absolute;top:0;left:0;width:100%;height:100%; object-fit
 
     .grow_item_list{
         gap:5px; flex-direction: column;
+        &.nobreak{flex-direction: row;}
         > li{}
     }
 
@@ -748,5 +749,9 @@ img.viewer_img{position:absolute;top:0;left:0;width:100%;height:100%; object-fit
                 width:100%;
              }
          }
+    }
+    .grow_item_list{
+        &.nobreak{flex-direction: column;}
+        > li{}
     }
 }
