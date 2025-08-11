@@ -627,6 +627,7 @@ input.box_input{
     &:disabled{background:#F8F8F8; color:#aaa;}
     &::placeholder{color:#aaa;}
     &.align_center{text-align:center;}
+    &.align_right{text-align:right;}
 }
 .box_input_with_wrap{
     display:flex; align-items: center;  border:1px solid #E6E6E6; border-radius:5px; position:relative;overflow:hidden; padding-right:13px; box-sizing:border-box;

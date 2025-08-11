@@ -5158,6 +5158,9 @@ input.box_input::placeholder {
 input.box_input.align_center {
   text-align: center;
 }
+input.box_input.align_right {
+  text-align: right;
+}
 
 .box_input_with_wrap {
   display: flex;
