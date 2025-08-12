@@ -218,6 +218,26 @@
 .mv_sticky_copy_wrap{margin-top:24px;}
 .mv_sticky_copy{}
 
+.mv_spbanner_box{
+    .inner_contents{
+    }
+    .img_row{}
+    .mv_img_wrap{
+        img{}
+    }
+    .spec_row{}
+    .mv_main_copy{}
+    .mold_sub_marking{
+        .ico{}
+    }
+    .mold_sub_caption_wrap{}
+    .mold_sub_caption{}
+}
+.corner_flag_item_wrap{}
+.corner_flag_item{
+    &.word_p{}
+}
+
 @media (max-width:$pcwid_large2){
     .mv_sticky_layer{display:none;}
     .mv_img_wrap{
