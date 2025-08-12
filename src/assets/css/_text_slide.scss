@@ -5,15 +5,15 @@
     dt{}
     dd{}
 }
-.node_keyword{}
+.node_keyword{display: inline-block; @include font2(14px,400,1.3,#000);}
 .node_linked_text{
     display:flex; justify-content: flex-end; align-items: center; @include font(14px,400,1.3,#595959); gap:2px; white-space: nowrap;
-    .linked_intext{@include font2(16px,400,1,#000)}
+    .linked_intext{@include font2(14px,400,1,#000)}
     .price_node{}
 }
 .price_node{
     display:flex; gap:3px; align-items: center; white-space: nowrap;
-    .price_number{@include font2(20px,700,1,#B5000F); @include spoca; word-break: keep-all;}
+    .price_number{@include font2(14px,400,1,#B5000F); @include spoca; word-break: keep-all;}
     .price_unit{}
 }
 .nodetext_struc_wrap{display:flex; flex-wrap:wrap; gap:5px 10px; justify-content: space-between; align-items: center;
@@ -28,13 +28,13 @@
     .copy_row{}
 }
 .amount_price_wrap{display:flex; gap:2px; align-items: center; justify-content: flex-end;text-align: right;}
-.amount_price_main{@include font2(24px,700,1,#B5000F); @include spoca;}
+.amount_price_main{@include font2(20px,700,1,#B5000F); @include spoca;}
 .amount_price_unit{@include font2(14px,400,1,#595959); }
 .amount_price_copy{@include font2(14px,400,1.3,#595959); margin-top:4px;}
 
 .with_number_para{@include font2(16px,500,1.3,#000000); @include spoca;}
 
-
+.no_reserve_com{border:1px solid #abd868; background-color: #e8ffc8; font-weight:bold; font-size:14px;}
 
 @media (max-width:$mobile_large){
     .node_obj_package{justify-content: flex-start;}

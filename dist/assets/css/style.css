@@ -5649,6 +5649,9 @@ select.form_select:required:invalid {
 select.form_select:required:invalid:hover option {
   color: #000;
 }
+select.form_select.yellow {
+  background: #FFFCD7 url("../images/ico_select_arrow.png") no-repeat calc(100% - 13px) 50%/16px auto !important;
+}
 
 .field_setbox {
   border-radius: 16px;
@@ -6413,7 +6416,7 @@ select.form_select:required:invalid:hover option {
 
 .btn_submit_box {
   display: flex;
-  min-height: 56px;
+  min-height: 50px;
   min-width: 180px;
   box-sizing: border-box;
   text-align: center;
@@ -6643,7 +6646,7 @@ select.form_select:required:invalid:hover option {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 24px;
+  padding: 8px 24px;
 }
 .bottom_layer_item .title_row .main_cols {
   display: flex;
@@ -6659,7 +6662,7 @@ select.form_select:required:invalid:hover option {
 .bottom_layer_item .contents_row {
   flex: 1;
   min-height: 0;
-  padding: 36px 24px 48px;
+  padding: 16px 24px 26px;
 }
 .bl_title_main {
   font-size: 20px;
@@ -17517,6 +17520,14 @@ input.docu_big_input::placeholder {
   gap: 8px;
   flex-wrap: wrap;
 }
+.node_keyword {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #000;
+}
+
 .node_linked_text {
   display: flex;
   justify-content: flex-end;
@@ -17530,7 +17541,7 @@ input.docu_big_input::placeholder {
   white-space: nowrap;
 }
 .node_linked_text .linked_intext {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1;
   color: #000;
@@ -17542,8 +17553,8 @@ input.docu_big_input::placeholder {
   white-space: nowrap;
 }
 .price_node .price_number {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 400;
   line-height: 1;
   color: #B5000F;
   font-family: "Spoqa", "NotoSans-Regular", dotum;
@@ -17585,7 +17596,7 @@ input.docu_big_input::placeholder {
 }
 
 .amount_price_main {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1;
   color: #B5000F;
@@ -17613,6 +17624,13 @@ input.docu_big_input::placeholder {
   line-height: 1.3;
   color: #000000;
   font-family: "Spoqa", "NotoSans-Regular", dotum;
+}
+
+.no_reserve_com {
+  border: 1px solid #abd868;
+  background-color: #e8ffc8;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 @media (max-width: 1023px) {
