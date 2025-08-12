@@ -75,6 +75,22 @@
           // main right banner
           mvSticky();
 
+          // main tape banner
+          var slideCount = document.querySelectorAll(".mv_tapbanner_container .swiper-slide").length;
+          // 슬라이드가 3개 초과일 때만 Swiper 실행
+          var mvTapebanner = null;
+          if (slideCount > 3) {
+            mvTapebanner = new Swiper(".mv_tapbanner_container", {
+              direction: "vertical",
+              slidesPerView: 3,
+              loop: true,
+              autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+              },
+            });
+          }
+
           // main banner
           let mv_banner = new Swiper(".mv_cardbanner_wrap", {
             loop: true,
@@ -159,6 +175,10 @@
             }
           }
         });
+      </script>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {});
       </script>
       @@include('./include/footer.html')
     </div>
