@@ -36,9 +36,9 @@
 								</p>
 							</div>
 							<div class="mv_cols_contents">
-								<div class="mv_tapebanner_wrap">
-									<ul class="mv_tapebanner_list">
-										<li>
+								<div class="mv_tapebanner_wrap swiper">
+									<ul class="mv_tapebanner_list swiper-wrapper">
+										<li class="swiper-slide">
 											<a href="#" class="mv_tapebanner_item">
 												<div class="img_cols">
 													<div class="mv_tapeimg_wrap">
@@ -63,7 +63,7 @@
 												</div>
 											</a>
 										</li>
-										<li>
+										<li class="swiper-slide">
 											<a href="#" class="mv_tapebanner_item">
 												<div class="img_cols">
 													<div class="mv_tapeimg_wrap">
@@ -89,7 +89,7 @@
 												</div>
 											</a>
 										</li>
-										<li>
+										<li class="swiper-slide">
 											<a href="#" class="mv_tapebanner_item">
 												<div class="img_cols">
 													<div class="mv_tapeimg_wrap">
@@ -108,7 +108,7 @@
 												</div>
 											</a>
 										</li>
-										<li>
+										<li class="swiper-slide">
 											<a href="#" class="mv_tapebanner_item">
 												<div class="img_cols">
 													<div class="mv_tapeimg_wrap">
@@ -127,7 +127,7 @@
 												</div>
 											</a>
 										</li>
-										<li>
+										<li class="swiper-slide">
 											<a href="#" class="mv_tapebanner_item">
 												<div class="img_cols">
 													<div class="mv_tapeimg_wrap">
@@ -153,7 +153,7 @@
 												</div>
 											</a>
 										</li>
-										<li>
+										<li class="swiper-slide">
 											<a href="#" class="mv_tapebanner_item">
 												<div class="img_cols">
 													<div class="mv_tapeimg_wrap">
@@ -178,7 +178,7 @@
 												</div>
 											</a>
 										</li>
-										<li>
+										<li class="swiper-slide">
 											<a href="#" class="mv_tapebanner_item">
 												<div class="img_cols">
 													<div class="mv_tapeimg_wrap">
@@ -203,7 +203,7 @@
 												</div>
 											</a>
 										</li>
-										<li>
+										<li class="swiper-slide">
 											<a href="#" class="mv_tapebanner_item">
 												<div class="img_cols">
 													<div class="mv_tapeimg_wrap">
@@ -228,7 +228,7 @@
 												</div>
 											</a>
 										</li>
-										<li>
+										<li class="swiper-slide">
 											<a href="#" class="mv_tapebanner_item">
 												<div class="img_cols">
 													<div class="mv_tapeimg_wrap">
@@ -264,8 +264,30 @@
 		</section>
 		<!-- // middle -->
 		<script>
-			document.addEventListener("DOMContentLoaded", function() {});
+			document.addEventListener("DOMContentLoaded", function() {
+				var slideCount = document.querySelectorAll(".mv_tapebanner_wrap .swiper-slide").length;
+
+				// 슬라이드가 3개 초과일 때만 Swiper 실행
+				if (slideCount > 3) {
+					var mySwiper = new Swiper(".mv_tapebanner_wrap", {
+						mode: "vertical", // 세로 모드
+						slidesPerView: 3, // 한번에 3개 보이기
+						loop: true, // 루프
+						autoplay: 3000, // 3초마다 자동
+						speed: 600, // 슬라이드 전환 속도
+					});
+				}
+			});
 		</script>
+		<!-- <style>
+        .mv_tapebanner_wrap.swiper-container {
+        }
+        .mv_tapebanner_list.swiper-wrapper {
+          display: block;
+        }
+        .mv_tapebanner_list.swiper-wrapper .swiper-slide {
+        }
+      </style> -->
 	</div>
 </body>
 
