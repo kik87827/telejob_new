@@ -87,7 +87,7 @@
     }
 }
 .mv_banner_box{
-    background:#fff; border:2px solid #E6E6E6; border-radius:24px; padding:46px 0 0 0; position:relative;
+    background:#fff; border:2px solid #E6E6E6; border-radius:24px; padding:46px 0 0 0; position:relative; box-sizing: border-box; min-height:100%;
     &.normal{
         .mv_main_copy{text-align: left;}
     }
@@ -445,14 +445,20 @@
     }
 
     .mv_banner_box_list{
-        gap:10px;flex-wrap:wrap;margin-right:-20px !important;
+        gap:10px;flex-wrap:wrap;margin-right:-10px !important;
         > li{
-            flex:0 0 calc(50% - 10px);
+            flex:0 0 calc(50% - 10px) !important;
             &:hover{
                 .mv_banner_box{
                     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
                     &.royal{
                         border-color:#D68AFF !important;
+                    }
+                    &.spe{
+                        border-color:#5CB9F3 !important;
+                    }
+                    &.gold{
+                        border-color:#F3BD5C !important;
                     }
                     .inner_contents{
                         visibility: visible; opacity:1;
@@ -476,6 +482,11 @@
             display:none !important;
         }
         .mv_main_copy{font-size:16px;}
+        &.spe,&.gold{
+            .inner_contents{
+                padding-bottom:5px;
+            }
+        }
     }
     .mv_img_wrap{height:65px;
        img{max-width:80%;}
@@ -512,6 +523,8 @@
     .mv_inner_main_row{
          .spec_row{margin:10px 20px 0;}
     }
+
+    .main_primary_section{margin-bottom:20px;}
 }
 @media (max-width:$mobile){
     
@@ -568,7 +581,6 @@
 }
 .sync_data_item{
     display:flex; align-items: center; min-height:64px; font-size:0;line-height:0;
-    .img_cols,
     .title_cols,
     .caption_cols,
     .btn_cols{box-sizing:border-box;padding:15px;}
@@ -599,6 +611,12 @@
 
     .caption_cols{
         .mold_sub_marking{margin-top:0;}
+    }
+
+    &.type2{
+        .sync_img_wrap{
+            > img{height:50%;}
+        }
     }
 }
 .sync_img_else_wrap{text-align:center; margin-top:8px;}
