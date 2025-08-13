@@ -67,13 +67,14 @@
                     .pouch_date{color:#005AAB;
                         &:hover{color:#00A7FC;}
                     }
+                    &.selected{background:#E0DCFF;}
                 }
             }
         }
     }
 }
 .pouch_thtext{display:inline-block; @include font2(12px,400,1,#595959);}
-.pouch_tditem{@include spoca;
+.pouch_tditem{@include spoca; display:flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; width:100%;line-height:1;
     > *{display:block;}
     &.emp{
         .pouch_date{color:#00A7FC !important;}

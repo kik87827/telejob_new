@@ -13917,6 +13917,9 @@ strong.color_emp {
 .pouch_calendar tbody tr td.enabled .pouch_date:hover {
   color: #00A7FC;
 }
+.pouch_calendar tbody tr td.enabled.selected {
+  background: #E0DCFF;
+}
 
 .pouch_thtext {
   display: inline-block;
@@ -13928,6 +13931,13 @@ strong.color_emp {
 
 .pouch_tditem {
   font-family: "Spoqa", "NotoSans-Regular", dotum;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  line-height: 1;
 }
 .pouch_tditem > * {
   display: block;
@@ -17562,11 +17572,14 @@ input.docu_big_input::placeholder {
 }
 .nodetext_struc_wrap {
   display: flex;
-  flex-wrap: wrap;
   gap: 5px 10px;
   justify-content: space-between;
   align-items: center;
 }
+.nodetext_struc_wrap .struc_cols .total_amount_group {
+  white-space: nowrap;
+}
+
 .nodetext_emp_text {
   font-size: 20px;
   font-weight: 500;
@@ -17660,6 +17673,12 @@ input.docu_big_input::placeholder {
   }
   .nodetext_struc_wrap {
     justify-content: flex-end;
+    flex-direction: column;
+    align-items: normal;
+  }
+  .nodetext_struc_wrap .struc_cols .total_amount_group {
+    justify-content: flex-end;
+    white-space: normal;
   }
   .amount_price_main {
     font-size: 20px;
@@ -20154,7 +20173,7 @@ input.docu_big_input::placeholder {
   min-height: 544px;
 }
 .mv_banner_box.spe {
-  border: 2px solid #5CB9F3;
+  border: 2px solid #91D2FA;
 }
 .mv_banner_box.spe .mv_main_copy {
   text-align: left;
@@ -20163,7 +20182,7 @@ input.docu_big_input::placeholder {
   padding-bottom: 16px;
 }
 .mv_banner_box.spe .hover_contents {
-  border: 3px solid #5CB9F3;
+  border: 3px solid #91D2FA;
   min-height: 530px;
 }
 .mv_banner_box.spe .hover_contents .img_row {
@@ -21115,6 +21134,29 @@ input.docu_big_input::placeholder {
      object-position: 0 0;
 }
 
+.sync_text_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.sync_text_node {
+  display: block;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #000;
+}
+
 .sync_title {
   word-break: break-all;
   display: -webkit-box;
@@ -21162,6 +21204,9 @@ input.docu_big_input::placeholder {
   }
   .fetch_title_sub {
     margin-top: 10px;
+  }
+  .sync_text_node {
+    font-size: 16px;
   }
 }
 @media (max-width: 1023px) {
@@ -21240,6 +21285,12 @@ input.docu_big_input::placeholder {
   .fetch_title_main .ico.shape_vip {
     width: 27.3px;
     height: 24px;
+  }
+  .sync_text_node {
+    font-size: 14px;
+  }
+  .sync_img_else_wrap {
+    margin-top: 5px;
   }
 }
 /* 고객센터 */
@@ -21830,8 +21881,7 @@ input.docu_big_input::placeholder {
   line-height: 0;
 }
 .square_data_item:hover {
-  border: 1px solid #000;
-  outline: 1px solid #000;
+  border-color: #828282;
 }
 
 .square_img_wrap {
@@ -21953,7 +22003,7 @@ input.docu_big_input::placeholder {
   margin-top: 8px;
 }
 .box_shape_item:hover {
-  border-color: #000;
+  border-color: #828282;
 }
 .box_shape_item:hover .btn_shape_more {
   background: #828282;
