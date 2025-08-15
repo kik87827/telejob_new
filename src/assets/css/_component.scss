@@ -606,9 +606,9 @@
             .boxtab_list{max-width:100%;
                 > li{
                     &:last-of-type{
-                        .boxtab{
+                        /* .boxtab{
                             &:after{display:none;}
-                        }
+                        } */
                     }
                 }
             }

@@ -1014,7 +1014,7 @@ function stickyTabUI() {
   const sticky_tab = sticky_ui_container.querySelectorAll(".floting_tab_wrap .boxtab");
   let sticky_tab_active = Array.from(sticky_tab).find((tab) => tab.classList.contains("active"));
   const sticky_section = document.querySelectorAll(".rise_contents_zone .rise_contents");
-  let contMargin = window.innerWidth > 1023 ? 60 : 30;
+  let contMargin = window.innerWidth > 1023 ? 30 : 10;
   let tabclick_is = false;
   initUpdate({
     tabarea: sticky_tab_area,
@@ -1224,5 +1224,29 @@ function mvSticky() {
         mv_sticky_layer.classList.remove("fixed");
       }
     }
+  }
+}
+
+function keywordMore() {
+  const $recom_keyword_wrap = $(".recom_keyword_wrap");
+  const $recom_keyword_list = $(".recom_keyword_list");
+  const $btn_shapemore_wrap = $(".recom_keyword_zone .btn_shapemore_wrap");
+  const $btn_shapemore = $(".recom_keyword_zone .btn_shapemore");
+
+  init();
+  eventFunc();
+  $(window).on("resize", function() {});
+
+  function init() {
+    var limitHeight = $(window).width() > 1023 ? 112 : 68;
+    $btn_shapemore_wrap.toggle($recom_keyword_list.height() >= limitHeight);
+  }
+
+  function eventFunc() {
+    $btn_shapemore.on("click", function(e) {
+      e.preventDefault();
+      $recom_keyword_wrap.addClass("active");
+      $btn_shapemore_wrap.hide();
+    });
   }
 }
