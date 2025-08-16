@@ -80,15 +80,15 @@
 
 /* form layout */
 .gate_form_container{padding:43px 0 0;}
-.gate_top_row{display:flex; justify-content: space-between; align-items:center; gap:20px; margin-bottom:24px;}
+.gate_top_row{display:block; text-align:center; margin-bottom:24px;}
 .gate_message_main{
     .gate_message_para{}
 }
 .gate_message_sub{
-    text-align:right;
+    margin-top:5px;
     .gate_message_detail{}
 }
-.gate_message_para{@include font(24px, 700, 1.3, 0, #000);}
+.gate_message_para{@include font(30px, 700, 1.3, 0, #000);}
 .gate_message_detail{@include font(16px, 400, 1.3, 0, #000); word-break: keep-all;}
 .gate_form_box{
     background: #fff;border: 1px solid #E6E6E6;border-radius: 24px;display:flex; padding:60px 0;
@@ -445,10 +445,8 @@ input.file_input{display:none;}
 
 .form_both_container{
     display:flex;gap:24px;
-    .form_cols,
-    .sms_cols{flex:1;}
-    .form_cols{}
-    .sms_cols{}
+    .form_cols{flex:1;}
+    .sms_cols{flex:0 0 43%;}
     .block_form_wrap{}
     .block_form_list{
         > li{
@@ -650,7 +648,7 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
     .visual_guide_copy{font-size:16px;}
 
     .gate_top_row{display:block;}
-    .gate_message_sub{text-align:left; margin-top:10px;}
+    .gate_message_sub{margin-top:10px;}
     .gate_form_box{padding:20px 0;flex-direction:column-reverse; border-radius:12px;}
 
     .gate_guide_cols, .gate_form_cols{
@@ -3147,12 +3145,17 @@ strong.color_emp{font-weight:700;}
            padding:0 60px;
         }
     }
+    
+    .info_banner_container{
+        .info_copy_box{
+             .text_node{font-size:20px;}
+        }
+    }
 }
 @media (max-width:$pcwid){
     .gate_main_copy{font-size:30px;}
     .gate_sub_copy{font-size:18px;}
     .gate_detail_copy{font-size:14px;}
-    
 }
 @media (max-width:$tablet){
     .gate_moon_title{font-size:24px; margin-bottom:20px;}

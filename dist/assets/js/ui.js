@@ -1135,8 +1135,6 @@ function floatingBottomLayer() {
     action();
   });
 
-  bottom_layer_control.attr("data-close", bottom_layer_control.text());
-
   bottom_layer_control.on("click", function(e) {
     e.preventDefault();
     var $this = $(this);
@@ -1165,6 +1163,24 @@ function floatingBottomLayer() {
       middle_inner.css("padding-bottom", marginValue);
     }
   }
+}
+
+function floatingBottomOpen() {
+  const bottom_layer_item = $(".bottom_layer_item");
+  const bottom_layer_control = bottom_layer_item.find(".btn_bl_control");
+  $(function() {
+    bottom_layer_item.removeClass("close");
+    bottom_layer_control.find(".text_node").text(bottom_layer_control.attr("data-close"));
+  });
+}
+
+function floatingBottomClose() {
+  const bottom_layer_item = $(".bottom_layer_item");
+  const bottom_layer_control = bottom_layer_item.find(".btn_bl_control");
+  $(function() {
+    bottom_layer_item.addClass("close");
+    bottom_layer_control.find(".text_node").text(bottom_layer_control.attr("data-open"));
+  });
 }
 
 function tabUI(option) {

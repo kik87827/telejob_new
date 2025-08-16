@@ -267,6 +267,10 @@ img.ico_img {
   display: none;
 }
 
+.mb_br2 {
+  display: none;
+}
+
 .pc_br {
   display: block;
 }
@@ -311,6 +315,9 @@ img.ico_img {
   }
 }
 @media (max-width: 767px) {
+  .mb_br2 {
+    display: block !important;
+  }
   .mb_hide {
     display: none !important;
   }
@@ -5024,6 +5031,26 @@ button.swiper-pagination-bullet {
   border-bottom: 1px solid #0053C2;
   border-radius: 16px 16px 0px 0px;
 }
+.tailtab.has_ico {
+  gap: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.tailtab.has_ico .ico {
+  width: 40px;
+  height: 32px;
+  flex: 0 0 42px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 0;
+  display: block;
+}
+.tailtab.has_ico .ico.dia {
+  background-image: url("../images/ico_main_dia.png");
+}
+.tailtab.has_ico .ico.king {
+  background-image: url("../images/ico_main_king.png");
+}
 
 .tailtab_text {
   display: inline-block;
@@ -5089,6 +5116,16 @@ button.swiper-pagination-bullet {
     min-height: 40px;
     min-width: 0;
     border-radius: 10px 10px 0 0;
+  }
+  .tailtab.has_ico {
+    gap: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .tailtab.has_ico .ico {
+    width: 20px;
+    height: 16px;
+    flex: 0 0 20px;
   }
   .tailtab_text {
     font-size: 12px;
@@ -7239,18 +7276,16 @@ select.form_select.yellow {
 }
 
 .gate_top_row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+  display: block;
+  text-align: center;
   margin-bottom: 24px;
 }
 
 .gate_message_sub {
-  text-align: right;
+  margin-top: 5px;
 }
 .gate_message_para {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 1.3;
   letter-spacing: 0;
@@ -8206,9 +8241,11 @@ input.file_input {
   display: flex;
   gap: 24px;
 }
-.form_both_container .form_cols,
-.form_both_container .sms_cols {
+.form_both_container .form_cols {
   flex: 1;
+}
+.form_both_container .sms_cols {
+  flex: 0 0 43%;
 }
 .form_both_container .block_form_list > li {
   margin-bottom: 24px;
@@ -8678,7 +8715,6 @@ input.input_sms_send::placeholder {
     display: block;
   }
   .gate_message_sub {
-    text-align: left;
     margin-top: 10px;
   }
   .gate_form_box {
@@ -13664,6 +13700,9 @@ strong.color_emp {
 @media (max-width: 1440px) {
   .gate_moon_container .moon_cols {
     padding: 0 60px;
+  }
+  .info_banner_container .info_copy_box .text_node {
+    font-size: 20px;
   }
 }
 @media (max-width: 1340px) {

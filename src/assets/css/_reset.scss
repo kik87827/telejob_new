@@ -67,6 +67,7 @@ i{display:flex;align-items: center;justify-content: center;font-size:0;line-heig
 img.ico_img{max-width:100%;}
 .vhidden{}
 .mb_br{display:none;}
+.mb_br2{display:none;}
 .pc_br{display:block;}
 .pc_wide_br{display:block;}
 .pc_item{}
@@ -96,5 +97,6 @@ img.ico_img{max-width:100%;}
     .mb_item{display:block !important;}
 }
 @media (max-width:$mobile){
+    .mb_br2{display:block !important;}
     .mb_hide{display:none !important;}
 }

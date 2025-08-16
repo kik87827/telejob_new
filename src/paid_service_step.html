@@ -389,7 +389,7 @@
       <!-- // middle -->
       <!-- bottom layer -->
       <div class="bottom_layer_wrap">
-        <div class="bottom_layer_item">
+        <div class="bottom_layer_item close">
           <div class="title_row">
             <div class="main_cols">
               <p class="bl_title_main">장바구니</p>
@@ -400,8 +400,8 @@
                 <li><a href="#" class="btn_actcard primary">결제하기</a></li>
                 <li><a href="#" class="btn_actcard">전체삭제</a></li>
               </ul>
-              <a href="javascript:;" class="btn_bl_control" data-open="열기">
-                <span class="text_node">닫기</span>
+              <a href="javascript:;" class="btn_bl_control" data-open="열기" data-close="닫기">
+                <span class="text_node">열기</span>
                 <i class="ico"></i>
               </a>
             </div>
@@ -1677,6 +1677,8 @@
 
         $(window).on("load", function () {
           floatingBottomLayer();
+          // floatingBottomOpen(); // 열기
+          // floatingBottomClose(); // 닫기
         });
       </script>
       @@include('./include/footer.html')
