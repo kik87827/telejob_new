@@ -35,7 +35,7 @@
 }
 .fdata_fiqure_wrap{
     height:174px; display:flex; align-items:center; justify-content: center;
-    > img{height:44px; max-width:100%; object-fit: contain; object-position: 50% 50%;}
+    > img{height:82px; max-width:100%; object-fit: contain; object-position: 50% 50%;}
 }
 .fdata_imgspec_maincopy{@include font2(16px,700,1.3,#000);}
 .fdata_imgspec_subcopy{@include font2(14px,400,1.3,#595959);margin-top:10px;}
@@ -70,7 +70,7 @@
 }
 .compact_chip_title{@include font2(14px,500,1.4,#000000);}
 .fdata_btn_row{
-    &.btn_box_wrap{margin-top:80px;}
+    &.btn_box_wrap{margin-top:50px;}
     .btn_box{}
 }
 

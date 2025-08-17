@@ -118,7 +118,7 @@
         .text_node{white-space:nowrap;}
     }
 }
-.btn_ovalbox{display:inline-flex; gap:4px; min-height:32px; background-color:#fff;border:1px solid #000; border-radius:100px; align-items: center; padding:5px 16px; box-sizing: border-box;
+.btn_ovalbox{display:inline-flex; gap:4px; min-height:28px; background-color:#fff;border:1px solid #000; border-radius:100px; align-items: center; padding:3px 16px; box-sizing: border-box;
     .ico{
         width:16px; height:16px; flex:0 0 16px; @include bgicon;
         &.link{background-image:url("../images/ico_ringlink_w.png")}
@@ -1278,7 +1278,7 @@ select.form_select{
 .popup_title_row{padding:32px 80px 20px 36px;}
 .popup_title{ @include font(20px, 500, 1.4, 0, #000);
 }
-.popup_contents_row{position:relative;overflow:hidden;overflow-y:auto;flex:1;font-size:16px;color:#333333;padding:0 40px 40px;
+.popup_contents_row{position:relative;overflow:hidden;overflow-y:auto;flex:1;font-size:16px;color:#333333;padding:0 40px 10px;
     &.ptype2{padding-bottom:0;}
     &.ptype3{padding-bottom:20px;}
 }
@@ -1298,7 +1298,7 @@ select.form_select{
     &:last-of-type{justify-content:flex-end; gap:12px;}
 }
 
-.btn_submit_box{display:flex; min-height:50px; min-width:180px; box-sizing: border-box; text-align: center; align-items: center; justify-content: center; border:1px solid #000; border-radius:100px; padding:12px 30px; gap:4px;
+.btn_submit_box{display:flex; min-height:44px; min-width:180px; box-sizing: border-box; text-align: center; align-items: center; justify-content: center; border:1px solid #000; border-radius:100px; padding:12px 30px; gap:4px;
     &.primary{
         border-color:#005AAB;
         .btn_submit_box_text{color:#005AAB;}
