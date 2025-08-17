@@ -88,6 +88,7 @@
     border:1px solid #000; border-radius:100px; @include font2(13px,700,1,#000); background:#fff; white-space: nowrap;
     &.large{}
     &.primary{color:#005AAB; border-color:#005AAB;}
+    &.dark{color:#fff; border-color:#000; background-color:#000;}
     &:disabled{background-color:#F8F8F8;border-color:#E6E6E6;color:#595959; cursor: default;}
     &.medium{min-height:36px;}
     &.large{min-height:48px;padding-left:24px;padding-right:24px;}
@@ -120,7 +121,7 @@
 .btn_ovalbox{display:inline-flex; gap:4px; min-height:32px; background-color:#fff;border:1px solid #000; border-radius:100px; align-items: center; padding:5px 16px; box-sizing: border-box;
     .ico{
         width:16px; height:16px; flex:0 0 16px; @include bgicon;
-        &.link{background-image:url("../images/ico_ringlink.png")}
+        &.link{background-image:url("../images/ico_ringlink_w.png")}
         &.modify{background-image:url("../images/ico_oval_pen.png")}
         &.del{background-image:url("../images/ico_oval_del.png")}
         &.end{background-image:url("../images/ico_oval_end.png")}
@@ -135,11 +136,11 @@
         }
     }
     &:hover,&.active{
-        border-color:#0053C2;
+        border-color:#0053C2; background-color:#0053C2;
         .ico{
             background-position: 0 100%;
         }
-        .text_node{color:#005AAB;}
+        .text_node{color:#fff;}
     }
     &.hover_2:hover,&.hover_2.active{
         border-color:#0053C2;background-color:#0053C2;
