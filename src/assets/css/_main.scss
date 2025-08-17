@@ -89,18 +89,20 @@
 .mv_banner_box{
     background:#fff; border:2px solid #E6E6E6; border-radius:24px; padding:46px 0 0 0; position:relative; box-sizing: border-box; min-height:100%;
     &.normal{
-        .mv_main_copy{text-align: left;}
+        .mv_main_copy{}
     }
     &.royal{
         border:2px solid #D68AFF;
         .hover_contents{
             min-height:544px;
+            .btn_else_row{margin:4px 24px 0;}
+            .mv_inner_summary_row{min-height:206px; padding-top:42px;}
         }
         /* &:hover{outline:1px solid #D68AFF} */
     }
     &.spe{
         border:2px solid #91D2FA;
-        .mv_main_copy{text-align: left;}
+        .mv_main_copy{}
         .inner_contents{
             padding-bottom:16px;
         }
@@ -109,7 +111,7 @@
             min-height:530px;
             .img_row{margin-bottom:0;}
             .mv_img_wrap{margin:0 0;}
-            .btn_else_row{margin:10px 24px 0;}
+            .btn_else_row{margin:4px 24px 0;}
             .hover_inner{padding-top:45px;}
             .btn_mold_block{margin-top:50px;}
         }
@@ -123,7 +125,7 @@
     }
     &.gold{
         border:2px solid #F3BD5C;
-        .mv_main_copy{text-align: left;}
+        .mv_main_copy{}
         .inner_contents{
             padding-bottom:16px;
         }
@@ -151,14 +153,14 @@
     .hover_contents{
         display:none; position:absolute;top:-2px;left:-2px;width:calc(100% - 2px); background:#fff; border:3px solid #D68AFF;
         box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2); border-radius:24px; 
-        .img_row{margin-bottom:42px;}
+        .img_row{}
         .spec_row{
             
         }
         .btn_else_row{margin-top:13px;}
-        .mv_img_wrap{margin:15px 0;}
-        .hover_inner{padding-top:64px;}
-        .btn_mold_block{margin-top:15px;}
+        .mv_img_wrap{margin:0;}
+        .hover_inner{padding-top:45px;}
+        .btn_mold_block{margin-top:36px;}
     }
     .mv_main_copy{font-size:20px;}
     .mold_sub_marking{margin-top:7px;}
@@ -171,7 +173,7 @@
     display:flex; justify-content: center; align-items: center; height:84px; width:100%;
     img{max-height:50%; max-width:70%; object-fit: contain; object-position: 50% 50%;vertical-align:top; width:100%;}
 }
-.mv_main_copy{text-align:center; @include font2(24px,700,1.4,#000); @include clamp(1);overflow:hidden;}
+.mv_main_copy{text-align:center; @include font2(24px,700,1.4,#000); @include clamp(1);overflow:hidden; text-align: center;}
 .mv_sub_copy{margin-top:8px; @include font2(16px,400,1.4,#595959); @include clamp(2); overflow:hidden;
     
 }
@@ -299,11 +301,19 @@
     }
     .mold_sub_caption_wrap{}
     .mold_sub_caption{}
+    .btn_else_row{margin:4px 24px 0;}
+    .btn_mold_block{margin-top:36px;}
     &:hover{
         .inner_contents{outline:0 solid #fff;}
         box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
     }
     &:last-of-type{margin-bottom:0;}
+    &.has_img{
+        .inner_contents{
+             height:544px;padding-top:0; border-radius:22px; overflow:hidden; overflow-y:auto;
+        }
+        img{width:100%;vertical-align: top;}
+    }
 }
 .corner_flag_item_wrap{position:absolute;top:0;right:0;}
 .corner_flag_item{
@@ -525,6 +535,15 @@
     }
 
     .main_primary_section{margin-bottom:20px;}
+
+    .mv_spbanner_box{
+        &.has_img{
+            .inner_contents{
+                height:auto;overflow:hidden;
+            }
+            img{width:100%;}
+        }
+    }
 }
 @media (max-width:$mobile){
     
@@ -700,6 +719,10 @@
 
     .sync_text_node{font-size:14px;}
     .sync_img_else_wrap{margin-top:5px;}
+
+    .sync_img_wrap{
+        > img{height:70%;max-width:100%;}
+    }
 }
 
 
@@ -1058,6 +1081,7 @@
 
     }
     .mold_sub_marking{
+        justify-content: flex-start;
         .ico{flex:0 0 15px; width:15px; height:15px; position:relative; top:3px;}
     }
     .mold_sub_caption_wrap{height:auto;@include clamp(1);}
@@ -1231,7 +1255,7 @@
 }
 
 .mold_sub_marking{
-    display: flex;gap: 4px; margin-top: 4px;
+    display: flex;gap: 4px; margin-top: 4px; justify-content: center;
     .ico{
       flex: 0 0 24px;
       display: inline-block;
@@ -1262,6 +1286,7 @@
     line-height: 1.4;
     color: #595959;
     word-break: break-all;
+    text-align: left;
     &.animation{animation: twinkle 0.8s infinite;}
 }
 
