@@ -82,7 +82,9 @@
 }
 .rise_tab_zone{}
 .floting_tab_wrap{
-    &.fixed{position:fixed;top:0;left:0;width:100%; z-index:50;box-sizing:border-box;}
+    &.fixed{position:fixed;top:0;left:0;width:100%; z-index:50;box-sizing:border-box;
+        .fixed_use{display:block;}
+    }
     .boxtab_wrap{max-width:930px;margin:0 auto;}
     .boxtab_text{line-height:1.3;word-break:keep-all;}
 }
@@ -496,7 +498,8 @@
     .fdata_title_row{margin-bottom:30px;}
     .fdata_title{font-size:18px;}
     .floting_tab_wrap{
-        &.fixed{padding:0 20px;}
+        &.fixed{padding:0 0;
+        }
         .boxtab{padding:5px;}
         .boxtab_text{font-size:13px;}
     }
@@ -735,6 +738,10 @@
 
     .recom_keyword_wrap{height:107px;}
     .btn_shapemore{width:30px;height:30px;}
+
+    .boxtwtab{
+
+    }
 }
 
 @media (max-width:$mobile){

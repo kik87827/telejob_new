@@ -499,6 +499,7 @@
                 &:after{display:none;}
             }
         }
+        &.fixed_use{display:none;}
     }
 }
 .boxtab{
@@ -510,7 +511,40 @@
         &:before,
         &:after{display:none !important;}
     }
+    &.callback_type{
+        background:#64C200; flex-direction: row; gap:7px;
+        .boxtab_text{color:#fff;}
+        
+        &.animation{
+            animation: tab_callback 0.8s infinite;
+        }
+    }
+    .ico{
+        width:24px;height:24px; flex:0 0 24px; @include bgicon;
+        &.callback{background-image:url("../images/ico_callback_24.png");}
+    }
 }
+.boxtwtab{
+    display:flex; min-height:100%; flex-direction: column; width:100%; background:#F8F8F8; box-sizing: border-box;padding:10px; position:relative; justify-content:center; text-align:center; align-items:center;
+    
+    background:#64C200; flex-direction: row; gap:7px;
+    .boxtab_text{color:#fff;}
+    &.animation{
+        animation: tab_callback 0.8s infinite;
+    }
+    .ico{
+        width:24px;height:24px; flex:0 0 24px; @include bgicon;
+        &.callback{background-image:url("../images/ico_callback_24.png");}
+    }
+}
+
+@keyframes tab_callback {
+    0%   { background-color: #64C200; }
+    33%  { background-color: #00C298; }
+    66%  { background-color: #008EC2; }
+    100%  { background-color: #00C20A;  }
+}
+
 .boxtab_text{@include font(16px, 700, 1, 0, #595959); display:inline-block;}
 .tailtab_wrap{margin-bottom:20px;
     &.mb_type2{margin-bottom:8px;}
@@ -626,6 +660,11 @@
                 }
             }
         }
+    }
+
+    .boxtwtab{
+        .ico{width:20px;height:20px;flex-basis: 20px;}
+        .boxtab_text{}
     }
 }
 
@@ -1382,7 +1421,9 @@ select.form_select{
     .contents_row{
         flex:1; min-height:0; padding:16px 24px 26px;
         .list_fraction_top_row{}
-        .respon_entry_wrap{}
+        .respon_entry_wrap{
+            position:relative;overflow-y:auto; height:400px;
+        }
         .foot_total_wrap{}
     }
 }
@@ -1410,7 +1451,13 @@ select.form_select{
     }
 
     .bottom_layer_wrap{position:static}
-    .bottom_layer_item{position:static;}
+    .bottom_layer_item{position:static;
+        .contents_row{
+            .respon_entry_wrap{
+               height:320px;
+            }
+        }
+    }
 }
 
 @media (max-width:$mobile){
