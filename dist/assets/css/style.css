@@ -18805,7 +18805,7 @@ input.docu_big_input::placeholder {
     height: 80px;
   }
   .pair_img_wrap > img {
-    height: 30px;
+    height: 100%;
   }
   .pair_main_copy {
     font-size: 14px;
