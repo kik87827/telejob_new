@@ -326,7 +326,8 @@
     }
     &.word_r{
         &:after{background-image:url("../images/flag_corner_r.png")}
-        background:#D68AFF;
+        /* background:#D68AFF; */
+        background: linear-gradient(153.25deg, #E6B7FF 0%, #CB6CFF 50%, #E6B7FF 100%);
     }
     &.word_s{
         border-radius: 0px 28px 0 24px;

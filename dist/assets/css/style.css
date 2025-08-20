@@ -21187,7 +21187,8 @@ input.docu_big_input::placeholder {
   background-image: url("../images/flag_corner_p.png");
 }
 .corner_flag_item.word_r {
-  background: #D68AFF;
+  /* background:#D68AFF; */
+  background: linear-gradient(153.25deg, #E6B7FF 0%, #CB6CFF 50%, #E6B7FF 100%);
 }
 .corner_flag_item.word_r:after {
   background-image: url("../images/flag_corner_r.png");
