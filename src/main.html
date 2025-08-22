@@ -126,6 +126,17 @@
             mv_banner.autoplay.stop();
           });
 
+          // 우수기업 전용채용관 250822
+          let usuTapeSwiper = new Swiper(".sync_vertical_wrap.swiper", {
+            loop: true,
+            direction: "vertical",
+            speed: 500,
+            autoplay: {
+              delay: 3000,
+              disableOnInteraction: false,
+            },
+          });
+
           // 인스턴스 선언
           let noticeMainPopup = new DesignPopup({
             selector: "#noticeMainPopup",

@@ -21559,6 +21559,9 @@ input.docu_big_input::placeholder {
 .sync_data_item:hover {
   background: #F8F8F8;
 }
+.sync_data_item .mold_sub_marking {
+  justify-content: flex-start;
+}
 .sync_data_item .mold_sub_marking .ico {
   width: 15px;
   height: 15px;
@@ -21657,6 +21660,24 @@ input.docu_big_input::placeholder {
   color: #000;
 }
 
+.sync_vertical_wrap {
+  height: 76px;
+}
+.sync_vswiper_wrap {
+  display: flex;
+  align-items: center;
+  font-size: 0;
+  line-height: 0;
+}
+.sync_tc_group {
+  flex: 1;
+  min-width: 0;
+  height: 76px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 @media (max-width: 1299px) {
   .mc_title_dom .text_node {
     font-size: 20px;
@@ -21734,6 +21755,22 @@ input.docu_big_input::placeholder {
     bottom: 0;
     right: 0;
     transform: translateY(-100%);
+  }
+  .sync_data_item.has_swiper {
+    padding: 0 0 0 110px;
+  }
+  .sync_tc_group {
+    min-height: 0;
+    height: auto;
+    width: 100%;
+    flex: 1;
+  }
+  .sync_vertical_wrap {
+    height: 70.4px;
+  }
+  .sync_vswiper_wrap {
+    height: 70.5px;
+    padding-right: 13px;
   }
   /* top10 / 우수기업 */
   .fetch_data_panel {
