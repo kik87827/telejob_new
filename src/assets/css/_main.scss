@@ -505,8 +505,8 @@
     .mv_main_copy{font-size:16px;}
     .mv_sub_copy{font-size:13px;height:auto; margin-top:5px; }
 
-    .mv_tapebanner_item{padding:8px;gap:15px; border-radius:10px;
-        .img_cols{}
+    .mv_tapebanner_item{padding:8px;gap:10px; border-radius:10px;
+        .img_cols{flex-basis:100px;}
         .spec_cols{
             .mv_tape_text{}
             .btn_else_row{}

@@ -76,14 +76,13 @@
           mvSticky();
 
           // main tape banner
-          var slideCount = document.querySelectorAll(".mv_tapbanner_container .swiper-slide").length;
-          // 슬라이드가 3개 초과일 때만 Swiper 실행
+          var slideCount = 0;
+          groupItemsIntoSlides(".mv_tapebanner_item", ".swiper .swiper-wrapper", 3);
+          slideCount = document.querySelectorAll(".mv_tapbanner_container .swiper-slide").length;
+          // 슬라이드가 1개 초과일 때만 Swiper 실행
           var mvTapebanner = null;
-          if (slideCount > 3) {
+          if (slideCount > 1) {
             mvTapebanner = new Swiper(".mv_tapbanner_container", {
-              direction: "vertical",
-              slidesPerView: 3,
-              slidesPerGroup: 3,
               speed: 500,
               loop: true,
               autoplay: {
@@ -177,10 +176,29 @@
             }
           }
         });
-      </script>
 
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {});
+        // 250822 스크립트 추가(3개씩 묶기)
+        function groupItemsIntoSlides(itemSelector = ".mv_tapebanner_item", wrapperSelector = ".swiper.mv_tapbanner_container .swiper-wrapper", perSlide = 3) {
+          const wrapper = document.querySelector(wrapperSelector);
+          if (!wrapper) return;
+
+          const items = Array.from(document.querySelectorAll(itemSelector));
+          if (items.length === 0) return;
+
+          // 기존 wrapper 비우기
+          wrapper.innerHTML = "";
+
+          // perSlide 개씩 묶어서 슬라이드 생성
+          for (let i = 0; i < items.length; i += perSlide) {
+            const slide = document.createElement("div");
+            slide.className = "swiper-slide";
+
+            const chunk = items.slice(i, i + perSlide);
+            chunk.forEach((el) => slide.appendChild(el));
+
+            wrapper.appendChild(slide);
+          }
+        }
       </script>
       @@include('./include/footer.html')
     </div>

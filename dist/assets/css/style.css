@@ -21379,8 +21379,11 @@ input.docu_big_input::placeholder {
   }
   .mv_tapebanner_item {
     padding: 8px;
-    gap: 15px;
+    gap: 10px;
     border-radius: 10px;
+  }
+  .mv_tapebanner_item .img_cols {
+    flex-basis: 100px;
   }
   .corner_flag_item {
     width: 38px;
