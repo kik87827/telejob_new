@@ -19038,12 +19038,12 @@ input.docu_big_input::placeholder {
 }
 
 .fdata_btn_row.btn_box_wrap {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 .feature_article_row {
-  padding: 80px 0; /* background:#F0F4FE; */
+  padding: 40px 0; /* background:#F0F4FE; */
   max-width: 930px;
-  margin: 80px auto 0;
+  margin: 40px auto 0;
   position: relative;
 }
 .feature_article_row:before {
@@ -19092,7 +19092,7 @@ input.docu_big_input::placeholder {
 }
 
 .rise_contents {
-  margin-bottom: 96px;
+  margin-bottom: 66px;
 }
 .rise_contents:first-of-type .rise_inner_contents {
   border-top: 0;
@@ -19121,7 +19121,7 @@ input.docu_big_input::placeholder {
 }
 
 .rise_linkage_zone {
-  padding: 60px 36px;
+  padding: 40px 36px;
 }
 .rise_linkage_zone img {
   vertical-align: top;
@@ -19293,6 +19293,7 @@ input.docu_big_input::placeholder {
   flex: 1;
   position: relative;
   height: 280px;
+  margin-top: 20px;
 }
 
 .api_linkage_render {
@@ -19506,6 +19507,13 @@ input.docu_big_input::placeholder {
   background-color: #0053C2;
   font-weight: 700;
 }
+.recom_keyword:hover {
+  color: #fff;
+  border-color: #0053C2;
+  background-color: #0053C2;
+  font-weight: 700;
+}
+
 .btn_shapemore {
   display: flex;
   width: 52px;
@@ -21052,9 +21060,8 @@ input.docu_big_input::placeholder {
   height: 40px;
 }
 .mv_vboxthum_wrap img {
-  height: 21px;
+  height: 52px;
   width: 100%;
-  max-width: 70%;
   -o-object-fit: contain;
      object-fit: contain;
   -o-object-position: 50% 50%;
@@ -21384,7 +21391,7 @@ input.docu_big_input::placeholder {
   }
   .mv_tapebanner_item {
     padding: 8px;
-    gap: 10px;
+    gap: 15px;
     border-radius: 10px;
   }
   .mv_tapebanner_item .img_cols {
@@ -21635,7 +21642,7 @@ input.docu_big_input::placeholder {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1.2;
   color: #000;
@@ -21682,7 +21689,6 @@ input.docu_big_input::placeholder {
   flex-direction: column;
   justify-content: center;
 }
-
 @media (max-width: 1299px) {
   .mc_title_dom .text_node {
     font-size: 20px;

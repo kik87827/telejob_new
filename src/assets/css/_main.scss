@@ -267,7 +267,7 @@
 .mv_vimg_row{}
 .mv_vboxthum_wrap{
     display:flex; justify-content: center; align-items: center; height:40px;
-    img{height:21px;width:100%; max-width:70%; object-fit: contain; object-position: 50% 50%; vertical-align:middle;}
+    img{height:52px;width:100%; /* max-width:70%; */ object-fit: contain; object-position: 50% 50%; vertical-align:middle;}
 }
 .mv_vspec_row{
     margin-top:12px;
@@ -505,7 +505,7 @@
     .mv_main_copy{font-size:16px;}
     .mv_sub_copy{font-size:13px;height:auto; margin-top:5px; }
 
-    .mv_tapebanner_item{padding:8px;gap:10px; border-radius:10px;
+    .mv_tapebanner_item{padding:8px;gap:15px; border-radius:10px;
         .img_cols{flex-basis:100px;}
         .spec_cols{
             .mv_tape_text{}
@@ -648,7 +648,7 @@
 .sync_text_wrap{
     display:flex;flex-direction:column; justify-content: center; align-items:center; box-sizing:border-box; padding:0 10px;text-align: center;
 }
-.sync_text_node{display:block;@include clamp(2); @include font2(20px,700,1.2,#000);}
+.sync_text_node{display:block;@include clamp(2); @include font2(18px,700,1.2,#000);}
 .sync_title{@include clamp(1); @include font2(14px,700,1.4,#000);}
 .sync_caption{@include clamp(1); @include font2(12px,400,1.4,#000);}
 
