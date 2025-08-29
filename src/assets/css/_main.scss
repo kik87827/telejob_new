@@ -1400,7 +1400,7 @@
     }
 }
 .flymenu{
-    display:inline-block; @include font2(14px,700,1.3,#000);
+    display:inline-block; @include font2(12px,500,1.3,#000);
     &:hover{color:#0258AD; text-decoration: underline;}
 }
 

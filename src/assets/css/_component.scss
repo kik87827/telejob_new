@@ -1,6 +1,6 @@
 /* button */
 .btn_box{
-    display:flex; box-sizing:border-box; min-height:56px;  appearance:none; gap:12px; justify-content:center; align-items:center; text-align:center; border:1px solid #000; color:#000; border-radius:120px; padding:12px 36px;
+    display:flex; box-sizing:border-box; min-height:46px;  appearance:none; gap:12px; justify-content:center; align-items:center; text-align:center; border:1px solid #000; color:#000; border-radius:120px; padding:6px 36px;
     &.primary{
         border-color:#0B51C5;
         .btn_box_text{color:#0258AD;}
@@ -45,7 +45,7 @@
         }
     }
 }
-.btn_box_text{@include font(20px, 700, 1, 0, #000); display:inline-block;}
+.btn_box_text{@include font(16px, 700, 1, 0, #000); display:inline-block;}
 .btn_box_wrap{
     display:flex; justify-content: center; gap:12px; text-align:center; flex-wrap:wrap; position:relative;
     &.align_type2{justify-content: flex-end;}
@@ -61,7 +61,7 @@
         &.sm_size1{min-width:161px;}
         &.sm_size2{min-width:181px;}
         &.sm_size3{max-width:200px;}
-        &.sm_size4{max-width:230px;}
+        &.sm_size4{max-width:200px;}
     }
     &.sub_bottom_pos{margin-top:64px;}
     &.size_wrap{
@@ -85,7 +85,7 @@
 }
 .btn_quad{
     display:inline-flex; min-height:32px; align-items: center; justify-content: center; box-sizing: border-box; padding:7px 16px;
-    border:1px solid #000; border-radius:100px; @include font2(13px,700,1,#000); background:#fff; white-space: nowrap;
+    border:1px solid #000; border-radius:100px; @include font2(13px,400,1,#000); background:#fff; white-space: nowrap;
     &.large{}
     &.primary{color:#005AAB; border-color:#005AAB;}
     &.dark{color:#fff; border-color:#000; background-color:#000;}
@@ -240,7 +240,7 @@
         min-height:32px;
         .ico{width:16px;height:16px; flex-basis:16px;}
     }
-    .text_node{@include font2(14px,700,1,#000); display:inline-block;}
+    .text_node{@include font2(14px,400,1,#000); display:inline-block;}
 }
 .btn_actbox_list{
     display:flex; justify-content: flex-end; gap:8px; align-items: center; flex-wrap:wrap;
@@ -1309,7 +1309,7 @@ select.form_select{
 
     &.skin2{
         .popup_title_row{padding-top:24px;padding-left:24px;}
-        .popup_title{font-size:30px; font-weight:700;}
+        .popup_title{font-size:22px; font-weight:700;}
         .popup_contents_row{padding:0 24px 36px;}
         .btn_popup_close{top:30px; right:24px;}
     }

@@ -58,7 +58,7 @@
         &.print{background-image:url("../images/ico_print.png");}
         &.word{background-image:url("../images/ico_word.png");}
     }
-    .text_node{@include font2(14px,700,1,#000);}
+    .text_node{@include font2(14px,400,1,#000);}
 }
 .tour_btn_wrap{}
 .btn_face{
