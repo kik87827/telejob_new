@@ -1103,6 +1103,7 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
                 }
                 &.align_type2{
                     text-align: left; 
+                    .respond_td_obj{justify-content: flex-start;}
                 }
                 &.nodata_td{
                     padding:100px 20px; background:#fff !important;
@@ -1121,7 +1122,7 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
 }
 .respond_thtext{display:inline-block; @include font2(14px,400,1,#000000);}
 .respond_td_obj{
-    display:inline-flex; gap:20px; align-items: center;
+    display:flex; gap:20px; align-items: center; justify-content: center;
     dt,dd{}
     > dt{display:none;}
     dd{}

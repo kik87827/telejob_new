@@ -334,6 +334,13 @@ const uiBase = {
       $(this).toggleClass("active");
     });
   },
+  hasSticky() {
+    const stickyItem = $(".render_sticky_wrap");
+    const middle_wrap = $(".middle_wrap");
+    if (stickyItem.length) {
+      middle_wrap.addClass("has_sticky");
+    }
+  },
 };
 
 /* popup */

@@ -856,7 +856,6 @@ input.top_search_input::placeholder {
   line-height: 1;
   letter-spacing: 0;
   color: #fff;
-  font-family: "Noto Serif KR";
   white-space: nowrap;
   position: relative;
   z-index: 1;
@@ -1042,6 +1041,9 @@ input.top_search_input::placeholder {
   flex: 1;
   position: relative;
   overflow-x: hidden;
+}
+.middle_wrap.has_sticky {
+  overflow-x: visible;
 }
 
 .middle_inner {
@@ -9546,6 +9548,9 @@ input.input_sms_send::placeholder {
 .respond_tb tbody tr td.align_type2 {
   text-align: left;
 }
+.respond_tb tbody tr td.align_type2 .respond_td_obj {
+  justify-content: flex-start;
+}
 .respond_tb tbody tr td.nodata_td {
   padding: 100px 20px;
   background: #fff !important;
@@ -9569,9 +9574,10 @@ input.input_sms_send::placeholder {
 }
 
 .respond_td_obj {
-  display: inline-flex;
+  display: flex;
   gap: 20px;
   align-items: center;
+  justify-content: center;
 }
 .respond_td_obj > dt {
   display: none;
@@ -21061,7 +21067,7 @@ input.docu_big_input::placeholder {
 }
 .mv_vboxthum_wrap img {
   height: 52px;
-  width: 100%;
+  width: 100%; /* max-width:70%; */
   -o-object-fit: contain;
      object-fit: contain;
   -o-object-position: 50% 50%;
@@ -21689,6 +21695,7 @@ input.docu_big_input::placeholder {
   flex-direction: column;
   justify-content: center;
 }
+
 @media (max-width: 1299px) {
   .mc_title_dom .text_node {
     font-size: 20px;
