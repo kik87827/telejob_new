@@ -524,7 +524,7 @@ input.mb_nav_form_input{line-height:1;width:100%;border:0;appearance: none;box-s
 
 @media (max-width:$mobile_large){
     .header_main_row{
-        padding:0 20px; display:block;
+        padding:0 16px; display:block;
         .logo_cols{
             display:flex; justify-content: center; padding-bottom:8px;
         }
@@ -550,7 +550,7 @@ input.mb_nav_form_input{line-height:1;width:100%;border:0;appearance: none;box-s
     }
     .header_nav_util_wrap,
     .nav_tooltip_layer{display:none;}
-    .header_nav_container{min-height:50px;padding:0 20px;position:relative; overflow-x:auto;
+    .header_nav_container{min-height:50px;padding:0 16px;position:relative; overflow-x:auto;
         &::-webkit-scrollbar{display:none;width:0;height:0;}
     }
     .header_nav_menu_link{font-size:14px;white-space:nowrap;}
