@@ -1331,6 +1331,13 @@ input.input_sms_send{flex:1;appearance: none; border:0; padding:0 16px; height:5
     }
     .spec_main_para{@include font2(14px,700,1.4,#000);@include clamp(1);}
     .spec_sub_para{@include font2(12px,400,1.4,#000);@include clamp(1);margin-top:5px;}
+     .mold_sub_marking{
+        margin-top:5px; justify-content: flex-start;
+        .ico{width:15px;height:15px; flex:0 0 15px; position:relative; top:2px;}
+    }
+    .mold_sub_caption_wrap{}
+    .mold_sub_caption{@include font2(12px,400,1.4,#000);@include clamp(1);}
+    .mold_sub_marking{}
     .caption_row{display:flex; justify-content: space-between; gap:20px; align-items: center; margin-top:8px; font-size:0;}
     .spec_caption_para{
          @include font2(12px,400,1.4,#595959); @include clamp(1);
@@ -1397,11 +1404,17 @@ li.nodata_li{
 .swiper{
     &.company_swiper_list{
         .swiper-wrapper{}
-        .swiper-slide{flex-shrink:0;width:auto;height:auto;}
+        .swiper-slide{
+            
+        }
     }
 }
+.digest_card_group{
+    display:flex; flex-wrap:wrap; gap:10px; margin-right:-10px;
+     .digest_card{flex:0 0 calc(20% - 10px);}
+}
 .digest_card{
-    display:flex; flex-direction: column; gap:12px; border:1px solid #E6E6E6; padding:10px; text-align:center; width:124px; box-sizing:border-box;
+    display:flex; flex-direction: column; gap:12px; border:1px solid #E6E6E6; padding:10px; text-align:center; box-sizing:border-box;
   .img_row{
      flex:0 0 72px;
     
@@ -1412,9 +1425,9 @@ li.nodata_li{
 }
 .digest_imgwrap{
     height:72px;  display:flex; justify-content: center; align-items:center;
-    img{height:40px; max-width:100%; object-fit: contain; object-position: 50% 50%; vertical-align:top;}
+    img{height:50px; max-width:100%; object-fit: contain; object-position: 50% 50%; vertical-align:top;}
 }
-.digest_main_copy{@include font2(14px,500,1.3,#000); @include clamp(1)}
+.digest_main_copy{@include font2(20px,500,1.3,#000); @include clamp(1)}
 .compact_info_box{
     display:flex;
     .img_cols{flex:0 0 300px;}
@@ -1830,7 +1843,10 @@ li.nodata_li{
          img{object-position: 0 50%;}
     }
 
-    
+    .digest_card_group{
+        .digest_card{flex:0 0 calc(33.33333333% - 10px);}
+    }
+    .digest_main_copy{font-size:14px;}
 }
 @media (max-width:$mobile){
     .bc_tabmeu_obj{flex-direction: column; text-align: left; align-items: flex-start;}

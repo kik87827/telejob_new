@@ -10123,6 +10123,28 @@ input.input_sms_send::placeholder {
   overflow: hidden;
   margin-top: 5px;
 }
+.chipcard_item .mold_sub_marking {
+  margin-top: 5px;
+  justify-content: flex-start;
+}
+.chipcard_item .mold_sub_marking .ico {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 15px;
+  position: relative;
+  top: 2px;
+}
+.chipcard_item .mold_sub_caption {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
 .chipcard_item .caption_row {
   display: flex;
   justify-content: space-between;
@@ -10281,10 +10303,14 @@ li.nodata_li .nodata_li_para {
   color: #B5000F;
 }
 
-.swiper.company_swiper_list .swiper-slide {
-  flex-shrink: 0;
-  width: auto;
-  height: auto;
+.digest_card_group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-right: -10px;
+}
+.digest_card_group .digest_card {
+  flex: 0 0 calc(20% - 10px);
 }
 
 .digest_card {
@@ -10294,7 +10320,6 @@ li.nodata_li .nodata_li_para {
   border: 1px solid #E6E6E6;
   padding: 10px;
   text-align: center;
-  width: 124px;
   box-sizing: border-box;
 }
 .digest_card .img_row {
@@ -10311,7 +10336,7 @@ li.nodata_li .nodata_li_para {
   align-items: center;
 }
 .digest_imgwrap img {
-  height: 40px;
+  height: 50px;
   max-width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -10321,7 +10346,7 @@ li.nodata_li .nodata_li_para {
 }
 
 .digest_main_copy {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 1.3;
   color: #000;
@@ -10932,6 +10957,12 @@ li.nodata_li .nodata_li_para {
   .list_logo_render img {
     -o-object-position: 0 50%;
        object-position: 0 50%;
+  }
+  .digest_card_group .digest_card {
+    flex: 0 0 calc(33.33333333% - 10px);
+  }
+  .digest_main_copy {
+    font-size: 14px;
   }
 }
 @media (max-width: 767px) {
@@ -23437,6 +23468,8 @@ input.docu_big_input::placeholder {
   display: block;
   position: relative;
   overflow: hidden;
+  min-height: 100%;
+  box-sizing: border-box;
 }
 .mbt_card_box:hover {
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
