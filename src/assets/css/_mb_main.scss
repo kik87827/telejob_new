@@ -14,27 +14,90 @@
 }
 .mbt_title{
     display:flex; align-items: center; gap:4px;
+    &.type2{position:relative;top:-2px;}
     .ico{
         flex:0 0 30px;
         img{}
     }
     .text_node{@include font2(16px,700,1,#000);}
+    .text_node_sub{@include font2(13px,400,1,#000); display:inline-flex;
+        .inner_word{}
+        i.text_i{display:inline-block;vertical-align:middle; position:relative; top:1px;
+            img{height:12px;vertical-align: middle;}
+        }
+    }
 }
 .btn_arole{display:inline-flex; border:1px solid #E6E6E6; @include font2(11px,400,1,#595959); height:22px; box-sizing: border-box; padding:0 8px; text-align: center; border-radius: 100px; align-items: center; justify-content: center; white-space: nowrap;}
 .mbt_contents{margin-top:8px;}
 .mbt_card_list{
-    > li{
+    display:flex; flex-direction: column; gap:8px;
+    /* > li{
         margin-bottom:8px;
         &:last-of-type{margin-bottom:0;}
-    }
+    } */
 }
 .mbt_card_box{
     border:1px solid #E6E6E6; border-radius:16px; display:block; position:relative; overflow:hidden;
+    &:hover{
+        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2); border-color:#000;
+    }
+    &.has_ico{
+        .mbt_card_inner{
+            padding:28px 12px;
+        }
+        .corner_flag_item_wrap{
+             top:-1px; right:-1px;
+        }
+        .corner_flag_item{width:30px;height:30px; border-radius:0 0 0 16px;
+            &:after{width:12px;height:12px;}
+        }
+    }
     &.ple{
         background: #4AFF86; border:0;
         background: linear-gradient(308deg, rgba(74, 255, 134, 1) 0%, rgba(74, 211, 255, 1) 100%);
        padding:2px;
         .mbt_card_inner{ border-radius:14px;}
+        &:hover{
+            padding:3px;
+        }
+    }
+    &.spe{
+       border:2px solid #91D2FA; 
+       .mbt_card_inner{
+        background:none;
+       }
+       &:hover{
+            .corner_flag_item.word_s{background: linear-gradient(153.25deg, #91D2FA 0%, #6AC5FF 54.24%, #90D4FF 98.96%);
+                &:after{background-position:0 100%;}
+            }
+       }
+       &.has_ico{
+            .corner_flag_item{
+                &:after{width:16px;height:16px;}
+            }
+       }
+    }
+    &.gold{
+       border:2px solid #F3BD5C; 
+       .mbt_card_inner{
+        background:none;
+       }
+       &:hover{
+            .corner_flag_item.word_g{background: linear-gradient(135deg, #FFE3B1 0%, #FBCA76 53.85%, #B97703 100%);
+                &:after{background-position:0 100%;}
+            }
+       }
+       &.has_ico{
+            .corner_flag_item{
+                &:after{width:14px;height:14px;}
+            }
+       }
+    }
+    &.royal{
+       border:2px solid #D68AFF;
+       .mbt_card_inner{
+        background:none;
+       }
     }
 }
 .mbt_card_inner{
@@ -70,3 +133,20 @@
     }
 }
 .mbt_vspec_util{display:inline-block; @include font2(12px,400,1,#595959);}
+@media (max-width : $mobile_size3){
+    .mbt_title{
+        .text_node_sub{font-size:12px;}
+    }
+}
+@media (max-width : $mobile_small){
+    .mbt_title{
+        flex-direction: column; justify-content: flex-start; align-items: flex-start;
+        .text_node{@include font2(16px,700,1,#000);}
+        .text_node_sub{@include font2(13px,400,1,#000); display:inline-flex;
+            .inner_word{}
+            i.text_i{display:inline-block;vertical-align:middle; position:relative; top:1px;
+                img{height:12px;vertical-align: middle;}
+            }
+        }
+    }
+}
