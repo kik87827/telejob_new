@@ -5150,6 +5150,18 @@ button.swiper-pagination-bullet {
 .tailtab.has_ico .ico.king {
   background-image: url("../images/ico_main_king.png");
 }
+.tailtab.has_ico .ico.top10 {
+  background-image: url("../images/ico_top10.png");
+  flex-basis: 31px;
+  width: 31px;
+  height: 36px;
+}
+.tailtab.has_ico .ico.vip {
+  background-image: url("../images/ico_vip.png");
+  flex-basis: 41px;
+  width: 41px;
+  height: 36px;
+}
 
 .tailtab_text {
   display: inline-block;
@@ -5225,6 +5237,16 @@ button.swiper-pagination-bullet {
     width: 20px;
     height: 16px;
     flex: 0 0 20px;
+  }
+  .tailtab.has_ico .ico.top10 {
+    flex-basis: 20px;
+    width: 20px;
+    height: 23.23px;
+  }
+  .tailtab.has_ico .ico.vip {
+    flex-basis: 24px;
+    width: 24px;
+    height: 21.07px;
   }
   .tailtab_text {
     font-size: 12px;

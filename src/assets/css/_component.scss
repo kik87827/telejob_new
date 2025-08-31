@@ -594,6 +594,8 @@
         .ico{width:40px;height:32px; flex:0 0 42px;@include bgicon; display:block;
             &.dia{background-image:url("../images/ico_main_dia.png");}
             &.king{background-image:url("../images/ico_main_king.png");}
+            &.top10{background-image:url("../images/ico_top10.png");flex-basis:31px;width:31px;height:36px;}
+            &.vip{background-image:url("../images/ico_vip.png");flex-basis:41px;width:41px;height:36px;}
         }
     }
 }
@@ -633,7 +635,10 @@
     .tailtab{padding:5px 10px; min-height:40px; min-width:0;border-radius:10px 10px 0 0;
         &.has_ico{
             gap:5px; padding-top:5px;padding-bottom:5px;
-            .ico{width:20px;height:16px; flex:0 0 20px;}
+            .ico{width:20px;height:16px; flex:0 0 20px;
+                 &.top10{flex-basis:20px;width:20px;height:23.23px;}
+                &.vip{flex-basis:24px;width:24px;height:21.07px;}
+            }
         }
     }
     .tailtab_text{font-size:12px;}
