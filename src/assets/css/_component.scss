@@ -118,7 +118,7 @@
         .text_node{white-space:nowrap;}
     }
 }
-.btn_ovalbox{display:inline-flex; gap:4px; min-height:28px; background-color:#fff;border:1px solid #000; border-radius:100px; align-items: center; padding:3px 16px; box-sizing: border-box;
+.btn_ovalbox{display:inline-flex; gap:4px; min-height:28px; background-color:#fff; box-shadow: 0 0 0 1px rgba(0,0,0,0.8);  border-radius: 9999px; align-items: center; padding:3px 16px; box-sizing: border-box;
     .ico{
         width:16px; height:16px; flex:0 0 16px; @include bgicon;
         &.link{background-image:url("../images/ico_ringlink_w.png")}
@@ -136,14 +136,14 @@
         }
     }
     &:hover,&.active{
-        border-color:#0053C2; background-color:#0053C2;
+        box-shadow: 0 0 0 1px rgba(0,83,194,1); background-color:#0053C2 !important;
         .ico{
             background-position: 0 100%;
         }
-        .text_node{color:#fff;}
+        .text_node{color:#fff !important;}
     }
     &.hover_2:hover,&.hover_2.active{
-        border-color:#0053C2;background-color:#0053C2;
+        box-shadow: 0 0 0 1px rgba(0,83,194,1);background-color:#0053C2;
         .ico{
             &.link{
                 background-image:url("../images/ico_ringlink_w.png")

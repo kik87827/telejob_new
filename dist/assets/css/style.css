@@ -4110,8 +4110,8 @@ button.swiper-pagination-bullet {
   gap: 4px;
   min-height: 28px;
   background-color: #fff;
-  border: 1px solid #000;
-  border-radius: 100px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.8);
+  border-radius: 9999px;
   align-items: center;
   padding: 3px 16px;
   box-sizing: border-box;
@@ -4152,17 +4152,17 @@ button.swiper-pagination-bullet {
   color: #000;
 }
 .btn_ovalbox:hover, .btn_ovalbox.active {
-  border-color: #0053C2;
-  background-color: #0053C2;
+  box-shadow: 0 0 0 1px rgb(0, 83, 194);
+  background-color: #0053C2 !important;
 }
 .btn_ovalbox:hover .ico, .btn_ovalbox.active .ico {
   background-position: 0 100%;
 }
 .btn_ovalbox:hover .text_node, .btn_ovalbox.active .text_node {
-  color: #fff;
+  color: #fff !important;
 }
 .btn_ovalbox.hover_2:hover, .btn_ovalbox.hover_2.active {
-  border-color: #0053C2;
+  box-shadow: 0 0 0 1px rgb(0, 83, 194);
   background-color: #0053C2;
 }
 .btn_ovalbox.hover_2:hover .ico.link, .btn_ovalbox.hover_2.active .ico.link {
@@ -15190,7 +15190,7 @@ img.viewer_img {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  padding: 10px 16px 4px;
+  padding: 10px 16px 10px;
   align-items: center;
 }
 .handle_top_row .top_cols {

@@ -363,7 +363,7 @@ img.viewer_img{position:absolute;top:0;left:0;width:100%;height:100%; object-fit
     &:last-of-type{margin-bottom:0;}
 }
 .handle_top_row{
-    display:flex; justify-content: space-between; gap:20px; padding:10px 16px 4px; align-items:center;
+    display:flex; justify-content: space-between; gap:20px; padding:10px 16px 10px; align-items:center;
     .top_cols{
         display:flex; gap:24px;
     }
