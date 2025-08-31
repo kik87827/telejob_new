@@ -23397,12 +23397,38 @@ input.docu_big_input::placeholder {
 
 .mbt_card_list {
   display: flex;
-  flex-direction: column;
   gap: 8px;
+  flex-wrap: wrap;
   /* > li{
       margin-bottom:8px;
       &:last-of-type{margin-bottom:0;}
   } */
+}
+.mbt_card_list > li {
+  flex: 0 0 100%;
+}
+.mbt_card_list > li.half {
+  flex: 0 0 calc(50% - 4px);
+}
+.mbt_card_list > li.half .mbt_card_inner {
+  display: block;
+}
+.mbt_card_list > li.half .mbt_card_inner .img_cols {
+  height: 60px;
+  margin-bottom: 10px;
+  width: 60%;
+}
+.mbt_card_list > li.half .mbt_card_inner .mbt_vspec_util_list {
+  gap: 5px 12px;
+}
+.mbt_card_list > li.half .mbt_card_inner .mbt_vspec_util_list > li:after {
+  right: -7px;
+}
+.mbt_card_list > li.half .mbt_card_inner .mold_sub_caption {
+  line-height: 1.5;
+}
+.mbt_card_list > li.half .mbt_card_inner .mbt_vspec_util_wrap {
+  gap: 5px;
 }
 
 .mbt_card_box {
@@ -23551,7 +23577,8 @@ input.docu_big_input::placeholder {
 .mbt_vspec_util_list {
   flex: 1;
   display: flex;
-  gap: 22px;
+  gap: 5px 22px;
+  flex-wrap: wrap;
 }
 .mbt_vspec_util_list > li {
   position: relative;
@@ -23567,12 +23594,17 @@ input.docu_big_input::placeholder {
   top: 9px;
   right: -12px;
 }
+.mbt_vspec_util_list > li:last-of-type:after {
+  display: none;
+}
+
 .mbt_vspec_util {
   display: inline-block;
   font-size: 12px;
   font-weight: 400;
   line-height: 1;
   color: #595959;
+  white-space: nowrap;
 }
 
 @media (max-width: 374px) {

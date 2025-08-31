@@ -30,11 +30,29 @@
 .btn_arole{display:inline-flex; border:1px solid #E6E6E6; @include font2(11px,400,1,#595959); height:22px; box-sizing: border-box; padding:0 8px; text-align: center; border-radius: 100px; align-items: center; justify-content: center; white-space: nowrap;}
 .mbt_contents{margin-top:8px;}
 .mbt_card_list{
-    display:flex; flex-direction: column; gap:8px;
+    display:flex; gap:8px; flex-wrap:wrap;
     /* > li{
         margin-bottom:8px;
         &:last-of-type{margin-bottom:0;}
     } */
+    > li{
+        flex:0 0 100%;
+        &.half{flex:0 0 calc(50% - 4px);
+            .mbt_card_inner{display:block;
+                .img_cols{
+                    height:60px; margin-bottom:10px;width:60%;
+                    .img_wrap{}
+                }
+                .mbt_vspec_util_list{gap:5px 12px;
+                    > li{
+                        &:after{right:-7px;}
+                    }
+                }
+                .mold_sub_caption{line-height:1.5;}
+                .mbt_vspec_util_wrap{gap:5px;}
+            }
+        }
+    }   
 }
 .mbt_card_box{
     border:1px solid #E6E6E6; border-radius:16px; display:block; position:relative; overflow:hidden;
@@ -123,16 +141,16 @@
     .btn_icon{}
 }
 .mbt_vspec_util_list{
-    flex:1; display:flex; gap:22px;
+    flex:1; display:flex; gap:5px 22px; flex-wrap:wrap;
     > li{
         position:relative;
         &:after{ display:block;content:''; width:2px; height:2px; background:#D9D9D9; border-radius: 100%; position:absolute; top:9px;right:-12px;}
         &:last-of-type{
-            &:after{}
+            &:after{display:none;}
         }
     }
 }
-.mbt_vspec_util{display:inline-block; @include font2(12px,400,1,#595959);}
+.mbt_vspec_util{display:inline-block; @include font2(12px,400,1,#595959);white-space:nowrap;}
 @media (max-width : $mobile_size3){
     .mbt_title{
         .text_node_sub{font-size:12px;}
