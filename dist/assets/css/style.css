@@ -4419,6 +4419,9 @@ button.swiper-pagination-bullet {
 .btn_actbox .ico.marker {
   background-image: url("../images/ico_marker_16.png");
 }
+.btn_actbox .ico.toggle {
+  background-image: url("../images/btn_act_toggle.png");
+}
 .btn_actbox.active .ico.star {
   background-position: 0 100%;
 }
@@ -4439,6 +4442,9 @@ button.swiper-pagination-bullet {
   line-height: 1;
   color: #000;
   display: inline-block;
+}
+.btn_actbox.d_toggle.active .ico.toggle {
+  background-position: 0 100%;
 }
 
 .btn_actbox_list {
@@ -7345,6 +7351,9 @@ select.form_select.yellow {
   color: #000000;
 }
 
+.core_contents_row.pc_block {
+  display: block;
+}
 .core_contents_para {
   font-size: 13px;
   font-weight: 400;
@@ -7403,6 +7412,22 @@ select.form_select.yellow {
   }
   .brick_message_para {
     font-size: 14px;
+  }
+  .core_title_else_wrap .btn_actbox_list {
+    gap: 5px;
+  }
+}
+@media (max-width: 359px) {
+  .core_title_row {
+    display: block;
+  }
+  .core_title_else_wrap {
+    margin-top: 5px;
+  }
+  .core_title_else_wrap .btn_actbox_list {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
   }
 }
 /* form layout */
@@ -15558,11 +15583,13 @@ img.viewer_img {
   }
   .cluster_thtext {
     font-size: 13px;
-    top: 10px;
+    top: 2px;
+    left: 5px;
     min-width: 0;
   }
   .cluster_cell_wrap .cluster_cell_group .cluster_thtext {
     top: 11px;
+    left: 0;
   }
   .getchip_container {
     min-height: 50px;

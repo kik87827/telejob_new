@@ -229,6 +229,7 @@
         &.print{background-image:url("../images/ico_print_24.png");}
         &.star{background-image:url("../images/ico_scrap_star_24.png");}
         &.marker{background-image:url("../images/ico_marker_16.png");}
+        &.toggle{background-image:url("../images/btn_act_toggle.png");}
     }
     &.active{
         .ico{
@@ -241,6 +242,16 @@
         .ico{width:16px;height:16px; flex-basis:16px;}
     }
     .text_node{@include font2(14px,400,1,#000); display:inline-block;}
+
+    &.d_toggle{
+        &.active{
+            .ico{
+                &.toggle{
+                    background-position:0 100%;
+                }
+            }
+        }
+    }
 }
 .btn_actbox_list{
     display:flex; justify-content: flex-end; gap:8px; align-items: center; flex-wrap:wrap;
