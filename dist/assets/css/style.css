@@ -7416,6 +7416,12 @@ select.form_select.yellow {
   .core_title_else_wrap .btn_actbox_list {
     gap: 5px;
   }
+  .core_contents_row.pc_block {
+    display: none;
+  }
+  .core_contents_row.pc_block.mb_active {
+    display: block;
+  }
 }
 @media (max-width: 359px) {
   .core_title_row {

@@ -86,6 +86,15 @@
      .core_title_else_wrap{
         .btn_actbox_list{gap:5px;}
     }
+
+    .core_contents_row{
+        &.pc_block{
+            display:none;
+            &.mb_active{
+                display:block;
+            }
+        }
+    }
 }
 @media (max-width:$mobile_small){
     .core_title_row{display:block;}

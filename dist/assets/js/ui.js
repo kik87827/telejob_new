@@ -1273,3 +1273,18 @@ function keywordMore() {
     });
   }
 }
+
+function toggleAction(option) {
+  $(document).on("click", option.btn, function(e) {
+    e.preventDefault();
+    const optionTarget = $(option.target);
+    const thisTarget = $(this);
+    const optionTargetTextNode = thisTarget.find(option.textNode);
+    $([optionTarget, thisTarget]).toggleClass(option.activeClass);
+    if (thisTarget.hasClass(option.activeClass)) {
+      optionTargetTextNode.text(thisTarget.attr("data-close"));
+    } else {
+      optionTargetTextNode.text(thisTarget.attr("data-open"));
+    }
+  });
+}

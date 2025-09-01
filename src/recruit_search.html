@@ -12,12 +12,14 @@
               <h2 class="core_title">채용정보 상세검색</h2>
               <div class="core_title_else_wrap">
                 <ul class="btn_actbox_list">
+                  <!-- 20250902 추가 -->
                   <li class="mb_item">
                     <a href="#" class="btn_actbox d_toggle" data-open="열기" data-close="닫기">
                       <i class="ico toggle"></i>
                       <span class="text_node">열기</span>
                     </a>
                   </li>
+                  <!-- // 20250902 추가 -->
                   <li>
                     <a href="#" class="btn_actbox">
                       <i class="ico reset"></i>
@@ -466,6 +468,18 @@
         </div>
       </section>
       <!-- // middle -->
+      <script>
+        /* 20250902 추가 */
+        $(function () {
+          toggleAction({
+            btn: ".d_toggle",
+            target: ".core_contents_row",
+            textNode: ".text_node",
+            activeClass: "mb_active",
+          });
+        });
+        /* // 20250902 추가 */
+      </script>
       @@include('./include/footer.html')
     </div>
   </body>
