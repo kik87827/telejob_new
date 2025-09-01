@@ -18313,6 +18313,13 @@ input.docu_big_input::placeholder {
   margin-right: -20px;
   gap: 14px 20px;
 }
+.des_tuple_list.full_block {
+  margin-right: 0;
+  gap: 14px 0;
+}
+.des_tuple_list.full_block > li {
+  flex: 0 0 100%;
+}
 .des_tuple_list.cols_2 > li {
   flex: 0 0 calc(50% - 20px);
 }
@@ -18781,7 +18788,7 @@ input.docu_big_input::placeholder {
     font-size: 12px;
   }
   .tuple_value {
-    padding-top: 1px;
+    padding-top: 2px;
   }
   .des_tuple_list {
     margin-right: -10px;
@@ -19853,6 +19860,20 @@ input.docu_big_input::placeholder {
   background-size: contain;
   background-position: 0 0;
   background-repeat: no-repeat;
+}
+
+.tarendar_data_wrap {
+  min-height: 136px;
+  border-bottom: 1px solid #E6E6E6;
+  box-sizing: border-box;
+  padding: 20px;
+  border-top: 2px solid #BDC5D1;
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+  word-break: break-all;
 }
 
 .ready_data_para {

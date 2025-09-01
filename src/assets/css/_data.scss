@@ -50,6 +50,10 @@
 .des_summary_row{margin-top:36px;}
 .des_tuple_list{
     display:flex; flex-wrap:wrap;margin-right:-20px; gap:14px 20px;
+    &.full_block{
+        margin-right:0; gap:14px 0;
+        > li{flex:0 0 100%;}
+    }
     &.cols_2{
         > li{
             flex:0 0 calc(50% - 20px);
@@ -269,7 +273,7 @@
 
     .tuple_keyword,
     .tuple_value{font-size:12px;}
-    .tuple_value{padding-top:1px;}
+    .tuple_value{padding-top:2px;}
     .des_tuple_list{
         margin-right:-10px; gap:5px 10px;
         > li{
