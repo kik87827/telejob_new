@@ -1308,6 +1308,7 @@
 }
 .mold_sub_caption_wrap{
   @include clamp(2); height: 48px;
+  &.clamp_1{@include clamp(1);}
 }
 .mold_sub_caption {
     display: inline;

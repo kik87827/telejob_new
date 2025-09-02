@@ -38,10 +38,12 @@
     > li{
         flex:0 0 100%;
         &.half{flex:0 0 calc(50% - 4px);
-            .mbt_card_inner{display:block;
+            .mbt_card_inner{display:block; padding:12px;
                 .img_cols{
                     height:60px; margin-bottom:10px;width:60%;
-                    .img_wrap{}
+                    .img_wrap{
+                        img{object-position: 0 50%;}
+                    }
                 }
                 .mbt_vspec_util_list{gap:5px 12px;
                     > li{
@@ -135,10 +137,16 @@
         height: 15px; position:relative; top:2px;
     }
 }
-.mbt_vspec_main{display:block; @include clamp(2); @include font2(14px,700,1.3,#000);}
+.mbt_vspec_main{display:block; @include clamp(2); @include font2(14px,700,1.3,#000);
+    &.clamp_1{ @include clamp(1);}
+    &.size_2{font-size:13px;}
+}
 .mbt_vspec_util_wrap{
     margin-top:8px; display:flex; align-items: center; gap:10px;
+    &.mt_type2{margin-top:4px;}
     .btn_icon{}
+    &.vtype2{align-items: flex-end;}
+    .mold_sub_marking{flex:1;}
 }
 .mbt_vspec_util_list{
     flex:1; display:flex; gap:5px 22px; flex-wrap:wrap;
