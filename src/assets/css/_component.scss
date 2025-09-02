@@ -496,6 +496,23 @@
             }
         }
     }
+    &.skin3{
+        .boxtab_list{
+            > li{
+                &:first-of-type{
+                    .boxtab{
+                        &:before{display:none;}
+                    }
+                }
+                &:last-of-type{
+                    .boxtab{
+                        &:after{display:none;}
+                    }
+                }
+                &.fixed_use{display:none;}
+            }
+        }
+    }
 }
 .boxtab_list{
     display:flex; min-height:56px; position:relative; 

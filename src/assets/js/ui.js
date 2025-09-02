@@ -1197,12 +1197,15 @@ function tabUI(option) {
         });
 
         if (!!thisTarget) {
-          console.log(thisTarget);
           thisTarget.classList.add("active");
           tabcontActive = thisTarget;
         }
         thisEvent.classList.add("active");
         tabmenuActive = thisEvent;
+
+        if (item.callback) {
+          item.callback();
+        }
       });
     });
   });
