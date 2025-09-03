@@ -23808,7 +23808,7 @@ input.docu_big_input::placeholder {
 
 .mbt_title_row {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 10px;
   justify-content: space-between;
 }
@@ -23866,7 +23866,7 @@ input.docu_big_input::placeholder {
 }
 
 .mbt_contents {
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .mbt_card_list {
@@ -23989,6 +23989,9 @@ input.docu_big_input::placeholder {
 .mbt_card_box.royal .mbt_card_inner {
   background: none;
 }
+.mbt_card_box.skin2 {
+  border: 0;
+}
 
 .mbt_card_inner {
   display: flex;
@@ -24108,39 +24111,55 @@ input.docu_big_input::placeholder {
   white-space: nowrap;
 }
 
+.mbt_card_container .mbt_card_box {
+  margin-bottom: 8px;
+}
+.mbt_card_container .mbt_card_box:last-of-type {
+  margin-bottom: 0;
+}
+
+.sync_mdata_list {
+  border-top: 1px solid #E6E6E6;
+}
+.sync_mdata_list > li {
+  border-bottom: 1px solid #E6E6E6;
+}
 @media (max-width: 374px) {
   .mbt_title .text_node_sub {
     font-size: 12px;
   }
 }
 @media (max-width: 359px) {
-  .mbt_title {
+  .mbt_title.has_sub {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .mbt_title .text_node {
+  .mbt_title.has_sub .text_node {
     font-size: 16px;
     font-weight: 700;
     line-height: 1;
     color: #000;
   }
-  .mbt_title .text_node_sub {
+  .mbt_title.has_sub .text_node_sub {
     font-size: 13px;
     font-weight: 400;
     line-height: 1;
     color: #000;
     display: inline-flex;
   }
-  .mbt_title .text_node_sub i.text_i {
+  .mbt_title.has_sub .text_node_sub i.text_i {
     display: inline-block;
     vertical-align: middle;
     position: relative;
     top: 1px;
   }
-  .mbt_title .text_node_sub i.text_i img {
+  .mbt_title.has_sub .text_node_sub i.text_i img {
     height: 12px;
     vertical-align: middle;
+  }
+  .mbt_title_row.type2 {
+    align-items: flex-end;
   }
 }
 /*# sourceMappingURL=style.css.map */
