@@ -378,6 +378,13 @@
         }
         .ico_arrow{ width:42px;height:42px;}
     }
+    .useguide_tab_row{
+         .long_cols{
+             .tailtab_wrap{
+                 .tailtab{padding-left:20px;padding-right:20px;}
+             }
+         }
+    }
 }
 
 @media (max-width:$mobile_large){

@@ -17772,6 +17772,10 @@ input.docu_big_input::placeholder {
     width: 42px;
     height: 42px;
   }
+  .useguide_tab_row .long_cols .tailtab_wrap .tailtab {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 @media (max-width: 1023px) {
   .stack_title {
