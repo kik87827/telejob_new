@@ -341,6 +341,14 @@ const uiBase = {
       middle_wrap.addClass("has_sticky");
     }
   },
+  logoMotion() {
+    const logo_motion_group = $(".logo_motion_group");
+    const logo_word = logo_motion_group.html();
+    setInterval(() => {
+      logo_motion_group.empty();
+      logo_motion_group.append(logo_word);
+    }, 4000);
+  },
 };
 
 /* popup */

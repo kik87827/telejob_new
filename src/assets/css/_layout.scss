@@ -41,7 +41,7 @@ html:not(.touchmode){
     }
 }
 .toplogo_container{
-    display:inline-block;
+    display:inline-block; position:relative; overflow:hidden;
 }
 .toplogo_item{
     display:flex; gap:12px; align-items:center;
@@ -548,6 +548,7 @@ input.mb_nav_form_input{line-height:1;width:100%;border:0;appearance: none;box-s
          }
         /* .spec_cols{display:none;} */
     }
+    .toplogo_container{padding:0 5px;}
     .header_nav_util_wrap,
     .nav_tooltip_layer{display:none;}
     .header_nav_container{min-height:50px;padding:0 16px;position:relative; overflow-x:auto;
@@ -612,3 +613,51 @@ input.mb_nav_form_input{line-height:1;width:100%;border:0;appearance: none;box-s
         }
     }
 }
+
+
+/* logo motion */
+/* .logo_motion_group{
+    position:absolute;width:125px; height:75px;
+    .word{
+        display:inline-block; position:absolute;background-repeat:no-repeat;background-size:100% auto; background-position:0 0;
+        &.word_t{top:23px;left:2px;width:25px;height:29px;background-image:url("../images/logo_word_t.png");}
+        &.word_red{top:30px;left:21px;width:20px;height:22px;background-image:url("../images/logo_word_e_red.png");}
+        &.word_l{top:24px;left:43px;width:5px;height:28px;background-color:#0B2649;}
+        &.word_blue{top:30px;left:50px;width:20px;height:22px;background-image:url("../images/logo_word_e_blue.png");}
+        &.word_j{top:24px;left:70px;width:10px;height:38px;background-image:url("../images/logo_word_j.png");}
+        &.word_o{top:29px;left:82px;width:23px;height:23px;background-image:url("../images/logo_word_o.png");}
+        &.word_b{top:23px;left:106px;width:21px;height:30px;background-image:url("../images/logo_word_b.png");}
+    }
+} */
+
+.logo_motion_group{
+    position:absolute;width:125px; height:75px;
+    .word{
+        display:inline-block; position:absolute;background-repeat:no-repeat;background-size:100% auto; background-position:0 0; transform: translateY(200%); animation: riseUp 0.4s ease-in-out forwards;
+        &.word_t{top:30.67%;left:1.6%;width:20%;height:38.67%;background-image:url("../images/logo_word_t.png");}
+        &.word_red{top:40%;left:16.8%;width:16%;height:29.33%;background-image:url("../images/logo_word_e_red.png");animation-delay: 0.1s;}
+        &.word_l{top:32%;left:34.5%;width:4%;height:37.33%;background-color:#0B2649;animation-delay: 0.2s;}
+        &.word_blue{top:40%;left:40%;width:16%;height:29.33%;background-image:url("../images/logo_word_e_blue.png");animation-delay: 0.3s;}
+        &.word_j{top:32%;left:56%;width:8%;height:50.67%;background-image:url("../images/logo_word_j.png");animation-delay: 0.7s;}
+        &.word_o{top:38.67%;left:65.6%;width:18.4%;height:30.67%;background-image:url("../images/logo_word_o.png");animation-delay: 0.8s;}
+        &.word_b{top:30.67%;left:84.8%;width:16.8%;height:40%;background-image:url("../images/logo_word_b.png");animation-delay: 0.9s;}
+    }
+}
+@keyframes riseUp {
+  0%   { transform: translateY(200%); }
+  70%  { transform: translateY(-15%); }
+  100% { transform: translateY(0%); }   /* 끝까지 유지 */
+}
+@media (max-width:$pcwid){
+    .logo_motion_group{
+        width:100px; height:60px;
+    }
+}
+@media (max-width:$mobile_large){
+    .logo_motion_group{
+        width:60px; height:36px;
+    }
+}
+
+
+/* // logo motion */
