@@ -4995,6 +4995,16 @@ button.swiper-pagination-bullet {
 .boxtab_wrap.skin2 .boxtab_list {
   position: relative;
 }
+.boxtab_wrap.skin2 .boxtab_list > li:first-of-type .boxtab:before {
+  display: block;
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #E6E6E6;
+}
 .boxtab_wrap.skin2 .boxtab_list > li:last-of-type .boxtab:after {
   display: block;
 }
@@ -5021,16 +5031,6 @@ button.swiper-pagination-bullet {
 }
 .boxtab_list > li {
   flex: 1;
-}
-.boxtab_list > li:first-of-type .boxtab:before {
-  display: block;
-  content: "";
-  width: 1px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #E6E6E6;
 }
 .boxtab_list > li:last-of-type .boxtab:after {
   display: none;

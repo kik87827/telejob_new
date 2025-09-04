@@ -485,6 +485,11 @@
         .boxtab_list{
             position:relative; 
             > li{
+                &:first-of-type{
+                    .boxtab{
+                        &:before{display:block;content:'';width:1px;height:100%;position:absolute;top:0;left:0;background:#E6E6E6; }
+                    }
+                }
                 &:last-of-type{
                     .boxtab{
                         &:after{display:block;}
@@ -517,11 +522,7 @@
 .boxtab_list{
     display:flex; min-height:56px; position:relative; 
     > li{flex:1;
-        &:first-of-type{
-            .boxtab{
-                &:before{display:block;content:'';width:1px;height:100%;position:absolute;top:0;left:0;background:#E6E6E6;}
-            }
-        }
+        
         &:last-of-type{
             .boxtab{
                 &:after{display:none;}
