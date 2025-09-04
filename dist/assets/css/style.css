@@ -17370,7 +17370,7 @@ input.docu_big_input::placeholder {
 .useguide_tab_row {
   display: flex;
   align-items: center;
-  gap: 77px;
+  gap: 80px;
 }
 .useguide_tab_row > .tailtab_wrap {
   flex: 1;
@@ -17384,13 +17384,30 @@ input.docu_big_input::placeholder {
 .useguide_tab_row .long_cols .tailtab_wrap {
   margin-bottom: 0;
 }
+.useguide_tab_row .long_cols .tailtab_wrap .tailtab_list > li {
+  flex: 1;
+}
+.useguide_tab_row .long_cols .tailtab_wrap .tailtab {
+  min-width: 0;
+}
+.useguide_tab_row .auto_cols {
+  flex: 1;
+  min-width: 0;
+}
+.useguide_tab_row .auto_cols .btn_taskbox_list > li {
+  flex: 1;
+}
+.useguide_tab_row .auto_cols .btn_taskbox_list > li .btn_taskbox {
+  display: flex;
+}
+
 .useguide_contents {
-  margin-top: 24px;
+  margin-top: 36px;
 }
 
 .display_product_container {
   display: flex;
-  gap: 60px;
+  gap: 80px;
   align-items: flex-start;
 }
 .display_product_container .product_cols {
@@ -17404,7 +17421,8 @@ input.docu_big_input::placeholder {
 .dp_product_wrap {
   position: relative;
   overflow-y: scroll;
-  padding-right: 20px;
+  margin-right: -10px;
+  height: 1968px;
 }
 
 .dp_product_list {
@@ -17961,6 +17979,7 @@ input.docu_big_input::placeholder {
   }
   .dp_product_wrap {
     padding: 0;
+    height: auto;
   }
   .dp_exptail_list {
     font-size: 14px;
